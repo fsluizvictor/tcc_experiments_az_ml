@@ -1,0 +1,22 @@
+name: data_prep_vrex_defaults_model
+display_name: Data Preparation Defaults Model
+type: command
+inputs:
+  data_to_train: 
+    type: uri_folder
+  data_to_test:
+    type: uri_folder
+outputs:
+  train_data:
+    type: uri_folder
+  test_data:
+    type: uri_folder
+code: .
+environment:
+  azureml:data-prep-dependencies:test
+command: >-
+  python data_prep.py 
+  --data_to_train ${{inputs.data_to_train}} 
+  --data_to_test ${{inputs.data_to_test}} 
+  --train_data ${{outputs.train_data}}
+  --test_data ${{outputs.test_data}}
