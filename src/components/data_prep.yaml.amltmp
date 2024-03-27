@@ -6,6 +6,8 @@ inputs:
     type: uri_folder
   data_to_test:
     type: uri_folder
+  flag_remove_null_values:
+    type: boolean
 outputs:
   train_data:
     type: uri_folder
@@ -13,10 +15,11 @@ outputs:
     type: uri_folder
 code: .
 environment:
-  azureml:data-prep-dependencies:test
+  azureml:data-prep-dependencies:v2
 command: >-
   python data_prep.py 
   --data_to_train ${{inputs.data_to_train}} 
   --data_to_test ${{inputs.data_to_test}} 
+  --flag_remove_null_values ${{inputs.flag_remove_null_values}} 
   --train_data ${{outputs.train_data}}
   --test_data ${{outputs.test_data}}

@@ -13,7 +13,7 @@ outputs:
     type: uri_folder
 code: .
 environment:
-  azureml:train-dependencies:test
+  azureml:train-dependencies:v2
 command: >-
   python train.py 
   --train_data ${{inputs.train_data}} 

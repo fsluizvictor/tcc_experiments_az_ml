@@ -74,13 +74,13 @@ def main():
                         y_test=y_test
                     )
         
-def _train_pipeline(clf : any,
-                    model_name: str,
-                    path_to_model : str,
-                    X_train: pd.ndarray,
-                    X_test: pd.ndarray,
-                    y_train: pd.Series,
-                    y_test: pd.Series):
+def _train_pipeline(clf,
+                    model_name,
+                    path_to_model,
+                    X_train,
+                    X_test,
+                    y_train,
+                    y_test):
     _is_active()
     print(f"Training with data of shape {X_train.shape}")
     mlflow.start_run()
