@@ -15,4 +15,4 @@ dependencies:
     - mlflow-skinny==2.8.0
     - azureml-mlflow==1.51.0
     - xlrd==2.0.1
-    - xgboost
+    - xgboost==2.0.3

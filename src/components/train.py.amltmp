@@ -3,10 +3,11 @@ import os
 import pandas as pd
 import mlflow
 import mlflow.sklearn
+import mlflow.xgboost
 import xgboost as xgb
 
 from sklearn.model_selection import cross_val_predict
-from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import precision_recall_fscore_support, accuracy_score, f1_score, precision_score, recall_score
 
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import classification_report
@@ -81,9 +82,35 @@ def _train_pipeline(clf,
                     X_test,
                     y_train,
                     y_test):
+    if model_name == "XGBoostClassifier":
+        _xgboost_models(clf,
+                    model_name,
+                    path_to_model,
+                    X_train,
+                    X_test,
+                    y_train,
+                    y_test)
+    else:
+        _sklearn_models(clf,
+                    model_name,
+                    path_to_model,
+                    X_train,
+                    X_test,
+                    y_train,
+                    y_test)
+
+def _sklearn_models(clf,
+                    model_name,
+                    path_to_model,
+                    X_train,
+                    X_test,
+                    y_train,
+                    y_test):
     _is_active()
     print(f"Training with data of shape {X_train.shape}")
-    mlflow.start_run()
+    
+    mlflow.start_run(run_name=model_name)
+
     mlflow.sklearn.autolog()
     
     clf.fit(X_train, y_train)
@@ -91,12 +118,45 @@ def _train_pipeline(clf,
 
     print(classification_report(y_test, y_pred))
 
-    mlflow.sklearn.log_model(
-        sk_model=clf,
-        artifact_path=model_name,
-    )
-
     mlflow.end_run()
+
+def _xgboost_models(clf,
+                    model_name,
+                    path_to_model,
+                    X_train,
+                    X_test,
+                    y_train,
+                    y_test):
+    _is_active()
+    print("running: ", model_name)
+    print(f"Training with data of shape {X_train.shape}")
+    
+    mlflow.autolog()
+    
+    with mlflow.start_run(run_name=model_name):
+        clf.fit(X_train, y_train)
+        y_pred = clf.predict(X_test)
+
+        # Calculating metrics
+        accuracy = accuracy_score(y_test, y_pred)
+        f1 = f1_score(y_test, y_pred)
+        precision = precision_score(y_test, y_pred)
+        recall = recall_score(y_test, y_pred)
+        # Alternatively, you can use clf.score() if it's available for your model
+
+        # Logging metrics
+        mlflow.log_metric("training_accuracy_score", accuracy)
+        mlflow.log_metric("training_f1_score", f1)
+        mlflow.log_metric("training_precision_score", precision)
+        mlflow.log_metric("training_recall_score", recall)
+        
+        # You can also log the overall training score if available
+        if hasattr(clf, 'score'):
+            training_score = clf.score(X_train, y_train)
+            mlflow.log_metric("training_score", training_score)
+
+        mlflow.end_run()
+
     
 def _is_active():
     if mlflow.active_run():
