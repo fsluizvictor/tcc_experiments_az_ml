@@ -15,7 +15,7 @@ outputs:
     type: uri_folder
 code: .
 environment:
-  azureml:data-prep-dependencies:v3
+  azureml:data-prep-dependencies:v5
 command: >-
   python data_prep.py 
   --data_to_train ${{inputs.data_to_train}} 

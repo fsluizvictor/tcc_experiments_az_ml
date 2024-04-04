@@ -12,7 +12,7 @@ def main():
     parser.add_argument("--data_to_test", type=str, help="path to input data to test")
     parser.add_argument("--train_data", type=str, help="path to train data")
     parser.add_argument("--test_data", type=str, help="path to test data")
-    parser.add_argument("--flag_remove_null_values", type=bool, help="flag to remove null values")
+    parser.add_argument("--flag_remove_null_values", type=bool, help="flag to remove null values, add value when true, empty when false")
     args = parser.parse_args()
 
     # Start Logging
@@ -30,7 +30,11 @@ def main():
     
     removed_columns = []
 
-    if args.flag_remove_null_values:
+    flag_remove_null_values = False
+
+    print("flag_remove_null_values", flag_remove_null_values)
+
+    if flag_remove_null_values:
         #Remove null values    
         vrex_df_to_train, removed_columns = _remove_null_values(vrex_df_to_train)
         
@@ -43,10 +47,10 @@ def main():
     vrex_df_to_test = pd.read_csv(args.data_to_test)
     vrex_df_to_test = _remove_columns(vrex_df_to_test)    
     
-    mlflow.log_metric("num_samples - vrex_df_to_test", vrex_df_to_test.shape[0])
-    mlflow.log_metric("num_features - vrex_df_to_test", vrex_df_to_test.shape[1] - 1)
+    mlflow.log_metric("num_samples_vrex_df_to_test", vrex_df_to_test.shape[0])
+    mlflow.log_metric("num_features_vrex_df_to_test", vrex_df_to_test.shape[1] - 1)
     
-    if args.flag_remove_null_values and len(removed_columns) > 0:
+    if flag_remove_null_values and len(removed_columns) > 0:
 
         #Remove null values
         print("removed_columns", removed_columns)    
