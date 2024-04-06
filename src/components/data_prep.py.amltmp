@@ -13,6 +13,9 @@ def main():
     parser.add_argument("--train_data", type=str, help="path to train data")
     parser.add_argument("--test_data", type=str, help="path to test data")
     parser.add_argument("--flag_remove_null_values", type=bool, help="flag to remove null values, add value when true, empty when false")
+    parser.add_argument("--flag_remove_values_by_percentage", type=bool, help="flag to remove values with percentage")
+    parser.add_argument("--percentage_to_remove_column", type=float, help="fpercentagr")
+
     args = parser.parse_args()
 
     # Start Logging
@@ -30,13 +33,11 @@ def main():
     
     removed_columns = []
 
-    flag_remove_null_values = False
-
     print("flag_remove_null_values", flag_remove_null_values)
 
-    if flag_remove_null_values:
+    if args.flag_remove_null_values and args.flag_remove_values_by_percentage and args.percentage_to_remove_column > 0:
         #Remove null values    
-        vrex_df_to_train, removed_columns = _remove_null_values(vrex_df_to_train)
+        vrex_df_to_train, removed_columns = _remove_values(vrex_df_to_train)
         
         print("removed_columns", removed_columns)    
 
@@ -50,7 +51,7 @@ def main():
     mlflow.log_metric("num_samples_vrex_df_to_test", vrex_df_to_test.shape[0])
     mlflow.log_metric("num_features_vrex_df_to_test", vrex_df_to_test.shape[1] - 1)
     
-    if flag_remove_null_values and len(removed_columns) > 0:
+    if args.flag_remove_null_values and args.flag_remove_values_by_percentage and len(removed_columns) > 0:
 
         #Remove null values
         print("removed_columns", removed_columns)    
@@ -80,11 +81,36 @@ def _remove_columns(df):
                         'cve'
     ])
     
-def _remove_null_values(df):
+def _remove_values(df, threshold=0):
     all_columns = df.columns.tolist()
     df = df.loc[:, (df != 0).any(axis=0)]
     removed_columns = [column for column in all_columns if column not in df.columns]
-    return df, removed_columns
+
+    mlflow.log_metric("amount_columns_with_all_null_rows", len(removed_columns))
+    print("columns with all null rows: ", len(removed_columns))
+
+    # Calcula a porcentagem de valores nulos em cada coluna
+    null_percentage = df.isnull().mean()
+
+    # Seleciona as colunas que possuem uma porcentagem de valores nulos maior que o threshold
+    columns_to_remove = null_percentage[null_percentage > threshold].index.tolist()
+
+    mlflow.log_metric("percentage_to_remove_column", threshold)
+    print("percentage to remove column: ", threshold)
+    mlflow.log_metric("amount_columns_with_percentage", threshold)
+    print("columns with percentage: ", len(columns_to_remove))
+
+    # Remove as colunas selecionadas do DataFrame
+    df = df.drop(columns=columns_to_remove)
+
+    # Concatena as listas de colunas removidas devido a valores nulos e colunas removidas por outra razão
+    all_removed_columns = removed_columns + columns_to_remove
+
+    mlflow.log_metric("amount_removed_columns", len(columns_to_remove))
+    print("amount removed columns: ", len(columns_to_remove))
+
+    return df, all_removed_columns
+
 
 
 if __name__ == "__main__":
