@@ -27,7 +27,7 @@
       "execution_count": 1,
       "metadata": {
         "gather": {
-          "logged": 1712444959396
+          "logged": 1712518005034
         }
       }
     },
@@ -58,7 +58,7 @@
           }
         },
         "gather": {
-          "logged": 1712444960512
+          "logged": 1712518005438
         }
       }
     },
@@ -66,12 +66,10 @@
       "cell_type": "code",
       "source": [
         "TRAIN_DATAS = [\n",
-        "    \"vrex_2009_2010_2011_2012_2013_.csv\",\n",
         "    \"vrex_2014_2015_2016_2017_2018_.csv\",\n",
         "]\n",
         "\n",
         "TEST_DATAS = [\n",
-        "    \"vrex_2014.csv\",\n",
         "    \"vrex_2019.csv\"\n",
         "]\n",
         "\n",
@@ -93,7 +91,7 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Data to train asset URI: azureml://subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/20c8eaed3e0076d5623ceabb00067339/vrex_2009_2010_2011_2012_2013_.csv - name: vrex_2009_2010_2011_2012_2013_\nData to test asset URI: azureml://subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/f4ecea294ba5aa10eadec0cdaf59ac5c/vrex_2014.csv - name: vrex_2014\nData to train asset URI: azureml://subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/38bbb10032af817b2a7427008e191128/vrex_2014_2015_2016_2017_2018_.csv - name: vrex_2014_2015_2016_2017_2018_\nData to test asset URI: azureml://subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/51c997e091d027cb70ab7be8e4015a5f/vrex_2019.csv - name: vrex_2019\n"
+          "text": "Data to train asset URI: azureml://subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/38bbb10032af817b2a7427008e191128/vrex_2014_2015_2016_2017_2018_.csv - name: vrex_2014_2015_2016_2017_2018_\nData to test asset URI: azureml://subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/51c997e091d027cb70ab7be8e4015a5f/vrex_2019.csv - name: vrex_2019\n"
         }
       ],
       "execution_count": 3,
@@ -108,7 +106,7 @@
           }
         },
         "gather": {
-          "logged": 1712444960659
+          "logged": 1712518005955
         }
       }
     },
@@ -146,12 +144,12 @@
         {
           "output_type": "stream",
           "name": "stderr",
-          "text": "\r\u001b[32mUploading components (0.01 MBs):   0%|          | 0/12037 [00:00<?, ?it/s]\r\u001b[32mUploading components (0.01 MBs):  59%|█████▉    | 7108/12037 [00:00<00:00, 62142.76it/s]\r\u001b[32mUploading components (0.01 MBs): 100%|██████████| 12037/12037 [00:00<00:00, 101370.64it/s]\n\u001b[39m\n\n"
+          "text": "\r\u001b[32mUploading components (0.02 MBs):   0%|          | 0/19575 [00:00<?, ?it/s]\r\u001b[32mUploading components (0.02 MBs):  58%|█████▊    | 11259/19575 [00:00<00:00, 88601.42it/s]\r\u001b[32mUploading components (0.02 MBs): 100%|██████████| 19575/19575 [00:00<00:00, 121258.82it/s]\n\u001b[39m\n\n"
         },
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Component data_prep_vrex_defaults_model with Version 2024-04-06-23-09-22-5389167 is registered\n"
+          "text": "Component data_prep_vrex_defaults_model with Version 2024-04-07-19-26-48-4431270 is registered\n"
         }
       ],
       "execution_count": 4,
@@ -166,7 +164,7 @@
           }
         },
         "gather": {
-          "logged": 1712444964190
+          "logged": 1712518009638
         }
       }
     },
@@ -177,7 +175,7 @@
         "from azure.ai.ml import load_component\n",
         "\n",
         "# Loading the component from the yml file\n",
-        "train_component = load_component(source=\"/home/azureuser/cloudfiles/code/Users/calebebraga08/tcc_experiments_az_ml/src/components/train.yaml\")\n",
+        "train_component = load_component(source=\"/home/azureuser/cloudfiles/code/Users/calebebraga08/tcc_experiments_az_ml/src/components/train_hyperparameters.yaml\")\n",
         "\n",
         "# Now we register the component to the workspace\n",
         "train_component = ml_client.create_or_update(train_component)\n",
@@ -191,7 +189,7 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Component train_vrex_defaults_model with Version 2024-04-06-23-09-24-6819998 is registered\n"
+          "text": "Component train_vrex_defaults_model with Version 2024-04-07-19-26-50-1019339 is registered\n"
         }
       ],
       "execution_count": 5,
@@ -206,7 +204,7 @@
           }
         },
         "gather": {
-          "logged": 1712444966034
+          "logged": 1712518011326
         }
       }
     },
@@ -215,19 +213,19 @@
       "source": [
         "# the dsl decorator tells the sdk that we are defining an Azure Machine Learning pipeline\n",
         "from azure.ai.ml import dsl, Input, Output\n",
-        "\n",
+        "from azure.ai.ml.sweep import Choice, Uniform\n",
         "\n",
         "@dsl.pipeline(\n",
         "    compute=\"serverless\",\n",
         "    description=\"E2E data_perp-train pipeline\",\n",
         ")\n",
-        "def prep_data_and_train_defaults_pipeline(\n",
+        "def prep_data_and_train_defaults_pipeline_with_hyperparameter_sweep(\n",
         "    data_to_train,\n",
         "    data_to_test,\n",
         "    flag_remove_null_values,\n",
         "    learning_rate_to_train,\n",
         "    flag_remove_values_by_percentage,\n",
-        "    percentage_to_remove_column\n",
+        "    percentage_to_remove_column,\n",
         "):\n",
         "\n",
         "    data_prep_job = data_prep_component(\n",
@@ -241,8 +239,23 @@
         "    train_job = train_component(\n",
         "        train_data=data_prep_job.outputs.train_data,  # note: using outputs from previous step\n",
         "        test_data=data_prep_job.outputs.test_data,  # note: using outputs from previous step\n",
-        "        learning_rate=learning_rate_to_train,  # note: using a pipeline input as parameter\n",
-        "    )\n"
+        "        n_estimators_to_gbc=Choice(values=[50, 100, 200]),\n",
+        "        learning_rate_to_gbc=Uniform(min_value=0.01, max_value=0.3),\n",
+        "        n_estimators_to_rfc=Choice(values=[50, 100, 200]),\n",
+        "        n_estimators_to_xgb=Choice(values=[100, 500, 1000]),\n",
+        "        learning_rate_to_xgb=Uniform(min_value=0.0001, max_value=0.3),\n",
+        "        kernel_to_svc=Choice(values=[\"linear\", \"rbf\", \"poly\", \"sigmoid\",\"precomputed\"]),\n",
+        "        gamma_to_svc=Choice(values=[\"scale\", \"auto\"]),\n",
+        "    )\n",
+        "\n",
+        "    sweep_step = train_job.sweep(\n",
+        "        compute=\"serverless\",\n",
+        "        sampling_algorithm=\"random\",\n",
+        "        primary_metric=\"Accuracy\",\n",
+        "        goal=\"Maximize\",\n",
+        "    )\n",
+        "\n",
+        "    sweep_step.set_limits(max_total_trials=5, max_concurrent_trials=5, timeout=3600)\n"
       ],
       "outputs": [],
       "execution_count": 6,
@@ -257,7 +270,7 @@
           }
         },
         "gather": {
-          "logged": 1712444966140
+          "logged": 1712518011418
         }
       }
     },
@@ -265,15 +278,14 @@
       "cell_type": "code",
       "source": [
         "pipelines = []\n",
-        "percentages = [0.5, 0.6, 0.7, 0.8, 0.85, 0.90, 0.95, 0.97]\n",
+        "percentages = [0.25, 0.50, 0.75, 0.90, 0.95]\n",
         "\n",
         "for percentage in percentages:\n",
         "    for data_to_train, data_to_test in zip(arr_data_to_train, arr_data_to_test):\n",
-        "        pipeline = prep_data_and_train_defaults_pipeline(\n",
+        "        pipeline = prep_data_and_train_defaults_pipeline_with_hyperparameter_sweep(\n",
         "            data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
         "            data_to_test=Input(type=\"uri_file\", path=data_to_test.path),\n",
         "            flag_remove_null_values=True,\n",
-        "            learning_rate_to_train=0.05,\n",
         "            flag_remove_values_by_percentage=True,\n",
         "            percentage_to_remove_column=percentage,\n",
         "        )\n",
@@ -286,7 +298,7 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Quantidade de pipelines:  16\n"
+          "text": "Quantidade de pipelines:  5\n"
         }
       ],
       "execution_count": 7,
@@ -301,7 +313,7 @@
           }
         },
         "gather": {
-          "logged": 1712444967883
+          "logged": 1712518011986
         }
       }
     },
@@ -318,7 +330,7 @@
         "            formatted_time = current_time.strftime(\"%Y_%m_%d_%H_%M_%S\")  # Formata a data e hora atual\n",
         "            train_name_base = train_name.split('.')[0]\n",
         "            test_name_base = test_name.split('.')[0]\n",
-        "            name = f\"{train_name_base}tested_{test_name_base}_executed_in_{formatted_time}_removed_null_values_by_percentage_{str(percentage).replace('.', '_')}\"\n",
+        "            name = f\"{train_name_base}tested_{test_name_base}_executed_in_{formatted_time}_removed_null_values_by_percentage_{str(percentage).replace('.', '_')}_with_hyperparameter\"\n",
         "            experiment_names.append(name)\n",
         "            print(name)\n",
         "    return experiment_names\n"
@@ -336,7 +348,7 @@
           }
         },
         "gather": {
-          "logged": 1712444968049
+          "logged": 1712518012124
         }
       }
     },
@@ -349,13 +361,13 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_5\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_5\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_6\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_6\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_7\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_7\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_8\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_8\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_85\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_85\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_9\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_9\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_95\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_95\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_97\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_97\n"
+          "text": "vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_25_with_hyperparameter\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_5_with_hyperparameter\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_75_with_hyperparameter\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_9_with_hyperparameter\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_95_with_hyperparameter\n"
         },
         {
           "output_type": "execute_result",
           "execution_count": 9,
           "data": {
-            "text/plain": "['vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_5',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_5',\n 'vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_6',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_6',\n 'vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_7',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_7',\n 'vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_8',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_8',\n 'vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_85',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_85',\n 'vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_9',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_9',\n 'vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_95',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_95',\n 'vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_97',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_97']"
+            "text/plain": "['vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_25_with_hyperparameter',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_5_with_hyperparameter',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_75_with_hyperparameter',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_9_with_hyperparameter',\n 'vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_95_with_hyperparameter']"
           },
           "metadata": {}
         }
@@ -372,7 +384,7 @@
           }
         },
         "gather": {
-          "logged": 1712444968179
+          "logged": 1712518012229
         }
       }
     },
@@ -398,7 +410,26 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "vrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_5\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_5\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_6\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_6\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_7\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_7\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_8\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_8\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_85\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_85\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_9\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_9\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_95\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_95\nvrex_2009_2010_2011_2012_2013_tested_vrex_2014_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_97\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_06_23_09_27_removed_null_values_by_percentage_0_97\nRunId: careful_pizza_gcpq1p7xbj\nWeb View: https://ml.azure.com/runs/careful_pizza_gcpq1p7xbj?wsid=/subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments\n\nStreaming logs/azureml/executionlogs.txt\n========================================\n\n[2024-04-06 23:09:31Z] Submitting 1 runs, first five are: 95498859:a5792837-6f23-4bc7-a81a-beb2adcbbb4b\n[2024-04-06 23:15:08Z] Completing processing run id a5792837-6f23-4bc7-a81a-beb2adcbbb4b.\n[2024-04-06 23:15:09Z] Submitting 1 runs, first five are: 92695c99:3b3e4918-4781-4aa3-917b-0a938411f11f\n[2024-04-06 23:36:17Z] Completing processing run id 3b3e4918-4781-4aa3-917b-0a938411f11f.\n\nExecution Summary\n=================\nRunId: careful_pizza_gcpq1p7xbj\nWeb View: https://ml.azure.com/runs/careful_pizza_gcpq1p7xbj?wsid=/subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments\n\nRunId: maroon_store_97kqyjrx3q\nWeb View: https://ml.azure.com/runs/maroon_store_97kqyjrx3q?wsid=/subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments\n\nStreaming logs/azureml/executionlogs.txt\n========================================\n\n[2024-04-06 23:36:56Z] Submitting 1 runs, first five are: 0bfeb132:ea472591-0723-4736-a714-1e480bbf1d92\n[2024-04-06 23:38:26Z] Completing processing run id ea472591-0723-4736-a714-1e480bbf1d92.\n[2024-04-06 23:38:27Z] Submitting 1 runs, first five are: 15bfab8e:b85e8786-f845-43e6-bd79-424e38a54521\n\nExecution Summary\n=================\nRunId: maroon_store_97kqyjrx3q\nWeb View: https://ml.azure.com/runs/maroon_store_97kqyjrx3q?wsid=/subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments\n\nRunId: quiet_roof_0s7pyrl3d2\nWeb View: https://ml.azure.com/runs/quiet_roof_0s7pyrl3d2?wsid=/subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments\n\nStreaming logs/azureml/executionlogs.txt\n========================================\n\n[2024-04-07 00:23:27Z] Submitting 1 runs, first five are: 47d7cfeb:24be0520-2a8a-460b-b64a-f92cdbda7d18\n[2024-04-07 00:24:34Z] Completing processing run id 24be0520-2a8a-460b-b64a-f92cdbda7d18.\n[2024-04-07 00:24:35Z] Submitting 1 runs, first five are: 0535db84:d3f56ac2-bc5e-4cd0-8032-c91fe140250a\n[2024-04-07 00:47:03Z] Completing processing run id d3f56ac2-bc5e-4cd0-8032-c91fe140250a.\n\nExecution Summary\n=================\nRunId: quiet_roof_0s7pyrl3d2\nWeb View: https://ml.azure.com/runs/quiet_roof_0s7pyrl3d2?wsid=/subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments\n\nRunId: salmon_quince_h5f7cxcxc9\nWeb View: https://ml.azure.com/runs/salmon_quince_h5f7cxcxc9?wsid=/subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments\n\nStreaming logs/azureml/executionlogs.txt\n========================================\n\n[2024-04-07 00:47:51Z] Submitting 1 runs, first five are: d174e265:e6282495-d389-43a9-98fa-854f64ac9e55\n[2024-04-07 00:49:12Z] Completing processing run id e6282495-d389-43a9-98fa-854f64ac9e55.\n[2024-04-07 00:49:13Z] Submitting 1 runs, first five are: 60a12862:219ee3ab-bcba-413a-8130-81b268770ccd\n"
+          "text": "vrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_25_with_hyperparameter\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_5_with_hyperparameter\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_75_with_hyperparameter\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_9_with_hyperparameter\nvrex_2014_2015_2016_2017_2018_tested_vrex_2019_executed_in_2024_04_07_19_26_51_removed_null_values_by_percentage_0_95_with_hyperparameter\nRunId: lucid_plate_q5jhstdtmm\nWeb View: https://ml.azure.com/runs/lucid_plate_q5jhstdtmm?wsid=/subscriptions/2944a580-6c5f-4258-8c86-b9c5de957998/resourcegroups/calebebraga08-rg/workspaces/tcc-experiments\n\nStreaming logs/azureml/executionlogs.txt\n========================================\n\n[2024-04-07 19:26:57Z] Submitting 1 runs, first five are: da80b3d7:24da8e4b-c09b-4197-a1aa-85b272e251d7\n"
+        },
+        {
+          "output_type": "error",
+          "ename": "JobException",
+          "evalue": "The output streaming for the run interrupted.\nBut the run is still executing on the compute target. \nDetails for canceling the run can be found here: https://aka.ms/aml-docs-cancel-run",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "File \u001b[0;32m/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/azure/ai/ml/operations/_job_ops_helper.py:250\u001b[0m, in \u001b[0;36mstream_logs_until_completion\u001b[0;34m(run_operations, job_resource, datastore_operations, raise_exception_on_failed_job, requests_pipeline)\u001b[0m\n\u001b[1;32m    249\u001b[0m file_handle\u001b[38;5;241m.\u001b[39mflush()\n\u001b[0;32m--> 250\u001b[0m \u001b[43mtime\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43msleep\u001b[49m\u001b[43m(\u001b[49m\u001b[43m_wait_before_polling\u001b[49m\u001b[43m(\u001b[49m\u001b[43mtime\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mtime\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m-\u001b[39;49m\u001b[43m \u001b[49m\u001b[43mpoll_start_time\u001b[49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m    251\u001b[0m _current_details: RunDetails \u001b[38;5;241m=\u001b[39m run_operations\u001b[38;5;241m.\u001b[39mget_run_details(job_name)  \u001b[38;5;66;03m# TODO use FileWatcher\u001b[39;00m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: ",
+            "\nDuring handling of the above exception, another exception occurred:\n",
+            "\u001b[0;31mJobException\u001b[0m                              Traceback (most recent call last)",
+            "Cell \u001b[0;32mIn[10], line 9\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28;01mfor\u001b[39;00m pipeline, experiment_name \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mzip\u001b[39m(pipelines, experiment_names):\n\u001b[1;32m      4\u001b[0m     pipeline_job \u001b[38;5;241m=\u001b[39m ml_client\u001b[38;5;241m.\u001b[39mjobs\u001b[38;5;241m.\u001b[39mcreate_or_update(\n\u001b[1;32m      5\u001b[0m         pipeline,\n\u001b[1;32m      6\u001b[0m         experiment_name\u001b[38;5;241m=\u001b[39mexperiment_name,\n\u001b[1;32m      7\u001b[0m     )\n\u001b[0;32m----> 9\u001b[0m     \u001b[43mml_client\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mjobs\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mstream\u001b[49m\u001b[43m(\u001b[49m\u001b[43mpipeline_job\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mname\u001b[49m\u001b[43m)\u001b[49m\n",
+            "File \u001b[0;32m/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/azure/core/tracing/decorator.py:76\u001b[0m, in \u001b[0;36mdistributed_trace.<locals>.decorator.<locals>.wrapper_use_tracer\u001b[0;34m(*args, **kwargs)\u001b[0m\n\u001b[1;32m     74\u001b[0m span_impl_type \u001b[38;5;241m=\u001b[39m settings\u001b[38;5;241m.\u001b[39mtracing_implementation()\n\u001b[1;32m     75\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m span_impl_type \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m:\n\u001b[0;32m---> 76\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mfunc\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43margs\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m     78\u001b[0m \u001b[38;5;66;03m# Merge span is parameter is set, but only if no explicit parent are passed\u001b[39;00m\n\u001b[1;32m     79\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m merge_span \u001b[38;5;129;01mand\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m passed_in_parent:\n",
+            "File \u001b[0;32m/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/azure/ai/ml/_telemetry/activity.py:263\u001b[0m, in \u001b[0;36mmonitor_with_activity.<locals>.monitor.<locals>.wrapper\u001b[0;34m(*args, **kwargs)\u001b[0m\n\u001b[1;32m    260\u001b[0m \u001b[38;5;129m@functools\u001b[39m\u001b[38;5;241m.\u001b[39mwraps(f)\n\u001b[1;32m    261\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mwrapper\u001b[39m(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs):\n\u001b[1;32m    262\u001b[0m     \u001b[38;5;28;01mwith\u001b[39;00m log_activity(logger, activity_name \u001b[38;5;129;01mor\u001b[39;00m f\u001b[38;5;241m.\u001b[39m\u001b[38;5;18m__name__\u001b[39m, activity_type, custom_dimensions):\n\u001b[0;32m--> 263\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43margs\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n",
+            "File \u001b[0;32m/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/azure/ai/ml/operations/_job_operations.py:661\u001b[0m, in \u001b[0;36mJobOperations.stream\u001b[0;34m(self, name)\u001b[0m\n\u001b[1;32m    658\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m _is_pipeline_child_job(job_object):\n\u001b[1;32m    659\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m PipelineChildJobError(job_id\u001b[38;5;241m=\u001b[39mjob_object\u001b[38;5;241m.\u001b[39mid)\n\u001b[0;32m--> 661\u001b[0m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_stream_logs_until_completion\u001b[49m\u001b[43m(\u001b[49m\n\u001b[1;32m    662\u001b[0m \u001b[43m    \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_runs_operations\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mjob_object\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_datastore_operations\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mrequests_pipeline\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_requests_pipeline\u001b[49m\n\u001b[1;32m    663\u001b[0m \u001b[43m\u001b[49m\u001b[43m)\u001b[49m\n",
+            "File \u001b[0;32m/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/azure/ai/ml/operations/_job_ops_helper.py:328\u001b[0m, in \u001b[0;36mstream_logs_until_completion\u001b[0;34m(run_operations, job_resource, datastore_operations, raise_exception_on_failed_job, requests_pipeline)\u001b[0m\n\u001b[1;32m    321\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mKeyboardInterrupt\u001b[39;00m:\n\u001b[1;32m    322\u001b[0m     error_message \u001b[38;5;241m=\u001b[39m (\n\u001b[1;32m    323\u001b[0m         \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe output streaming for the run interrupted.\u001b[39m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    324\u001b[0m         \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mBut the run is still executing on the compute target. \u001b[39m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    325\u001b[0m         \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mDetails for canceling the run can be found here: \u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    326\u001b[0m         \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mhttps://aka.ms/aml-docs-cancel-run\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    327\u001b[0m     )\n\u001b[0;32m--> 328\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m JobException(\n\u001b[1;32m    329\u001b[0m         message\u001b[38;5;241m=\u001b[39merror_message,\n\u001b[1;32m    330\u001b[0m         target\u001b[38;5;241m=\u001b[39mErrorTarget\u001b[38;5;241m.\u001b[39mJOB,\n\u001b[1;32m    331\u001b[0m         no_personal_data_message\u001b[38;5;241m=\u001b[39merror_message,\n\u001b[1;32m    332\u001b[0m         error_category\u001b[38;5;241m=\u001b[39mErrorCategory\u001b[38;5;241m.\u001b[39mUSER_ERROR,\n\u001b[1;32m    333\u001b[0m     )\n",
+            "\u001b[0;31mJobException\u001b[0m: The output streaming for the run interrupted.\nBut the run is still executing on the compute target. \nDetails for canceling the run can be found here: https://aka.ms/aml-docs-cancel-run"
+          ]
         }
       ],
       "execution_count": 10,
@@ -413,7 +444,7 @@
           }
         },
         "gather": {
-          "logged": 1712444582767
+          "logged": 1712518258532
         }
       }
     }

@@ -18,6 +18,8 @@ def main():
 
     args = parser.parse_args()
 
+    print("start data_prep.py...")
+
     # Start Logging
     mlflow.start_run()
     
@@ -28,9 +30,6 @@ def main():
     vrex_df_to_train = pd.read_csv(args.data_to_train)
     vrex_df_to_train = _remove_columns(vrex_df_to_train)
 
-    mlflow.log_metric("num_samples_vrex_df_to_train_original", vrex_df_to_train.shape[0])
-    mlflow.log_metric("num_features_vrex_df_to_train_original", vrex_df_to_train.shape[1] - 1)
-    
     removed_columns = []
 
     if args.flag_remove_null_values and args.flag_remove_values_by_percentage and args.percentage_to_remove_column > 0:
@@ -41,13 +40,13 @@ def main():
 
         mlflow.log_metric("num_samples_vrex_df_to_train_without_null_values", vrex_df_to_train.shape[0])
         mlflow.log_metric("num_features_vrex_df_to_train_without_null_values", vrex_df_to_train.shape[1] - 1)
+
+    mlflow.log_metric("num_samples_vrex_df_to_train_original", vrex_df_to_train.shape[0])
+    mlflow.log_metric("num_features_vrex_df_to_train_original", vrex_df_to_train.shape[1] - 1)
     
     
     vrex_df_to_test = pd.read_csv(args.data_to_test)
     vrex_df_to_test = _remove_columns(vrex_df_to_test)    
-    
-    mlflow.log_metric("num_samples_vrex_df_to_test", vrex_df_to_test.shape[0])
-    mlflow.log_metric("num_features_vrex_df_to_test", vrex_df_to_test.shape[1] - 1)
     
     if args.flag_remove_null_values and args.flag_remove_values_by_percentage and len(removed_columns) > 0:
 
@@ -57,6 +56,9 @@ def main():
     
         mlflow.log_metric("num_samples_vrex_df_to_test_without_null_values", vrex_df_to_test.shape[0])
         mlflow.log_metric("num_features_vrex_df_to_test_without_null_values", vrex_df_to_test.shape[1] - 1)
+    
+    mlflow.log_metric("num_samples_vrex_df_to_test", vrex_df_to_test.shape[0])
+    mlflow.log_metric("num_features_vrex_df_to_test", vrex_df_to_test.shape[1] - 1)
     
     # output paths are mounted as folder, therefore, we are adding a filename to the path
     vrex_df_to_train.to_csv(os.path.join(args.train_data, "data.csv"), index=False)
@@ -88,10 +90,13 @@ def _remove_values(df, threshold=0):
     print("columns with all null rows: ", len(removed_columns))
 
     # Calcula a porcentagem de valores nulos em cada coluna
-    null_percentage = df.isnull().mean()
+    null_percentage = (df == 0).mean()
 
     # Seleciona as colunas que possuem uma porcentagem de valores nulos maior que o threshold
     columns_to_remove = null_percentage[null_percentage > threshold].index.tolist()
+
+    target = 'lbl_exploits_has'
+    columns_to_remove.remove(target)
 
     mlflow.log_metric("percentage_to_remove_column", threshold)
     print("percentage to remove column: ", threshold)
