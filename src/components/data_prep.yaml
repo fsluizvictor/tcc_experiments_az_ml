@@ -11,7 +11,7 @@ inputs:
   flag_remove_values_by_percentage:
     type: boolean
   percentage_to_remove_column:
-    type: float
+    type: number
 outputs:
   train_data:
     type: uri_folder
