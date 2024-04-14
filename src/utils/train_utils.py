@@ -1,9 +1,21 @@
+import os
 import mlflow
 import mlflow.sklearn
 import mlflow.xgboost
 
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report
 
+def select_first_file(path) -> str:
+    """Selects first file in folder, use under assumption there is only one file in folder
+    Args:
+        path (str): path to directory or file to choose
+    Returns:
+        str: full path of selected file
+    """
+    files = os.listdir(path)
+    return os.path.join(path, files[0])
+
+os.makedirs("./outputs", exist_ok=True)
 
 def sklearn_models(clf,
                     model_name,
