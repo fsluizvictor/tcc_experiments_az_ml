@@ -24,7 +24,7 @@ def batch_csv(csv_file_path : str, years_range : List[int]):
             csv_name += str(year) + "_"
         
         # Cria o primeiro arquivo de saída
-        new_file = f"/home/luiz/repos/tcc/datasets/samples/batch_5_years/tcc_dataset_{csv_name}.csv"
+        new_file = f"/home/luiz/repos/tcc_experiments_az_ml/data/samples/vrex_{csv_name}.csv"
         with open(new_file, 'w', newline='') as new_csv:
             writer_csv = csv.writer(new_csv)
             writer_csv.writerow(header)
@@ -41,8 +41,9 @@ def batch_csv(csv_file_path : str, years_range : List[int]):
     print(f"A divisão do arquivo foi concluída. Foi criado um novo arquivo CSV para o ano {year}.")
 
 # Exemplo de uso
-csv_file_path = "/home/luiz/repos/tcc/datasets/vrex.csv"
-years = [year for year in range(1999, 2022)]
+csv_file_path = "/home/luiz/repos/tcc_experiments_az_ml/data/vrex.csv"
+years = [year for year in range(1999, 2019)]
+years.sort(reverse=True)
 
 count = 0
 batch = []
