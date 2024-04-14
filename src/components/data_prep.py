@@ -92,11 +92,12 @@ def _remove_values(df, threshold=0):
     # Calcula a porcentagem de valores nulos em cada coluna
     null_percentage = (df == 0).mean()
 
-    # Seleciona as colunas que possuem uma porcentagem de valores nulos maior que o threshold
+    # Seleciona as colunas que possuem uma porcentagem de valores nulos menor ou igual ao threshold
     columns_to_remove = null_percentage[null_percentage > threshold].index.tolist()
 
     target = 'lbl_exploits_has'
-    columns_to_remove.remove(target)
+    if target in columns_to_remove:
+        columns_to_remove.remove(target)
 
     mlflow.log_metric("percentage_to_remove_column", threshold)
     print("percentage to remove column: ", threshold)

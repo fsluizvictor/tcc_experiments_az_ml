@@ -30,7 +30,7 @@ outputs:
     type: uri_folder
 code: .
 environment:
-  azureml:train-dependencies:v7
+  azureml:train-dependencies:v8
 command: >-
   python train_hyperparameters.py 
   --train_data ${{inputs.train_data}} 
