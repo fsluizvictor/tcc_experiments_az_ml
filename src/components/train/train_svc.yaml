@@ -1,0 +1,31 @@
+name: train_vrex_defaults_model
+display_name: Train VREX Defaults Model
+type: command
+inputs:
+  train_data: 
+    type: uri_folder
+  test_data: 
+    type: uri_folder
+
+  kernel_to_svc:
+    type: string
+  gamma_to_svc:
+    type: string
+
+outputs:
+  model:
+    type: uri_folder
+code: .
+environment:
+  azureml:train-dependencies:v8
+command: >-
+  python train_hyperparameters.py 
+  --train_data ${{inputs.train_data}} 
+  --test_data ${{inputs.test_data}} 
+  --kernel_to_svc ${{inputs.kernel_to_svc}}
+  --gamma_to_svc ${{inputs.gamma_to_svc}}
+  --model ${{outputs.model}}
+
+
+
+    

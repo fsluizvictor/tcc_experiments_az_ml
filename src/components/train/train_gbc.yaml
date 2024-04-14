@@ -1,0 +1,31 @@
+name: train_vrex_defaults_model
+display_name: Train VREX Defaults Model
+type: command
+inputs:
+  train_data: 
+    type: uri_folder
+  test_data: 
+    type: uri_folder
+
+  n_estimators_to_gbc:
+    type: number
+  learning_rate_to_gbc:
+    type: number
+
+outputs:
+  model:
+    type: uri_folder
+code: .
+environment:
+  azureml:train-dependencies:v8
+command: >-
+  python train_hyperparameters.py 
+  --train_data ${{inputs.train_data}} 
+  --test_data ${{inputs.test_data}} 
+  --n_estimators_to_gbc ${{inputs.n_estimators_to_gbc}}
+  --learning_rate_to_gbc ${{inputs.learning_rate_to_gbc}}
+  --model ${{outputs.model}}
+
+
+
+    
