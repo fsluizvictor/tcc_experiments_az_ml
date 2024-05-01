@@ -12,7 +12,7 @@ outputs:
     type: uri_folder
 code: .
 environment:
-  azureml:train-dependencies:v8
+  azureml:train-dependencies:v5
 command: >-
   python train_nbc.py 
   --train_data ${{inputs.train_data}} 

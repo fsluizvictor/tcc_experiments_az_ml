@@ -39,7 +39,6 @@ def main():
     
     _train_pipeline(clf=RandomForestClassifier(n_estimators=args.n_estimators_to_rfc),
                         model_name="RandomForestClassifier",
-                        path_to_model=args.model,
                         X_train=X_train,
                         X_test=X_test,
                         y_train=y_train,
@@ -48,14 +47,12 @@ def main():
         
 def _train_pipeline(clf,
                     model_name,
-                    path_to_model,
                     X_train,
                     X_test,
                     y_train,
                     y_test):
     sklearn_models(clf,
                     model_name,
-                    path_to_model,
                     X_train,
                     X_test,
                     y_train,
