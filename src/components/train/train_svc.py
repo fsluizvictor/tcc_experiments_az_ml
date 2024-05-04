@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 from sklearn.svm import SVC
-from train_utils import select_first_file, sklearn_models
+from train_utils import select_first_file, train_and_log_model
 
 def main():
     """Main function of the script."""
@@ -51,7 +51,7 @@ def _train_pipeline(clf,
                     X_test,
                     y_train,
                     y_test):
-    sklearn_models(clf,
+    train_and_log_model(clf,
                     model_name,
                     X_train,
                     X_test,

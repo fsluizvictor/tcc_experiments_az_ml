@@ -2,7 +2,7 @@ import argparse
 import os
 import pandas as pd
 
-from train_utils import select_first_file, xgboost_models
+from train_utils import select_first_file, train_and_log_model
 import xgboost as xgb
 
 def main():
@@ -52,7 +52,7 @@ def _train_pipeline(clf,
                     X_test,
                     y_train,
                     y_test):
-    xgboost_models(clf,
+    train_and_log_model(clf,
                     model_name,
                     X_train,
                     X_test,

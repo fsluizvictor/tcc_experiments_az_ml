@@ -5,7 +5,6 @@ import mlflow.xgboost
 import numpy as np
 
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report
-from sklearn.model_selection import TimeSeriesSplit
 
 def select_first_file(path) -> str:
     """Selecione o primeiro arquivo em uma pasta, assumindo que há apenas um arquivo na pasta.
@@ -21,26 +20,6 @@ def select_first_file(path) -> str:
 
 os.makedirs("./outputs", exist_ok=True)
     
-def cross_validation_train_and_log_model(clf, model_name, X_train, y_train, n_splits=5):
-    """Executa validação cruzada para treinamento e registro de modelos.
-    
-    Args:
-        clf: Classificador ou regressor a ser treinado.
-        model_name (str): Nome do modelo para o run do MLflow.
-        X_train (array-like): Dados de treinamento de entrada.
-        y_train (array-like): Rótulos de treinamento.
-        n_splits (int): Número de partições para validação cruzada.
-    """
-    tscv = TimeSeriesSplit(n_splits=n_splits)
-    
-    for train_index, val_index in tscv.split(X_train):
-        X_train_fold, X_val_fold = X_train[train_index], X_train[val_index]
-        y_train_fold, y_val_fold = y_train[train_index], y_train[val_index]
-        
-        # Executa o treinamento e registro do modelo para cada dobra
-        train_and_log_model(clf, model_name, X_train_fold, X_val_fold, y_train_fold, y_val_fold)
-
-
 def train_and_log_model(clf,
                     model_name,
                     X_train,
