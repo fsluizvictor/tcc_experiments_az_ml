@@ -62,11 +62,7 @@ def train_and_log_model(clf,
             precision = precision_score(y_test, y_pred)
             recall = recall_score(y_test, y_pred)
 
-<<<<<<< HEAD
             print(f"Metrics:accuracy:{accuracy},f1:{f1},precision{precision},recall{recall}")
-=======
-            print(f"accuracy: {accuracy}, f1: {f1}, precision: {precision}, recall: {recall}")
->>>>>>> 684aa70 (feat : add more logs)
 
             _log_metrcics(accuracy, f1, precision, recall)
         
