@@ -62,7 +62,11 @@ def train_and_log_model(clf,
             precision = precision_score(y_test, y_pred)
             recall = recall_score(y_test, y_pred)
 
+<<<<<<< HEAD
             print(f"Metrics:accuracy:{accuracy},f1:{f1},precision{precision},recall{recall}")
+=======
+            print(f"accuracy: {accuracy}, f1: {f1}, precision: {precision}, recall: {recall}")
+>>>>>>> 684aa70 (feat : add more logs)
 
             _log_metrcics(accuracy, f1, precision, recall)
         
@@ -80,9 +84,6 @@ def _validate_inputs(X_train, X_test, y_train, y_test):
     Raises:
         ValueError: Se os dados de entrada não forem consistentes ou contiverem valores inválidos.
     """
-    if not (isinstance(X_train, (np.ndarray, list)) and isinstance(X_test, (np.ndarray, list)) and 
-            isinstance(y_train, (np.ndarray, list)) and isinstance(y_test, (np.ndarray, list))):
-        raise ValueError("Os dados de entrada devem ser arrays ou listas.")
     
     if len(X_train) != len(y_train) or len(X_test) != len(y_test):
         raise ValueError("Os tamanhos dos conjuntos de entrada e saída devem ser iguais.")
