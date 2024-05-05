@@ -19,7 +19,7 @@ def select_first_file(path) -> str:
     return os.path.join(path, files[0])
 
 os.makedirs("./outputs", exist_ok=True)
-    
+
 def train_and_log_model(clf,
                     model_name,
                     X_train,
@@ -87,9 +87,6 @@ def _validate_inputs(X_train, X_test, y_train, y_test):
     if len(X_train) != len(y_train) or len(X_test) != len(y_test):
         raise ValueError("Os tamanhos dos conjuntos de entrada e saída devem ser iguais.")
     
-    if not (is_classifier(clf)):
-        raise ValueError("O classificador deve ser um modelo válido de aprendizado de máquina.")
-
 def _log_metrics(accuracy, f1, precision, recall):
     """Registra as métricas no MLflow.
     
