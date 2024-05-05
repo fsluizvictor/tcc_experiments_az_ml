@@ -26,7 +26,6 @@ def train_and_log_model(clf,
                     X_test,
                     y_train,
                     y_test):
-    _is_active()
     """Treina o modelo e registra as métricas no MLflow.
     
     Args:
@@ -37,16 +36,16 @@ def train_and_log_model(clf,
         X_test (array-like): Dados de teste de entrada.
         y_test (array-like): Rótulos de teste.
     """
-
-    validate_inputs(X_train, X_test, y_train, y_test)
+    print(f"Start train to {model_name}")
+    _is_active()
+    _validate_inputs(X_train, X_test, y_train, y_test)
 
     print(f"Training with data of shape {X_train.shape}")
     
-    if autolog:
-            if model_name == "XGBoostClassifier":
-                mlflow.xgboost.autolog()
-            else:
-                mlflow.sklearn.autolog()
+    if model_name == "XGBoostClassifier":
+        mlflow.xgboost.autolog()
+    else:
+        mlflow.sklearn.autolog()
     
     with mlflow.start_run(run_name=model_name):
         with (mlflow.xgboost.autolog() if model_name == "XGBoostClassifier" else mlflow.sklearn.autolog()):
@@ -62,6 +61,8 @@ def train_and_log_model(clf,
             f1 = f1_score(y_test, y_pred)
             precision = precision_score(y_test, y_pred)
             recall = recall_score(y_test, y_pred)
+
+            print(f"Metrics:accuracy:{accuracy},f1:{f1},precision{precision},recall{recall}")
 
             _log_metrcics(accuracy, f1, precision, recall)
         
