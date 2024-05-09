@@ -42,31 +42,30 @@ def train_and_log_model(clf,
 
     print(f"Training with data of shape {X_train.shape}")
     
-    if model_name == "XGBoostClassifier":
-        mlflow.xgboost.autolog()
-    else:
-        mlflow.sklearn.autolog()
-    
     with mlflow.start_run(run_name=model_name):
-        with (mlflow.xgboost.autolog() if model_name == "XGBoostClassifier" else mlflow.sklearn.autolog()):
-            clf.fit(X_train, y_train)
-            y_pred = clf.predict(X_test)
+        if model_name == "XGBoostClassifier":
+            mlflow.xgboost.autolog()
+        else:
+            mlflow.sklearn.autolog()
 
-            if model_name != "XGBoostClassifier":
-                report = classification_report(y_test, y_pred)
-                print(report)
+        clf.fit(X_train, y_train)
+        y_pred = clf.predict(X_test)
 
-            # Calculating metrics
-            accuracy = accuracy_score(y_test, y_pred)
-            f1 = f1_score(y_test, y_pred)
-            precision = precision_score(y_test, y_pred)
-            recall = recall_score(y_test, y_pred)
+        if model_name != "XGBoostClassifier":
+            report = classification_report(y_test, y_pred)
+            print(report)
 
-            print(f"Metrics:accuracy:{accuracy},f1:{f1},precision{precision},recall{recall}")
+        # Calculating metrics
+        accuracy = accuracy_score(y_test, y_pred)
+        f1 = f1_score(y_test, y_pred)
+        precision = precision_score(y_test, y_pred)
+        recall = recall_score(y_test, y_pred)
 
-            _log_metrcics(accuracy, f1, precision, recall)
+        print(f"Metrics:accuracy: {accuracy},f1: {f1},precision: {precision},recall: {recall}")
+
+        _log_metrics(accuracy, f1, precision, recall)
         
-            mlflow.end_run()
+        mlflow.end_run()
 
 def _validate_inputs(X_train, X_test, y_train, y_test):
     """Verifica se os dados de entrada têm o formato correto.
