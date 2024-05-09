@@ -3,6 +3,7 @@ import numpy as np
 from typing import List
 
 from sklearn.preprocessing import LabelEncoder
+from sklearn.feature_extraction.text import HashingVectorizer
 
 from utils import VREX_PATH, FEATURE_TYPE, FEATURES_TO_MAINTAIN, NEW_FEATURE, NEW_FILE_PATH
 
@@ -22,7 +23,7 @@ def main():
 
     print("step 4 - register by encoder in rows")
     
-    df = _encode_features_by_row(df=df)
+    df = _encode_features_by_row(df=df, features=features, pairs=pairs)
     
     df = df.drop(columns=features)
 
@@ -30,14 +31,21 @@ def main():
     
     df.to_csv(NEW_FILE_PATH, index=False)
 
-def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
+def _encode_features_by_row(df: pd.DataFrame, features, pairs) -> pd.DataFrame:
     encoders_by_row = []
+    hv = HashingVectorizer(analyzer='word', n_features=392)
+
     for idx, row in df.iterrows():
         for column_name, value in row.items():
             if column_name in features and value == 1:
                 encoder = pairs[column_name]
                 encoders_by_row.append(encoder)
-        df.loc[idx, NEW_FEATURE] = _join_encoders(encoders_by_row)
+
+        join_features_str = _join_encoders(encoders_by_row)
+        hashed_features = hv.fit_transform([join_features_str])
+
+        df.loc[idx, NEW_FEATURE] = hashed_features.toarray()[0][0]
+        print(hashed_features.toarray()[0][0])
         encoders_by_row = []
     return df
 
