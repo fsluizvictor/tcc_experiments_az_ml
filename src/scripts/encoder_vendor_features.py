@@ -3,7 +3,7 @@ import numpy as np
 from typing import List
 
 from sklearn.preprocessing import LabelEncoder
-from sklearn.feature_extraction.text import HashingVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 from utils import VREX_PATH, FEATURE_TYPE, FEATURES_TO_MAINTAIN, NEW_FEATURE, NEW_FILE_PATH
 
@@ -33,7 +33,7 @@ def main():
 
 def _encode_features_by_row(df: pd.DataFrame, features, pairs) -> pd.DataFrame:
     encoders_by_row = []
-    hv = HashingVectorizer(analyzer='word', n_features=392)
+    tfidf_vectorizer = TfidfVectorizer()
 
     for idx, row in df.iterrows():
         for column_name, value in row.items():
@@ -42,11 +42,12 @@ def _encode_features_by_row(df: pd.DataFrame, features, pairs) -> pd.DataFrame:
                 encoders_by_row.append(encoder)
 
         join_features_str = _join_encoders(encoders_by_row)
-        hashed_features = hv.fit_transform([join_features_str])
 
-        df.loc[idx, NEW_FEATURE] = hashed_features.toarray()[0][0]
-        print(hashed_features.toarray()[0][0])
-        encoders_by_row = []
+        tfidf_matrix = tfidf_vectorizer.fit_transform([join_features_str])
+
+        tfidf_value = tfidf_matrix.toarray()[0][0]
+
+        df.loc[idx, NEW_FEATURE] = tfidf_value
     return df
 
 def _apply_encoder(features: List[str]):
