@@ -5,56 +5,97 @@ from typing import List
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-from utils import VREX_PATH, FEATURE_TYPE, FEATURES_TO_MAINTAIN, NEW_FEATURE, NEW_FILE_PATH
+from utils import VREX_PATH, FEATURE_TYPE, FEATURES_TO_MAINTAIN, NEW_FEATURE, NEW_FILE_PATH, CONCAT_VENDOR_FEATURES
 
 def main():
     print("starting ...")
     df = _get_df(VREX_PATH) 
     df = _remove_columns(df=df)
-    print("step 1 - extract features")
+
     features = _extract_vendor_features(df=df, feature_type=FEATURE_TYPE, features_to_maintain=FEATURES_TO_MAINTAIN)
-    print("step 2 - apply encoder")
-    encondeds = _apply_encoder(features)
-    print("step 3 - dict of feature by encode")
-    pairs = [(feature, encoder) for feature, encoder in zip(features, encondeds)]
-    pairs = dict(pairs)
 
     df[NEW_FEATURE] = np.nan
 
-    print("step 4 - register by encoder in rows")
-    
-    df = _encode_features_by_row(df=df, features=features, pairs=pairs)
-    
+    df = _build_new_feature(df=df, features=features)
     df = df.drop(columns=features)
 
-    print("step 5 - new file")
+    #df.to_csv(CONCAT_VENDOR_FEATURES, index=False)
     
+    df = _encode_features_by_row(df=df)
     df.to_csv(NEW_FILE_PATH, index=False)
 
-def _encode_features_by_row(df: pd.DataFrame, features, pairs) -> pd.DataFrame:
-    encoders_by_row = []
-    tfidf_vectorizer = TfidfVectorizer()
+def _build_new_feature(df: pd.DataFrame, features: List[str]) -> pd.DataFrame:
+    features_by_row = []
 
     for idx, row in df.iterrows():
         for column_name, value in row.items():
             if column_name in features and value == 1:
-                encoder = pairs[column_name]
-                encoders_by_row.append(encoder)
+                features_by_row.append(column_name)
 
-        join_features_str = _join_encoders(encoders_by_row)
+        join_features_str = _join_encoders(features_by_row)
 
-        tfidf_matrix = tfidf_vectorizer.fit_transform([join_features_str])
-
-        tfidf_value = tfidf_matrix.toarray()[0][0]
-
-        df.loc[idx, NEW_FEATURE] = tfidf_value
+        df.loc[idx, NEW_FEATURE] = join_features_str
+        features_by_row = []
+        join_features_str = ''
     return df
 
-def _apply_encoder(features: List[str]):
-    le = LabelEncoder()
-    le.fit(features)
-    encoded = le.transform(features)
-    return encoded
+def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
+    # Combine as palavras de todas as linhas em um único documento
+    all_words = []
+
+    # Percorra todas as linhas do DataFrame
+    for idx, row in df.iterrows():
+        tfidf_values = []
+
+        # Obtenha as palavras na nova característica para a linha atual
+        words = row[NEW_FEATURE]
+
+        # Verifique se é uma string antes de tentar dividi-la
+        if isinstance(words, str):
+            # Adicione as palavras à lista
+            all_words.extend(words.split(';'))
+
+    # Una todas as palavras em uma única string separada por espaço
+    all_documents = ' '.join(all_words)
+
+    # Inicialize o vetorizador TF-IDF
+    tfidf_vectorizer = TfidfVectorizer()
+
+    # Aplique o vetorizador TF-IDF aos documentos
+    tfidf_matrix = tfidf_vectorizer.fit_transform([all_documents])
+
+    # Obtenha os nomes das características do vetorizador
+    feature_names = tfidf_vectorizer.get_feature_names_out()
+
+    # Para cada linha, calcule a média ponderada dos valores TF-IDF das palavras na nova característica
+    for idx, row in df.iterrows():
+        tfidf_values = []
+
+        # Obtenha as palavras na nova característica para a linha atual
+        words = row[NEW_FEATURE]
+
+        # Verifique se é uma string antes de tentar dividi-la
+        if isinstance(words, str):
+            # Divida a string em palavras
+            for word in words.split(';'):
+                # Para cada palavra na nova característica, obtenha o valor TF-IDF correspondente
+                try:
+                    word_index = feature_names.index(word)
+                    tfidf_value = tfidf_matrix[0, word_index]  # A matriz TF-IDF tem apenas uma linha (documento único)
+                    tfidf_values.append(tfidf_value)
+                except ValueError:
+                    pass
+
+            # Calcule a média ponderada dos valores TF-IDF
+            if tfidf_values:
+                weighted_average = sum(tfidf_values) / len(tfidf_values)
+            else:
+                weighted_average = 0
+
+            # Atribua a média ponderada à nova coluna NEW_FEATURE para a linha atual
+            df.loc[idx, NEW_FEATURE] = weighted_average
+
+    return df
 
 def _get_df(path:str):
     return pd.read_csv(path)
@@ -75,8 +116,8 @@ def _remove_columns(df : pd.DataFrame) -> pd.DataFrame:
                         'lbl_exploits_has'
     ])
 
-def _join_encoders(encoders_by_row):
-    return ';'.join(map(str, encoders_by_row))
+def _join_encoders(features_by_row: List[str]):
+    return ';'.join(features_by_row)
 
 if __name__ == "__main__":
     main()
