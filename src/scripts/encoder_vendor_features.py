@@ -40,60 +40,65 @@ def _build_new_feature(df: pd.DataFrame, features: List[str]) -> pd.DataFrame:
     return df
 
 def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
-    # Combine as palavras de todas as linhas em um único documento
-    all_words = []
-
-    # Percorra todas as linhas do DataFrame
-    for idx, row in df.iterrows():
-        tfidf_values = []
-
-        # Obtenha as palavras na nova característica para a linha atual
-        words = row[NEW_FEATURE]
-
-        # Verifique se é uma string antes de tentar dividi-la
-        if isinstance(words, str):
-            # Adicione as palavras à lista
-            all_words.extend(words.split(';'))
-
-    # Una todas as palavras em uma única string separada por espaço
-    all_documents = ' '.join(all_words)
-
     # Inicialize o vetorizador TF-IDF
     tfidf_vectorizer = TfidfVectorizer()
 
-    # Aplique o vetorizador TF-IDF aos documentos
-    tfidf_matrix = tfidf_vectorizer.fit_transform([all_documents])
+    print(f"Conteúdo da nova característica antes de TF-IDF:\n{df[NEW_FEATURE].head()}")
 
-    # Obtenha os nomes das características do vetorizador
+    # Combine as palavras de todas as linhas em um único documento para criar o vocabulário
+    all_documents = df[NEW_FEATURE].dropna().astype(str).apply(lambda x: x.replace(';', ' ')).values.tolist()
+
+    # Verifique se todos os itens em all_documents são strings
+    all_documents = [' '.join(doc.split()) if isinstance(doc, str) else str(doc) for doc in all_documents]
+    
+    print(f"Documentos combinados para TF-IDF:\n{all_documents[:5]}")
+
+    if not all_documents:
+        raise ValueError("Nenhum documento válido encontrado para a vetorização TF-IDF.")
+
+    tfidf_vectorizer.fit(all_documents)
+
+    # Obtenha os valores TF-IDF para todas as palavras
+    tfidf_matrix = tfidf_vectorizer.transform(all_documents)
     feature_names = tfidf_vectorizer.get_feature_names_out()
+
+    # Calcule a frequência de cada característica em toda a coluna NEW_FEATURE
+    word_counts = {}
+    for idx, row in df.iterrows():
+        words = row[NEW_FEATURE].values[0]
+        words_list = words.split(';')
+        for word in words_list:
+            if word in word_counts:
+                word_counts[word] += 1
+            else:
+                word_counts[word] = 1
+
+
 
     # Para cada linha, calcule a média ponderada dos valores TF-IDF das palavras na nova característica
     for idx, row in df.iterrows():
-        tfidf_values = []
+        words = row[NEW_FEATURE].values[0]
+        words_list = words.split(';')
+        words_list = [word.lower() for word in words_list]
 
-        # Obtenha as palavras na nova característica para a linha atual
-        words = row[NEW_FEATURE]
+        # Calcule os valores TF-IDF das palavras na linha
+        word_tfidf_values = []
+        for word in words_list:
+            if word in feature_names:
+                tfidf_value = tfidf_matrix[idx, feature_names.tolist().index(word)]
+                count = word_counts[word]
+                weighted_value = tfidf_value * count
+                word_tfidf_values.append(weighted_value)
+                print(f"Palavra: {word}, TF-IDF: {tfidf_value}, Contagem: {count}, Valor Ponderado: {weighted_value}")
 
-        # Verifique se é uma string antes de tentar dividi-la
-        if isinstance(words, str):
-            # Divida a string em palavras
-            for word in words.split(';'):
-                # Para cada palavra na nova característica, obtenha o valor TF-IDF correspondente
-                try:
-                    word_index = feature_names.index(word)
-                    tfidf_value = tfidf_matrix[0, word_index]  # A matriz TF-IDF tem apenas uma linha (documento único)
-                    tfidf_values.append(tfidf_value)
-                except ValueError:
-                    pass
+        # Calcule a média ponderada dos valores TF-IDF das palavras presentes na linha
+        total_count = sum(word_counts[word] for word in words_list if word in feature_names)
+        weighted_average = np.sum(word_tfidf_values) / total_count if total_count > 0 else 0
+        print(f"Média Ponderada TF-IDF para a linha {idx}: {weighted_average}")
 
-            # Calcule a média ponderada dos valores TF-IDF
-            if tfidf_values:
-                weighted_average = sum(tfidf_values) / len(tfidf_values)
-            else:
-                weighted_average = 0
+        df.loc[idx, NEW_FEATURE] = weighted_average
 
-            # Atribua a média ponderada à nova coluna NEW_FEATURE para a linha atual
-            df.loc[idx, NEW_FEATURE] = weighted_average
+
 
     return df
 

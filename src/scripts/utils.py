@@ -1,4 +1,4 @@
-VREX_PATH = '/home/luiz/repos/tcc_experiments_az_ml/data/samples/batch_1_years/vrex_2021.csv'
+VREX_PATH = '/home/luiz/repos/tcc_experiments_az_ml/data/samples/batch_1_years/vrex_1999.csv'
 NEW_FILE_PATH = '/home/luiz/repos/tcc_experiments_az_ml/data/vrex_encoder_vendors_tfidf.csv'
 CONCAT_VENDOR_FEATURES = '/home/luiz/repos/tcc_experiments_az_ml/data/vrex_concat_vendors.csv'
 
