@@ -19,7 +19,7 @@ def main():
     df = _build_new_feature(df=df, features=features)
     df = df.drop(columns=features)
 
-    #df.to_csv(CONCAT_VENDOR_FEATURES, index=False)
+    df.to_csv(CONCAT_VENDOR_FEATURES, index=False)
     
     df = _encode_features_by_row(df=df)
     df.to_csv(NEW_FILE_PATH, index=False)
@@ -67,39 +67,39 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
     for idx, row in df.iterrows():
         words = row[NEW_FEATURE].values[0]
         words_list = words.split(';')
+        words_list = [word.lower() for word in words_list]
         for word in words_list:
             if word in word_counts:
                 word_counts[word] += 1
             else:
                 word_counts[word] = 1
 
-
-
     # Para cada linha, calcule a média ponderada dos valores TF-IDF das palavras na nova característica
     for idx, row in df.iterrows():
         words = row[NEW_FEATURE].values[0]
-        words_list = words.split(';')
-        words_list = [word.lower() for word in words_list]
 
-        # Calcule os valores TF-IDF das palavras na linha
-        word_tfidf_values = []
-        for word in words_list:
-            if word in feature_names:
-                tfidf_value = tfidf_matrix[idx, feature_names.tolist().index(word)]
-                count = word_counts[word]
-                weighted_value = tfidf_value * count
-                word_tfidf_values.append(weighted_value)
-                print(f"Palavra: {word}, TF-IDF: {tfidf_value}, Contagem: {count}, Valor Ponderado: {weighted_value}")
+        if not words == "":
+            words_list = words.split(';')
+            words_list = [word.lower() for word in words_list]
 
-        # Calcule a média ponderada dos valores TF-IDF das palavras presentes na linha
-        total_count = sum(word_counts[word] for word in words_list if word in feature_names)
-        weighted_average = np.sum(word_tfidf_values) / total_count if total_count > 0 else 0
-        print(f"Média Ponderada TF-IDF para a linha {idx}: {weighted_average}")
+            # Calcule os valores TF-IDF das palavras na linha
+            word_tfidf_values = []
+            for word in words_list:
+                if word in feature_names:
+                    tfidf_value = tfidf_matrix[idx, feature_names.tolist().index(word)]
+                    count = word_counts[word]
+                    weighted_value = tfidf_value * count
+                    word_tfidf_values.append(weighted_value)
+                    print(f"Palavra: {word}, TF-IDF: {tfidf_value}, Contagem: {count}, Valor Ponderado: {weighted_value}")
 
-        df.loc[idx, NEW_FEATURE] = weighted_average
+            # Calcule a média ponderada dos valores TF-IDF das palavras presentes na linha
+            total_count = sum(word_counts[word] for word in words_list if word in feature_names)
+            weighted_average = np.sum(word_tfidf_values) / total_count if total_count > 0 else 0
+            print(f"Média Ponderada TF-IDF para a linha {idx}: {weighted_average}")
 
-
-
+            df.loc[idx, NEW_FEATURE] = weighted_average
+        else:
+            df.loc[idx, NEW_FEATURE] = 0
     return df
 
 def _get_df(path:str):
