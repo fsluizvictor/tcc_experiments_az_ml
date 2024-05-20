@@ -130,7 +130,6 @@ def _remove_columns(df : pd.DataFrame) -> pd.DataFrame:
                         'lbl_exploits_verified',
                         'idx',
                         'cve',
-                        'lbl_exploits_has'
     ])
 
 def _join_encoders(features_by_row: List[str]):
