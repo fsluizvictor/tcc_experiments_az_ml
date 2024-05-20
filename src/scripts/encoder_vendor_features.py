@@ -45,16 +45,22 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
 
     print(f"Conteúdo da nova característica antes de TF-IDF:\n{df[NEW_FEATURE].head()}")
 
-    # Combine as palavras de todas as linhas em um único documento para criar o vocabulário
-    all_documents = df[NEW_FEATURE].dropna().astype(str).apply(lambda x: x.replace(';', ' ')).values.tolist()
-
-    # Verifique se todos os itens em all_documents são strings
-    all_documents = [' '.join(doc.split()) if isinstance(doc, str) else str(doc) for doc in all_documents]
+    # Crie a lista de todas as características em todas as linhas
+    all_documents = []
+    for idx, row in df.iterrows():
+        words = row[NEW_FEATURE].values[0]
+        if isinstance(words, str):
+            words_list = words.split(';')
+            words_list = [word.lower() for word in words_list]
+            all_documents.extend(words_list)
     
     print(f"Documentos combinados para TF-IDF:\n{all_documents[:5]}")
 
     if not all_documents:
         raise ValueError("Nenhum documento válido encontrado para a vetorização TF-IDF.")
+
+    # Ajuste a lista para o formato esperado pelo TF-IDF
+    all_documents = [' '.join(all_documents)]
 
     tfidf_vectorizer.fit(all_documents)
 
@@ -66,19 +72,21 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
     word_counts = {}
     for idx, row in df.iterrows():
         words = row[NEW_FEATURE].values[0]
-        words_list = words.split(';')
-        words_list = [word.lower() for word in words_list]
-        for word in words_list:
-            if word in word_counts:
-                word_counts[word] += 1
-            else:
-                word_counts[word] = 1
+        if isinstance(words, str):
+            words_list = words.split(';')
+            words_list = [word.lower() for word in words_list]
+            for word in words_list:
+                if word in word_counts:
+                    word_counts[word] += 1
+                else:
+                    word_counts[word] = 1
+
+    print(f"Frequência das características: {word_counts}")
 
     # Para cada linha, calcule a média ponderada dos valores TF-IDF das palavras na nova característica
     for idx, row in df.iterrows():
         words = row[NEW_FEATURE].values[0]
-
-        if not words == "":
+        if isinstance(words, str):
             words_list = words.split(';')
             words_list = [word.lower() for word in words_list]
 
@@ -86,7 +94,8 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
             word_tfidf_values = []
             for word in words_list:
                 if word in feature_names:
-                    tfidf_value = tfidf_matrix[idx, feature_names.tolist().index(word)]
+                    index = feature_names.tolist().index(word)
+                    tfidf_value = tfidf_matrix[0, index]
                     count = word_counts[word]
                     weighted_value = tfidf_value * count
                     word_tfidf_values.append(weighted_value)
@@ -96,6 +105,9 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
             total_count = sum(word_counts[word] for word in words_list if word in feature_names)
             weighted_average = np.sum(word_tfidf_values) / total_count if total_count > 0 else 0
             print(f"Média Ponderada TF-IDF para a linha {idx}: {weighted_average}")
+
+            words_list = []
+            word_tfidf_values = []
 
             df.loc[idx, NEW_FEATURE] = weighted_average
         else:
