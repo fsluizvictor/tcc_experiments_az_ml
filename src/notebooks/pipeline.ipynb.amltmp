@@ -27,7 +27,7 @@
       "execution_count": 1,
       "metadata": {
         "gather": {
-          "logged": 1715272338327
+          "logged": 1716343036351
         }
       }
     },
@@ -58,7 +58,7 @@
           }
         },
         "gather": {
-          "logged": 1715272339008
+          "logged": 1716343036832
         }
       }
     },
@@ -91,7 +91,7 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Data to train asset URI: azureml://subscriptions/a3f56f48-3efb-4970-81a3-e4eda598333c/resourcegroups/luiz.victor.dev-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/4722af391476dd8597905df3c3ae6d19/vrex_consolidated_2008_2017.csv - name: vrex_consolidated_2008_2017\nData to test asset URI: azureml://subscriptions/a3f56f48-3efb-4970-81a3-e4eda598333c/resourcegroups/luiz.victor.dev-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/154dc9171c762e1cab20b8998d7d1c63/vrex_consolidated_2018_2021.csv - name: vrex_consolidated_2018_2021\n"
+          "text": "Data to train asset URI: azureml://subscriptions/a3f56f48-3efb-4970-81a3-e4eda598333c/resourcegroups/luiz.victor.dev-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/e363ff29fa18e47a4feef89cdf79094d/vrex_vendor_tf_idf_2008_2009_2010_2011_2012_2013_2014_2015_2016_2017_.csv - name: vrex_vendor_tf_idf_2008_2009_2010_2011_2012_2013_2014_2015_2016_2017_\nData to test asset URI: azureml://subscriptions/a3f56f48-3efb-4970-81a3-e4eda598333c/resourcegroups/luiz.victor.dev-rg/workspaces/tcc-experiments/datastores/workspaceblobstore/paths/LocalUpload/285dd7e8dcbcd160e13cc7e7b81709cd/vrex_vendor_tf_idf_2018_2019_2020_2021_.csv - name: vrex_vendor_tf_idf_2018_2019_2020_2021_\n"
         }
       ],
       "execution_count": 3,
@@ -106,7 +106,7 @@
           }
         },
         "gather": {
-          "logged": 1715272339090
+          "logged": 1716343037315
         }
       }
     },
@@ -130,8 +130,13 @@
       "outputs": [
         {
           "output_type": "stream",
+          "name": "stderr",
+          "text": "\r\u001b[32mUploading preparation (0.01 MBs):   0%|          | 0/5796 [00:00<?, ?it/s]\r\u001b[32mUploading preparation (0.01 MBs): 100%|██████████| 5796/5796 [00:00<00:00, 69980.53it/s]\n\u001b[39m\n\n"
+        },
+        {
+          "output_type": "stream",
           "name": "stdout",
-          "text": "Component data_prep_vrex_defaults_model with Version 2024-05-09-16-32-19-5527283 is registered\n"
+          "text": "Component data_prep_vrex_defaults_model with Version 2024-05-22-01-57-20-0242393 is registered\n"
         }
       ],
       "execution_count": 4,
@@ -146,7 +151,7 @@
           }
         },
         "gather": {
-          "logged": 1715272341232
+          "logged": 1716343041486
         }
       }
     },
@@ -170,8 +175,13 @@
       "outputs": [
         {
           "output_type": "stream",
+          "name": "stderr",
+          "text": "\u001b[32mUploading train (0.02 MBs): 100%|██████████| 16530/16530 [00:00<00:00, 67957.07it/s]\n\u001b[39m\n\n"
+        },
+        {
+          "output_type": "stream",
           "name": "stdout",
-          "text": "Component train_gbc_model with Version 2024-05-09-16-32-21-6554564 is registered\n"
+          "text": "Component train_gbc_model with Version 2024-05-22-01-57-23-0386188 is registered\n"
         }
       ],
       "execution_count": 5,
@@ -186,7 +196,7 @@
           }
         },
         "gather": {
-          "logged": 1715272342799
+          "logged": 1716343044405
         }
       }
     },
@@ -211,7 +221,7 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Component train_nbc_model with Version 2024-05-09-16-32-23-0097993 is registered\n"
+          "text": "Component train_nbc_model with Version 2024-05-22-01-57-24-5192441 is registered\n"
         }
       ],
       "execution_count": 6,
@@ -226,7 +236,7 @@
           }
         },
         "gather": {
-          "logged": 1715272344325
+          "logged": 1716343045517
         }
       }
     },
@@ -251,7 +261,7 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Component train_rfc_model with Version 2024-05-09-16-32-24-6036187 is registered\n"
+          "text": "Component train_rfc_model with Version 2024-05-22-01-57-25-8338026 is registered\n"
         }
       ],
       "execution_count": 7,
@@ -266,7 +276,7 @@
           }
         },
         "gather": {
-          "logged": 1715272345678
+          "logged": 1716343046748
         }
       }
     },
@@ -291,7 +301,7 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Component train_svc_model with Version 2024-05-09-16-32-25-9553209 is registered\n"
+          "text": "Component train_svc_model with Version 2024-05-22-01-57-27-0863457 is registered\n"
         }
       ],
       "execution_count": 8,
@@ -306,7 +316,7 @@
           }
         },
         "gather": {
-          "logged": 1715272347303
+          "logged": 1716343047996
         }
       }
     },
@@ -331,7 +341,7 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Component train_xgb_model with Version 2024-05-09-16-32-27-6108685 is registered\n"
+          "text": "Component train_xgb_model with Version 2024-05-22-01-57-28-3129917 is registered\n"
         }
       ],
       "execution_count": 9,
@@ -346,7 +356,7 @@
           }
         },
         "gather": {
-          "logged": 1715272348679
+          "logged": 1716343049416
         }
       }
     },
@@ -382,7 +392,7 @@
           }
         },
         "gather": {
-          "logged": 1715272348785
+          "logged": 1716343049513
         }
       }
     },
@@ -410,8 +420,8 @@
         "    )\n",
         "\n",
         "    train_gbc_job = train_gbc(\n",
-        "        train_data=data_prep_job.outputs.train_data,  # note: using outputs from previous step\n",
-        "        test_data=data_prep_job.outputs.test_data,  # note: using outputs from previous step\n",
+        "        train_data=data_prep_job.outputs.train_data,  \n",
+        "        test_data=data_prep_job.outputs.test_data,  \n",
         "        n_estimators_to_gbc=Choice(values=[50, 100, 200]),\n",
         "        learning_rate_to_gbc=Uniform(min_value=0.01, max_value=0.3),\n",
         "    )\n",
@@ -440,7 +450,7 @@
           }
         },
         "gather": {
-          "logged": 1715272348932
+          "logged": 1716343049668
         }
       }
     },
@@ -485,7 +495,7 @@
           }
         },
         "gather": {
-          "logged": 1715272349023
+          "logged": 1716343049753
         }
       }
     },
@@ -514,8 +524,8 @@
         "    )\n",
         "\n",
         "    train_rfc_job = train_rfc(\n",
-        "        train_data=data_prep_job.outputs.train_data,  # note: using outputs from previous step\n",
-        "        test_data=data_prep_job.outputs.test_data,  # note: using outputs from previous step\n",
+        "        train_data=data_prep_job.outputs.train_data,  \n",
+        "        test_data=data_prep_job.outputs.test_data,  \n",
         "        n_estimators_to_rfc=Choice(values=[50, 100, 200]),\n",
         "    )\n",
         "\n",
@@ -542,7 +552,7 @@
           }
         },
         "gather": {
-          "logged": 1715272349112
+          "logged": 1716343049943
         }
       }
     },
@@ -571,8 +581,8 @@
         "    )\n",
         "\n",
         "    train_svc_job = train_svc(\n",
-        "        train_data=data_prep_job.outputs.train_data,  # note: using outputs from previous step\n",
-        "        test_data=data_prep_job.outputs.test_data,  # note: using outputs from previous step\n",
+        "        train_data=data_prep_job.outputs.train_data,  \n",
+        "        test_data=data_prep_job.outputs.test_data,  \n",
         "        kernel_to_svc=Choice(values=[\"linear\", \"rbf\", \"poly\", \"sigmoid\",\"precomputed\"]),\n",
         "        gamma_to_svc=Choice(values=[\"scale\", \"auto\"]),\n",
         "    )\n",
@@ -600,7 +610,7 @@
           }
         },
         "gather": {
-          "logged": 1715272349188
+          "logged": 1716343050055
         }
       }
     },
@@ -629,8 +639,8 @@
         "    )\n",
         "\n",
         "    train_xgb_job = train_xgb(\n",
-        "        train_data=data_prep_job.outputs.train_data,  # note: using outputs from previous step\n",
-        "        test_data=data_prep_job.outputs.test_data,  # note: using outputs from previous step\n",
+        "        train_data=data_prep_job.outputs.train_data,  \n",
+        "        test_data=data_prep_job.outputs.test_data,  \n",
         "        n_estimators_to_xgb=Choice(values=[100, 500, 1000]),\n",
         "        learning_rate_to_xgb=Uniform(min_value=0.01, max_value=0.3),\n",
         "    )\n",
@@ -658,7 +668,7 @@
           }
         },
         "gather": {
-          "logged": 1715272349277
+          "logged": 1716343050153
         }
       }
     },
@@ -669,37 +679,37 @@
         "\n",
         "for data_to_train, data_to_test in zip(arr_data_to_train, arr_data_to_test):\n",
         "\n",
-        "    #pipelines.append(train_nbc_pipeline(\n",
-        "    #    data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
-        "    #    data_to_test=Input(type=\"uri_file\", path=data_to_test.path),\n",
-        "    #    flag_remove_null_values=False,\n",
-        "    #    flag_remove_values_by_percentage=False,\n",
-        "    #    percentage_to_remove_column=0,\n",
-        "    #))\n",
+        "    pipelines.append(train_nbc_pipeline(\n",
+        "        data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
+        "        data_to_test=Input(type=\"uri_file\", path=data_to_test.path),\n",
+        "        flag_remove_null_values=False,\n",
+        "        flag_remove_values_by_percentage=False,\n",
+        "        percentage_to_remove_column=0,\n",
+        "    ))\n",
         "\n",
-        "    #pipelines.append(train_gbc_pipeline(\n",
-        "    #    data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
-        "    #    data_to_test=Input(type=\"uri_file\", path=data_to_test.path),\n",
-        "    #    flag_remove_null_values=False,\n",
-        "    #    flag_remove_values_by_percentage=False,\n",
-        "    #    percentage_to_remove_column=0,\n",
-        "    #))\n",
+        "    pipelines.append(train_gbc_pipeline(\n",
+        "        data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
+        "        data_to_test=Input(type=\"uri_file\", path=data_to_test.path),\n",
+        "        flag_remove_null_values=False,\n",
+        "        flag_remove_values_by_percentage=False,\n",
+        "        percentage_to_remove_column=0,\n",
+        "    ))\n",
         "\n",
-        "    #pipelines.append(train_rfc_pipeline(\n",
-        "    #    data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
-        "    #    data_to_test=Input(type=\"uri_file\", path=data_to_test.path),\n",
-        "    #    flag_remove_null_values=False,\n",
-        "    #    flag_remove_values_by_percentage=False,\n",
-        "    #    percentage_to_remove_column=0,\n",
-        "    #))\n",
+        "    pipelines.append(train_rfc_pipeline(\n",
+        "        data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
+        "        data_to_test=Input(type=\"uri_file\", path=data_to_test.path),\n",
+        "        flag_remove_null_values=False,\n",
+        "        flag_remove_values_by_percentage=False,\n",
+        "        percentage_to_remove_column=0,\n",
+        "    ))\n",
         "\n",
-        "    #pipelines.append(train_svc_pipeline(\n",
-        "    #    data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
-        "    #    data_to_test=Input(type=\"uri_file\", path=data_to_test.path),\n",
-        "    #    flag_remove_null_values=False,\n",
-        "    #    flag_remove_values_by_percentage=False,\n",
-        "    #    percentage_to_remove_column=0,\n",
-        "    #))\n",
+        "    pipelines.append(train_svc_pipeline(\n",
+        "        data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
+        "        data_to_test=Input(type=\"uri_file\", path=data_to_test.path),\n",
+        "        flag_remove_null_values=False,\n",
+        "        flag_remove_values_by_percentage=False,\n",
+        "        percentage_to_remove_column=0,\n",
+        "    ))\n",
         "\n",
         "    pipelines.append(train_xgb_pipeline(\n",
         "        data_to_train=Input(type=\"uri_file\", path=data_to_train.path),\n",
@@ -722,7 +732,7 @@
           }
         },
         "gather": {
-          "logged": 1715272349372
+          "logged": 1716343050252
         }
       }
     },
@@ -731,7 +741,7 @@
       "source": [
         "import datetime as dt\n",
         "\n",
-        "models = ['xgb']\n",
+        "models = ['nbc', 'gbc', 'rfc', 'svc', 'xgb']\n",
         "\n",
         "def _get_experiment_names() -> [str]:\n",
         "    experiment_names = []\n",
@@ -741,7 +751,7 @@
         "            formatted_time = current_time.strftime(\"%Y_%m_%d_%H_%M_%S\")  # Formata a data e hora atual\n",
         "            train_name_base = train_name.split('.')[0]\n",
         "            test_name_base = test_name.split('.')[0]\n",
-        "            name = f\"{train_name_base}_tested_{test_name_base}_model_{model_name}_complete_data_1\"\n",
+        "            name = f\"{train_name_base}_tested_{test_name_base}_model_{model_name}_encoded_data_1\"\n",
         "            experiment_names.append(name)\n",
         "            print(name)\n",
         "    return experiment_names\n"
@@ -759,7 +769,7 @@
           }
         },
         "gather": {
-          "logged": 1715272349452
+          "logged": 1716343050358
         }
       }
     },
@@ -783,7 +793,7 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "vrex_consolidated_2008_2017_tested_vrex_consolidated_2018_2021_model_xgb_complete_data_1\nRunId: nifty_foot_v99yt2sqb6\nWeb View: https://ml.azure.com/runs/nifty_foot_v99yt2sqb6?wsid=/subscriptions/a3f56f48-3efb-4970-81a3-e4eda598333c/resourcegroups/luiz.victor.dev-rg/workspaces/tcc-experiments\n\nStreaming logs/azureml/executionlogs.txt\n========================================\n\n[2024-05-09 16:32:33Z] Submitting 1 runs, first five are: abd8577a:59624326-4d3e-4246-85d7-7a37016a5437\n[2024-05-09 16:41:26Z] Completing processing run id 59624326-4d3e-4246-85d7-7a37016a5437.\n[2024-05-09 16:41:26Z] Submitting 1 runs, first five are: 16e83786:92603d5b-88a8-4fd4-969d-93edc1795d00\n"
+          "text": "vrex_vendor_tf_idf_2008_2009_2010_2011_2012_2013_2014_2015_2016_2017__tested_vrex_vendor_tf_idf_2018_2019_2020_2021__model_xgb_encoded_data_1\nRunId: witty_pillow_ch8r1gsqzs\nWeb View: https://ml.azure.com/runs/witty_pillow_ch8r1gsqzs?wsid=/subscriptions/a3f56f48-3efb-4970-81a3-e4eda598333c/resourcegroups/luiz.victor.dev-rg/workspaces/tcc-experiments\n\nStreaming logs/azureml/executionlogs.txt\n========================================\n\n[2024-05-22 01:57:36Z] Submitting 1 runs, first five are: 9bdbdb2b:ab6f6abd-47cf-4755-b7ee-dd66603cb4f3\n[2024-05-22 02:02:06Z] Completing processing run id ab6f6abd-47cf-4755-b7ee-dd66603cb4f3.\n[2024-05-22 02:02:07Z] Submitting 1 runs, first five are: 16004bf6:9b95f5e8-5c89-4c86-8850-017f27576fb4\n[2024-05-22 02:07:52Z] Completing processing run id 9b95f5e8-5c89-4c86-8850-017f27576fb4.\n\nExecution Summary\n=================\nRunId: witty_pillow_ch8r1gsqzs\nWeb View: https://ml.azure.com/runs/witty_pillow_ch8r1gsqzs?wsid=/subscriptions/a3f56f48-3efb-4970-81a3-e4eda598333c/resourcegroups/luiz.victor.dev-rg/workspaces/tcc-experiments\n\n"
         }
       ],
       "execution_count": 18,
@@ -798,7 +808,7 @@
           }
         },
         "gather": {
-          "logged": 1715264124838
+          "logged": 1716343676646
         }
       }
     }
