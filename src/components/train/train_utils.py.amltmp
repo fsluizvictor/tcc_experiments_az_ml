@@ -56,14 +56,14 @@ def train_and_log_model(clf,
             print(report)
 
         # Calculating metrics
-        accuracy = accuracy_score(y_test, y_pred)
-        f1 = f1_score(y_test, y_pred)
-        precision = precision_score(y_test, y_pred)
-        recall = recall_score(y_test, y_pred)
+        #accuracy = accuracy_score(y_test, y_pred)
+        #f1 = f1_score(y_test, y_pred)
+        #precision = precision_score(y_test, y_pred)
+        #recall = recall_score(y_test, y_pred)
 
-        print(f"Metrics:accuracy: {accuracy},f1: {f1},precision: {precision},recall: {recall}")
+        #print(f"Metrics:accuracy: {accuracy},f1: {f1},precision: {precision},recall: {recall}")
 
-        _log_metrics(accuracy, f1, precision, recall)
+        #_log_metrics(accuracy, f1, precision, recall)
         
         mlflow.end_run()
 

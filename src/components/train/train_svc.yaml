@@ -17,7 +17,7 @@ outputs:
     type: uri_folder
 code: .
 environment:
-  azureml:train-dependencies:v6
+  azureml:train-dependencies:v9
 command: >-
   python train_svc.py 
   --train_data ${{inputs.train_data}} 

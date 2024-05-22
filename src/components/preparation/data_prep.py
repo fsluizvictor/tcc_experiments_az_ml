@@ -70,16 +70,7 @@ def main():
     
     
 def _remove_columns(df):
-    return df.drop(columns=[  'lbl_exploits_delta_days',	
-                        'lbl_exploits_weaponized_type_ENUM_absent',
-                        'lbl_exploits_weaponized_type_ENUM_other',	
-                        'lbl_exploits_weaponized_type_ENUM_auxiliary',
-                        'lbl_exploits_weaponized_type_ENUM_exploit',
-                        'lbl_exploits_weaponized_count',
-                        'lbl_exploits_verified',
-                        'idx',
-                        'cve'
-    ])
+    return df.drop(columns=['cve'])
     
 def _remove_values(df, threshold=0):
     all_columns = df.columns.tolist()
