@@ -2,31 +2,28 @@ import csv
 import os
 from typing import List
 
-from utils import NEW_FILE_PATH
+from utils import RANGE_YEARS_TEST, RANGE_YEARS_TRAIN, VREX_ENCODER_VENDORS_TFIDF, NEW_FILE_BASE_PATH
 
-def batch_csv(csv_file_path : str, years_range : List[int]):
-    # Verifica se o arquivo de entrada existe
+def main():
+    years_to_train = [year for year in range(RANGE_YEARS_TRAIN[0],RANGE_YEARS_TRAIN[1])]
+    years_to_test = [year for year in range(RANGE_YEARS_TEST[0],RANGE_YEARS_TEST[1])]
+
+    _batch_csv(csv_file_path=VREX_ENCODER_VENDORS_TFIDF, years_range=years_to_train)
+    _batch_csv(csv_file_path=VREX_ENCODER_VENDORS_TFIDF, years_range=years_to_test)
+
+def _batch_csv(csv_file_path : str, years_range : List[int]):
     if not os.path.isfile(csv_file_path):
-        print(f"O arquivo {csv_file_path} não existe.")
         return
-
-    # Abre o arquivo de entrada para leitura
     with open(csv_file_path, 'r', newline='') as arquivo_csv:
         csv_read = csv.reader(arquivo_csv)
         
-        # Lê o cabeçalho do arquivo
         header = next(csv_read)
 
-        # Inicializa variáveis
-        numero_arquivo = 1
-        count_lines = 0
-        
         csv_name = ""
         for year in years_range:
             csv_name += str(year) + "_"
         
-        # Cria o primeiro arquivo de saída
-        new_file = f"/home/luiz/repos/tcc_experiments_az_ml/data/samples/vrex_vendor_tf_idf_{csv_name}.csv"
+        new_file = f"{NEW_FILE_BASE_PATH}{csv_name}.csv"
         with open(new_file, 'w', newline='') as new_csv:
             writer_csv = csv.writer(new_csv)
             writer_csv.writerow(header)
@@ -40,29 +37,10 @@ def batch_csv(csv_file_path : str, years_range : List[int]):
                 else:
                     exit
 
-    print(f"A divisão do arquivo foi concluída. Foi criado um novo arquivo CSV para o ano {year}.")
-
-# Exemplo de uso
-csv_file_path = NEW_FILE_PATH
-years = [year for year in range(1999, 2022)]
-years.sort(reverse=True)
-
-count = 0
-batch = []
-batchs = []
-
-for year in years:
-    count = count + 1
-    batch.append(year)
-    if count == 1 or year == years[len(years) - 1]:
-        count = 0
-        batchs.append(batch)
-        batch = []   
-
 def _contains(years_range: List[int], cve_year: int) -> bool:
     for year in years_range:
         if year == cve_year:
             return True
 
-for batch in batchs:
-    batch_csv(csv_file_path,batch)
+if __name__ == "__main__":
+    main()
