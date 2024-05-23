@@ -2,27 +2,25 @@ import pandas as pd
 import numpy as np
 from typing import List
 
-from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-from utils import VREX_PATH, FEATURE_TYPE, FEATURES_TO_MAINTAIN, NEW_FEATURE, NEW_FILE_PATH, CONCAT_VENDOR_FEATURES
+from utils import VREX_ENCODER_VENDORS_TFIDF_TO_REF_TYPE, FEATURE_TYPE_REFERENCE_TYPE_ENUM, FEATURES_TO_MAINTAIN, CONCAT_REFERENCE_TYPE_FEATURE, NEW_FILE_PATH, CONCAT_VENDOR_FEATURES, VREX_ENCODER_TFIDF, CONCAT_REFERENCES_FEATURES
 
 def main():
     print("starting ...")
-    df = _get_df(VREX_PATH) 
-    df = _remove_columns(df=df)
+    df = _get_df(VREX_ENCODER_VENDORS_TFIDF_TO_REF_TYPE) 
 
-    features = _extract_vendor_features(df=df, feature_type=FEATURE_TYPE, features_to_maintain=FEATURES_TO_MAINTAIN)
+    features = _extract_reference_type_features(df=df, feature_type=FEATURE_TYPE_REFERENCE_TYPE_ENUM)
 
-    df[NEW_FEATURE] = np.nan
+    df[CONCAT_REFERENCE_TYPE_FEATURE] = np.nan
 
     df = _build_new_feature(df=df, features=features)
     df = df.drop(columns=features)
 
-    df.to_csv(CONCAT_VENDOR_FEATURES, index=False)
+    df.to_csv(CONCAT_REFERENCES_FEATURES, index=False)
     
     df = _encode_features_by_row(df=df)
-    df.to_csv(NEW_FILE_PATH, index=False)
+    df.to_csv(VREX_ENCODER_TFIDF, index=False)
 
 def _build_new_feature(df: pd.DataFrame, features: List[str]) -> pd.DataFrame:
     features_by_row = []
@@ -34,7 +32,7 @@ def _build_new_feature(df: pd.DataFrame, features: List[str]) -> pd.DataFrame:
 
         join_features_str = _join_encoders(features_by_row)
 
-        df.loc[idx, NEW_FEATURE] = join_features_str
+        df.loc[idx, CONCAT_REFERENCE_TYPE_FEATURE] = join_features_str
         features_by_row = []
         join_features_str = ''
     return df
@@ -43,12 +41,12 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
     # Inicialize o vetorizador TF-IDF
     tfidf_vectorizer = TfidfVectorizer()
 
-    print(f"Conteúdo da nova característica antes de TF-IDF:\n{df[NEW_FEATURE].head()}")
+    print(f"Conteúdo da nova característica antes de TF-IDF:\n{df[CONCAT_REFERENCE_TYPE_FEATURE].head()}")
 
     # Crie a lista de todas as características em todas as linhas
     all_documents = []
     for idx, row in df.iterrows():
-        words = row[NEW_FEATURE].values[0]
+        words = row[CONCAT_REFERENCE_TYPE_FEATURE]
         if isinstance(words, str):
             words_list = words.split(';')
             words_list = [word.lower() for word in words_list]
@@ -71,7 +69,7 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
     # Calcule a frequência de cada característica em toda a coluna NEW_FEATURE
     word_counts = {}
     for idx, row in df.iterrows():
-        words = row[NEW_FEATURE].values[0]
+        words = row[CONCAT_REFERENCE_TYPE_FEATURE]
         if isinstance(words, str):
             words_list = words.split(';')
             words_list = [word.lower() for word in words_list]
@@ -85,8 +83,8 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
 
     # Para cada linha, calcule a média ponderada dos valores TF-IDF das palavras na nova característica
     for idx, row in df.iterrows():
-        words = row[NEW_FEATURE].values[0]
-        if isinstance(words, str):
+        words = row[CONCAT_REFERENCE_TYPE_FEATURE]
+        if not words == '':
             words_list = words.split(';')
             words_list = [word.lower() for word in words_list]
 
@@ -109,27 +107,16 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
             words_list = []
             word_tfidf_values = []
 
-            df.loc[idx, NEW_FEATURE] = weighted_average
+            df.loc[idx, CONCAT_REFERENCE_TYPE_FEATURE] = weighted_average
         else:
-            df.loc[idx, NEW_FEATURE] = 0
+            df.loc[idx, CONCAT_REFERENCE_TYPE_FEATURE] = 0
     return df
 
 def _get_df(path:str):
     return pd.read_csv(path)
 
-def _extract_vendor_features(df: pd.DataFrame, feature_type: str, features_to_maintain: List[str]) -> List[str]:
-    return [column_name for column_name in df.columns if feature_type in column_name and column_name not in features_to_maintain]
-
-def _remove_columns(df : pd.DataFrame) -> pd.DataFrame:
-    return df.drop(columns=[  'lbl_exploits_delta_days',	
-                        'lbl_exploits_weaponized_type_ENUM_absent',
-                        'lbl_exploits_weaponized_type_ENUM_other',	
-                        'lbl_exploits_weaponized_type_ENUM_auxiliary',
-                        'lbl_exploits_weaponized_type_ENUM_exploit',
-                        'lbl_exploits_weaponized_count',
-                        'lbl_exploits_verified',
-                        'idx',
-    ])
+def _extract_reference_type_features(df: pd.DataFrame, feature_type: str) -> List[str]:
+    return [column_name for column_name in df.columns if feature_type in column_name and column_name]
 
 def _join_encoders(features_by_row: List[str]):
     return ';'.join(features_by_row)

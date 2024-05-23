@@ -5,8 +5,8 @@ from typing import List
 from utils import RANGE_YEARS_TEST, RANGE_YEARS_TRAIN, VREX_ENCODER_VENDORS_TFIDF, NEW_FILE_BASE_PATH
 
 def main():
-    years_to_train = [year for year in range(RANGE_YEARS_TRAIN[0],RANGE_YEARS_TRAIN[1])]
-    years_to_test = [year for year in range(RANGE_YEARS_TEST[0],RANGE_YEARS_TEST[1])]
+    years_to_train = [year for year in range(RANGE_YEARS_TRAIN[0],RANGE_YEARS_TRAIN[1] + 1)]
+    years_to_test = [year for year in range(RANGE_YEARS_TEST[0],RANGE_YEARS_TEST[1] + 1)]
 
     _batch_csv(csv_file_path=VREX_ENCODER_VENDORS_TFIDF, years_range=years_to_train)
     _batch_csv(csv_file_path=VREX_ENCODER_VENDORS_TFIDF, years_range=years_to_test)
@@ -30,7 +30,7 @@ def _batch_csv(csv_file_path : str, years_range : List[int]):
 
             # Loop através das linhas do arquivo de entrada
             for row in csv_read:
-                cve = row[1]
+                cve = row[0]
                 cve_year = cve.split("-")[1]
                 if _contains(years_range,int(cve_year)):
                     writer_csv.writerow(row)
