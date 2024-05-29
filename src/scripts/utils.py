@@ -19,4 +19,4 @@ RANGE_YEARS_TRAIN = (2008,2017)
 RANGE_YEARS_TEST = (2018,2021)
 
 VREX_ENCODER_VENDORS_TFIDF = '/home/luiz/repos/tcc_experiments_az_ml/data/vrex_encoder_vendors_tfidf.csv'
-NEW_FILE_BASE_PATH = '/home/luiz/repos/tcc_experiments_az_ml/data/samples/modified/vrex_vendor_tf_idf_'
+NEW_FILE_BASE_PATH = '/home/luiz/repos/tcc_experiments_az_ml/data/samples/modified/vrex_encoded_tf_idf_'

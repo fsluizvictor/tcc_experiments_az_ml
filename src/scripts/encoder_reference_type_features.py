@@ -66,21 +66,6 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
     tfidf_matrix = tfidf_vectorizer.transform(all_documents)
     feature_names = tfidf_vectorizer.get_feature_names_out()
 
-    # Calcule a frequência de cada característica em toda a coluna NEW_FEATURE
-    word_counts = {}
-    for idx, row in df.iterrows():
-        words = row[CONCAT_REFERENCE_TYPE_FEATURE]
-        if isinstance(words, str):
-            words_list = words.split(';')
-            words_list = [word.lower() for word in words_list]
-            for word in words_list:
-                if word in word_counts:
-                    word_counts[word] += 1
-                else:
-                    word_counts[word] = 1
-
-    print(f"Frequência das características: {word_counts}")
-
     # Para cada linha, calcule a média ponderada dos valores TF-IDF das palavras na nova característica
     for idx, row in df.iterrows():
         words = row[CONCAT_REFERENCE_TYPE_FEATURE]
@@ -94,15 +79,12 @@ def _encode_features_by_row(df: pd.DataFrame) -> pd.DataFrame:
                 if word in feature_names:
                     index = feature_names.tolist().index(word)
                     tfidf_value = tfidf_matrix[0, index]
-                    count = word_counts[word]
-                    weighted_value = tfidf_value * count
+                    weighted_value = tfidf_value
                     word_tfidf_values.append(weighted_value)
-                    print(f"Palavra: {word}, TF-IDF: {tfidf_value}, Contagem: {count}, Valor Ponderado: {weighted_value}")
+                    print(f"Palavra: {word}, TF-IDF: {tfidf_value}")
 
-            # Calcule a média ponderada dos valores TF-IDF das palavras presentes na linha
-            total_count = sum(word_counts[word] for word in words_list if word in feature_names)
-            weighted_average = np.sum(word_tfidf_values) / total_count if total_count > 0 else 0
-            print(f"Média Ponderada TF-IDF para a linha {idx}: {weighted_average}")
+            weighted_average = np.sum(word_tfidf_values)
+            print(f"Soma do TF-IDF para a linha {idx}: {weighted_average}")
 
             words_list = []
             word_tfidf_values = []
