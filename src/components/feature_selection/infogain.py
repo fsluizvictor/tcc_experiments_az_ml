@@ -13,7 +13,7 @@ def main():
     parser.add_argument("--test_data", type=str, help="path to input data to test")
     parser.add_argument("--train_data_feat_sel", type=str, help="path to train data")
     parser.add_argument("--test_data_feat_sel", type=str, help="path to test data")
-    parser.add_argument("--feature_percentage", type=int, help="feature percentage")
+    parser.add_argument("--feature_percentage", type=float, help="feature percentage")
 
     args = parser.parse_args()
 
