@@ -43,7 +43,7 @@ def main():
 
     info_gain = mutual_info_classif(X_train, y_train)
 
-    feature_scores = pd.DataFrame({'Feature': X.columns, 'Information_Gain': info_gain})
+    feature_scores = pd.DataFrame({'Feature': X_train.columns, 'Information_Gain': info_gain})
     feature_scores = feature_scores.sort_values(by='Information_Gain', ascending=False)
 
     percentage = args.feature_percentage
