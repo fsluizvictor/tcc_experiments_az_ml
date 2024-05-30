@@ -3,6 +3,7 @@ import argparse
 import pandas as pd
 from sklearn.feature_selection import mutual_info_classif
 import mlflow
+from feature_selection_utils import select_first_file
 
 def main():
     """Main function of the script."""
@@ -22,8 +23,8 @@ def main():
 
     print("start infogain.py ...")
     
-    df_train = pd.read_csv(args.train_data)
-    df_test = pd.read_csv(args.test_data)
+    df_train = pd.read_csv(select_first_file(args.train_data))
+    df_test = pd.read_csv(select_first_file(args.test_data))
 
     X_train = df_train
     X_test = df_test 
@@ -67,12 +68,12 @@ def main():
     mlflow.log_metric("num_features_test_feat_sel", df_test.shape[1] - 1)
 
     # output paths are mounted as folder, therefore, we are adding a filename to the path
-    df_train_selected.to_csv(os.path.join(args.train_data_feat_sel, "data.csv"), index=False)
+    df_train_selected.to_csv(os.path.join(args.train_data_feat_sel, "feat_sel/data.csv"), index=False)
 
-    df_test_selected.to_csv(os.path.join(args.test_data_feat_sel, "data.csv"), index=False)
+    df_test_selected.to_csv(os.path.join(args.test_data_feat_sel, "feat_sel/data.csv"), index=False)
 
     # Stop Logging
     mlflow.end_run()
-    
+
 if __name__ == "__main__":
     main()
