@@ -1,7 +1,6 @@
 import os
 import argparse
 import pandas as pd
-import numpy as np
 from sklearn.feature_selection import mutual_info_classif
 import mlflow
 
@@ -20,6 +19,8 @@ def main():
 
     # Start Logging
     mlflow.start_run()
+
+    print("start infogain.py ...")
     
     df_train = pd.read_csv(args.train_data)
     df_test = pd.read_csv(args.test_data)
@@ -34,11 +35,11 @@ def main():
     y_test = X_test.pop(TARGET)
     X_test = X_test.values
 
-    mlflow.log_metric("num_samples_train", X_train.shape[0])
-    mlflow.log_metric("num_features_train", X_train.shape[1] - 1)
-    mlflow.log_metric("num_samples_test", X_test.shape[0])
-    mlflow.log_metric("num_features_test", X_test.shape[1] - 1)
-    
+    mlflow.log_metric("num_samples_train_original", df_train.shape[0])
+    mlflow.log_metric("num_features_train_original", df_train.shape[1] - 1)
+    mlflow.log_metric("num_samples_test_original", df_test.shape[0])
+    mlflow.log_metric("num_features_test_original", df_test.shape[1] - 1)
+
     info_gain = mutual_info_classif(X_train, y_train)
 
     feature_scores = pd.DataFrame({'Feature': X.columns, 'Information_Gain': info_gain})
@@ -48,15 +49,22 @@ def main():
 
     feature_quantity = (X_train.shape[1] - 1) * percentage
 
+    mlflow.log_metric("feature_percentage", percentage)
+    mlflow.log_metric("feature_quantity", feature_quantity)
+    print(f"feature_percentage: {percentage}, feature_quantity: {feature_quantity}")
+
     top_features = feature_scores.head(feature_quantity)
+
+    mlflow.log_metric("top_features", top_features)
+    print("top_features:", top_features)
 
     df_train_selected = df_train[top_features['Feature']]
     df_test_selected = df_test[top_features['Feature']]
 
-    mlflow.log_metric("num_samples_train", df_train.shape[0])
-    mlflow.log_metric("num_features_train", df_train.shape[1] - 1)
-    mlflow.log_metric("num_samples_test", df_test.shape[0])
-    mlflow.log_metric("num_features_test", df_test.shape[1] - 1)
+    mlflow.log_metric("num_samples_train_feat_sel", df_train.shape[0])
+    mlflow.log_metric("num_features_train_feat_sel", df_train.shape[1] - 1)
+    mlflow.log_metric("num_samples_test_feat_sel", df_test.shape[0])
+    mlflow.log_metric("num_features_test_feat_sel", df_test.shape[1] - 1)
 
     # output paths are mounted as folder, therefore, we are adding a filename to the path
     df_train_selected.to_csv(os.path.join(args.train_data_feat_sel, "data.csv"), index=False)
