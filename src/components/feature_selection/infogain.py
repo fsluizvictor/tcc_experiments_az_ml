@@ -43,6 +43,8 @@ def main():
     feature_scores = pd.DataFrame({'Feature': X_train.columns, 'Information_Gain': info_gain})
     feature_scores = feature_scores.sort_values(by='Information_Gain', ascending=False)
 
+    print("feature_scores", feature_scores)
+
     percentage = args.feature_percentage
 
     feature_quantity = (X_train.shape[1] - 1) * percentage
@@ -70,9 +72,9 @@ def main():
     mlflow.log_metric("num_features_test_feat_sel", df_test.shape[1] - 1)
 
     # output paths are mounted as folder, therefore, we are adding a filename to the path
-    df_train_selected.to_csv(os.path.join(args.train_data_feat_sel, "feat_sel/data.csv"), index=False)
+    df_train_selected.to_csv(os.path.join(args.train_data_feat_sel, "data.csv"), index=False)
 
-    df_test_selected.to_csv(os.path.join(args.test_data_feat_sel, "feat_sel/data.csv"), index=False)
+    df_test_selected.to_csv(os.path.join(args.test_data_feat_sel, "data.csv"), index=False)
 
     # Stop Logging
     mlflow.end_run()
