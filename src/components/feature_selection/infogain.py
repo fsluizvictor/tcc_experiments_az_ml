@@ -51,7 +51,7 @@ def main():
     mlflow.log_metric("feature_quantity", feature_quantity)
     print(f"feature_percentage: {percentage}, feature_quantity: {feature_quantity}")
 
-    top_features = feature_scores.head(feature_quantity)
+    top_features = feature_scores.head(int(feature_quantity))
 
     mlflow.log_metric("top_features", top_features)
     print("top_features:", top_features)
