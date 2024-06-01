@@ -26,15 +26,12 @@ def main():
     df_train = pd.read_csv(select_first_file(args.train_data))
     df_test = pd.read_csv(select_first_file(args.test_data))
 
-    X_train = df_train
-    X_test = df_test 
-
     TARGET = 'lbl_exploits_has'
 
-    y_train = X_train.pop(TARGET)
-    X_train = X_train.values
-    y_test = X_test.pop(TARGET)
-    X_test = X_test.values
+    y_train = df_train.pop(TARGET)
+    X_train = df_train
+    y_test = df_test.pop(TARGET)
+    X_test = df_test
 
     mlflow.log_metric("num_samples_train_original", df_train.shape[0])
     mlflow.log_metric("num_features_train_original", df_train.shape[1] - 1)
@@ -61,6 +58,10 @@ def main():
 
     df_train_selected = df_train[top_features['Feature']]
     df_test_selected = df_test[top_features['Feature']]
+
+    # Add the target column back to the selected features DataFrame
+    df_train_selected = pd.concat([df_train_selected, y_train], axis=1)
+    df_test_selected = pd.concat([df_test_selected, y_test], axis=1)
 
     mlflow.log_metric("num_samples_train_feat_sel", df_train.shape[0])
     mlflow.log_metric("num_features_train_feat_sel", df_train.shape[1] - 1)
