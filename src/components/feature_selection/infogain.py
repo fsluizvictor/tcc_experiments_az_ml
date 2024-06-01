@@ -53,7 +53,8 @@ def main():
 
     top_features = feature_scores.head(int(feature_quantity))
 
-    mlflow.log_metric("top_features", ', '.join(top_features['Feature'].tolist()))
+    top_features_log = str(', '.join(top_features['Feature'].tolist()))
+    mlflow.log_metric("top_features", top_features_log)
     print("top_features:", top_features)
 
     df_train_selected = df_train[top_features['Feature']]
