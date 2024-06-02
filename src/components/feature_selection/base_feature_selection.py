@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import mlflow
 from abc import ABC, abstractmethod
-from feature_selection_utils import select_first_file
+from utils.utils import select_first_file
 
 # Indicação do uso do padrão Template Method via nomenclatura
 class BaseFeatureSelection(ABC):
