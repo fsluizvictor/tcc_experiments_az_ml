@@ -1,7 +1,7 @@
 import pandas as pd
 import argparse
 from sklearn.tree import DecisionTreeClassifier
-from feature_selection.base_feature_selector import BaseFeatureSelector
+from base_feature_selector import BaseFeatureSelector
 
 class GiniFeatureSelection(BaseFeatureSelector):
     def compute_feature_scores(self):
