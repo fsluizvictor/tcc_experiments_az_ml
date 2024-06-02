@@ -1,6 +1,7 @@
 import pandas as pd
+import argparse
 from sklearn.feature_selection import mutual_info_classif
-from .base_feature_selector import BaseFeatureSelector
+from feature_selection.base_feature_selector import BaseFeatureSelector
 
 class InfogainFeatureSelection(BaseFeatureSelector):
     def compute_feature_scores(self):

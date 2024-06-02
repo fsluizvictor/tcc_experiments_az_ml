@@ -1,8 +1,7 @@
 import pandas as pd
 import argparse
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.feature_selection import SelectFromModel
-from .base_feature_selector import BaseFeatureSelector
+from feature_selection.base_feature_selector import BaseFeatureSelector
 
 class GiniFeatureSelection(BaseFeatureSelector):
     def compute_feature_scores(self):
@@ -27,7 +26,7 @@ def main():
         train_data_feat_sel=args.train_data_feat_sel,
         test_data_feat_sel=args.test_data_feat_sel,
         feature_percentage=args.feature_percentage,
-        method="Gini"
+        method="gini"
     )
     selector.run()
 
