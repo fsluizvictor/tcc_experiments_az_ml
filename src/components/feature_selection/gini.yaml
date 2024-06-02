@@ -17,7 +17,7 @@ code: .
 environment:
   azureml:feature-selection-dependencies:v1
 command: >-
-  python gini.py 
+  python gini_feature_selection.py 
   --train_data ${{inputs.train_data}} 
   --test_data ${{inputs.test_data}} 
   --feature_percentage ${{inputs.feature_percentage}}
