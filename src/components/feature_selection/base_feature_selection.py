@@ -5,7 +5,7 @@ from abc import ABC, abstractmethod
 from feature_selection_utils import select_first_file
 
 # Indicação do uso do padrão Template Method via nomenclatura
-class BaseFeatureSelector(ABC):
+class BaseFeatureSelection(ABC):
     """
     Classe base abstrata para o padrão Template Method.
     Define o esqueleto do algoritmo de seleção de características.

@@ -1,9 +1,9 @@
 import pandas as pd
 import argparse
 from sklearn.tree import DecisionTreeClassifier
-from base_feature_selector import BaseFeatureSelector
+from base_feature_selection import BaseFeatureSelection
 
-class GiniFeatureSelection(BaseFeatureSelector):
+class GiniFeatureSelection(BaseFeatureSelection):
     def compute_feature_scores(self):
         decision_tree = DecisionTreeClassifier(criterion='gini', random_state=42)
         decision_tree.fit(self.X_train, self.y_train)

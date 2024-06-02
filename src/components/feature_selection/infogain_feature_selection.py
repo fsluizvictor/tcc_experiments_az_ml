@@ -1,9 +1,9 @@
 import pandas as pd
 import argparse
 from sklearn.feature_selection import mutual_info_classif
-from base_feature_selector import BaseFeatureSelector
+from base_feature_selection import BaseFeatureSelection
 
-class InfogainFeatureSelection(BaseFeatureSelector):
+class InfogainFeatureSelection(BaseFeatureSelection):
     def compute_feature_scores(self):
         info_gain = mutual_info_classif(self.X_train, self.y_train)
         self.feature_scores = pd.DataFrame({'Feature': self.X_train.columns, 'info_gain': info_gain})
