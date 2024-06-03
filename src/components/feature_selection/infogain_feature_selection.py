@@ -24,7 +24,7 @@ def main():
         train_data_feat_sel=args.train_data_feat_sel,
         test_data_feat_sel=args.test_data_feat_sel,
         feature_percentage=args.feature_percentage,
-        method="info_gain"
+        method_name="info_gain"
     )
     selector.run()
 

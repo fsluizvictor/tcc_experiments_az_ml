@@ -26,7 +26,7 @@ def main():
         train_data_feat_sel=args.train_data_feat_sel,
         test_data_feat_sel=args.test_data_feat_sel,
         feature_percentage=args.feature_percentage,
-        method="gini"
+        method_name="gini"
     )
     selector.run()
 
