@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import mlflow
 from abc import ABC, abstractmethod
-from utils.utils import select_first_file
 
 # Indicação do uso do padrão Template Method via nomenclatura
 class BaseFeatureSelection(ABC):
@@ -23,10 +22,22 @@ class BaseFeatureSelection(ABC):
         self.test_data_feat_sel = test_data_feat_sel
         self.feature_percentage = feature_percentage
         self.method_name = method_name
+    
+    def select_first_file(self, path) -> str:
+        """Selecione o primeiro arquivo em uma pasta, assumindo que há apenas um arquivo na pasta.
+        
+        Args:
+            path (str): Caminho para o diretório ou arquivo a ser escolhido.
+            
+        Returns:
+            str: Caminho completo do arquivo selecionado.
+        """
+        files = os.listdir(path)
+        return os.path.join(path, files[0])
 
     def load_data(self):
-        self.df_train = pd.read_csv(select_first_file(self.train_data))
-        self.df_test = pd.read_csv(select_first_file(self.test_data))
+        self.df_train = pd.read_csv(self.select_first_file(self.train_data))
+        self.df_test = pd.read_csv(self.select_first_file(self.test_data))
 
     def split_data(self):
         TARGET = 'lbl_exploits_has'

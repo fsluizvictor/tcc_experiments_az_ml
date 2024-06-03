@@ -9,3 +9,7 @@ METRIC = 'training_accuracy_score'
 GOAL = 'Maximize'
 EVALUATION_INTERVAL = 1
 DELAY_EVALUATION = 5
+
+SUBSCRIPTION="a3f56f48-3efb-4970-81a3-e4eda598333c"
+RESOURCE_GROUP="luiz.victor.dev-rg"
+WS_NAME="tcc-experiments"

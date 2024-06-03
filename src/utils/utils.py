@@ -1,5 +1,6 @@
 import os
 
+
 def select_first_file(path) -> str:
     """Selecione o primeiro arquivo em uma pasta, assumindo que há apenas um arquivo na pasta.
     
