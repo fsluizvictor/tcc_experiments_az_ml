@@ -15,7 +15,7 @@ def select_first_file(path) -> str:
 
 #ENVIROMENT VARIABLES
 PEARSON_FEAT_SEL = 'pearson'
-SPERMAN_FEAT_SEL = 'sperman'
+SPEARMAN_FEAT_SEL = 'spearman'
 INFOGAIN_FEAT_SEL = 'infogain'
 GINI_FEAT_SEL = 'gini'
 FEATURE_KEY = 'feature'

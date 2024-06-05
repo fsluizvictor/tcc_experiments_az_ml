@@ -1,12 +1,12 @@
 import pandas as pd
 import argparse
 from base_feature_selection import BaseFeatureSelection
-from feature_selection_utils import SPERMAN_FEAT_SEL, FEATURE_KEY
+from feature_selection_utils import SPEARMAN_FEAT_SEL, FEATURE_KEY
 
-class SpermanFeatureSelection(BaseFeatureSelection):
+class SPEARMANFeatureSelection(BaseFeatureSelection):
     def compute_feature_scores(self):
-        correlations = self.X_train.corrwith(self.y_train, method=SPERMAN_FEAT_SEL) 
-        self.feature_scores = pd.DataFrame({FEATURE_KEY: self.X_train.columns, SPERMAN_FEAT_SEL: correlations.abs()})
+        correlations = self.X_train.corrwith(self.y_train, method=SPEARMAN_FEAT_SEL) 
+        self.feature_scores = pd.DataFrame({FEATURE_KEY: self.X_train.columns, SPEARMAN_FEAT_SEL: correlations.abs()})
 
 def main():
     parser = argparse.ArgumentParser()
@@ -18,13 +18,13 @@ def main():
 
     args = parser.parse_args()
 
-    selector = SpermanFeatureSelection(
+    selector = SPEARMANFeatureSelection(
         train_data=args.train_data,
         test_data=args.test_data,
         train_data_feat_sel=args.train_data_feat_sel,
         test_data_feat_sel=args.test_data_feat_sel,
         feature_percentage=args.feature_percentage,
-        method_name=SPERMAN_FEAT_SEL
+        method_name=SPEARMAN_FEAT_SEL
     )
     selector.run()
 

@@ -29,7 +29,7 @@ XGB_PATH = "/home/azureuser/cloudfiles/code/Users/luiz.victor.dev/tcc_experiment
 #FEAT_SEL
 INFOGAIN_PATH = "/home/azureuser/cloudfiles/code/Users/luiz.victor.dev/tcc_experiments_az_ml/src/components/feature_selection/infogain_feature_selection.yaml"
 GINI_PATH = "/home/azureuser/cloudfiles/code/Users/luiz.victor.dev/tcc_experiments_az_ml/src/components/feature_selection/gini_feature_selection.yaml"
-SPERMAN_PATH = "/home/azureuser/cloudfiles/code/Users/luiz.victor.dev/tcc_experiments_az_ml/src/components/feature_selection/sperman_feature_selection.yaml"
+SPEARMAN_PATH = "/home/azureuser/cloudfiles/code/Users/luiz.victor.dev/tcc_experiments_az_ml/src/components/feature_selection/SPEARMAN_feature_selection.yaml"
 PEARSON_PATH = "/home/azureuser/cloudfiles/code/Users/luiz.victor.dev/tcc_experiments_az_ml/src/components/feature_selection/pearson_feature_selection.yaml"
 
 #PREP_DATA
@@ -39,7 +39,7 @@ PREP_DATA_PATH = "/home/azureuser/cloudfiles/code/Users/luiz.victor.dev/tcc_expe
 GINI = 'Gini'
 INFOGAIN = 'Infogain'
 PEARSON = 'Pearson'
-SPERMAN = 'Sperman'
+SPEARMAN = 'spearman'
 
 #TRAIN
 GBC = 'GradientBoostingClassifier'
@@ -67,12 +67,12 @@ RFC_BY_GINI = f"{RFC}_BY_{GINI}"
 SVC_BY_GINI = f"{SVC}_BY_{GINI}"
 XGB_BY_GINI = f"{XGB}_BY_{GINI}"
 
-#SPERMAN
-GBC_BY_SPERMAN = f"{GBC}_BY_{SPERMAN}"
-NBC_BY_SPERMAN = f"{NBC}_BY_{SPERMAN}"
-RFC_BY_SPERMAN = f"{RFC}_BY_{SPERMAN}"
-SVC_BY_SPERMAN = f"{SVC}_BY_{SPERMAN}"
-XGB_BY_SPERMAN = f"{XGB}_BY_{SPERMAN}"
+#SPEARMAN
+GBC_BY_SPEARMAN = f"{GBC}_BY_{SPEARMAN}"
+NBC_BY_SPEARMAN = f"{NBC}_BY_{SPEARMAN}"
+RFC_BY_SPEARMAN = f"{RFC}_BY_{SPEARMAN}"
+SVC_BY_SPEARMAN = f"{SVC}_BY_{SPEARMAN}"
+XGB_BY_SPEARMAN = f"{XGB}_BY_{SPEARMAN}"
 
 #PEARSON
 GBC_BY_PEARSON = f"{GBC}_BY_{PEARSON}"
