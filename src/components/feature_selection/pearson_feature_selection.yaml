@@ -1,0 +1,29 @@
+name: pearson_feature_selection
+display_name: Feature Selection by Pearson
+type: command
+inputs:
+  train_data: 
+    type: uri_folder
+  test_data: 
+    type: uri_folder
+  feature_percentage:
+    type: number
+outputs:
+  train_data_feat_sel: 
+    type: uri_folder
+  test_data_feat_sel: 
+    type: uri_folder
+code: .
+environment:
+  azureml:feature-selection-dependencies:v1
+command: >-
+  python pearson_feature_selection.py 
+  --train_data ${{inputs.train_data}} 
+  --test_data ${{inputs.test_data}} 
+  --feature_percentage ${{inputs.feature_percentage}}
+  --train_data_feat_sel ${{outputs.train_data_feat_sel}} 
+  --test_data_feat_sel ${{outputs.test_data_feat_sel}}
+
+
+
+    
