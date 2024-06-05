@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import mlflow
 from abc import ABC, abstractmethod
-from feature_selection_utils import select_first_file
+from feature_selection_utils import select_first_file, FEATURE_KEY, TARGET
 
 # Indicação do uso do padrão Template Method via nomenclatura
 class BaseFeatureSelection(ABC):
@@ -29,7 +29,6 @@ class BaseFeatureSelection(ABC):
         self.df_test = pd.read_csv(select_first_file(self.test_data))
 
     def split_data(self):
-        TARGET = 'lbl_exploits_has'
         self.y_train = self.df_train.pop(TARGET)
         self.X_train = self.df_train
         self.y_test = self.df_test.pop(TARGET)
@@ -50,7 +49,7 @@ class BaseFeatureSelection(ABC):
     def select_top_features(self):
         self.feature_scores = self.feature_scores.sort_values(by=self.method_name, ascending=False)
         feature_quantity = int(self.X_train.shape[1] * self.feature_percentage)
-        self.top_features = self.feature_scores.head(feature_quantity)['feature']
+        self.top_features = self.feature_scores.head(feature_quantity)[FEATURE_KEY]
 
     def save_selected_features(self):
         df_train_selected = self.df_train[self.top_features]

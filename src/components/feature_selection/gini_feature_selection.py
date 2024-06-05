@@ -2,13 +2,14 @@ import pandas as pd
 import argparse
 from sklearn.tree import DecisionTreeClassifier
 from base_feature_selection import BaseFeatureSelection
+from feature_selection_utils import GINI_FEAT_SEL, FEATURE_KEY
 
 class GiniFeatureSelection(BaseFeatureSelection):
     def compute_feature_scores(self):
-        decision_tree = DecisionTreeClassifier(criterion='gini', random_state=42)
+        decision_tree = DecisionTreeClassifier(criterion=GINI_FEAT_SEL, random_state=42)
         decision_tree.fit(self.X_train, self.y_train)
         feature_importances = decision_tree.feature_importances_
-        self.feature_scores = pd.DataFrame({'feature': self.X_train.columns, 'gini': feature_importances})
+        self.feature_scores = pd.DataFrame({FEATURE_KEY: self.X_train.columns, GINI_FEAT_SEL: feature_importances})
 
 def main():
     parser = argparse.ArgumentParser()
@@ -26,7 +27,7 @@ def main():
         train_data_feat_sel=args.train_data_feat_sel,
         test_data_feat_sel=args.test_data_feat_sel,
         feature_percentage=args.feature_percentage,
-        method_name="gini"
+        method_name=GINI_FEAT_SEL
     )
     selector.run()
 

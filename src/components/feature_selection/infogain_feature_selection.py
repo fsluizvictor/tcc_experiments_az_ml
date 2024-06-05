@@ -2,11 +2,12 @@ import pandas as pd
 import argparse
 from sklearn.feature_selection import mutual_info_classif
 from base_feature_selection import BaseFeatureSelection
+from feature_selection_utils import INFOGAIN_FEAT_SEL, FEATURE_KEY
 
 class InfogainFeatureSelection(BaseFeatureSelection):
     def compute_feature_scores(self):
         info_gain = mutual_info_classif(self.X_train, self.y_train)
-        self.feature_scores = pd.DataFrame({'feature': self.X_train.columns, 'info_gain': info_gain})
+        self.feature_scores = pd.DataFrame({FEATURE_KEY: self.X_train.columns, INFOGAIN_FEAT_SEL: info_gain})
 
 def main():
     parser = argparse.ArgumentParser()
@@ -24,7 +25,7 @@ def main():
         train_data_feat_sel=args.train_data_feat_sel,
         test_data_feat_sel=args.test_data_feat_sel,
         feature_percentage=args.feature_percentage,
-        method_name="info_gain"
+        method_name=INFOGAIN_FEAT_SEL
     )
     selector.run()
 
