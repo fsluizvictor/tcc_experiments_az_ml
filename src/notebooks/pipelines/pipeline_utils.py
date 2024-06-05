@@ -1,3 +1,6 @@
+from typing import List
+import datetime as dt
+
 #SWEEP VALUES
 TOTAL_TRIALS = 20
 CONCURRENT_TRIALS = 10
@@ -78,3 +81,17 @@ RFC_BY_PEARSON = f"{RFC}_BY_{PEARSON}"
 SVC_BY_PEARSON = f"{SVC}_BY_{PEARSON}"
 XGB_BY_PEARSON = f"{XGB}_BY_{PEARSON}"
 
+#FUNCTIONS
+
+def get_experiment_names(train_data: List[str], test_data: List[str], feat_sel: str) -> List[str]:
+    experiment_names = []
+    for train_name, test_name in zip(train_data, test_data):
+        for model_name in MODELS:
+            current_time = dt.datetime.now()
+            formatted_time = current_time.strftime("%Y_%m_%d_%H_%M_%S")  # Formata a data e hora atual
+            train_name_base = train_name.split('.')[0]
+            test_name_base = test_name.split('.')[0]
+            name = f"{train_name_base}_tested_{test_name_base}_{feat_sel}_{model_name}_{formatted_time}"
+            experiment_names.append(name)
+            print(name)
+    return experiment_names
