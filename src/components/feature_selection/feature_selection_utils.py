@@ -19,3 +19,5 @@ SPERMAN_FEAT_SEL = 'sperman'
 INFOGAIN_FEAT_SEL = 'infogain'
 GINI_FEAT_SEL = 'gini'
 FEATURE_KEY = 'feature'
+
+TARGET = 'lbl_exploits_has'
