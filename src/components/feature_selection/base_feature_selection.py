@@ -70,12 +70,11 @@ class BaseFeatureSelection(ABC):
         mlflow.log_metric("num_samples_test_original", self.df_test.shape[0])
         mlflow.log_metric("num_features_test_original", self.df_test.shape[1])
         mlflow.log_metric("feature_percentage", self.feature_percentage)
-
-        print("top_features", ', '.join(self.top_features))
     
     def log_metrics_after_selection(self):
         mlflow.log_metric("num_features_train_feat_sel", self.df_train.shape[1] - 1)
         mlflow.log_metric("num_features_test_feat_sel", self.df_test.shape[1] - 1)
+        print("top_features", str(', '.join(self.top_features)))
 
     def run(self):
         """
