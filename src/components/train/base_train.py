@@ -42,7 +42,7 @@ class BaseTrain(ABC):
         mlflow.log_metric("num_samples_y_test", self.y_test.shape[0])
         mlflow.log_metric("num_features_y_test", self.y_test.shape[1])
         
-        print("hyperparams",self.hyperparams)
+        print("hyperparams", self.hyperparams)
 
         print("x_train", self.x_train)
         print("y_train", self.y_train)
