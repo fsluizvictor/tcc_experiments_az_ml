@@ -54,12 +54,6 @@ class BaseTrain(ABC):
         pass
 
     def run(self, *args, **kwargs):
-        mlflow.start_run()
         self.load_data()
         self.split_data()
         self.train(*args, **kwargs)
-        self.log()
-        mlflow.end_run()
-
-    
-        
