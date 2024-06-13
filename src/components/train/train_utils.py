@@ -91,13 +91,19 @@ def _validate_inputs(X_train, X_test, y_train, y_test):
     mlflow.log_metric("num_features_x_train", X_train.shape[1])
 
     mlflow.log_metric("num_samples_y_train", y_train.shape[0])
-    mlflow.log_metric("num_features_y_train", y_train.shape[1])
+    if len(y_train.shape) > 1:
+        mlflow.log_metric("num_features_y_train", y_train.shape[1])
+    else:
+        mlflow.log_metric("num_features_y_train", 1)
 
     mlflow.log_metric("num_samples_x_test", X_test.shape[0])
     mlflow.log_metric("num_features_x_test", X_test.shape[1])
 
     mlflow.log_metric("num_samples_y_test", y_test.shape[0])
-    mlflow.log_metric("num_features_y_test", y_test.shape[1])
+    if len(y_test.shape) > 1:
+        mlflow.log_metric("num_features_y_test", y_test.shape[1])
+    else:
+        mlflow.log_metric("num_features_y_test", 1)
         
     print("x_train", X_train)
     print("y_train", y_train)
