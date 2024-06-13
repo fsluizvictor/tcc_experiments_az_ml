@@ -19,7 +19,7 @@ code: .
 environment:
   azureml:train-dependencies:v9
 command: >-
-  python xgb_classifier.py 
+  python train_xgb.py 
   --train_data ${{inputs.train_data}} 
   --test_data ${{inputs.test_data}} 
   --n_estimators_to_xgb ${{inputs.n_estimators_to_xgb}}
