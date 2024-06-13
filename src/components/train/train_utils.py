@@ -1,8 +1,6 @@
 import os
 import mlflow
 import mlflow.sklearn
-import mlflow.xgboost
-import numpy as np
 
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report
 
@@ -70,7 +68,7 @@ def train_and_log_model(clf,
         mlflow.log_metric('precision', precision)
         mlflow.log_metric('recall', recall)
 
-        print(f"Metrics:accuracy: {accuracy},f1: {f1},precision: {precision},recall: {recall}")
+        print(f"Metrics: training_accuracy_score: {accuracy}, f1: {f1}, precision: {precision}, recall: {recall}")
         
         mlflow.end_run()
 
@@ -108,10 +106,12 @@ def _validate_inputs(X_train, X_test, y_train, y_test):
     else:
         mlflow.log_metric("num_features_y_test", 1)
         
-    print("x_train", X_train)
-    print("y_train", y_train)
-    print("x_test", X_test)
-    print("y_test", y_test)
+    print("x_train columns:", X_train.columns)
+    print("x_train sample data:\n", X_train.head())
+    print("y_train sample data:\n", y_train.head())
+    print("x_test columns:", X_test.columns)
+    print("x_test sample data:\n", X_test.head())
+    print("y_test sample data:\n", y_test.head())
     
 def _is_active():
     """Encerra o run ativo do MLflow, se houver."""
