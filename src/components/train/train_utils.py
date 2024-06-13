@@ -38,12 +38,13 @@ def train_and_log_model(clf,
     """
     print(f"Start train to {model_name}")
     _is_active()
-    _validate_inputs(X_train, X_test, y_train, y_test)
 
     print(f"Training with data of shape {X_train.shape}")
 
     if model_name != "XGBoostClassifier":
         with mlflow.start_run(run_name=model_name):
+            _validate_inputs(X_train, X_test, y_train, y_test)
+
             mlflow.sklearn.autolog()
 
             clf.fit(X_train, y_train)
@@ -51,6 +52,8 @@ def train_and_log_model(clf,
             return
     
     with mlflow.start_run(run_name=model_name):
+        _validate_inputs(X_train, X_test, y_train, y_test)
+
         clf.fit(X_train, y_train)
         y_pred = clf.predict(X_test)
 
