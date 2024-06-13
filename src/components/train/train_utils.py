@@ -106,13 +106,6 @@ def _validate_inputs(X_train, X_test, y_train, y_test):
     else:
         mlflow.log_metric("num_features_y_test", 1)
         
-    print("x_train columns:", X_train.columns)
-    print("x_train sample data:\n", X_train.head())
-    print("y_train sample data:\n", y_train.head())
-    print("x_test columns:", X_test.columns)
-    print("x_test sample data:\n", X_test.head())
-    print("y_test sample data:\n", y_test.head())
-    
 def _is_active():
     """Encerra o run ativo do MLflow, se houver."""
     if mlflow.active_run():
