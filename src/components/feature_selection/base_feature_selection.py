@@ -15,7 +15,7 @@ class BaseFeatureSelection(ABC):
                  test_data : str, 
                  train_data_feat_sel : str, 
                  test_data_feat_sel : str, 
-                 feature_quantity : float, 
+                 feature_quantity : int, 
                  method_name : str):
         self.train_data = train_data
         self.test_data = test_data
@@ -48,8 +48,7 @@ class BaseFeatureSelection(ABC):
 
     def select_top_features(self):
         self.feature_scores = self.feature_scores.sort_values(by=self.method_name, ascending=False)
-        feature_quantity = int(self.X_train.shape[1] * self.feature_quantity)
-        self.top_features = self.feature_scores.head(feature_quantity)[FEATURE_KEY]
+        self.top_features = self.feature_scores.head(self.feature_quantity)[FEATURE_KEY]
 
     def save_selected_features(self):
         df_train_selected = self.df_train[self.top_features]
@@ -71,9 +70,10 @@ class BaseFeatureSelection(ABC):
         mlflow.log_metric("feature_quantity", self.feature_quantity)
     
     def log_metrics_after_selection(self):
-        mlflow.log_metric("num_features_train_feat_sel", self.df_train.shape[1] - 1)
-        mlflow.log_metric("num_features_test_feat_sel", self.df_test.shape[1] - 1)
-        print("top_features", self.top_features)
+        mlflow.log_metric("num_features_train_feature_selection", self.df_train.shape[1] - 1)
+        mlflow.log_metric("num_features_test_feature_selection", self.df_test.shape[1] - 1)
+        print("top_features\n", self.top_features)
+        print("feature_scores\n", self.feature_scores)
 
     def run(self):
         """

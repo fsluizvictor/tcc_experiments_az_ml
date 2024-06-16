@@ -8,6 +8,9 @@ class InfogainFeatureSelection(BaseFeatureSelection):
     def compute_feature_scores(self):
         info_gain = mutual_info_classif(self.X_train, self.y_train)
         self.feature_scores = pd.DataFrame({FEATURE_KEY: self.X_train.columns, INFOGAIN_FEAT_SEL: info_gain})
+        print("self.X_train.columns\n", self.X_train.columns)
+        print("info_gain\n", info_gain)
+        print("self.feature_scores\n", self.feature_scores)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -15,7 +18,7 @@ def main():
     parser.add_argument("--test_data", type=str, help="path to input data to test")
     parser.add_argument("--train_data_feat_sel", type=str, help="path to train data")
     parser.add_argument("--test_data_feat_sel", type=str, help="path to test data")
-    parser.add_argument("--feature_quantity", type=float, help="feature percentage")
+    parser.add_argument("--feature_quantity", type=int, help="feature percentage")
 
     args = parser.parse_args()
 
