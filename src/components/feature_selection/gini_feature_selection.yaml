@@ -6,7 +6,7 @@ inputs:
     type: uri_folder
   test_data: 
     type: uri_folder
-  feature_percentage:
+  feature_quantity:
     type: number
 outputs:
   train_data_feat_sel: 
@@ -20,7 +20,7 @@ command: >-
   python gini_feature_selection.py 
   --train_data ${{inputs.train_data}} 
   --test_data ${{inputs.test_data}} 
-  --feature_percentage ${{inputs.feature_percentage}}
+  --feature_quantity ${{inputs.feature_quantity}}
   --train_data_feat_sel ${{outputs.train_data_feat_sel}} 
   --test_data_feat_sel ${{outputs.test_data_feat_sel}}
 

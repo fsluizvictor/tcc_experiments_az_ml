@@ -14,7 +14,7 @@ def main():
     parser.add_argument("--test_data", type=str, help="path to input data to test")
     parser.add_argument("--train_data_feat_sel", type=str, help="path to train data")
     parser.add_argument("--test_data_feat_sel", type=str, help="path to test data")
-    parser.add_argument("--feature_percentage", type=float, help="feature percentage")
+    parser.add_argument("--feature_quantity", type=float, help="feature percentage")
 
     args = parser.parse_args()
 
@@ -23,7 +23,7 @@ def main():
         test_data=args.test_data,
         train_data_feat_sel=args.train_data_feat_sel,
         test_data_feat_sel=args.test_data_feat_sel,
-        feature_percentage=args.feature_percentage,
+        feature_quantity=args.feature_quantity,
         method_name=PEARSON_FEAT_SEL
     )
     selector.run()

@@ -83,15 +83,16 @@ XGB_BY_PEARSON = f"{XGB}_BY_{PEARSON}"
 
 #FUNCTIONS
 
-def get_experiment_names(train_data: List[str], test_data: List[str], feat_sel: str) -> List[str]:
+def get_experiment_names(train_data: List[str], test_data: List[str], feat_sel: str, n_features: List[float]) -> List[str]:
     experiment_names = []
-    for train_name, test_name in zip(train_data, test_data):
-        for model_name in MODELS:
-            current_time = dt.datetime.now()
-            formatted_time = current_time.strftime("%Y_%m_%d_%H_%M_%S")  # Formata a data e hora atual
-            train_name_base = train_name.split('.')[0]
-            test_name_base = test_name.split('.')[0]
-            name = f"{train_name_base}_tested_{test_name_base}_{feat_sel}_{model_name}_{formatted_time}"
-            experiment_names.append(name)
-            print(name)
+    for n_feature in n_features:
+        for train_name, test_name in zip(train_data, test_data):
+            for model_name in MODELS:
+                current_time = dt.datetime.now()
+                formatted_time = current_time.strftime("%Y_%m_%d_%H_%M_%S")  # Formata a data e hora atual
+                train_name_base = train_name.split('.')[0]
+                test_name_base = test_name.split('.')[0]
+                name = f"{train_name_base}_tested_{test_name_base}_{feat_sel}_{model_name}_{formatted_time}"
+                experiment_names.append(name)
+                print(name)
     return experiment_names
