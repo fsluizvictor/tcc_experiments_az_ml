@@ -1,7 +1,7 @@
 import argparse
 import os
 import pandas as pd
-from train_utils import select_first_file, train_and_log_model
+from train_utils import select_first_file, train_and_log_model, _log_inputs
 
 from sklearn.ensemble import GradientBoostingClassifier
 
@@ -27,6 +27,8 @@ def main():
 
     # paths are mounted as folder, therefore, we are selecting the file from folder
     test_df = pd.read_csv(select_first_file(args.test_data))
+
+    _log_inputs(train_df=train_df, test_df=test_df)
 
     TARGET = 'lbl_exploits_has'
 

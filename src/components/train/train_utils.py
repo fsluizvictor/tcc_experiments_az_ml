@@ -64,11 +64,11 @@ def train_and_log_model(clf,
         recall = recall_score(y_test, y_pred)
 
         mlflow.log_metric('training_accuracy_score', accuracy)
-        mlflow.log_metric('f1_score', f1)
-        mlflow.log_metric('precision', precision)
-        mlflow.log_metric('recall', recall)
+        mlflow.log_metric('training_f1_score', f1)
+        mlflow.log_metric('training_precision_score', precision)
+        mlflow.log_metric('training_recall_score', recall)
 
-        print(f"Metrics: training_accuracy_score: {accuracy}, f1: {f1}, precision: {precision}, recall: {recall}")
+        print(f"Metrics: training_accuracy_score: {accuracy}, training_f1_score: {f1}, training_precision_score: {precision}, training_recall_score: {recall}")
         
         mlflow.end_run()
 
@@ -105,6 +105,10 @@ def _validate_inputs(X_train, X_test, y_train, y_test):
         mlflow.log_metric("num_features_y_test", y_test.shape[1])
     else:
         mlflow.log_metric("num_features_y_test", 1)
+
+def _log_inputs(train_df, test_df):
+    print("Colunas de train_df:", train_df.columns if hasattr(train_df, 'columns') else "Não possui colunas")
+    print("Colunas de test_df:", test_df.columns if hasattr(test_df, 'columns') else "Não possui colunas")
         
 def _is_active():
     """Encerra o run ativo do MLflow, se houver."""
