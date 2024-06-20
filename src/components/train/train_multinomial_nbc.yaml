@@ -1,0 +1,27 @@
+name: train_multinomial_nbc_model
+display_name: Train Naive Bayes Model
+type: command
+inputs:
+  train_data: 
+    type: uri_folder
+  test_data: 
+    type: uri_folder
+
+  alpha:
+    type: number
+  fit_prior:
+    type: bool
+
+outputs:
+  model:
+    type: uri_folder
+code: .
+environment:
+  azureml:train-dependencies:v9
+command: >-
+  python train_nbc.py 
+  --train_data ${{inputs.train_data}} 
+  --test_data ${{inputs.test_data}}
+  --alpha ${{inputs.alpha}} 
+  --fit_prior ${{inputs.fit_prior}}  
+  --model ${{outputs.model}}
