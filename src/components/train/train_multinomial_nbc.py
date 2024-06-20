@@ -4,6 +4,7 @@ import pandas as pd
 
 from train_utils import select_first_file, train_and_log_model, _log_inputs
 from sklearn.naive_bayes import MultinomialNB
+from sklearn.preprocessing import MinMaxScaler
 
 def main():
     """Main function of the script."""
@@ -36,6 +37,10 @@ def main():
     X_train = train_df.values
     y_test = test_df.pop(TARGET)
     X_test = test_df.values
+
+    scaler = MinMaxScaler()
+    X_train = scaler.fit_transform(X_train)
+    X_test = scaler.transform(X_test)
 
     print(f"Training with data of shape {X_train.shape}")
     

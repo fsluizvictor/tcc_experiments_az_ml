@@ -1,5 +1,5 @@
 name: train_multinomial_nbc_model
-display_name: Train Naive Bayes Model
+display_name: Train Mult Naive Bayes Model
 type: command
 inputs:
   train_data: 
@@ -10,7 +10,7 @@ inputs:
   alpha:
     type: number
   fit_prior:
-    type: bool
+    type: boolean
 
 outputs:
   model:
@@ -19,7 +19,7 @@ code: .
 environment:
   azureml:train-dependencies:v9
 command: >-
-  python train_nbc.py 
+  python train_multinomial_nbc.py 
   --train_data ${{inputs.train_data}} 
   --test_data ${{inputs.test_data}}
   --alpha ${{inputs.alpha}} 
