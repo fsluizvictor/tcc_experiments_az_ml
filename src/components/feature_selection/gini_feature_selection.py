@@ -14,10 +14,12 @@ class GiniFeatureSelection(BaseFeatureSelection):
         #print("self.X_train.columns\n", )
         #print("feature_importances\n", feature_importances)
         #print("self.feature_scores\n", self.feature_scores)
+        
+        # Convertendo os dados para formatos compatíveis com JSON
         data = {
-            "X_train_columns": self.X_train.columns.to_list(),
-            "feature_importances": feature_importances,
-            "feature_scores": feature_scores
+            "X_train_columns": self.X_train.columns.tolist(),
+            "feature_importances": feature_importances.tolist(),
+            "feature_scores": self.feature_scores.to_dict(orient='records')
         }
         json_data = json.dumps(data, indent=4)
         print(json_data)
