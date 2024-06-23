@@ -45,10 +45,11 @@ SPEARMAN = 'spearman'
 #TRAIN
 GBC = 'GradientBoostingClassifier'
 NBC = 'GaussianNB'
+MULT_NBC = 'MultGaussianNB'
 RFC = 'RandomForestClassifier'
 SVC = 'SVC'
 XGB = 'XGBoost'
-MODELS = [NBC, GBC, RFC, SVC, XGB]
+MODELS = [MULT_NBC, NBC, GBC, RFC, SVC, XGB]
 
 #PREPATION
 DATA_PREP = 'DataPreparation'
@@ -83,18 +84,23 @@ RFC_BY_PEARSON = f"{RFC}_BY_{PEARSON}"
 SVC_BY_PEARSON = f"{SVC}_BY_{PEARSON}"
 XGB_BY_PEARSON = f"{XGB}_BY_{PEARSON}"
 
+#PIPELINE VALUES
+TRAIN_DATA = "vrex_encoded_tf_idf_2008_2009_2010_2011_2012_2013_2014_2015_2016_2017.csv"
+TEST_DATA = "vrex_encoded_tf_idf_2018_2019_2020_2021.csv"
+DATA_VERSION = "v1"
+
+N_FEATURES = [399, 300, 200, 150, 100, 75, 50, 10, 5]
+
 #FUNCTIONS
 
-def get_experiment_names(train_data: List[str], test_data: List[str], feat_sel: str, n_features: List[float]) -> List[str]:
+def get_experiment_names(feat_sel: str) -> List[str]:
     experiment_names = []
-    for n_feature in n_features:
-        for train_name, test_name in zip(train_data, test_data):
-            for model_name in MODELS:
-                current_time = dt.datetime.now()
-                formatted_time = current_time.strftime("%Y_%m_%d_%H_%M_%S")  # Formata a data e hora atual
-                train_name_base = train_name.split('.')[0]
-                test_name_base = test_name.split('.')[0]
-                name = f"{train_name_base}_tested_{test_name_base}_{feat_sel}_{model_name}_{formatted_time}"
-                experiment_names.append(name)
-                print(name)
+    for n_feature in N_FEATURES:
+        for model_name in MODELS:
+            name = f"{feat_sel}_{model_name}_N_FEAT_{n_feature}_{_get_current_time()}"
+            experiment_names.append(name)
+            print(name)
     return experiment_names
+
+def _get_current_time():
+    return dt.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
