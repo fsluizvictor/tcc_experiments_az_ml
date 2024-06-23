@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import mlflow
+import json
 from abc import ABC, abstractmethod
 from feature_selection_utils import select_first_file, FEATURE_KEY, TARGET
 
@@ -74,6 +75,12 @@ class BaseFeatureSelection(ABC):
         mlflow.log_metric("num_features_test_feature_selection", self.df_test.shape[1] - 1)
         print("top_features\n", self.top_features)
         print("feature_scores\n", self.feature_scores)
+        data = {
+            "top_features": self.top_features,
+            "feature_scores": self.feature_scores
+        }
+        json_data = json.dumps(data, indent=4)
+        print(json_data)
 
     def run(self):
         """

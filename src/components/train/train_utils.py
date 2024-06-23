@@ -1,4 +1,5 @@
 import os
+import json
 import mlflow
 import mlflow.sklearn
 
@@ -107,8 +108,14 @@ def _validate_inputs(X_train, X_test, y_train, y_test):
         mlflow.log_metric("num_features_y_test", 1)
 
 def _log_inputs(train_df, test_df):
-    print("Colunas de train_df:", train_df.columns if hasattr(train_df, 'columns') else "Não possui colunas")
-    print("Colunas de test_df:", test_df.columns if hasattr(test_df, 'columns') else "Não possui colunas")
+    #print("Colunas de train_df:", train_df.columns if hasattr(train_df, 'columns') else "Não possui colunas")
+    #print("Colunas de test_df:", test_df.columns if hasattr(test_df, 'columns') else "Não possui colunas")
+    data = {
+            "Colunas de train_df:": train_df.columns,
+            "Colunas de test_df:": test_df.columns,
+        }
+    json_data = json.dumps(data, indent=4)
+    print(json_data)
         
 def _is_active():
     """Encerra o run ativo do MLflow, se houver."""

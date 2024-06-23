@@ -1,5 +1,6 @@
 import pandas as pd
 import argparse
+import json
 from sklearn.tree import DecisionTreeClassifier
 from base_feature_selection import BaseFeatureSelection
 from feature_selection_utils import GINI_FEAT_SEL, FEATURE_KEY
@@ -10,9 +11,16 @@ class GiniFeatureSelection(BaseFeatureSelection):
         decision_tree.fit(self.X_train, self.y_train)
         feature_importances = decision_tree.feature_importances_
         self.feature_scores = pd.DataFrame({FEATURE_KEY: self.X_train.columns, GINI_FEAT_SEL: feature_importances})
-        print("self.X_train.columns\n", self.X_train.columns)
-        print("feature_importances\n", feature_importances)
-        print("self.feature_scores\n", self.feature_scores)
+        #print("self.X_train.columns\n", )
+        #print("feature_importances\n", feature_importances)
+        #print("self.feature_scores\n", self.feature_scores)
+        data = {
+            "X_train_columns": self.X_train.columns.to_list(),
+            "feature_importances": feature_importances,
+            "feature_scores": feature_scores
+        }
+        json_data = json.dumps(data, indent=4)
+        print(json_data)
 
 def main():
     parser = argparse.ArgumentParser()
