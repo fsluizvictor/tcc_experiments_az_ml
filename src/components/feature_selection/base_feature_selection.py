@@ -75,9 +75,11 @@ class BaseFeatureSelection(ABC):
         mlflow.log_metric("num_features_test_feature_selection", self.df_test.shape[1] - 1)
         print("top_features\n", self.top_features)
         print("feature_scores\n", self.feature_scores)
+        
+        # Convertendo os dados para formatos compatíveis com JSON
         data = {
-            "top_features": self.top_features,
-            "feature_scores": self.feature_scores
+            "top_features": self.top_features.tolist(),
+            "feature_scores": self.feature_scores.to_dict(orient='records')
         }
         json_data = json.dumps(data, indent=4)
         print(json_data)
