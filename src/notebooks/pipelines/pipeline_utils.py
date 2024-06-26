@@ -58,6 +58,7 @@ DATA_PREP = 'DataPreparation'
 #INFOGAIN
 GBC_BY_INFOGAIN = f"{GBC}_BY_{INFOGAIN}"
 NBC_BY_INFOGAIN = f"{NBC}_BY_{INFOGAIN}"
+MULT_NBC_BY_INFOGAIN = f"{MULT_NBC}_BY_{INFOGAIN}"
 RFC_BY_INFOGAIN = f"{RFC}_BY_{INFOGAIN}"
 SVC_BY_INFOGAIN = f"{SVC}_BY_{INFOGAIN}"
 XGB_BY_INFOGAIN = f"{XGB}_BY_{INFOGAIN}"
@@ -97,7 +98,7 @@ def get_experiment_names(feat_sel: str) -> List[str]:
     experiment_names = []
     for n_feature in N_FEATURES:
         for model_name in MODELS:
-            name = f"{feat_sel}_{model_name}_N_FEAT_{n_feature}_{_get_current_time()}"
+            name = f"{feat_sel}_{model_name}_N_FEAT_{n_feature}_DATE_{_get_current_time()}"
             experiment_names.append(name)
             print(name)
     return experiment_names
