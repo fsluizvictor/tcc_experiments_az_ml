@@ -8,7 +8,7 @@ FEATURES_TO_MAINTAIN = ['vendor_ENUM_absent']
 NEW_FEATURE = ['vendor_ENUM_encoded']
 
 #encoder_reference_type_features.py
-VREX_ENCODER_VENDORS_TFIDF_TO_REF_TYPE = '/home/luiz/repos/tcc_experiments_az_ml/data/vrex_encoder_vendors_tfidf.csv'
+VREX_ENCODER_VENDORS_TFIDF_TO_REF_TYPE = '/home/luiz/repos/tcc_experiments_az_ml/data/vrex_encoder_vendors_tfidf_updated.csv'
 FEATURE_TYPE_REFERENCE_TYPE_ENUM = 'reference_type_ENUM'
 CONCAT_REFERENCE_TYPE_FEATURE = 'reference_type_ENUM_encoded'
 VREX_ENCODER_TFIDF = '/home/luiz/repos/tcc_experiments_az_ml/data/vrex_encoder_tfidf_updated.csv'
