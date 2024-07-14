@@ -22,8 +22,12 @@ def _batch_csv(csv_file_path : str, years_range : List[int]):
         csv_name = ""
         for year in years_range:
             csv_name += str(year) + "_"
-        
+
         new_file = f"{NEW_FILE_BASE_PATH}{csv_name}.csv"
+
+         # Ensure the directory exists
+        os.makedirs(os.path.dirname(new_file), exist_ok=True)
+
         with open(new_file, 'w', newline='') as new_csv:
             writer_csv = csv.writer(new_csv)
             writer_csv.writerow(header)
@@ -41,6 +45,7 @@ def _contains(years_range: List[int], cve_year: int) -> bool:
     for year in years_range:
         if year == cve_year:
             return True
-
+    return False    
+    
 if __name__ == "__main__":
     main()

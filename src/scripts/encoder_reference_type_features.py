@@ -98,7 +98,7 @@ def _get_df(path:str):
     return pd.read_csv(path)
 
 def _extract_reference_type_features(df: pd.DataFrame, feature_type: str) -> List[str]:
-    return [column_name for column_name in df.columns if feature_type in column_name and column_name]
+    return [column_name for column_name in df.columns if feature_type in column_name]
 
 def _join_encoders(features_by_row: List[str]):
     return ';'.join(features_by_row)
