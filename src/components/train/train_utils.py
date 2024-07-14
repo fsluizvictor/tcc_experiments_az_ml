@@ -48,6 +48,24 @@ def train_and_log_model(clf,
 
             clf.fit(X_train, y_train)
             y_pred = clf.predict(X_test)
+
+            #PARA COMPARAÇÃO DOS VALORES DE AUTOLOG E OS GERADOS PELAS MÉTRICAS
+            report = classification_report(y_test, y_pred)
+            print(report)
+            # Calculating metrics
+            accuracy = accuracy_score(y_test, y_pred)
+            f1 = f1_score(y_test, y_pred, average='weighted')
+            precision = precision_score(y_test, y_pred, average='weighted')
+            recall = recall_score(y_test, y_pred, average='weighted')
+
+            mlflow.log_metric('accuracy_score', accuracy)
+            mlflow.log_metric('f1_score', f1)
+            mlflow.log_metric('precision_score', precision)
+            mlflow.log_metric('recall_score', recall)
+
+            print(f"Metrics: training_accuracy_score: {accuracy}, training_f1_score: {f1}, training_precision_score: {precision}, training_recall_score: {recall}")
+            
+            mlflow.end_run()
             return
     
     with mlflow.start_run(run_name=model_name):
@@ -58,16 +76,17 @@ def train_and_log_model(clf,
 
         report = classification_report(y_test, y_pred)
         print(report)
-            # Calculating metrics
+        # Calculating metrics
         accuracy = accuracy_score(y_test, y_pred)
         f1 = f1_score(y_test, y_pred, average='weighted')
         precision = precision_score(y_test, y_pred, average='weighted')
         recall = recall_score(y_test, y_pred, average='weighted')
 
         mlflow.log_metric('training_accuracy_score', accuracy)
-        mlflow.log_metric('training_f1_score', f1)
-        mlflow.log_metric('training_precision_score', precision)
-        mlflow.log_metric('training_recall_score', recall)
+        mlflow.log_metric('accuracy_score', accuracy)
+        mlflow.log_metric('f1_score', f1)
+        mlflow.log_metric('precision_score', precision)
+        mlflow.log_metric('recall_score', recall)
 
         print(f"Metrics: training_accuracy_score: {accuracy}, training_f1_score: {f1}, training_precision_score: {precision}, training_recall_score: {recall}")
         
