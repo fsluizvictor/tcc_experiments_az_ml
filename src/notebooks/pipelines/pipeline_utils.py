@@ -8,7 +8,7 @@ TIMEOUT = 2*3600
 TIMEOUT_PLUS = 2*7200
 COMPUTE = 'serverless'
 SAMPLING_ALGORITHM = 'bayesian'
-METRIC = 'training_accuracy_score'
+METRIC = 'accuracy_score'
 GOAL = 'Maximize'
 EVALUATION_INTERVAL = 1
 DELAY_EVALUATION = 5
@@ -92,7 +92,7 @@ TRAIN_DATA = "vrex_encoded_tf_idf_updated_2008_2009_2010_2011_2012_2013_2014_201
 TEST_DATA = "vrex_encoded_tf_idf_updated_2018_2019_2020_2021_.csv"
 DATA_VERSION = "v1"
 
-N_FEATURES = [300, 200, 150, 100, 75, 50, 10, 5]
+N_FEATURES = [399, 300, 200, 150, 100, 75, 50, 10, 5]
 
 #FUNCTIONS
 
