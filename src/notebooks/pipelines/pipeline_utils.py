@@ -92,7 +92,7 @@ TRAIN_DATA = "vrex_encoded_tf_idf_updated_2008_2009_2010_2011_2012_2013_2014_201
 TEST_DATA = "vrex_encoded_tf_idf_updated_2018_2019_2020_2021_.csv"
 DATA_VERSION = "v1"
 
-N_FEATURES = [10, 5]
+N_FEATURES = [399, 300, 200, 150, 100, 75, 50, 10, 5]
 
 #FUNCTIONS
 
