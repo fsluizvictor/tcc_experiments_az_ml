@@ -1,0 +1,2071 @@
+self.X_train.columns
+ Index(['delta_days_oval', 'delta_days_patch', 'delta_days_proposed',
+       'status_ENUM_candidate', 'status_ENUM_entry', 'phase_ENUM_assigned',
+       'phase_ENUM_interim', 'phase_ENUM_proposed', 'phase_ENUM_modified',
+       'phase_ENUM_absent',
+       ...
+       'description_ENUM_opening', 'description_ENUM_properly',
+       'description_ENUM_mediaserver', 'description_ENUM_install',
+       'description_ENUM_intended', 'description_ENUM_point',
+       'description_ENUM_accessible', 'description_ENUM_operation',
+       'vendor_ENUM_encoded', 'reference_type_ENUM_encoded'],
+      dtype='object', length=399)
+info_gain
+ delta_days_oval               -0.031861
+delta_days_patch              -0.007177
+delta_days_proposed                 NaN
+status_ENUM_candidate               NaN
+status_ENUM_entry                   NaN
+                                 ...   
+description_ENUM_point         0.002884
+description_ENUM_accessible   -0.005595
+description_ENUM_operation    -0.011508
+vendor_ENUM_encoded           -0.201725
+reference_type_ENUM_encoded    0.122561
+Length: 399, dtype: float64
+self.feature_scores
+                                                  feature  spearman
+delta_days_oval                          delta_days_oval  0.031861
+delta_days_patch                        delta_days_patch  0.007177
+delta_days_proposed                  delta_days_proposed       NaN
+status_ENUM_candidate              status_ENUM_candidate       NaN
+status_ENUM_entry                      status_ENUM_entry       NaN
+...                                                  ...       ...
+description_ENUM_point            description_ENUM_point  0.002884
+description_ENUM_accessible  description_ENUM_accessible  0.005595
+description_ENUM_operation    description_ENUM_operation  0.011508
+vendor_ENUM_encoded                  vendor_ENUM_encoded  0.201725
+reference_type_ENUM_encoded  reference_type_ENUM_encoded  0.122561
+
+[399 rows x 2 columns]
+top_features
+ type_ENUM_vt_ec                              type_ENUM_vt_ec
+cvss_exploitability_score          cvss_exploitability_score
+cvss_a_ENUM_partial                      cvss_a_ENUM_partial
+cvss_i_ENUM_partial                      cvss_i_ENUM_partial
+cvss_version_ENUM_2_0                  cvss_version_ENUM_2_0
+                                            ...             
+phase_ENUM_modified                      phase_ENUM_modified
+phase_ENUM_absent                          phase_ENUM_absent
+vendor_ENUM_absent                        vendor_ENUM_absent
+comments                                            comments
+description_ENUM_currentuser    description_ENUM_currentuser
+Name: feature, Length: 399, dtype: object
+feature_scores
+                                                    feature  spearman
+type_ENUM_vt_ec                            type_ENUM_vt_ec  0.269337
+cvss_exploitability_score        cvss_exploitability_score  0.250435
+cvss_a_ENUM_partial                    cvss_a_ENUM_partial  0.207430
+cvss_i_ENUM_partial                    cvss_i_ENUM_partial  0.205713
+cvss_version_ENUM_2_0                cvss_version_ENUM_2_0  0.203165
+...                                                    ...       ...
+phase_ENUM_modified                    phase_ENUM_modified       NaN
+phase_ENUM_absent                        phase_ENUM_absent       NaN
+vendor_ENUM_absent                      vendor_ENUM_absent       NaN
+comments                                          comments       NaN
+description_ENUM_currentuser  description_ENUM_currentuser       NaN
+
+[399 rows x 2 columns]
+{
+    "top_features": [
+        "type_ENUM_vt_ec",
+        "cvss_exploitability_score",
+        "cvss_a_ENUM_partial",
+        "cvss_i_ENUM_partial",
+        "cvss_version_ENUM_2_0",
+        "vendor_ENUM_encoded",
+        "references_count",
+        "cvss_c_ENUM_partial",
+        "cvss_impact_score",
+        "type_ENUM_absent",
+        "description_ENUM_joomla",
+        "cvss_ui_ENUM_absent",
+        "cvss_s_ENUM_absent",
+        "cvss_av_ENUM_network",
+        "cvss_version_ENUM_3_0",
+        "type_ENUM_vt_dirt",
+        "cvss_aupr_ENUM_none",
+        "reference_type_ENUM_encoded",
+        "cvss_s_ENUM_unchanged",
+        "description_ENUM_include",
+        "description_ENUM_detail",
+        "description_ENUM_magic_quotes_gpc",
+        "cvss_score",
+        "description_ENUM_obtained",
+        "description_ENUM_reject",
+        "cvss_has_exploitability_score",
+        "cvss_version_ENUM_absent",
+        "cvss_av_ENUM_absent",
+        "cvss_has_impact_score",
+        "cvss_a_ENUM_absent",
+        "cvss_c_ENUM_absent",
+        "cvss_i_ENUM_absent",
+        "cvss_aupr_ENUM_absent",
+        "cvss_ac_ENUM_absent",
+        "description_ENUM_reason",
+        "description_ENUM_vulnerability",
+        "cvss_ui_ENUM_none",
+        "description_ENUM_disabled",
+        "cvss_i_ENUM_none",
+        "cvss_ui_ENUM_required",
+        "description_ENUM_candidate",
+        "description_ENUM_url",
+        "description_ENUM_register_globals",
+        "description_ENUM_cna",
+        "description_ENUM_associate",
+        "description_ENUM_requested",
+        "description_ENUM_individual",
+        "type_ENUM_vt_info",
+        "cvss_a_ENUM_high",
+        "cvss_c_ENUM_low",
+        "description_ENUM_parameter",
+        "cvss_i_ENUM_low",
+        "description_ENUM_earlier",
+        "versions",
+        "cvss_c_ENUM_high",
+        "cvss_a_ENUM_none",
+        "cvss_s_ENUM_changed",
+        "description_ENUM_attacker",
+        "description_ENUM_man",
+        "cvss_av_ENUM_local",
+        "type_ENUM_vt_dos",
+        "description_ENUM_uploading",
+        "description_ENUM_denial",
+        "cvss_av_ENUM_adjacent_network",
+        "cvss_i_ENUM_high",
+        "cvss_aupr_ENUM_low",
+        "description_ENUM_setting",
+        "description_ENUM_provenance",
+        "description_ENUM_download",
+        "description_ENUM_vector",
+        "description_ENUM_verify",
+        "description_ENUM_assigned",
+        "description_ENUM_unknown",
+        "description_ENUM_accessing",
+        "description_ENUM_service",
+        "description_ENUM_path_info",
+        "description_ENUM_leveraged",
+        "description_ENUM_wild",
+        "cvss_c_ENUM_none",
+        "description_ENUM_information",
+        "description_ENUM_issue",
+        "description_ENUM_php",
+        "cvss_i_ENUM_complete",
+        "description_ENUM_html",
+        "cvss_c_ENUM_complete",
+        "type_ENUM_vt_sql",
+        "cvss_ac_ENUM_medium",
+        "description_ENUM_android",
+        "cvss_ac_ENUM_high",
+        "description_ENUM_administrator",
+        "description_ENUM_request",
+        "description_ENUM_wordpress",
+        "description_ENUM_vulnerable",
+        "cvss_ac_ENUM_low",
+        "description_ENUM_argument",
+        "description_ENUM_easier",
+        "description_ENUM_drupal",
+        "description_ENUM_make",
+        "type_ENUM_vt_overflow",
+        "description_ENUM_user",
+        "description_ENUM_unspecified",
+        "description_ENUM_http",
+        "description_ENUM_webkit",
+        "delta_days_oval",
+        "cvss_aupr_ENUM_high",
+        "description_ENUM_admin",
+        "cvss_a_ENUM_low",
+        "description_ENUM_uri",
+        "cvss_version_ENUM_3_1",
+        "cvss_a_ENUM_complete",
+        "description_ENUM_availability",
+        "description_ENUM_caf",
+        "description_ENUM_exploit",
+        "description_ENUM_rated",
+        "description_ENUM_oracle",
+        "type_ENUM_vt_bypass",
+        "description_ENUM_reported",
+        "description_ENUM_ui",
+        "description_ENUM_enabled",
+        "description_ENUM_enable",
+        "description_ENUM_person",
+        "description_ENUM_ac",
+        "description_ENUM_demonstrated",
+        "description_ENUM_typo3",
+        "description_ENUM_elevation",
+        "description_ENUM_reading",
+        "description_ENUM_read",
+        "description_ENUM_located",
+        "description_ENUM_description",
+        "description_ENUM_removed",
+        "description_ENUM_upload",
+        "description_ENUM_integrity",
+        "description_ENUM_action",
+        "description_ENUM_network",
+        "description_ENUM_altering",
+        "description_ENUM_seamonkey",
+        "description_ENUM_device",
+        "description_ENUM_acrobat",
+        "description_ENUM_ffmpeg",
+        "description_ENUM_database",
+        "description_ENUM_context",
+        "description_ENUM_affected",
+        "cvss_aupr_ENUM_single",
+        "description_ENUM_domain",
+        "description_ENUM_data",
+        "description_ENUM_version",
+        "description_ENUM_unique",
+        "description_ENUM_buffer",
+        "description_ENUM_reference",
+        "description_ENUM_command",
+        "description_ENUM_sniffing",
+        "description_ENUM_hijack",
+        "description_ENUM_software",
+        "description_ENUM_occur",
+        "description_ENUM_blink",
+        "description_ENUM_send",
+        "description_ENUM_mediaserver",
+        "description_ENUM_lack",
+        "description_ENUM_due",
+        "description_ENUM_spoof",
+        "description_ENUM_subset",
+        "description_ENUM_java",
+        "description_ENUM_leveraging",
+        "description_ENUM_imagemagick",
+        "type_ENUM_vt_xss",
+        "description_ENUM_cpanel",
+        "description_ENUM_authentication",
+        "description_ENUM_flaw",
+        "description_ENUM_module",
+        "description_ENUM_possibility",
+        "description_ENUM_configured",
+        "description_ENUM_bypass",
+        "description_ENUM_perform",
+        "description_ENUM_security",
+        "description_ENUM_create",
+        "description_ENUM_xss",
+        "description_ENUM_permission",
+        "description_ENUM_crash",
+        "cvss_av_ENUM_physical",
+        "description_ENUM_conduct",
+        "description_ENUM_processing",
+        "description_ENUM_check",
+        "description_ENUM_file",
+        "description_ENUM_trigger",
+        "description_ENUM_required",
+        "description_ENUM_allowed",
+        "description_ENUM_exploited",
+        "description_ENUM_open",
+        "description_ENUM_zdi",
+        "description_ENUM_properly",
+        "description_ENUM_ruby",
+        "description_ENUM_jenkins",
+        "description_ENUM_visit",
+        "description_ENUM_return",
+        "description_ENUM_filesystem",
+        "description_ENUM_ensure",
+        "description_ENUM_application",
+        "description_ENUM_placing",
+        "description_ENUM_part",
+        "description_ENUM_browser",
+        "description_ENUM_access",
+        "description_ENUM_operation",
+        "description_ENUM_system",
+        "description_ENUM_node",
+        "description_ENUM_handling",
+        "description_ENUM_call",
+        "description_ENUM_delete",
+        "description_ENUM_attack",
+        "description_ENUM_opera",
+        "description_ENUM_host",
+        "description_ENUM_change",
+        "description_ENUM_duplicate",
+        "cvss_aupr_ENUM_multiple",
+        "description_ENUM_persuading",
+        "description_ENUM_linux",
+        "description_ENUM_log",
+        "description_ENUM_key",
+        "description_ENUM_javascript",
+        "description_ENUM_install",
+        "description_ENUM_received",
+        "description_ENUM_time",
+        "description_ENUM_length",
+        "description_ENUM_disclosure",
+        "description_ENUM_doe",
+        "description_ENUM_parsing",
+        "description_ENUM_cleartext",
+        "description_ENUM_document",
+        "description_ENUM_default",
+        "products",
+        "description_ENUM_process",
+        "description_ENUM_object",
+        "type_ENUM_vt_csrf",
+        "type_ENUM_vt_priv",
+        "description_ENUM_prior",
+        "description_ENUM_sequence",
+        "description_ENUM_size",
+        "description_ENUM_identified",
+        "description_ENUM_display",
+        "description_ENUM_sending",
+        "description_ENUM_intended",
+        "description_ENUM_memory",
+        "description_ENUM_patched",
+        "description_ENUM_affect",
+        "description_ENUM_add",
+        "description_ENUM_server",
+        "description_ENUM_implementation",
+        "description_ENUM_app",
+        "description_ENUM_set",
+        "description_ENUM_prevent",
+        "description_ENUM_validate",
+        "description_ENUM_email",
+        "description_ENUM_load",
+        "description_ENUM_crafted",
+        "description_ENUM_stored",
+        "description_ENUM_package",
+        "description_ENUM_installer",
+        "description_ENUM_target",
+        "description_ENUM_page",
+        "description_ENUM_component",
+        "description_ENUM_mail",
+        "description_ENUM_hang",
+        "delta_days_patch",
+        "description_ENUM_compromise",
+        "description_ENUM_string",
+        "description_ENUM_passed",
+        "description_ENUM_modifying",
+        "description_ENUM_obtain",
+        "description_ENUM_run",
+        "description_ENUM_processed",
+        "description_ENUM_execution",
+        "description_ENUM_end",
+        "description_ENUM_execute",
+        "description_ENUM_connecting",
+        "description_ENUM_connection",
+        "description_ENUM_triggering",
+        "description_ENUM_installation",
+        "type_ENUM_vt_memc",
+        "description_ENUM_reveals",
+        "description_ENUM_os",
+        "description_ENUM_susceptible",
+        "description_ENUM_case",
+        "description_ENUM_victim",
+        "description_ENUM_reboot",
+        "description_ENUM_accessed",
+        "description_ENUM_logged",
+        "description_ENUM_function",
+        "description_ENUM_provide",
+        "description_ENUM_vendor",
+        "description_ENUM_error",
+        "description_ENUM_note",
+        "description_ENUM_needed",
+        "description_ENUM_client",
+        "description_ENUM_connect",
+        "description_ENUM_accessible",
+        "description_ENUM_owner",
+        "description_ENUM_mishandled",
+        "description_ENUM_interface",
+        "description_ENUM_account",
+        "description_ENUM_code",
+        "description_ENUM_control",
+        "description_ENUM_type",
+        "description_ENUM_running",
+        "description_ENUM_redirect",
+        "description_ENUM_exploitable",
+        "description_ENUM_credential",
+        "description_ENUM_character",
+        "description_ENUM_series",
+        "description_ENUM_executed",
+        "description_ENUM_leverage",
+        "description_ENUM_overflow",
+        "description_ENUM_called",
+        "description_ENUM_occurs",
+        "description_ENUM_directory",
+        "description_ENUM_session",
+        "description_ENUM_payload",
+        "description_ENUM_packet",
+        "description_ENUM_username",
+        "description_ENUM_windows",
+        "description_ENUM_kernel",
+        "cpes_non_vulnerable_count",
+        "description_ENUM_privilege",
+        "description_ENUM_csrf",
+        "description_ENUM_conjunction",
+        "description_ENUM_installed",
+        "description_ENUM_path",
+        "description_ENUM_triggered",
+        "description_ENUM_trick",
+        "description_ENUM_image",
+        "description_ENUM_input",
+        "description_ENUM_found",
+        "description_ENUM_filename",
+        "description_ENUM_plaintext",
+        "description_ENUM_update",
+        "description_ENUM_product",
+        "description_ENUM_option",
+        "description_ENUM_cookie",
+        "description_ENUM_changing",
+        "description_ENUM_logon",
+        "description_ENUM_overwrite",
+        "description_ENUM_click",
+        "description_ENUM_included",
+        "description_ENUM_site",
+        "description_ENUM_point",
+        "description_ENUM_leak",
+        "description_ENUM_ability",
+        "description_ENUM_opening",
+        "description_ENUM_infrastructure",
+        "description_ENUM_mac",
+        "description_ENUM_write",
+        "description_ENUM_configuration",
+        "description_ENUM_attempt",
+        "description_ENUM_login",
+        "description_ENUM_adding",
+        "type_ENUM_vt_fileinc",
+        "description_ENUM_message",
+        "description_ENUM_content",
+        "description_ENUM_intel",
+        "description_ENUM_contract",
+        "description_ENUM_resource",
+        "description_ENUM_link",
+        "description_ENUM_script",
+        "description_ENUM_password",
+        "description_ENUM_networking",
+        "description_ENUM_response",
+        "description_ENUM_address",
+        "description_ENUM_header",
+        "description_ENUM_fixed",
+        "description_ENUM_balance",
+        "description_ENUM_logfile",
+        "description_ENUM_clear",
+        "description_ENUM_related",
+        "description_ENUM_disputed",
+        "description_ENUM_order",
+        "description_ENUM_field",
+        "description_ENUM_validating",
+        "description_ENUM_takeover",
+        "description_ENUM_firmware",
+        "type_ENUM_vt_httprs",
+        "description_ENUM_protocol",
+        "description_ENUM_program",
+        "description_ENUM_bug",
+        "description_ENUM_creating",
+        "description_ENUM_executing",
+        "description_ENUM_modify",
+        "description_ENUM_root",
+        "description_ENUM_addressed",
+        "description_ENUM_distributed",
+        "description_ENUM_free",
+        "delta_days_proposed",
+        "status_ENUM_candidate",
+        "status_ENUM_entry",
+        "phase_ENUM_assigned",
+        "phase_ENUM_interim",
+        "phase_ENUM_proposed",
+        "phase_ENUM_modified",
+        "phase_ENUM_absent",
+        "vendor_ENUM_absent",
+        "comments",
+        "description_ENUM_currentuser"
+    ],
+    "feature_scores": [
+        {
+            "feature": "type_ENUM_vt_ec",
+            "spearman": 0.26933723611545196
+        },
+        {
+            "feature": "cvss_exploitability_score",
+            "spearman": 0.25043487963820243
+        },
+        {
+            "feature": "cvss_a_ENUM_partial",
+            "spearman": 0.20742982714115704
+        },
+        {
+            "feature": "cvss_i_ENUM_partial",
+            "spearman": 0.2057133938575777
+        },
+        {
+            "feature": "cvss_version_ENUM_2_0",
+            "spearman": 0.20316473275218142
+        },
+        {
+            "feature": "vendor_ENUM_encoded",
+            "spearman": 0.20172521929509113
+        },
+        {
+            "feature": "references_count",
+            "spearman": 0.19340176949275725
+        },
+        {
+            "feature": "cvss_c_ENUM_partial",
+            "spearman": 0.19192837056061543
+        },
+        {
+            "feature": "cvss_impact_score",
+            "spearman": 0.17195808293916964
+        },
+        {
+            "feature": "type_ENUM_absent",
+            "spearman": 0.16801721214935575
+        },
+        {
+            "feature": "description_ENUM_joomla",
+            "spearman": 0.16599479531044986
+        },
+        {
+            "feature": "cvss_ui_ENUM_absent",
+            "spearman": 0.15122414362955475
+        },
+        {
+            "feature": "cvss_s_ENUM_absent",
+            "spearman": 0.15122414362955475
+        },
+        {
+            "feature": "cvss_av_ENUM_network",
+            "spearman": 0.14400358478277736
+        },
+        {
+            "feature": "cvss_version_ENUM_3_0",
+            "spearman": 0.14299656367577931
+        },
+        {
+            "feature": "type_ENUM_vt_dirt",
+            "spearman": 0.13311515152657205
+        },
+        {
+            "feature": "cvss_aupr_ENUM_none",
+            "spearman": 0.12435986380991491
+        },
+        {
+            "feature": "reference_type_ENUM_encoded",
+            "spearman": 0.12256137204577912
+        },
+        {
+            "feature": "cvss_s_ENUM_unchanged",
+            "spearman": 0.12254862038978985
+        },
+        {
+            "feature": "description_ENUM_include",
+            "spearman": 0.12156103395822243
+        },
+        {
+            "feature": "description_ENUM_detail",
+            "spearman": 0.12154179366832922
+        },
+        {
+            "feature": "description_ENUM_magic_quotes_gpc",
+            "spearman": 0.11621765376110045
+        },
+        {
+            "feature": "cvss_score",
+            "spearman": 0.10936085844139624
+        },
+        {
+            "feature": "description_ENUM_obtained",
+            "spearman": 0.10760403374932935
+        },
+        {
+            "feature": "description_ENUM_reject",
+            "spearman": 0.10693729369974839
+        },
+        {
+            "feature": "cvss_has_exploitability_score",
+            "spearman": 0.10686956730211439
+        },
+        {
+            "feature": "cvss_version_ENUM_absent",
+            "spearman": 0.10686956730211439
+        },
+        {
+            "feature": "cvss_av_ENUM_absent",
+            "spearman": 0.10686956730211439
+        },
+        {
+            "feature": "cvss_has_impact_score",
+            "spearman": 0.10686956730211439
+        },
+        {
+            "feature": "cvss_a_ENUM_absent",
+            "spearman": 0.1063577390461395
+        },
+        {
+            "feature": "cvss_c_ENUM_absent",
+            "spearman": 0.1063108252301647
+        },
+        {
+            "feature": "cvss_i_ENUM_absent",
+            "spearman": 0.10615113104315443
+        },
+        {
+            "feature": "cvss_aupr_ENUM_absent",
+            "spearman": 0.10605962518036273
+        },
+        {
+            "feature": "cvss_ac_ENUM_absent",
+            "spearman": 0.10605962518036273
+        },
+        {
+            "feature": "description_ENUM_reason",
+            "spearman": 0.10379977809090643
+        },
+        {
+            "feature": "description_ENUM_vulnerability",
+            "spearman": 0.1029113863630333
+        },
+        {
+            "feature": "cvss_ui_ENUM_none",
+            "spearman": 0.10043384914975138
+        },
+        {
+            "feature": "description_ENUM_disabled",
+            "spearman": 0.09835050051588794
+        },
+        {
+            "feature": "cvss_i_ENUM_none",
+            "spearman": 0.09016884341731078
+        },
+        {
+            "feature": "cvss_ui_ENUM_required",
+            "spearman": 0.0894708765558628
+        },
+        {
+            "feature": "description_ENUM_candidate",
+            "spearman": 0.0858419994718164
+        },
+        {
+            "feature": "description_ENUM_url",
+            "spearman": 0.08555456561234505
+        },
+        {
+            "feature": "description_ENUM_register_globals",
+            "spearman": 0.08453322286888224
+        },
+        {
+            "feature": "description_ENUM_cna",
+            "spearman": 0.08436083056876229
+        },
+        {
+            "feature": "description_ENUM_associate",
+            "spearman": 0.08275914937192629
+        },
+        {
+            "feature": "description_ENUM_requested",
+            "spearman": 0.08235118301642609
+        },
+        {
+            "feature": "description_ENUM_individual",
+            "spearman": 0.08223956616227839
+        },
+        {
+            "feature": "type_ENUM_vt_info",
+            "spearman": 0.08118348703865717
+        },
+        {
+            "feature": "cvss_a_ENUM_high",
+            "spearman": 0.08084371134235924
+        },
+        {
+            "feature": "cvss_c_ENUM_low",
+            "spearman": 0.0801827956245957
+        },
+        {
+            "feature": "description_ENUM_parameter",
+            "spearman": 0.07768795605644539
+        },
+        {
+            "feature": "cvss_i_ENUM_low",
+            "spearman": 0.07755750797961963
+        },
+        {
+            "feature": "description_ENUM_earlier",
+            "spearman": 0.07527397959115528
+        },
+        {
+            "feature": "versions",
+            "spearman": 0.07438470716555055
+        },
+        {
+            "feature": "cvss_c_ENUM_high",
+            "spearman": 0.07036260546423113
+        },
+        {
+            "feature": "cvss_a_ENUM_none",
+            "spearman": 0.07033506751709746
+        },
+        {
+            "feature": "cvss_s_ENUM_changed",
+            "spearman": 0.07015986742668379
+        },
+        {
+            "feature": "description_ENUM_attacker",
+            "spearman": 0.0687816557044869
+        },
+        {
+            "feature": "description_ENUM_man",
+            "spearman": 0.06563646926444051
+        },
+        {
+            "feature": "cvss_av_ENUM_local",
+            "spearman": 0.06561664510276584
+        },
+        {
+            "feature": "type_ENUM_vt_dos",
+            "spearman": 0.06488128469071062
+        },
+        {
+            "feature": "description_ENUM_uploading",
+            "spearman": 0.06482853753692168
+        },
+        {
+            "feature": "description_ENUM_denial",
+            "spearman": 0.062498510971829804
+        },
+        {
+            "feature": "cvss_av_ENUM_adjacent_network",
+            "spearman": 0.0621565649072573
+        },
+        {
+            "feature": "cvss_i_ENUM_high",
+            "spearman": 0.06088824240694892
+        },
+        {
+            "feature": "cvss_aupr_ENUM_low",
+            "spearman": 0.05851547211571579
+        },
+        {
+            "feature": "description_ENUM_setting",
+            "spearman": 0.05840376716370713
+        },
+        {
+            "feature": "description_ENUM_provenance",
+            "spearman": 0.0577744214465914
+        },
+        {
+            "feature": "description_ENUM_download",
+            "spearman": 0.0563294926178619
+        },
+        {
+            "feature": "description_ENUM_vector",
+            "spearman": 0.05630009576053642
+        },
+        {
+            "feature": "description_ENUM_verify",
+            "spearman": 0.05584854319089787
+        },
+        {
+            "feature": "description_ENUM_assigned",
+            "spearman": 0.05401763543743748
+        },
+        {
+            "feature": "description_ENUM_unknown",
+            "spearman": 0.053962136349525625
+        },
+        {
+            "feature": "description_ENUM_accessing",
+            "spearman": 0.05299291195111489
+        },
+        {
+            "feature": "description_ENUM_service",
+            "spearman": 0.05173838121987621
+        },
+        {
+            "feature": "description_ENUM_path_info",
+            "spearman": 0.051097599061808996
+        },
+        {
+            "feature": "description_ENUM_leveraged",
+            "spearman": 0.05068628677092031
+        },
+        {
+            "feature": "description_ENUM_wild",
+            "spearman": 0.050312243246767197
+        },
+        {
+            "feature": "cvss_c_ENUM_none",
+            "spearman": 0.05017789439900225
+        },
+        {
+            "feature": "description_ENUM_information",
+            "spearman": 0.049429603497826644
+        },
+        {
+            "feature": "description_ENUM_issue",
+            "spearman": 0.04769206014765011
+        },
+        {
+            "feature": "description_ENUM_php",
+            "spearman": 0.04704432039691463
+        },
+        {
+            "feature": "cvss_i_ENUM_complete",
+            "spearman": 0.04674260357448831
+        },
+        {
+            "feature": "description_ENUM_html",
+            "spearman": 0.04639290992853881
+        },
+        {
+            "feature": "cvss_c_ENUM_complete",
+            "spearman": 0.04604653025385564
+        },
+        {
+            "feature": "type_ENUM_vt_sql",
+            "spearman": 0.044239091372525796
+        },
+        {
+            "feature": "cvss_ac_ENUM_medium",
+            "spearman": 0.04405115506801663
+        },
+        {
+            "feature": "description_ENUM_android",
+            "spearman": 0.041349534108763485
+        },
+        {
+            "feature": "cvss_ac_ENUM_high",
+            "spearman": 0.04125647838239687
+        },
+        {
+            "feature": "description_ENUM_administrator",
+            "spearman": 0.040614087265645596
+        },
+        {
+            "feature": "description_ENUM_request",
+            "spearman": 0.04008234339424119
+        },
+        {
+            "feature": "description_ENUM_wordpress",
+            "spearman": 0.037986241872774426
+        },
+        {
+            "feature": "description_ENUM_vulnerable",
+            "spearman": 0.037130910492420933
+        },
+        {
+            "feature": "cvss_ac_ENUM_low",
+            "spearman": 0.036476282588094266
+        },
+        {
+            "feature": "description_ENUM_argument",
+            "spearman": 0.035569788795955626
+        },
+        {
+            "feature": "description_ENUM_easier",
+            "spearman": 0.03551590435598164
+        },
+        {
+            "feature": "description_ENUM_drupal",
+            "spearman": 0.03500010696394033
+        },
+        {
+            "feature": "description_ENUM_make",
+            "spearman": 0.034691853778184296
+        },
+        {
+            "feature": "type_ENUM_vt_overflow",
+            "spearman": 0.03403396501689552
+        },
+        {
+            "feature": "description_ENUM_user",
+            "spearman": 0.033645522096638646
+        },
+        {
+            "feature": "description_ENUM_unspecified",
+            "spearman": 0.03355115122452286
+        },
+        {
+            "feature": "description_ENUM_http",
+            "spearman": 0.03270208173293034
+        },
+        {
+            "feature": "description_ENUM_webkit",
+            "spearman": 0.03230416796301745
+        },
+        {
+            "feature": "delta_days_oval",
+            "spearman": 0.03186118737695592
+        },
+        {
+            "feature": "cvss_aupr_ENUM_high",
+            "spearman": 0.03162526158363788
+        },
+        {
+            "feature": "description_ENUM_admin",
+            "spearman": 0.030987655858615876
+        },
+        {
+            "feature": "cvss_a_ENUM_low",
+            "spearman": 0.030919858260521443
+        },
+        {
+            "feature": "description_ENUM_uri",
+            "spearman": 0.0308437250992402
+        },
+        {
+            "feature": "cvss_version_ENUM_3_1",
+            "spearman": 0.03006619274944665
+        },
+        {
+            "feature": "cvss_a_ENUM_complete",
+            "spearman": 0.02925635757183374
+        },
+        {
+            "feature": "description_ENUM_availability",
+            "spearman": 0.029171605106241304
+        },
+        {
+            "feature": "description_ENUM_caf",
+            "spearman": 0.02876273184213974
+        },
+        {
+            "feature": "description_ENUM_exploit",
+            "spearman": 0.028458222570254096
+        },
+        {
+            "feature": "description_ENUM_rated",
+            "spearman": 0.02794926725642454
+        },
+        {
+            "feature": "description_ENUM_oracle",
+            "spearman": 0.02790803378045452
+        },
+        {
+            "feature": "type_ENUM_vt_bypass",
+            "spearman": 0.026859881923581092
+        },
+        {
+            "feature": "description_ENUM_reported",
+            "spearman": 0.02682499073975906
+        },
+        {
+            "feature": "description_ENUM_ui",
+            "spearman": 0.026145465504795646
+        },
+        {
+            "feature": "description_ENUM_enabled",
+            "spearman": 0.025629988854959044
+        },
+        {
+            "feature": "description_ENUM_enable",
+            "spearman": 0.025622999751785804
+        },
+        {
+            "feature": "description_ENUM_person",
+            "spearman": 0.025404841437414533
+        },
+        {
+            "feature": "description_ENUM_ac",
+            "spearman": 0.02504018415240671
+        },
+        {
+            "feature": "description_ENUM_demonstrated",
+            "spearman": 0.02476615239240617
+        },
+        {
+            "feature": "description_ENUM_typo3",
+            "spearman": 0.024411916003349365
+        },
+        {
+            "feature": "description_ENUM_elevation",
+            "spearman": 0.02436755005266886
+        },
+        {
+            "feature": "description_ENUM_reading",
+            "spearman": 0.02414562411928856
+        },
+        {
+            "feature": "description_ENUM_read",
+            "spearman": 0.023722930323356255
+        },
+        {
+            "feature": "description_ENUM_located",
+            "spearman": 0.023651910841471654
+        },
+        {
+            "feature": "description_ENUM_description",
+            "spearman": 0.02351770768533372
+        },
+        {
+            "feature": "description_ENUM_removed",
+            "spearman": 0.02305433716226548
+        },
+        {
+            "feature": "description_ENUM_upload",
+            "spearman": 0.022924701660550485
+        },
+        {
+            "feature": "description_ENUM_integrity",
+            "spearman": 0.0227265298490435
+        },
+        {
+            "feature": "description_ENUM_action",
+            "spearman": 0.02262955756480565
+        },
+        {
+            "feature": "description_ENUM_network",
+            "spearman": 0.02204767801233448
+        },
+        {
+            "feature": "description_ENUM_altering",
+            "spearman": 0.02200672914695354
+        },
+        {
+            "feature": "description_ENUM_seamonkey",
+            "spearman": 0.021837842339023066
+        },
+        {
+            "feature": "description_ENUM_device",
+            "spearman": 0.021438872952242168
+        },
+        {
+            "feature": "description_ENUM_acrobat",
+            "spearman": 0.021248024841969148
+        },
+        {
+            "feature": "description_ENUM_ffmpeg",
+            "spearman": 0.020873219268147447
+        },
+        {
+            "feature": "description_ENUM_database",
+            "spearman": 0.020855000633401604
+        },
+        {
+            "feature": "description_ENUM_context",
+            "spearman": 0.020528514755218597
+        },
+        {
+            "feature": "description_ENUM_affected",
+            "spearman": 0.02042033526424916
+        },
+        {
+            "feature": "cvss_aupr_ENUM_single",
+            "spearman": 0.020297144896885482
+        },
+        {
+            "feature": "description_ENUM_domain",
+            "spearman": 0.019824239080885334
+        },
+        {
+            "feature": "description_ENUM_data",
+            "spearman": 0.01975494827967483
+        },
+        {
+            "feature": "description_ENUM_version",
+            "spearman": 0.01949710896522378
+        },
+        {
+            "feature": "description_ENUM_unique",
+            "spearman": 0.019418781002334323
+        },
+        {
+            "feature": "description_ENUM_buffer",
+            "spearman": 0.019384211685815174
+        },
+        {
+            "feature": "description_ENUM_reference",
+            "spearman": 0.019344963481466027
+        },
+        {
+            "feature": "description_ENUM_command",
+            "spearman": 0.019028978506678285
+        },
+        {
+            "feature": "description_ENUM_sniffing",
+            "spearman": 0.01888989876408379
+        },
+        {
+            "feature": "description_ENUM_hijack",
+            "spearman": 0.018788943062805954
+        },
+        {
+            "feature": "description_ENUM_software",
+            "spearman": 0.01864680118185339
+        },
+        {
+            "feature": "description_ENUM_occur",
+            "spearman": 0.01857062396390552
+        },
+        {
+            "feature": "description_ENUM_blink",
+            "spearman": 0.01853263455616077
+        },
+        {
+            "feature": "description_ENUM_send",
+            "spearman": 0.018346126783666167
+        },
+        {
+            "feature": "description_ENUM_mediaserver",
+            "spearman": 0.018258680179524173
+        },
+        {
+            "feature": "description_ENUM_lack",
+            "spearman": 0.018099468442158387
+        },
+        {
+            "feature": "description_ENUM_due",
+            "spearman": 0.01795579340631307
+        },
+        {
+            "feature": "description_ENUM_spoof",
+            "spearman": 0.01783751290334944
+        },
+        {
+            "feature": "description_ENUM_subset",
+            "spearman": 0.017784663686920516
+        },
+        {
+            "feature": "description_ENUM_java",
+            "spearman": 0.017432987225200376
+        },
+        {
+            "feature": "description_ENUM_leveraging",
+            "spearman": 0.01727342854082389
+        },
+        {
+            "feature": "description_ENUM_imagemagick",
+            "spearman": 0.01704300479688075
+        },
+        {
+            "feature": "type_ENUM_vt_xss",
+            "spearman": 0.017016459806718145
+        },
+        {
+            "feature": "description_ENUM_cpanel",
+            "spearman": 0.016997717302727908
+        },
+        {
+            "feature": "description_ENUM_authentication",
+            "spearman": 0.016443575425999866
+        },
+        {
+            "feature": "description_ENUM_flaw",
+            "spearman": 0.016233933592789792
+        },
+        {
+            "feature": "description_ENUM_module",
+            "spearman": 0.01622329553383056
+        },
+        {
+            "feature": "description_ENUM_possibility",
+            "spearman": 0.01602645693347462
+        },
+        {
+            "feature": "description_ENUM_configured",
+            "spearman": 0.015606036365586056
+        },
+        {
+            "feature": "description_ENUM_bypass",
+            "spearman": 0.015412638616228134
+        },
+        {
+            "feature": "description_ENUM_perform",
+            "spearman": 0.015385885514472075
+        },
+        {
+            "feature": "description_ENUM_security",
+            "spearman": 0.014902690884049632
+        },
+        {
+            "feature": "description_ENUM_create",
+            "spearman": 0.014818154457640863
+        },
+        {
+            "feature": "description_ENUM_xss",
+            "spearman": 0.014764509937641997
+        },
+        {
+            "feature": "description_ENUM_permission",
+            "spearman": 0.014590135961272751
+        },
+        {
+            "feature": "description_ENUM_crash",
+            "spearman": 0.01449032853955898
+        },
+        {
+            "feature": "cvss_av_ENUM_physical",
+            "spearman": 0.014410403089780076
+        },
+        {
+            "feature": "description_ENUM_conduct",
+            "spearman": 0.014353658621038358
+        },
+        {
+            "feature": "description_ENUM_processing",
+            "spearman": 0.013871117085659704
+        },
+        {
+            "feature": "description_ENUM_check",
+            "spearman": 0.013723208681850048
+        },
+        {
+            "feature": "description_ENUM_file",
+            "spearman": 0.013619752816034126
+        },
+        {
+            "feature": "description_ENUM_trigger",
+            "spearman": 0.01344038110428145
+        },
+        {
+            "feature": "description_ENUM_required",
+            "spearman": 0.013004461930489984
+        },
+        {
+            "feature": "description_ENUM_allowed",
+            "spearman": 0.012898794218354446
+        },
+        {
+            "feature": "description_ENUM_exploited",
+            "spearman": 0.01269010348721784
+        },
+        {
+            "feature": "description_ENUM_open",
+            "spearman": 0.012684907465836436
+        },
+        {
+            "feature": "description_ENUM_zdi",
+            "spearman": 0.012679057632909807
+        },
+        {
+            "feature": "description_ENUM_properly",
+            "spearman": 0.012580818805177314
+        },
+        {
+            "feature": "description_ENUM_ruby",
+            "spearman": 0.012379994499617365
+        },
+        {
+            "feature": "description_ENUM_jenkins",
+            "spearman": 0.012377072008775669
+        },
+        {
+            "feature": "description_ENUM_visit",
+            "spearman": 0.012298441487512697
+        },
+        {
+            "feature": "description_ENUM_return",
+            "spearman": 0.012041852480198133
+        },
+        {
+            "feature": "description_ENUM_filesystem",
+            "spearman": 0.012021028020647695
+        },
+        {
+            "feature": "description_ENUM_ensure",
+            "spearman": 0.011952738300646696
+        },
+        {
+            "feature": "description_ENUM_application",
+            "spearman": 0.011882663140128343
+        },
+        {
+            "feature": "description_ENUM_placing",
+            "spearman": 0.01176641046731303
+        },
+        {
+            "feature": "description_ENUM_part",
+            "spearman": 0.011745840498742943
+        },
+        {
+            "feature": "description_ENUM_browser",
+            "spearman": 0.011743579510858663
+        },
+        {
+            "feature": "description_ENUM_access",
+            "spearman": 0.011733576390063848
+        },
+        {
+            "feature": "description_ENUM_operation",
+            "spearman": 0.011508474317496084
+        },
+        {
+            "feature": "description_ENUM_system",
+            "spearman": 0.011375587033187314
+        },
+        {
+            "feature": "description_ENUM_node",
+            "spearman": 0.01121562386288715
+        },
+        {
+            "feature": "description_ENUM_handling",
+            "spearman": 0.011203066522148475
+        },
+        {
+            "feature": "description_ENUM_call",
+            "spearman": 0.011191562116739722
+        },
+        {
+            "feature": "description_ENUM_delete",
+            "spearman": 0.011079002326082159
+        },
+        {
+            "feature": "description_ENUM_attack",
+            "spearman": 0.011070189299942369
+        },
+        {
+            "feature": "description_ENUM_opera",
+            "spearman": 0.010844196598159873
+        },
+        {
+            "feature": "description_ENUM_host",
+            "spearman": 0.010785327806096928
+        },
+        {
+            "feature": "description_ENUM_change",
+            "spearman": 0.010761647651183944
+        },
+        {
+            "feature": "description_ENUM_duplicate",
+            "spearman": 0.01070821320050609
+        },
+        {
+            "feature": "cvss_aupr_ENUM_multiple",
+            "spearman": 0.010558916788663159
+        },
+        {
+            "feature": "description_ENUM_persuading",
+            "spearman": 0.010558916454452862
+        },
+        {
+            "feature": "description_ENUM_linux",
+            "spearman": 0.010543829229049295
+        },
+        {
+            "feature": "description_ENUM_log",
+            "spearman": 0.010524911171452603
+        },
+        {
+            "feature": "description_ENUM_key",
+            "spearman": 0.010512657606558957
+        },
+        {
+            "feature": "description_ENUM_javascript",
+            "spearman": 0.010494394430823494
+        },
+        {
+            "feature": "description_ENUM_install",
+            "spearman": 0.01025850465572411
+        },
+        {
+            "feature": "description_ENUM_received",
+            "spearman": 0.010181430693755022
+        },
+        {
+            "feature": "description_ENUM_time",
+            "spearman": 0.010017120969609968
+        },
+        {
+            "feature": "description_ENUM_length",
+            "spearman": 0.009964627990549575
+        },
+        {
+            "feature": "description_ENUM_disclosure",
+            "spearman": 0.009883197825628196
+        },
+        {
+            "feature": "description_ENUM_doe",
+            "spearman": 0.009647154414272881
+        },
+        {
+            "feature": "description_ENUM_parsing",
+            "spearman": 0.009512236860575516
+        },
+        {
+            "feature": "description_ENUM_cleartext",
+            "spearman": 0.009510717048185284
+        },
+        {
+            "feature": "description_ENUM_document",
+            "spearman": 0.00934752182788478
+        },
+        {
+            "feature": "description_ENUM_default",
+            "spearman": 0.009177584952655093
+        },
+        {
+            "feature": "products",
+            "spearman": 0.009088917289448313
+        },
+        {
+            "feature": "description_ENUM_process",
+            "spearman": 0.00907326514301723
+        },
+        {
+            "feature": "description_ENUM_object",
+            "spearman": 0.009045235929684552
+        },
+        {
+            "feature": "type_ENUM_vt_csrf",
+            "spearman": 0.008991452355847323
+        },
+        {
+            "feature": "type_ENUM_vt_priv",
+            "spearman": 0.008957551290741066
+        },
+        {
+            "feature": "description_ENUM_prior",
+            "spearman": 0.008908253158845095
+        },
+        {
+            "feature": "description_ENUM_sequence",
+            "spearman": 0.008521013538893788
+        },
+        {
+            "feature": "description_ENUM_size",
+            "spearman": 0.008483969402126557
+        },
+        {
+            "feature": "description_ENUM_identified",
+            "spearman": 0.008399352101191694
+        },
+        {
+            "feature": "description_ENUM_display",
+            "spearman": 0.008355125761334478
+        },
+        {
+            "feature": "description_ENUM_sending",
+            "spearman": 0.008288161804412207
+        },
+        {
+            "feature": "description_ENUM_intended",
+            "spearman": 0.008268159963975834
+        },
+        {
+            "feature": "description_ENUM_memory",
+            "spearman": 0.00823667070693003
+        },
+        {
+            "feature": "description_ENUM_patched",
+            "spearman": 0.008189723605191986
+        },
+        {
+            "feature": "description_ENUM_affect",
+            "spearman": 0.008151883115363504
+        },
+        {
+            "feature": "description_ENUM_add",
+            "spearman": 0.008145427100106139
+        },
+        {
+            "feature": "description_ENUM_server",
+            "spearman": 0.008116767526211701
+        },
+        {
+            "feature": "description_ENUM_implementation",
+            "spearman": 0.008033644056959914
+        },
+        {
+            "feature": "description_ENUM_app",
+            "spearman": 0.008012493593899364
+        },
+        {
+            "feature": "description_ENUM_set",
+            "spearman": 0.007937881488312563
+        },
+        {
+            "feature": "description_ENUM_prevent",
+            "spearman": 0.007926471290633234
+        },
+        {
+            "feature": "description_ENUM_validate",
+            "spearman": 0.007874179103822805
+        },
+        {
+            "feature": "description_ENUM_email",
+            "spearman": 0.00783376285611137
+        },
+        {
+            "feature": "description_ENUM_load",
+            "spearman": 0.007694529630907824
+        },
+        {
+            "feature": "description_ENUM_crafted",
+            "spearman": 0.007611541321430123
+        },
+        {
+            "feature": "description_ENUM_stored",
+            "spearman": 0.007605412211069505
+        },
+        {
+            "feature": "description_ENUM_package",
+            "spearman": 0.007571363771902394
+        },
+        {
+            "feature": "description_ENUM_installer",
+            "spearman": 0.007532060261849112
+        },
+        {
+            "feature": "description_ENUM_target",
+            "spearman": 0.007380218565586748
+        },
+        {
+            "feature": "description_ENUM_page",
+            "spearman": 0.007349713294375084
+        },
+        {
+            "feature": "description_ENUM_component",
+            "spearman": 0.007320555317381459
+        },
+        {
+            "feature": "description_ENUM_mail",
+            "spearman": 0.007264821417032391
+        },
+        {
+            "feature": "description_ENUM_hang",
+            "spearman": 0.007255577247530795
+        },
+        {
+            "feature": "delta_days_patch",
+            "spearman": 0.0071767099211460265
+        },
+        {
+            "feature": "description_ENUM_compromise",
+            "spearman": 0.007172789419699737
+        },
+        {
+            "feature": "description_ENUM_string",
+            "spearman": 0.007003344651608262
+        },
+        {
+            "feature": "description_ENUM_passed",
+            "spearman": 0.006943697462342308
+        },
+        {
+            "feature": "description_ENUM_modifying",
+            "spearman": 0.006935185732758615
+        },
+        {
+            "feature": "description_ENUM_obtain",
+            "spearman": 0.006746662061146426
+        },
+        {
+            "feature": "description_ENUM_run",
+            "spearman": 0.0066943783736478695
+        },
+        {
+            "feature": "description_ENUM_processed",
+            "spearman": 0.006474108355073427
+        },
+        {
+            "feature": "description_ENUM_execution",
+            "spearman": 0.006464230398931534
+        },
+        {
+            "feature": "description_ENUM_end",
+            "spearman": 0.00646238599745516
+        },
+        {
+            "feature": "description_ENUM_execute",
+            "spearman": 0.006436471596596086
+        },
+        {
+            "feature": "description_ENUM_connecting",
+            "spearman": 0.00641449433070759
+        },
+        {
+            "feature": "description_ENUM_connection",
+            "spearman": 0.0064076591753240465
+        },
+        {
+            "feature": "description_ENUM_triggering",
+            "spearman": 0.006389021524908955
+        },
+        {
+            "feature": "description_ENUM_installation",
+            "spearman": 0.006365124678433103
+        },
+        {
+            "feature": "type_ENUM_vt_memc",
+            "spearman": 0.00635530770347292
+        },
+        {
+            "feature": "description_ENUM_reveals",
+            "spearman": 0.006258281605897718
+        },
+        {
+            "feature": "description_ENUM_os",
+            "spearman": 0.006226448292820708
+        },
+        {
+            "feature": "description_ENUM_susceptible",
+            "spearman": 0.006129407956163291
+        },
+        {
+            "feature": "description_ENUM_case",
+            "spearman": 0.006091696484471241
+        },
+        {
+            "feature": "description_ENUM_victim",
+            "spearman": 0.0060876039559180015
+        },
+        {
+            "feature": "description_ENUM_reboot",
+            "spearman": 0.006057402564722574
+        },
+        {
+            "feature": "description_ENUM_accessed",
+            "spearman": 0.006055639005946021
+        },
+        {
+            "feature": "description_ENUM_logged",
+            "spearman": 0.00603804297546723
+        },
+        {
+            "feature": "description_ENUM_function",
+            "spearman": 0.006001275855945467
+        },
+        {
+            "feature": "description_ENUM_provide",
+            "spearman": 0.005953096630357776
+        },
+        {
+            "feature": "description_ENUM_vendor",
+            "spearman": 0.005904516969490161
+        },
+        {
+            "feature": "description_ENUM_error",
+            "spearman": 0.005895583628432722
+        },
+        {
+            "feature": "description_ENUM_note",
+            "spearman": 0.005853467716850523
+        },
+        {
+            "feature": "description_ENUM_needed",
+            "spearman": 0.005762890478705735
+        },
+        {
+            "feature": "description_ENUM_client",
+            "spearman": 0.00567870828308802
+        },
+        {
+            "feature": "description_ENUM_connect",
+            "spearman": 0.005595755029268546
+        },
+        {
+            "feature": "description_ENUM_accessible",
+            "spearman": 0.005595489008902685
+        },
+        {
+            "feature": "description_ENUM_owner",
+            "spearman": 0.005415164548686065
+        },
+        {
+            "feature": "description_ENUM_mishandled",
+            "spearman": 0.005348529729151119
+        },
+        {
+            "feature": "description_ENUM_interface",
+            "spearman": 0.005280015080127838
+        },
+        {
+            "feature": "description_ENUM_account",
+            "spearman": 0.005234568605814905
+        },
+        {
+            "feature": "description_ENUM_code",
+            "spearman": 0.0051653503983481175
+        },
+        {
+            "feature": "description_ENUM_control",
+            "spearman": 0.005139574007122112
+        },
+        {
+            "feature": "description_ENUM_type",
+            "spearman": 0.0051395401412069296
+        },
+        {
+            "feature": "description_ENUM_running",
+            "spearman": 0.0051392486620440376
+        },
+        {
+            "feature": "description_ENUM_redirect",
+            "spearman": 0.005122995504982598
+        },
+        {
+            "feature": "description_ENUM_exploitable",
+            "spearman": 0.0050293057019115996
+        },
+        {
+            "feature": "description_ENUM_credential",
+            "spearman": 0.00489541671501249
+        },
+        {
+            "feature": "description_ENUM_character",
+            "spearman": 0.004888116543039008
+        },
+        {
+            "feature": "description_ENUM_series",
+            "spearman": 0.004878116650908253
+        },
+        {
+            "feature": "description_ENUM_executed",
+            "spearman": 0.004848535526553856
+        },
+        {
+            "feature": "description_ENUM_leverage",
+            "spearman": 0.004820509640870653
+        },
+        {
+            "feature": "description_ENUM_overflow",
+            "spearman": 0.004800874890705444
+        },
+        {
+            "feature": "description_ENUM_called",
+            "spearman": 0.004727996770030811
+        },
+        {
+            "feature": "description_ENUM_occurs",
+            "spearman": 0.0047138111019375765
+        },
+        {
+            "feature": "description_ENUM_directory",
+            "spearman": 0.004708950058866612
+        },
+        {
+            "feature": "description_ENUM_session",
+            "spearman": 0.004556028573558228
+        },
+        {
+            "feature": "description_ENUM_payload",
+            "spearman": 0.0045196824811260155
+        },
+        {
+            "feature": "description_ENUM_packet",
+            "spearman": 0.004471047000449895
+        },
+        {
+            "feature": "description_ENUM_username",
+            "spearman": 0.004459452398150656
+        },
+        {
+            "feature": "description_ENUM_windows",
+            "spearman": 0.004419647926489573
+        },
+        {
+            "feature": "description_ENUM_kernel",
+            "spearman": 0.004412243957550375
+        },
+        {
+            "feature": "cpes_non_vulnerable_count",
+            "spearman": 0.004187061720950754
+        },
+        {
+            "feature": "description_ENUM_privilege",
+            "spearman": 0.00406108225331012
+        },
+        {
+            "feature": "description_ENUM_csrf",
+            "spearman": 0.0040090744535497625
+        },
+        {
+            "feature": "description_ENUM_conjunction",
+            "spearman": 0.003960840513345371
+        },
+        {
+            "feature": "description_ENUM_installed",
+            "spearman": 0.003921863373066599
+        },
+        {
+            "feature": "description_ENUM_path",
+            "spearman": 0.003909529549516733
+        },
+        {
+            "feature": "description_ENUM_triggered",
+            "spearman": 0.003906356013097371
+        },
+        {
+            "feature": "description_ENUM_trick",
+            "spearman": 0.003900299496715964
+        },
+        {
+            "feature": "description_ENUM_image",
+            "spearman": 0.0038832354125397845
+        },
+        {
+            "feature": "description_ENUM_input",
+            "spearman": 0.003824127344245569
+        },
+        {
+            "feature": "description_ENUM_found",
+            "spearman": 0.003795777686102414
+        },
+        {
+            "feature": "description_ENUM_filename",
+            "spearman": 0.0035676060425997727
+        },
+        {
+            "feature": "description_ENUM_plaintext",
+            "spearman": 0.0035169765761621564
+        },
+        {
+            "feature": "description_ENUM_update",
+            "spearman": 0.003443635891066333
+        },
+        {
+            "feature": "description_ENUM_product",
+            "spearman": 0.0034389073901474132
+        },
+        {
+            "feature": "description_ENUM_option",
+            "spearman": 0.003317179518297429
+        },
+        {
+            "feature": "description_ENUM_cookie",
+            "spearman": 0.0032821219157778874
+        },
+        {
+            "feature": "description_ENUM_changing",
+            "spearman": 0.003263484962601717
+        },
+        {
+            "feature": "description_ENUM_logon",
+            "spearman": 0.003178373350423143
+        },
+        {
+            "feature": "description_ENUM_overwrite",
+            "spearman": 0.0031288855013591314
+        },
+        {
+            "feature": "description_ENUM_click",
+            "spearman": 0.002952618243088027
+        },
+        {
+            "feature": "description_ENUM_included",
+            "spearman": 0.002920082617684005
+        },
+        {
+            "feature": "description_ENUM_site",
+            "spearman": 0.00291039576988553
+        },
+        {
+            "feature": "description_ENUM_point",
+            "spearman": 0.002883943543852915
+        },
+        {
+            "feature": "description_ENUM_leak",
+            "spearman": 0.002758814595495417
+        },
+        {
+            "feature": "description_ENUM_ability",
+            "spearman": 0.0027377939778268517
+        },
+        {
+            "feature": "description_ENUM_opening",
+            "spearman": 0.0027108996965622425
+        },
+        {
+            "feature": "description_ENUM_infrastructure",
+            "spearman": 0.0027095626757484984
+        },
+        {
+            "feature": "description_ENUM_mac",
+            "spearman": 0.0026871625067789113
+        },
+        {
+            "feature": "description_ENUM_write",
+            "spearman": 0.0026179756486060368
+        },
+        {
+            "feature": "description_ENUM_configuration",
+            "spearman": 0.002568181511827018
+        },
+        {
+            "feature": "description_ENUM_attempt",
+            "spearman": 0.0025247885934180816
+        },
+        {
+            "feature": "description_ENUM_login",
+            "spearman": 0.0022743243191137175
+        },
+        {
+            "feature": "description_ENUM_adding",
+            "spearman": 0.0021298469836022235
+        },
+        {
+            "feature": "type_ENUM_vt_fileinc",
+            "spearman": 0.0020871837833740916
+        },
+        {
+            "feature": "description_ENUM_message",
+            "spearman": 0.002043886478145383
+        },
+        {
+            "feature": "description_ENUM_content",
+            "spearman": 0.0019871355702222363
+        },
+        {
+            "feature": "description_ENUM_intel",
+            "spearman": 0.001977175244997865
+        },
+        {
+            "feature": "description_ENUM_contract",
+            "spearman": 0.001977175244997865
+        },
+        {
+            "feature": "description_ENUM_resource",
+            "spearman": 0.001923856269255092
+        },
+        {
+            "feature": "description_ENUM_link",
+            "spearman": 0.0019142460090238074
+        },
+        {
+            "feature": "description_ENUM_script",
+            "spearman": 0.00190698364825286
+        },
+        {
+            "feature": "description_ENUM_password",
+            "spearman": 0.001848069946832344
+        },
+        {
+            "feature": "description_ENUM_networking",
+            "spearman": 0.0018165551786462615
+        },
+        {
+            "feature": "description_ENUM_response",
+            "spearman": 0.001808775322852851
+        },
+        {
+            "feature": "description_ENUM_address",
+            "spearman": 0.001795054717765033
+        },
+        {
+            "feature": "description_ENUM_header",
+            "spearman": 0.001791111803766618
+        },
+        {
+            "feature": "description_ENUM_fixed",
+            "spearman": 0.0017366395502434859
+        },
+        {
+            "feature": "description_ENUM_balance",
+            "spearman": 0.0013980651431478156
+        },
+        {
+            "feature": "description_ENUM_logfile",
+            "spearman": 0.0013980651431478156
+        },
+        {
+            "feature": "description_ENUM_clear",
+            "spearman": 0.0013656439995443736
+        },
+        {
+            "feature": "description_ENUM_related",
+            "spearman": 0.001352858064810444
+        },
+        {
+            "feature": "description_ENUM_disputed",
+            "spearman": 0.0013253764605882933
+        },
+        {
+            "feature": "description_ENUM_order",
+            "spearman": 0.0012433581507611936
+        },
+        {
+            "feature": "description_ENUM_field",
+            "spearman": 0.001204083971597422
+        },
+        {
+            "feature": "description_ENUM_validating",
+            "spearman": 0.001175430600904986
+        },
+        {
+            "feature": "description_ENUM_takeover",
+            "spearman": 0.0011045232905323083
+        },
+        {
+            "feature": "description_ENUM_firmware",
+            "spearman": 0.0010396408542972823
+        },
+        {
+            "feature": "type_ENUM_vt_httprs",
+            "spearman": 0.0009518038005627144
+        },
+        {
+            "feature": "description_ENUM_protocol",
+            "spearman": 0.0008705028059041519
+        },
+        {
+            "feature": "description_ENUM_program",
+            "spearman": 0.0008646113126754473
+        },
+        {
+            "feature": "description_ENUM_bug",
+            "spearman": 0.0007472735517946824
+        },
+        {
+            "feature": "description_ENUM_creating",
+            "spearman": 0.0007163794415504121
+        },
+        {
+            "feature": "description_ENUM_executing",
+            "spearman": 0.0005300980481095848
+        },
+        {
+            "feature": "description_ENUM_modify",
+            "spearman": 0.00039518097832638336
+        },
+        {
+            "feature": "description_ENUM_root",
+            "spearman": 0.00028233528228689296
+        },
+        {
+            "feature": "description_ENUM_addressed",
+            "spearman": 0.0002522483520468246
+        },
+        {
+            "feature": "description_ENUM_distributed",
+            "spearman": 0.00015761113021445138
+        },
+        {
+            "feature": "description_ENUM_free",
+            "spearman": 8.048214161191968e-05
+        },
+        {
+            "feature": "delta_days_proposed",
+            "spearman": NaN
+        },
+        {
+            "feature": "status_ENUM_candidate",
+            "spearman": NaN
+        },
+        {
+            "feature": "status_ENUM_entry",
+            "spearman": NaN
+        },
+        {
+            "feature": "phase_ENUM_assigned",
+            "spearman": NaN
+        },
+        {
+            "feature": "phase_ENUM_interim",
+            "spearman": NaN
+        },
+        {
+            "feature": "phase_ENUM_proposed",
+            "spearman": NaN
+        },
+        {
+            "feature": "phase_ENUM_modified",
+            "spearman": NaN
+        },
+        {
+            "feature": "phase_ENUM_absent",
+            "spearman": NaN
+        },
+        {
+            "feature": "vendor_ENUM_absent",
+            "spearman": NaN
+        },
+        {
+            "feature": "comments",
+            "spearman": NaN
+        },
+        {
+            "feature": "description_ENUM_currentuser",
+            "spearman": NaN
+        }
+    ]
+}/azureml-envs/azureml_216d0915756136b01f3f139aa36b089b/lib/python3.8/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  warnings.warn(SpearmanRConstantInputWarning())
+

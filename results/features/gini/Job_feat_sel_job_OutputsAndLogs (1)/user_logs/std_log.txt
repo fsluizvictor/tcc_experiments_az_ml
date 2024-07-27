@@ -1,0 +1,4031 @@
+{
+    "X_train_columns": [
+        "delta_days_oval",
+        "delta_days_patch",
+        "delta_days_proposed",
+        "status_ENUM_candidate",
+        "status_ENUM_entry",
+        "phase_ENUM_assigned",
+        "phase_ENUM_interim",
+        "phase_ENUM_proposed",
+        "phase_ENUM_modified",
+        "phase_ENUM_absent",
+        "vendor_ENUM_absent",
+        "cvss_version_ENUM_3_0",
+        "cvss_version_ENUM_3_1",
+        "cvss_version_ENUM_2_0",
+        "cvss_version_ENUM_absent",
+        "cvss_av_ENUM_physical",
+        "cvss_av_ENUM_network",
+        "cvss_av_ENUM_adjacent_network",
+        "cvss_av_ENUM_local",
+        "cvss_av_ENUM_absent",
+        "cvss_ac_ENUM_absent",
+        "cvss_ac_ENUM_low",
+        "cvss_ac_ENUM_high",
+        "cvss_ac_ENUM_medium",
+        "cvss_aupr_ENUM_low",
+        "cvss_aupr_ENUM_high",
+        "cvss_aupr_ENUM_single",
+        "cvss_aupr_ENUM_absent",
+        "cvss_aupr_ENUM_multiple",
+        "cvss_aupr_ENUM_none",
+        "cvss_c_ENUM_low",
+        "cvss_c_ENUM_complete",
+        "cvss_c_ENUM_high",
+        "cvss_c_ENUM_partial",
+        "cvss_c_ENUM_absent",
+        "cvss_c_ENUM_none",
+        "cvss_i_ENUM_low",
+        "cvss_i_ENUM_complete",
+        "cvss_i_ENUM_high",
+        "cvss_i_ENUM_partial",
+        "cvss_i_ENUM_absent",
+        "cvss_i_ENUM_none",
+        "cvss_a_ENUM_low",
+        "cvss_a_ENUM_complete",
+        "cvss_a_ENUM_high",
+        "cvss_a_ENUM_partial",
+        "cvss_a_ENUM_absent",
+        "cvss_a_ENUM_none",
+        "cvss_ui_ENUM_required",
+        "cvss_ui_ENUM_none",
+        "cvss_ui_ENUM_absent",
+        "cvss_s_ENUM_changed",
+        "cvss_s_ENUM_unchanged",
+        "cvss_s_ENUM_absent",
+        "type_ENUM_vt_dirt",
+        "type_ENUM_vt_dos",
+        "type_ENUM_vt_info",
+        "type_ENUM_vt_httprs",
+        "type_ENUM_vt_xss",
+        "type_ENUM_vt_memc",
+        "type_ENUM_vt_fileinc",
+        "type_ENUM_vt_overflow",
+        "type_ENUM_vt_csrf",
+        "type_ENUM_vt_sql",
+        "type_ENUM_vt_bypass",
+        "type_ENUM_vt_priv",
+        "type_ENUM_vt_ec",
+        "type_ENUM_absent",
+        "references_count",
+        "products",
+        "versions",
+        "cvss_score",
+        "cvss_has_exploitability_score",
+        "cvss_exploitability_score",
+        "cvss_has_impact_score",
+        "cvss_impact_score",
+        "comments",
+        "cpes_non_vulnerable_count",
+        "description_ENUM_denial",
+        "description_ENUM_vulnerability",
+        "description_ENUM_attacker",
+        "description_ENUM_earlier",
+        "description_ENUM_html",
+        "description_ENUM_reject",
+        "description_ENUM_reason",
+        "description_ENUM_service",
+        "description_ENUM_issue",
+        "description_ENUM_user",
+        "description_ENUM_affected",
+        "description_ENUM_candidate",
+        "description_ENUM_cna",
+        "description_ENUM_exploit",
+        "description_ENUM_requested",
+        "description_ENUM_individual",
+        "description_ENUM_associate",
+        "description_ENUM_demonstrated",
+        "description_ENUM_vulnerable",
+        "description_ENUM_trigger",
+        "description_ENUM_url",
+        "description_ENUM_file",
+        "description_ENUM_assigned",
+        "description_ENUM_ui",
+        "description_ENUM_ac",
+        "description_ENUM_windows",
+        "description_ENUM_man",
+        "description_ENUM_request",
+        "description_ENUM_read",
+        "description_ENUM_version",
+        "description_ENUM_unspecified",
+        "description_ENUM_http",
+        "description_ENUM_detail",
+        "description_ENUM_access",
+        "description_ENUM_context",
+        "description_ENUM_make",
+        "description_ENUM_due",
+        "description_ENUM_unique",
+        "description_ENUM_server",
+        "description_ENUM_verify",
+        "description_ENUM_parameter",
+        "description_ENUM_device",
+        "description_ENUM_authentication",
+        "description_ENUM_enabled",
+        "description_ENUM_information",
+        "description_ENUM_bypass",
+        "description_ENUM_password",
+        "description_ENUM_easier",
+        "description_ENUM_privilege",
+        "description_ENUM_application",
+        "description_ENUM_fixed",
+        "description_ENUM_crash",
+        "description_ENUM_lack",
+        "description_ENUM_exploited",
+        "description_ENUM_wordpress",
+        "description_ENUM_sending",
+        "description_ENUM_system",
+        "description_ENUM_set",
+        "description_ENUM_elevation",
+        "description_ENUM_obtained",
+        "description_ENUM_hijack",
+        "description_ENUM_prior",
+        "description_ENUM_android",
+        "description_ENUM_php",
+        "description_ENUM_doe",
+        "description_ENUM_needed",
+        "description_ENUM_administrator",
+        "description_ENUM_reference",
+        "description_ENUM_person",
+        "description_ENUM_os",
+        "description_ENUM_product",
+        "description_ENUM_free",
+        "description_ENUM_attack",
+        "description_ENUM_unknown",
+        "description_ENUM_obtain",
+        "description_ENUM_provenance",
+        "description_ENUM_availability",
+        "description_ENUM_oracle",
+        "description_ENUM_removed",
+        "description_ENUM_description",
+        "description_ENUM_required",
+        "description_ENUM_data",
+        "description_ENUM_leverage",
+        "description_ENUM_xss",
+        "description_ENUM_open",
+        "description_ENUM_subset",
+        "description_ENUM_leveraging",
+        "description_ENUM_linux",
+        "description_ENUM_joomla",
+        "description_ENUM_create",
+        "description_ENUM_webkit",
+        "description_ENUM_running",
+        "description_ENUM_reading",
+        "description_ENUM_send",
+        "description_ENUM_client",
+        "description_ENUM_memory",
+        "description_ENUM_occur",
+        "description_ENUM_network",
+        "description_ENUM_content",
+        "description_ENUM_executed",
+        "description_ENUM_modify",
+        "description_ENUM_configured",
+        "description_ENUM_vector",
+        "description_ENUM_check",
+        "description_ENUM_perform",
+        "description_ENUM_hang",
+        "description_ENUM_include",
+        "description_ENUM_kernel",
+        "description_ENUM_victim",
+        "description_ENUM_disabled",
+        "description_ENUM_drupal",
+        "description_ENUM_command",
+        "description_ENUM_directory",
+        "description_ENUM_change",
+        "description_ENUM_write",
+        "description_ENUM_identified",
+        "description_ENUM_zdi",
+        "description_ENUM_exploitable",
+        "description_ENUM_argument",
+        "description_ENUM_error",
+        "description_ENUM_accessing",
+        "description_ENUM_execute",
+        "description_ENUM_visit",
+        "description_ENUM_flaw",
+        "description_ENUM_root",
+        "description_ENUM_run",
+        "description_ENUM_buffer",
+        "description_ENUM_software",
+        "description_ENUM_seamonkey",
+        "description_ENUM_firmware",
+        "description_ENUM_default",
+        "description_ENUM_enable",
+        "description_ENUM_permission",
+        "description_ENUM_setting",
+        "description_ENUM_integrity",
+        "description_ENUM_processing",
+        "description_ENUM_handling",
+        "description_ENUM_target",
+        "description_ENUM_related",
+        "description_ENUM_caf",
+        "description_ENUM_code",
+        "description_ENUM_object",
+        "description_ENUM_field",
+        "description_ENUM_conduct",
+        "description_ENUM_duplicate",
+        "description_ENUM_addressed",
+        "description_ENUM_altering",
+        "description_ENUM_upload",
+        "description_ENUM_conjunction",
+        "description_ENUM_modifying",
+        "description_ENUM_time",
+        "description_ENUM_component",
+        "description_ENUM_order",
+        "description_ENUM_browser",
+        "description_ENUM_uploading",
+        "description_ENUM_end",
+        "description_ENUM_spoof",
+        "description_ENUM_rated",
+        "description_ENUM_register_globals",
+        "description_ENUM_control",
+        "description_ENUM_domain",
+        "description_ENUM_path",
+        "description_ENUM_filename",
+        "description_ENUM_account",
+        "description_ENUM_disputed",
+        "description_ENUM_java",
+        "description_ENUM_call",
+        "description_ENUM_script",
+        "description_ENUM_ability",
+        "description_ENUM_process",
+        "description_ENUM_database",
+        "description_ENUM_configuration",
+        "description_ENUM_logon",
+        "description_ENUM_creating",
+        "description_ENUM_infrastructure",
+        "description_ENUM_reveals",
+        "description_ENUM_log",
+        "description_ENUM_page",
+        "description_ENUM_part",
+        "description_ENUM_owner",
+        "description_ENUM_username",
+        "description_ENUM_function",
+        "description_ENUM_crafted",
+        "description_ENUM_message",
+        "description_ENUM_intel",
+        "description_ENUM_execution",
+        "description_ENUM_mishandled",
+        "description_ENUM_javascript",
+        "description_ENUM_download",
+        "description_ENUM_contract",
+        "description_ENUM_case",
+        "description_ENUM_packet",
+        "description_ENUM_connection",
+        "description_ENUM_balance",
+        "description_ENUM_character",
+        "description_ENUM_magic_quotes_gpc",
+        "description_ENUM_parsing",
+        "description_ENUM_response",
+        "description_ENUM_affect",
+        "description_ENUM_length",
+        "description_ENUM_typo3",
+        "description_ENUM_session",
+        "description_ENUM_cpanel",
+        "description_ENUM_persuading",
+        "description_ENUM_link",
+        "description_ENUM_takeover",
+        "description_ENUM_cookie",
+        "description_ENUM_validate",
+        "description_ENUM_module",
+        "description_ENUM_program",
+        "description_ENUM_leveraged",
+        "description_ENUM_admin",
+        "description_ENUM_acrobat",
+        "description_ENUM_host",
+        "description_ENUM_interface",
+        "description_ENUM_credential",
+        "description_ENUM_connect",
+        "description_ENUM_series",
+        "description_ENUM_logged",
+        "description_ENUM_address",
+        "description_ENUM_cleartext",
+        "description_ENUM_return",
+        "description_ENUM_add",
+        "description_ENUM_processed",
+        "description_ENUM_triggered",
+        "description_ENUM_login",
+        "description_ENUM_type",
+        "description_ENUM_vendor",
+        "description_ENUM_csrf",
+        "description_ENUM_stored",
+        "description_ENUM_sequence",
+        "description_ENUM_package",
+        "description_ENUM_load",
+        "description_ENUM_allowed",
+        "description_ENUM_uri",
+        "description_ENUM_disclosure",
+        "description_ENUM_accessed",
+        "description_ENUM_passed",
+        "description_ENUM_header",
+        "description_ENUM_installed",
+        "description_ENUM_installation",
+        "description_ENUM_string",
+        "description_ENUM_trick",
+        "description_ENUM_input",
+        "description_ENUM_note",
+        "description_ENUM_occurs",
+        "description_ENUM_document",
+        "description_ENUM_sniffing",
+        "description_ENUM_found",
+        "description_ENUM_key",
+        "description_ENUM_possibility",
+        "description_ENUM_susceptible",
+        "description_ENUM_adding",
+        "description_ENUM_placing",
+        "description_ENUM_filesystem",
+        "description_ENUM_distributed",
+        "description_ENUM_overflow",
+        "description_ENUM_validating",
+        "description_ENUM_ffmpeg",
+        "description_ENUM_logfile",
+        "description_ENUM_resource",
+        "description_ENUM_blink",
+        "description_ENUM_node",
+        "description_ENUM_update",
+        "description_ENUM_image",
+        "description_ENUM_action",
+        "description_ENUM_imagemagick",
+        "description_ENUM_reported",
+        "description_ENUM_ensure",
+        "description_ENUM_security",
+        "description_ENUM_size",
+        "description_ENUM_option",
+        "description_ENUM_compromise",
+        "description_ENUM_app",
+        "description_ENUM_click",
+        "description_ENUM_received",
+        "description_ENUM_plaintext",
+        "description_ENUM_display",
+        "description_ENUM_provide",
+        "description_ENUM_path_info",
+        "description_ENUM_jenkins",
+        "description_ENUM_overwrite",
+        "description_ENUM_reboot",
+        "description_ENUM_changing",
+        "description_ENUM_attempt",
+        "description_ENUM_implementation",
+        "description_ENUM_mac",
+        "description_ENUM_triggering",
+        "description_ENUM_networking",
+        "description_ENUM_delete",
+        "description_ENUM_ruby",
+        "description_ENUM_opera",
+        "description_ENUM_located",
+        "description_ENUM_currentuser",
+        "description_ENUM_patched",
+        "description_ENUM_redirect",
+        "description_ENUM_site",
+        "description_ENUM_called",
+        "description_ENUM_mail",
+        "description_ENUM_installer",
+        "description_ENUM_included",
+        "description_ENUM_prevent",
+        "description_ENUM_executing",
+        "description_ENUM_leak",
+        "description_ENUM_clear",
+        "description_ENUM_bug",
+        "description_ENUM_connecting",
+        "description_ENUM_email",
+        "description_ENUM_protocol",
+        "description_ENUM_payload",
+        "description_ENUM_wild",
+        "description_ENUM_opening",
+        "description_ENUM_properly",
+        "description_ENUM_mediaserver",
+        "description_ENUM_install",
+        "description_ENUM_intended",
+        "description_ENUM_point",
+        "description_ENUM_accessible",
+        "description_ENUM_operation",
+        "vendor_ENUM_encoded",
+        "reference_type_ENUM_encoded"
+    ],
+    "feature_importances": [
+        0.011479242618906815,
+        0.007768711411662818,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.00035674529042630345,
+        0.001214839359470598,
+        0.0003738788785896051,
+        0.0,
+        0.0003172475569605353,
+        0.0015275230598914813,
+        0.0007268252331833215,
+        0.0011478814372168505,
+        0.0,
+        0.0001015487636747179,
+        0.003327599051755743,
+        0.0013068166255653189,
+        0.003952501109803283,
+        0.0015827315114468003,
+        0.0001523231455120769,
+        0.0014426957376614804,
+        4.626425301324647e-06,
+        0.0,
+        0.0038310009868220813,
+        0.0006401359489176523,
+        0.00080072468633427,
+        0.0009759053906000317,
+        0.06370037617284457,
+        6.986996457184387e-05,
+        0.0021147147068648993,
+        0.00033701849888382717,
+        0.0013501289122725994,
+        0.0006081449150310619,
+        0.0017763854536275566,
+        0.0,
+        0.002485029408423247,
+        0.0002454130678428818,
+        0.0010904547180126648,
+        0.001153362813455221,
+        0.0023820130142033677,
+        0.0,
+        0.0018875557257450916,
+        0.0014432225771777313,
+        0.0012172686072834812,
+        0.00029787290525035875,
+        0.0005419641788230022,
+        0.0010485290539670286,
+        0.0005689633826525418,
+        0.024562025806613784,
+        0.0024941306221548092,
+        0.0022254410696860723,
+        0.0005364757575792805,
+        0.0021878798256574753,
+        9.370765660616393e-05,
+        0.00010936294936992926,
+        0.0011436626317700828,
+        0.0008492040361694912,
+        0.004606501131134795,
+        0.001840108666112013,
+        0.0025883239787065034,
+        0.07539297586275145,
+        0.003123152706665093,
+        0.10144121368847402,
+        0.025898239808759264,
+        0.06874020672102944,
+        0.021011831538757453,
+        0.0,
+        0.02540732361761344,
+        0.0,
+        0.005936751470783217,
+        0.0,
+        0.011266535342253685,
+        0.0037630244677015457,
+        0.005177960688788724,
+        0.0037706747973378398,
+        0.011981698815977227,
+        0.004751079636610109,
+        0.0,
+        6.666359138739384e-05,
+        0.002257989898533791,
+        0.00192979892690849,
+        0.0012685735084558012,
+        0.003600021407042101,
+        4.029353770052803e-05,
+        3.864908326838659e-07,
+        0.0007492921542713819,
+        8.039253543041066e-05,
+        3.153137643660812e-10,
+        1.5788865870666096e-10,
+        0.0044803297334352725,
+        0.0010883293754344748,
+        0.0026405015946641243,
+        0.002706892859664743,
+        0.0025611468112902132,
+        0.0004920554118486846,
+        0.00018425645455878617,
+        0.00044427584107689086,
+        0.001202628482052851,
+        0.0011389102587322608,
+        0.005355426524452468,
+        0.000993009829293732,
+        0.0028334927950732607,
+        0.0013228175317970981,
+        0.0006536566954064648,
+        0.0032215854981032474,
+        0.0013210591503760567,
+        0.0003398162948858947,
+        0.000821851474374509,
+        0.0002208046048866844,
+        0.0032003925429136934,
+        0.0014810653849294832,
+        0.00033059932335853905,
+        0.0065029031624205275,
+        0.0006943042594006912,
+        0.0007708822769100859,
+        0.0017673665903206208,
+        0.0023506961635448975,
+        0.0014616121694537036,
+        0.0012085086160133589,
+        0.0006198539607798393,
+        0.0009066781412729298,
+        0.0007059017342195748,
+        0.0003871166649912753,
+        0.0013387638070662018,
+        0.0005815211029743281,
+        0.0013236974439310662,
+        0.005102023314121216,
+        0.0004342878671466278,
+        0.0005324808662211757,
+        0.0006004063752685771,
+        0.0002563395089695727,
+        0.0037208362234560184,
+        0.0007854086821483409,
+        0.0006873332512367088,
+        0.0005679632144260794,
+        0.002769123211118735,
+        0.001060347585168517,
+        9.632872339009395e-05,
+        0.003626229135092536,
+        0.0005778335217372769,
+        0.0,
+        0.00029951154047442983,
+        0.0019488355838451373,
+        0.0005920749832574406,
+        0.0005634039432418549,
+        0.0007805662825407842,
+        0.0005493575097759989,
+        0.0016739282018220854,
+        0.00031970718524458987,
+        0.00023192469540830876,
+        7.34415165861799e-05,
+        4.969025534747694e-05,
+        0.00010717451697876992,
+        0.0003591851599531122,
+        0.0002987717037277321,
+        0.00019421792934132517,
+        0.00025418615810035794,
+        0.0,
+        0.0014820253799461287,
+        0.0005976188500543001,
+        0.008939522272454023,
+        0.001327482801467311,
+        0.00018240696675071212,
+        0.0005033156104995201,
+        0.0005200805560530546,
+        5.315375670684026e-05,
+        0.0004494013526982327,
+        0.000759638335654427,
+        0.00018034462506372748,
+        0.0002507335452006894,
+        0.00027480741784589164,
+        1.9040393189009604e-05,
+        0.0009200317873774679,
+        0.00015189597351343342,
+        0.002388173793757319,
+        1.0695171097967339e-05,
+        6.693080142236575e-05,
+        0.0005782351844698199,
+        0.0019492778456717873,
+        0.001771099027052812,
+        0.00048228548663161385,
+        0.0007286081848937771,
+        0.001976393506571613,
+        0.0017878635817485569,
+        0.0008154115234401004,
+        0.00099665273990394,
+        0.001288989048341917,
+        0.0,
+        0.0,
+        0.0004564375234091,
+        0.0020368769117673573,
+        0.0016615231510673175,
+        0.0010343110079701731,
+        0.00022026917358699055,
+        0.0,
+        0.0001670630654414058,
+        0.0006940025992228333,
+        0.00011131465298852824,
+        0.00031934833360941213,
+        0.0001867635426905402,
+        0.00020598758702991034,
+        0.0015307862139098505,
+        0.0002460418096059396,
+        0.00021002985764219652,
+        0.00024374383746260354,
+        0.0030126557850408604,
+        0.000322501658441969,
+        0.0001513922511306917,
+        7.631907093777433e-06,
+        0.00011296503471893778,
+        0.0015482989407523103,
+        0.0,
+        8.213502944278657e-05,
+        0.00020428583471657102,
+        0.0012870021301220824,
+        0.00010282131146954748,
+        0.00031541875941446467,
+        0.00018784160086894995,
+        0.0,
+        0.0013256707280894964,
+        0.0008764130833814254,
+        0.0008668758181772343,
+        0.00014026277016268457,
+        0.00023046214326667323,
+        0.0002174595013871748,
+        0.0,
+        0.0007561999685846698,
+        0.0002057189052574338,
+        0.00023158226985206382,
+        0.0,
+        0.0008559267970508199,
+        0.0002534490283094978,
+        5.7121179567028826e-05,
+        0.0002766578001838264,
+        0.000844684579213917,
+        3.958348426476694e-05,
+        0.0005214641417416973,
+        0.00021837723707540552,
+        0.0012966938324127995,
+        0.0004797521516341964,
+        0.00046310083183889115,
+        0.00036333305269315363,
+        0.00046374344515782637,
+        0.0003065221634292045,
+        0.0006248663855973876,
+        0.0004334827433323627,
+        0.0,
+        0.0004904172412954982,
+        3.277875566431462e-05,
+        0.00037257472449207037,
+        0.00019550438892895506,
+        0.0,
+        0.0007291730274439979,
+        0.00048544624045088343,
+        0.0007226519643954844,
+        0.0006216973414618838,
+        0.0,
+        0.0006713587858985237,
+        0.0004377798435255554,
+        7.616157275603843e-05,
+        0.0030459414164915833,
+        0.0,
+        0.0002665655046461345,
+        0.0007045090128464522,
+        0.00028288953494100136,
+        0.0,
+        0.00034213477092127806,
+        0.0008816247437915595,
+        0.00024121033036273793,
+        0.0005797739473070157,
+        0.0002022440155246615,
+        7.422978799437068e-05,
+        0.004869089618872717,
+        0.0005134756098971391,
+        8.217563377633654e-05,
+        0.0,
+        0.0003442355447374294,
+        0.0001057866644371445,
+        0.0003954533492176368,
+        0.0004119724151249995,
+        0.0,
+        0.0005305097856645561,
+        0.0013337793263193422,
+        0.001143283755519567,
+        0.00042038043988318856,
+        0.0,
+        0.00042273190181487313,
+        0.0,
+        0.00018137034161645673,
+        0.0004552202298047769,
+        0.00014131578603085047,
+        0.00022704694089708508,
+        3.2211191485166726e-05,
+        0.0004444791669158068,
+        0.0008926679158769259,
+        0.0005165172469260843,
+        0.0,
+        0.00020490303157602742,
+        0.0001180518008231327,
+        0.00013389269234433397,
+        0.00027881668644892134,
+        9.373904505756871e-05,
+        0.00021008764551757185,
+        6.0929258204830766e-05,
+        0.00018470279413137293,
+        0.0,
+        0.0014027122741273204,
+        0.0002029249358520161,
+        0.00033225486114821766,
+        6.073262977835818e-05,
+        0.000642112202689518,
+        0.00016941566289179933,
+        0.0005110589624528247,
+        0.00015583732972145143,
+        0.00027920164319353416,
+        0.00016632105085963623,
+        0.0005905424497208995,
+        0.00024202747636908368,
+        0.000423351409488422,
+        7.616157275603843e-05,
+        0.0004061739400027154,
+        0.0001336462861575417,
+        0.00011618306272670872,
+        8.908509321857298e-05,
+        0.0004973918657979258,
+        0.0005454970054473675,
+        0.00023268082763342423,
+        0.00045568748973207285,
+        9.126358678518092e-05,
+        0.00025878684834278296,
+        0.00010123630594033409,
+        0.0,
+        0.0003291303379064583,
+        0.0,
+        0.00033962835629691934,
+        0.00020873395192609642,
+        0.00014841169330713806,
+        0.0011424579182623248,
+        1.967566793467358e-05,
+        0.00046646628629680475,
+        0.0002049937626035974,
+        0.0,
+        0.00017509146714142306,
+        0.000402080762454991,
+        0.0,
+        4.795367824494787e-05,
+        0.0001295254353537768,
+        0.0,
+        5.23909545389789e-05,
+        0.00010585144660864232,
+        0.00018477792318304852,
+        0.002951247113157783,
+        0.00025002245463770316,
+        0.0002262683786374113,
+        0.0001866628017176877,
+        0.00026220199597210567,
+        0.0003240168893737929,
+        0.00024456806344263176,
+        0.0009618115149983629,
+        0.00030725207272582844,
+        9.544335783133568e-05,
+        0.0,
+        0.0012256141004653627,
+        9.273827870563715e-05,
+        0.0010264648198022948,
+        0.0,
+        0.00011143180757623785,
+        0.00030084743353692714,
+        0.0004320764579264532,
+        0.0,
+        5.5146245167105086e-05,
+        0.0002515325329614266,
+        0.00018012644693011926,
+        0.00018001826287790903,
+        0.0002072284037109985,
+        0.0,
+        0.00012688345496602728,
+        0.0003080214783309578,
+        0.00010452823260892427,
+        0.000453660879321638,
+        0.00010177131136258773,
+        4.68686601575621e-05,
+        0.002136015014457745,
+        9.792202211490657e-05,
+        0.00027042394350138346,
+        0.0,
+        8.57782620631637e-05,
+        0.0,
+        0.0,
+        0.00023936455960107993,
+        0.0,
+        0.09109707683910886,
+        0.15924272031701792
+    ],
+    "feature_scores": [
+        {
+            "feature": "delta_days_oval",
+            "gini": 0.011479242618906815
+        },
+        {
+            "feature": "delta_days_patch",
+            "gini": 0.007768711411662818
+        },
+        {
+            "feature": "delta_days_proposed",
+            "gini": 0.0
+        },
+        {
+            "feature": "status_ENUM_candidate",
+            "gini": 0.0
+        },
+        {
+            "feature": "status_ENUM_entry",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_assigned",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_interim",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_proposed",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_modified",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "vendor_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_version_ENUM_3_0",
+            "gini": 0.00035674529042630345
+        },
+        {
+            "feature": "cvss_version_ENUM_3_1",
+            "gini": 0.001214839359470598
+        },
+        {
+            "feature": "cvss_version_ENUM_2_0",
+            "gini": 0.0003738788785896051
+        },
+        {
+            "feature": "cvss_version_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_av_ENUM_physical",
+            "gini": 0.0003172475569605353
+        },
+        {
+            "feature": "cvss_av_ENUM_network",
+            "gini": 0.0015275230598914813
+        },
+        {
+            "feature": "cvss_av_ENUM_adjacent_network",
+            "gini": 0.0007268252331833215
+        },
+        {
+            "feature": "cvss_av_ENUM_local",
+            "gini": 0.0011478814372168505
+        },
+        {
+            "feature": "cvss_av_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_ac_ENUM_absent",
+            "gini": 0.0001015487636747179
+        },
+        {
+            "feature": "cvss_ac_ENUM_low",
+            "gini": 0.003327599051755743
+        },
+        {
+            "feature": "cvss_ac_ENUM_high",
+            "gini": 0.0013068166255653189
+        },
+        {
+            "feature": "cvss_ac_ENUM_medium",
+            "gini": 0.003952501109803283
+        },
+        {
+            "feature": "cvss_aupr_ENUM_low",
+            "gini": 0.0015827315114468003
+        },
+        {
+            "feature": "cvss_aupr_ENUM_high",
+            "gini": 0.0001523231455120769
+        },
+        {
+            "feature": "cvss_aupr_ENUM_single",
+            "gini": 0.0014426957376614804
+        },
+        {
+            "feature": "cvss_aupr_ENUM_absent",
+            "gini": 4.626425301324647e-06
+        },
+        {
+            "feature": "cvss_aupr_ENUM_multiple",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_aupr_ENUM_none",
+            "gini": 0.0038310009868220813
+        },
+        {
+            "feature": "cvss_c_ENUM_low",
+            "gini": 0.0006401359489176523
+        },
+        {
+            "feature": "cvss_c_ENUM_complete",
+            "gini": 0.00080072468633427
+        },
+        {
+            "feature": "cvss_c_ENUM_high",
+            "gini": 0.0009759053906000317
+        },
+        {
+            "feature": "cvss_c_ENUM_partial",
+            "gini": 0.06370037617284457
+        },
+        {
+            "feature": "cvss_c_ENUM_absent",
+            "gini": 6.986996457184387e-05
+        },
+        {
+            "feature": "cvss_c_ENUM_none",
+            "gini": 0.0021147147068648993
+        },
+        {
+            "feature": "cvss_i_ENUM_low",
+            "gini": 0.00033701849888382717
+        },
+        {
+            "feature": "cvss_i_ENUM_complete",
+            "gini": 0.0013501289122725994
+        },
+        {
+            "feature": "cvss_i_ENUM_high",
+            "gini": 0.0006081449150310619
+        },
+        {
+            "feature": "cvss_i_ENUM_partial",
+            "gini": 0.0017763854536275566
+        },
+        {
+            "feature": "cvss_i_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_i_ENUM_none",
+            "gini": 0.002485029408423247
+        },
+        {
+            "feature": "cvss_a_ENUM_low",
+            "gini": 0.0002454130678428818
+        },
+        {
+            "feature": "cvss_a_ENUM_complete",
+            "gini": 0.0010904547180126648
+        },
+        {
+            "feature": "cvss_a_ENUM_high",
+            "gini": 0.001153362813455221
+        },
+        {
+            "feature": "cvss_a_ENUM_partial",
+            "gini": 0.0023820130142033677
+        },
+        {
+            "feature": "cvss_a_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_a_ENUM_none",
+            "gini": 0.0018875557257450916
+        },
+        {
+            "feature": "cvss_ui_ENUM_required",
+            "gini": 0.0014432225771777313
+        },
+        {
+            "feature": "cvss_ui_ENUM_none",
+            "gini": 0.0012172686072834812
+        },
+        {
+            "feature": "cvss_ui_ENUM_absent",
+            "gini": 0.00029787290525035875
+        },
+        {
+            "feature": "cvss_s_ENUM_changed",
+            "gini": 0.0005419641788230022
+        },
+        {
+            "feature": "cvss_s_ENUM_unchanged",
+            "gini": 0.0010485290539670286
+        },
+        {
+            "feature": "cvss_s_ENUM_absent",
+            "gini": 0.0005689633826525418
+        },
+        {
+            "feature": "type_ENUM_vt_dirt",
+            "gini": 0.024562025806613784
+        },
+        {
+            "feature": "type_ENUM_vt_dos",
+            "gini": 0.0024941306221548092
+        },
+        {
+            "feature": "type_ENUM_vt_info",
+            "gini": 0.0022254410696860723
+        },
+        {
+            "feature": "type_ENUM_vt_httprs",
+            "gini": 0.0005364757575792805
+        },
+        {
+            "feature": "type_ENUM_vt_xss",
+            "gini": 0.0021878798256574753
+        },
+        {
+            "feature": "type_ENUM_vt_memc",
+            "gini": 9.370765660616393e-05
+        },
+        {
+            "feature": "type_ENUM_vt_fileinc",
+            "gini": 0.00010936294936992926
+        },
+        {
+            "feature": "type_ENUM_vt_overflow",
+            "gini": 0.0011436626317700828
+        },
+        {
+            "feature": "type_ENUM_vt_csrf",
+            "gini": 0.0008492040361694912
+        },
+        {
+            "feature": "type_ENUM_vt_sql",
+            "gini": 0.004606501131134795
+        },
+        {
+            "feature": "type_ENUM_vt_bypass",
+            "gini": 0.001840108666112013
+        },
+        {
+            "feature": "type_ENUM_vt_priv",
+            "gini": 0.0025883239787065034
+        },
+        {
+            "feature": "type_ENUM_vt_ec",
+            "gini": 0.07539297586275145
+        },
+        {
+            "feature": "type_ENUM_absent",
+            "gini": 0.003123152706665093
+        },
+        {
+            "feature": "references_count",
+            "gini": 0.10144121368847402
+        },
+        {
+            "feature": "products",
+            "gini": 0.025898239808759264
+        },
+        {
+            "feature": "versions",
+            "gini": 0.06874020672102944
+        },
+        {
+            "feature": "cvss_score",
+            "gini": 0.021011831538757453
+        },
+        {
+            "feature": "cvss_has_exploitability_score",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_exploitability_score",
+            "gini": 0.02540732361761344
+        },
+        {
+            "feature": "cvss_has_impact_score",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_impact_score",
+            "gini": 0.005936751470783217
+        },
+        {
+            "feature": "comments",
+            "gini": 0.0
+        },
+        {
+            "feature": "cpes_non_vulnerable_count",
+            "gini": 0.011266535342253685
+        },
+        {
+            "feature": "description_ENUM_denial",
+            "gini": 0.0037630244677015457
+        },
+        {
+            "feature": "description_ENUM_vulnerability",
+            "gini": 0.005177960688788724
+        },
+        {
+            "feature": "description_ENUM_attacker",
+            "gini": 0.0037706747973378398
+        },
+        {
+            "feature": "description_ENUM_earlier",
+            "gini": 0.011981698815977227
+        },
+        {
+            "feature": "description_ENUM_html",
+            "gini": 0.004751079636610109
+        },
+        {
+            "feature": "description_ENUM_reject",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_reason",
+            "gini": 6.666359138739384e-05
+        },
+        {
+            "feature": "description_ENUM_service",
+            "gini": 0.002257989898533791
+        },
+        {
+            "feature": "description_ENUM_issue",
+            "gini": 0.00192979892690849
+        },
+        {
+            "feature": "description_ENUM_user",
+            "gini": 0.0012685735084558012
+        },
+        {
+            "feature": "description_ENUM_affected",
+            "gini": 0.003600021407042101
+        },
+        {
+            "feature": "description_ENUM_candidate",
+            "gini": 4.029353770052803e-05
+        },
+        {
+            "feature": "description_ENUM_cna",
+            "gini": 3.864908326838659e-07
+        },
+        {
+            "feature": "description_ENUM_exploit",
+            "gini": 0.0007492921542713819
+        },
+        {
+            "feature": "description_ENUM_requested",
+            "gini": 8.039253543041066e-05
+        },
+        {
+            "feature": "description_ENUM_individual",
+            "gini": 3.153137643660812e-10
+        },
+        {
+            "feature": "description_ENUM_associate",
+            "gini": 1.5788865870666096e-10
+        },
+        {
+            "feature": "description_ENUM_demonstrated",
+            "gini": 0.0044803297334352725
+        },
+        {
+            "feature": "description_ENUM_vulnerable",
+            "gini": 0.0010883293754344748
+        },
+        {
+            "feature": "description_ENUM_trigger",
+            "gini": 0.0026405015946641243
+        },
+        {
+            "feature": "description_ENUM_url",
+            "gini": 0.002706892859664743
+        },
+        {
+            "feature": "description_ENUM_file",
+            "gini": 0.0025611468112902132
+        },
+        {
+            "feature": "description_ENUM_assigned",
+            "gini": 0.0004920554118486846
+        },
+        {
+            "feature": "description_ENUM_ui",
+            "gini": 0.00018425645455878617
+        },
+        {
+            "feature": "description_ENUM_ac",
+            "gini": 0.00044427584107689086
+        },
+        {
+            "feature": "description_ENUM_windows",
+            "gini": 0.001202628482052851
+        },
+        {
+            "feature": "description_ENUM_man",
+            "gini": 0.0011389102587322608
+        },
+        {
+            "feature": "description_ENUM_request",
+            "gini": 0.005355426524452468
+        },
+        {
+            "feature": "description_ENUM_read",
+            "gini": 0.000993009829293732
+        },
+        {
+            "feature": "description_ENUM_version",
+            "gini": 0.0028334927950732607
+        },
+        {
+            "feature": "description_ENUM_unspecified",
+            "gini": 0.0013228175317970981
+        },
+        {
+            "feature": "description_ENUM_http",
+            "gini": 0.0006536566954064648
+        },
+        {
+            "feature": "description_ENUM_detail",
+            "gini": 0.0032215854981032474
+        },
+        {
+            "feature": "description_ENUM_access",
+            "gini": 0.0013210591503760567
+        },
+        {
+            "feature": "description_ENUM_context",
+            "gini": 0.0003398162948858947
+        },
+        {
+            "feature": "description_ENUM_make",
+            "gini": 0.000821851474374509
+        },
+        {
+            "feature": "description_ENUM_due",
+            "gini": 0.0002208046048866844
+        },
+        {
+            "feature": "description_ENUM_unique",
+            "gini": 0.0032003925429136934
+        },
+        {
+            "feature": "description_ENUM_server",
+            "gini": 0.0014810653849294832
+        },
+        {
+            "feature": "description_ENUM_verify",
+            "gini": 0.00033059932335853905
+        },
+        {
+            "feature": "description_ENUM_parameter",
+            "gini": 0.0065029031624205275
+        },
+        {
+            "feature": "description_ENUM_device",
+            "gini": 0.0006943042594006912
+        },
+        {
+            "feature": "description_ENUM_authentication",
+            "gini": 0.0007708822769100859
+        },
+        {
+            "feature": "description_ENUM_enabled",
+            "gini": 0.0017673665903206208
+        },
+        {
+            "feature": "description_ENUM_information",
+            "gini": 0.0023506961635448975
+        },
+        {
+            "feature": "description_ENUM_bypass",
+            "gini": 0.0014616121694537036
+        },
+        {
+            "feature": "description_ENUM_password",
+            "gini": 0.0012085086160133589
+        },
+        {
+            "feature": "description_ENUM_easier",
+            "gini": 0.0006198539607798393
+        },
+        {
+            "feature": "description_ENUM_privilege",
+            "gini": 0.0009066781412729298
+        },
+        {
+            "feature": "description_ENUM_application",
+            "gini": 0.0007059017342195748
+        },
+        {
+            "feature": "description_ENUM_fixed",
+            "gini": 0.0003871166649912753
+        },
+        {
+            "feature": "description_ENUM_crash",
+            "gini": 0.0013387638070662018
+        },
+        {
+            "feature": "description_ENUM_lack",
+            "gini": 0.0005815211029743281
+        },
+        {
+            "feature": "description_ENUM_exploited",
+            "gini": 0.0013236974439310662
+        },
+        {
+            "feature": "description_ENUM_wordpress",
+            "gini": 0.005102023314121216
+        },
+        {
+            "feature": "description_ENUM_sending",
+            "gini": 0.0004342878671466278
+        },
+        {
+            "feature": "description_ENUM_system",
+            "gini": 0.0005324808662211757
+        },
+        {
+            "feature": "description_ENUM_set",
+            "gini": 0.0006004063752685771
+        },
+        {
+            "feature": "description_ENUM_elevation",
+            "gini": 0.0002563395089695727
+        },
+        {
+            "feature": "description_ENUM_obtained",
+            "gini": 0.0037208362234560184
+        },
+        {
+            "feature": "description_ENUM_hijack",
+            "gini": 0.0007854086821483409
+        },
+        {
+            "feature": "description_ENUM_prior",
+            "gini": 0.0006873332512367088
+        },
+        {
+            "feature": "description_ENUM_android",
+            "gini": 0.0005679632144260794
+        },
+        {
+            "feature": "description_ENUM_php",
+            "gini": 0.002769123211118735
+        },
+        {
+            "feature": "description_ENUM_doe",
+            "gini": 0.001060347585168517
+        },
+        {
+            "feature": "description_ENUM_needed",
+            "gini": 9.632872339009395e-05
+        },
+        {
+            "feature": "description_ENUM_administrator",
+            "gini": 0.003626229135092536
+        },
+        {
+            "feature": "description_ENUM_reference",
+            "gini": 0.0005778335217372769
+        },
+        {
+            "feature": "description_ENUM_person",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_os",
+            "gini": 0.00029951154047442983
+        },
+        {
+            "feature": "description_ENUM_product",
+            "gini": 0.0019488355838451373
+        },
+        {
+            "feature": "description_ENUM_free",
+            "gini": 0.0005920749832574406
+        },
+        {
+            "feature": "description_ENUM_attack",
+            "gini": 0.0005634039432418549
+        },
+        {
+            "feature": "description_ENUM_unknown",
+            "gini": 0.0007805662825407842
+        },
+        {
+            "feature": "description_ENUM_obtain",
+            "gini": 0.0005493575097759989
+        },
+        {
+            "feature": "description_ENUM_provenance",
+            "gini": 0.0016739282018220854
+        },
+        {
+            "feature": "description_ENUM_availability",
+            "gini": 0.00031970718524458987
+        },
+        {
+            "feature": "description_ENUM_oracle",
+            "gini": 0.00023192469540830876
+        },
+        {
+            "feature": "description_ENUM_removed",
+            "gini": 7.34415165861799e-05
+        },
+        {
+            "feature": "description_ENUM_description",
+            "gini": 4.969025534747694e-05
+        },
+        {
+            "feature": "description_ENUM_required",
+            "gini": 0.00010717451697876992
+        },
+        {
+            "feature": "description_ENUM_data",
+            "gini": 0.0003591851599531122
+        },
+        {
+            "feature": "description_ENUM_leverage",
+            "gini": 0.0002987717037277321
+        },
+        {
+            "feature": "description_ENUM_xss",
+            "gini": 0.00019421792934132517
+        },
+        {
+            "feature": "description_ENUM_open",
+            "gini": 0.00025418615810035794
+        },
+        {
+            "feature": "description_ENUM_subset",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_leveraging",
+            "gini": 0.0014820253799461287
+        },
+        {
+            "feature": "description_ENUM_linux",
+            "gini": 0.0005976188500543001
+        },
+        {
+            "feature": "description_ENUM_joomla",
+            "gini": 0.008939522272454023
+        },
+        {
+            "feature": "description_ENUM_create",
+            "gini": 0.001327482801467311
+        },
+        {
+            "feature": "description_ENUM_webkit",
+            "gini": 0.00018240696675071212
+        },
+        {
+            "feature": "description_ENUM_running",
+            "gini": 0.0005033156104995201
+        },
+        {
+            "feature": "description_ENUM_reading",
+            "gini": 0.0005200805560530546
+        },
+        {
+            "feature": "description_ENUM_send",
+            "gini": 5.315375670684026e-05
+        },
+        {
+            "feature": "description_ENUM_client",
+            "gini": 0.0004494013526982327
+        },
+        {
+            "feature": "description_ENUM_memory",
+            "gini": 0.000759638335654427
+        },
+        {
+            "feature": "description_ENUM_occur",
+            "gini": 0.00018034462506372748
+        },
+        {
+            "feature": "description_ENUM_network",
+            "gini": 0.0002507335452006894
+        },
+        {
+            "feature": "description_ENUM_content",
+            "gini": 0.00027480741784589164
+        },
+        {
+            "feature": "description_ENUM_executed",
+            "gini": 1.9040393189009604e-05
+        },
+        {
+            "feature": "description_ENUM_modify",
+            "gini": 0.0009200317873774679
+        },
+        {
+            "feature": "description_ENUM_configured",
+            "gini": 0.00015189597351343342
+        },
+        {
+            "feature": "description_ENUM_vector",
+            "gini": 0.002388173793757319
+        },
+        {
+            "feature": "description_ENUM_check",
+            "gini": 1.0695171097967339e-05
+        },
+        {
+            "feature": "description_ENUM_perform",
+            "gini": 6.693080142236575e-05
+        },
+        {
+            "feature": "description_ENUM_hang",
+            "gini": 0.0005782351844698199
+        },
+        {
+            "feature": "description_ENUM_include",
+            "gini": 0.0019492778456717873
+        },
+        {
+            "feature": "description_ENUM_kernel",
+            "gini": 0.001771099027052812
+        },
+        {
+            "feature": "description_ENUM_victim",
+            "gini": 0.00048228548663161385
+        },
+        {
+            "feature": "description_ENUM_disabled",
+            "gini": 0.0007286081848937771
+        },
+        {
+            "feature": "description_ENUM_drupal",
+            "gini": 0.001976393506571613
+        },
+        {
+            "feature": "description_ENUM_command",
+            "gini": 0.0017878635817485569
+        },
+        {
+            "feature": "description_ENUM_directory",
+            "gini": 0.0008154115234401004
+        },
+        {
+            "feature": "description_ENUM_change",
+            "gini": 0.00099665273990394
+        },
+        {
+            "feature": "description_ENUM_write",
+            "gini": 0.001288989048341917
+        },
+        {
+            "feature": "description_ENUM_identified",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_zdi",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_exploitable",
+            "gini": 0.0004564375234091
+        },
+        {
+            "feature": "description_ENUM_argument",
+            "gini": 0.0020368769117673573
+        },
+        {
+            "feature": "description_ENUM_error",
+            "gini": 0.0016615231510673175
+        },
+        {
+            "feature": "description_ENUM_accessing",
+            "gini": 0.0010343110079701731
+        },
+        {
+            "feature": "description_ENUM_execute",
+            "gini": 0.00022026917358699055
+        },
+        {
+            "feature": "description_ENUM_visit",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_flaw",
+            "gini": 0.0001670630654414058
+        },
+        {
+            "feature": "description_ENUM_root",
+            "gini": 0.0006940025992228333
+        },
+        {
+            "feature": "description_ENUM_run",
+            "gini": 0.00011131465298852824
+        },
+        {
+            "feature": "description_ENUM_buffer",
+            "gini": 0.00031934833360941213
+        },
+        {
+            "feature": "description_ENUM_software",
+            "gini": 0.0001867635426905402
+        },
+        {
+            "feature": "description_ENUM_seamonkey",
+            "gini": 0.00020598758702991034
+        },
+        {
+            "feature": "description_ENUM_firmware",
+            "gini": 0.0015307862139098505
+        },
+        {
+            "feature": "description_ENUM_default",
+            "gini": 0.0002460418096059396
+        },
+        {
+            "feature": "description_ENUM_enable",
+            "gini": 0.00021002985764219652
+        },
+        {
+            "feature": "description_ENUM_permission",
+            "gini": 0.00024374383746260354
+        },
+        {
+            "feature": "description_ENUM_setting",
+            "gini": 0.0030126557850408604
+        },
+        {
+            "feature": "description_ENUM_integrity",
+            "gini": 0.000322501658441969
+        },
+        {
+            "feature": "description_ENUM_processing",
+            "gini": 0.0001513922511306917
+        },
+        {
+            "feature": "description_ENUM_handling",
+            "gini": 7.631907093777433e-06
+        },
+        {
+            "feature": "description_ENUM_target",
+            "gini": 0.00011296503471893778
+        },
+        {
+            "feature": "description_ENUM_related",
+            "gini": 0.0015482989407523103
+        },
+        {
+            "feature": "description_ENUM_caf",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_code",
+            "gini": 8.213502944278657e-05
+        },
+        {
+            "feature": "description_ENUM_object",
+            "gini": 0.00020428583471657102
+        },
+        {
+            "feature": "description_ENUM_field",
+            "gini": 0.0012870021301220824
+        },
+        {
+            "feature": "description_ENUM_conduct",
+            "gini": 0.00010282131146954748
+        },
+        {
+            "feature": "description_ENUM_duplicate",
+            "gini": 0.00031541875941446467
+        },
+        {
+            "feature": "description_ENUM_addressed",
+            "gini": 0.00018784160086894995
+        },
+        {
+            "feature": "description_ENUM_altering",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_upload",
+            "gini": 0.0013256707280894964
+        },
+        {
+            "feature": "description_ENUM_conjunction",
+            "gini": 0.0008764130833814254
+        },
+        {
+            "feature": "description_ENUM_modifying",
+            "gini": 0.0008668758181772343
+        },
+        {
+            "feature": "description_ENUM_time",
+            "gini": 0.00014026277016268457
+        },
+        {
+            "feature": "description_ENUM_component",
+            "gini": 0.00023046214326667323
+        },
+        {
+            "feature": "description_ENUM_order",
+            "gini": 0.0002174595013871748
+        },
+        {
+            "feature": "description_ENUM_browser",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_uploading",
+            "gini": 0.0007561999685846698
+        },
+        {
+            "feature": "description_ENUM_end",
+            "gini": 0.0002057189052574338
+        },
+        {
+            "feature": "description_ENUM_spoof",
+            "gini": 0.00023158226985206382
+        },
+        {
+            "feature": "description_ENUM_rated",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_register_globals",
+            "gini": 0.0008559267970508199
+        },
+        {
+            "feature": "description_ENUM_control",
+            "gini": 0.0002534490283094978
+        },
+        {
+            "feature": "description_ENUM_domain",
+            "gini": 5.7121179567028826e-05
+        },
+        {
+            "feature": "description_ENUM_path",
+            "gini": 0.0002766578001838264
+        },
+        {
+            "feature": "description_ENUM_filename",
+            "gini": 0.000844684579213917
+        },
+        {
+            "feature": "description_ENUM_account",
+            "gini": 3.958348426476694e-05
+        },
+        {
+            "feature": "description_ENUM_disputed",
+            "gini": 0.0005214641417416973
+        },
+        {
+            "feature": "description_ENUM_java",
+            "gini": 0.00021837723707540552
+        },
+        {
+            "feature": "description_ENUM_call",
+            "gini": 0.0012966938324127995
+        },
+        {
+            "feature": "description_ENUM_script",
+            "gini": 0.0004797521516341964
+        },
+        {
+            "feature": "description_ENUM_ability",
+            "gini": 0.00046310083183889115
+        },
+        {
+            "feature": "description_ENUM_process",
+            "gini": 0.00036333305269315363
+        },
+        {
+            "feature": "description_ENUM_database",
+            "gini": 0.00046374344515782637
+        },
+        {
+            "feature": "description_ENUM_configuration",
+            "gini": 0.0003065221634292045
+        },
+        {
+            "feature": "description_ENUM_logon",
+            "gini": 0.0006248663855973876
+        },
+        {
+            "feature": "description_ENUM_creating",
+            "gini": 0.0004334827433323627
+        },
+        {
+            "feature": "description_ENUM_infrastructure",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_reveals",
+            "gini": 0.0004904172412954982
+        },
+        {
+            "feature": "description_ENUM_log",
+            "gini": 3.277875566431462e-05
+        },
+        {
+            "feature": "description_ENUM_page",
+            "gini": 0.00037257472449207037
+        },
+        {
+            "feature": "description_ENUM_part",
+            "gini": 0.00019550438892895506
+        },
+        {
+            "feature": "description_ENUM_owner",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_username",
+            "gini": 0.0007291730274439979
+        },
+        {
+            "feature": "description_ENUM_function",
+            "gini": 0.00048544624045088343
+        },
+        {
+            "feature": "description_ENUM_crafted",
+            "gini": 0.0007226519643954844
+        },
+        {
+            "feature": "description_ENUM_message",
+            "gini": 0.0006216973414618838
+        },
+        {
+            "feature": "description_ENUM_intel",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_execution",
+            "gini": 0.0006713587858985237
+        },
+        {
+            "feature": "description_ENUM_mishandled",
+            "gini": 0.0004377798435255554
+        },
+        {
+            "feature": "description_ENUM_javascript",
+            "gini": 7.616157275603843e-05
+        },
+        {
+            "feature": "description_ENUM_download",
+            "gini": 0.0030459414164915833
+        },
+        {
+            "feature": "description_ENUM_contract",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_case",
+            "gini": 0.0002665655046461345
+        },
+        {
+            "feature": "description_ENUM_packet",
+            "gini": 0.0007045090128464522
+        },
+        {
+            "feature": "description_ENUM_connection",
+            "gini": 0.00028288953494100136
+        },
+        {
+            "feature": "description_ENUM_balance",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_character",
+            "gini": 0.00034213477092127806
+        },
+        {
+            "feature": "description_ENUM_magic_quotes_gpc",
+            "gini": 0.0008816247437915595
+        },
+        {
+            "feature": "description_ENUM_parsing",
+            "gini": 0.00024121033036273793
+        },
+        {
+            "feature": "description_ENUM_response",
+            "gini": 0.0005797739473070157
+        },
+        {
+            "feature": "description_ENUM_affect",
+            "gini": 0.0002022440155246615
+        },
+        {
+            "feature": "description_ENUM_length",
+            "gini": 7.422978799437068e-05
+        },
+        {
+            "feature": "description_ENUM_typo3",
+            "gini": 0.004869089618872717
+        },
+        {
+            "feature": "description_ENUM_session",
+            "gini": 0.0005134756098971391
+        },
+        {
+            "feature": "description_ENUM_cpanel",
+            "gini": 8.217563377633654e-05
+        },
+        {
+            "feature": "description_ENUM_persuading",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_link",
+            "gini": 0.0003442355447374294
+        },
+        {
+            "feature": "description_ENUM_takeover",
+            "gini": 0.0001057866644371445
+        },
+        {
+            "feature": "description_ENUM_cookie",
+            "gini": 0.0003954533492176368
+        },
+        {
+            "feature": "description_ENUM_validate",
+            "gini": 0.0004119724151249995
+        },
+        {
+            "feature": "description_ENUM_module",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_program",
+            "gini": 0.0005305097856645561
+        },
+        {
+            "feature": "description_ENUM_leveraged",
+            "gini": 0.0013337793263193422
+        },
+        {
+            "feature": "description_ENUM_admin",
+            "gini": 0.001143283755519567
+        },
+        {
+            "feature": "description_ENUM_acrobat",
+            "gini": 0.00042038043988318856
+        },
+        {
+            "feature": "description_ENUM_host",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_interface",
+            "gini": 0.00042273190181487313
+        },
+        {
+            "feature": "description_ENUM_credential",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_connect",
+            "gini": 0.00018137034161645673
+        },
+        {
+            "feature": "description_ENUM_series",
+            "gini": 0.0004552202298047769
+        },
+        {
+            "feature": "description_ENUM_logged",
+            "gini": 0.00014131578603085047
+        },
+        {
+            "feature": "description_ENUM_address",
+            "gini": 0.00022704694089708508
+        },
+        {
+            "feature": "description_ENUM_cleartext",
+            "gini": 3.2211191485166726e-05
+        },
+        {
+            "feature": "description_ENUM_return",
+            "gini": 0.0004444791669158068
+        },
+        {
+            "feature": "description_ENUM_add",
+            "gini": 0.0008926679158769259
+        },
+        {
+            "feature": "description_ENUM_processed",
+            "gini": 0.0005165172469260843
+        },
+        {
+            "feature": "description_ENUM_triggered",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_login",
+            "gini": 0.00020490303157602742
+        },
+        {
+            "feature": "description_ENUM_type",
+            "gini": 0.0001180518008231327
+        },
+        {
+            "feature": "description_ENUM_vendor",
+            "gini": 0.00013389269234433397
+        },
+        {
+            "feature": "description_ENUM_csrf",
+            "gini": 0.00027881668644892134
+        },
+        {
+            "feature": "description_ENUM_stored",
+            "gini": 9.373904505756871e-05
+        },
+        {
+            "feature": "description_ENUM_sequence",
+            "gini": 0.00021008764551757185
+        },
+        {
+            "feature": "description_ENUM_package",
+            "gini": 6.0929258204830766e-05
+        },
+        {
+            "feature": "description_ENUM_load",
+            "gini": 0.00018470279413137293
+        },
+        {
+            "feature": "description_ENUM_allowed",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_uri",
+            "gini": 0.0014027122741273204
+        },
+        {
+            "feature": "description_ENUM_disclosure",
+            "gini": 0.0002029249358520161
+        },
+        {
+            "feature": "description_ENUM_accessed",
+            "gini": 0.00033225486114821766
+        },
+        {
+            "feature": "description_ENUM_passed",
+            "gini": 6.073262977835818e-05
+        },
+        {
+            "feature": "description_ENUM_header",
+            "gini": 0.000642112202689518
+        },
+        {
+            "feature": "description_ENUM_installed",
+            "gini": 0.00016941566289179933
+        },
+        {
+            "feature": "description_ENUM_installation",
+            "gini": 0.0005110589624528247
+        },
+        {
+            "feature": "description_ENUM_string",
+            "gini": 0.00015583732972145143
+        },
+        {
+            "feature": "description_ENUM_trick",
+            "gini": 0.00027920164319353416
+        },
+        {
+            "feature": "description_ENUM_input",
+            "gini": 0.00016632105085963623
+        },
+        {
+            "feature": "description_ENUM_note",
+            "gini": 0.0005905424497208995
+        },
+        {
+            "feature": "description_ENUM_occurs",
+            "gini": 0.00024202747636908368
+        },
+        {
+            "feature": "description_ENUM_document",
+            "gini": 0.000423351409488422
+        },
+        {
+            "feature": "description_ENUM_sniffing",
+            "gini": 7.616157275603843e-05
+        },
+        {
+            "feature": "description_ENUM_found",
+            "gini": 0.0004061739400027154
+        },
+        {
+            "feature": "description_ENUM_key",
+            "gini": 0.0001336462861575417
+        },
+        {
+            "feature": "description_ENUM_possibility",
+            "gini": 0.00011618306272670872
+        },
+        {
+            "feature": "description_ENUM_susceptible",
+            "gini": 8.908509321857298e-05
+        },
+        {
+            "feature": "description_ENUM_adding",
+            "gini": 0.0004973918657979258
+        },
+        {
+            "feature": "description_ENUM_placing",
+            "gini": 0.0005454970054473675
+        },
+        {
+            "feature": "description_ENUM_filesystem",
+            "gini": 0.00023268082763342423
+        },
+        {
+            "feature": "description_ENUM_distributed",
+            "gini": 0.00045568748973207285
+        },
+        {
+            "feature": "description_ENUM_overflow",
+            "gini": 9.126358678518092e-05
+        },
+        {
+            "feature": "description_ENUM_validating",
+            "gini": 0.00025878684834278296
+        },
+        {
+            "feature": "description_ENUM_ffmpeg",
+            "gini": 0.00010123630594033409
+        },
+        {
+            "feature": "description_ENUM_logfile",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_resource",
+            "gini": 0.0003291303379064583
+        },
+        {
+            "feature": "description_ENUM_blink",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_node",
+            "gini": 0.00033962835629691934
+        },
+        {
+            "feature": "description_ENUM_update",
+            "gini": 0.00020873395192609642
+        },
+        {
+            "feature": "description_ENUM_image",
+            "gini": 0.00014841169330713806
+        },
+        {
+            "feature": "description_ENUM_action",
+            "gini": 0.0011424579182623248
+        },
+        {
+            "feature": "description_ENUM_imagemagick",
+            "gini": 1.967566793467358e-05
+        },
+        {
+            "feature": "description_ENUM_reported",
+            "gini": 0.00046646628629680475
+        },
+        {
+            "feature": "description_ENUM_ensure",
+            "gini": 0.0002049937626035974
+        },
+        {
+            "feature": "description_ENUM_security",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_size",
+            "gini": 0.00017509146714142306
+        },
+        {
+            "feature": "description_ENUM_option",
+            "gini": 0.000402080762454991
+        },
+        {
+            "feature": "description_ENUM_compromise",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_app",
+            "gini": 4.795367824494787e-05
+        },
+        {
+            "feature": "description_ENUM_click",
+            "gini": 0.0001295254353537768
+        },
+        {
+            "feature": "description_ENUM_received",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_plaintext",
+            "gini": 5.23909545389789e-05
+        },
+        {
+            "feature": "description_ENUM_display",
+            "gini": 0.00010585144660864232
+        },
+        {
+            "feature": "description_ENUM_provide",
+            "gini": 0.00018477792318304852
+        },
+        {
+            "feature": "description_ENUM_path_info",
+            "gini": 0.002951247113157783
+        },
+        {
+            "feature": "description_ENUM_jenkins",
+            "gini": 0.00025002245463770316
+        },
+        {
+            "feature": "description_ENUM_overwrite",
+            "gini": 0.0002262683786374113
+        },
+        {
+            "feature": "description_ENUM_reboot",
+            "gini": 0.0001866628017176877
+        },
+        {
+            "feature": "description_ENUM_changing",
+            "gini": 0.00026220199597210567
+        },
+        {
+            "feature": "description_ENUM_attempt",
+            "gini": 0.0003240168893737929
+        },
+        {
+            "feature": "description_ENUM_implementation",
+            "gini": 0.00024456806344263176
+        },
+        {
+            "feature": "description_ENUM_mac",
+            "gini": 0.0009618115149983629
+        },
+        {
+            "feature": "description_ENUM_triggering",
+            "gini": 0.00030725207272582844
+        },
+        {
+            "feature": "description_ENUM_networking",
+            "gini": 9.544335783133568e-05
+        },
+        {
+            "feature": "description_ENUM_delete",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_ruby",
+            "gini": 0.0012256141004653627
+        },
+        {
+            "feature": "description_ENUM_opera",
+            "gini": 9.273827870563715e-05
+        },
+        {
+            "feature": "description_ENUM_located",
+            "gini": 0.0010264648198022948
+        },
+        {
+            "feature": "description_ENUM_currentuser",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_patched",
+            "gini": 0.00011143180757623785
+        },
+        {
+            "feature": "description_ENUM_redirect",
+            "gini": 0.00030084743353692714
+        },
+        {
+            "feature": "description_ENUM_site",
+            "gini": 0.0004320764579264532
+        },
+        {
+            "feature": "description_ENUM_called",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_mail",
+            "gini": 5.5146245167105086e-05
+        },
+        {
+            "feature": "description_ENUM_installer",
+            "gini": 0.0002515325329614266
+        },
+        {
+            "feature": "description_ENUM_included",
+            "gini": 0.00018012644693011926
+        },
+        {
+            "feature": "description_ENUM_prevent",
+            "gini": 0.00018001826287790903
+        },
+        {
+            "feature": "description_ENUM_executing",
+            "gini": 0.0002072284037109985
+        },
+        {
+            "feature": "description_ENUM_leak",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_clear",
+            "gini": 0.00012688345496602728
+        },
+        {
+            "feature": "description_ENUM_bug",
+            "gini": 0.0003080214783309578
+        },
+        {
+            "feature": "description_ENUM_connecting",
+            "gini": 0.00010452823260892427
+        },
+        {
+            "feature": "description_ENUM_email",
+            "gini": 0.000453660879321638
+        },
+        {
+            "feature": "description_ENUM_protocol",
+            "gini": 0.00010177131136258773
+        },
+        {
+            "feature": "description_ENUM_payload",
+            "gini": 4.68686601575621e-05
+        },
+        {
+            "feature": "description_ENUM_wild",
+            "gini": 0.002136015014457745
+        },
+        {
+            "feature": "description_ENUM_opening",
+            "gini": 9.792202211490657e-05
+        },
+        {
+            "feature": "description_ENUM_properly",
+            "gini": 0.00027042394350138346
+        },
+        {
+            "feature": "description_ENUM_mediaserver",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_install",
+            "gini": 8.57782620631637e-05
+        },
+        {
+            "feature": "description_ENUM_intended",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_point",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_accessible",
+            "gini": 0.00023936455960107993
+        },
+        {
+            "feature": "description_ENUM_operation",
+            "gini": 0.0
+        },
+        {
+            "feature": "vendor_ENUM_encoded",
+            "gini": 0.09109707683910886
+        },
+        {
+            "feature": "reference_type_ENUM_encoded",
+            "gini": 0.15924272031701792
+        }
+    ]
+}
+top_features
+ 398    reference_type_ENUM_encoded
+68                references_count
+397            vendor_ENUM_encoded
+66                 type_ENUM_vt_ec
+70                        versions
+Name: feature, dtype: object
+feature_scores
+                              feature      gini
+398      reference_type_ENUM_encoded  0.159243
+68                  references_count  0.101441
+397              vendor_ENUM_encoded  0.091097
+66                   type_ENUM_vt_ec  0.075393
+70                          versions  0.068740
+..                               ...       ...
+10                vendor_ENUM_absent  0.000000
+302       description_ENUM_triggered  0.000000
+46                cvss_a_ENUM_absent  0.000000
+371     description_ENUM_currentuser  0.000000
+252  description_ENUM_infrastructure  0.000000
+
+[399 rows x 2 columns]
+{
+    "top_features": [
+        "reference_type_ENUM_encoded",
+        "references_count",
+        "vendor_ENUM_encoded",
+        "type_ENUM_vt_ec",
+        "versions"
+    ],
+    "feature_scores": [
+        {
+            "feature": "reference_type_ENUM_encoded",
+            "gini": 0.15924272031701792
+        },
+        {
+            "feature": "references_count",
+            "gini": 0.10144121368847402
+        },
+        {
+            "feature": "vendor_ENUM_encoded",
+            "gini": 0.09109707683910886
+        },
+        {
+            "feature": "type_ENUM_vt_ec",
+            "gini": 0.07539297586275145
+        },
+        {
+            "feature": "versions",
+            "gini": 0.06874020672102944
+        },
+        {
+            "feature": "cvss_c_ENUM_partial",
+            "gini": 0.06370037617284457
+        },
+        {
+            "feature": "products",
+            "gini": 0.025898239808759264
+        },
+        {
+            "feature": "cvss_exploitability_score",
+            "gini": 0.02540732361761344
+        },
+        {
+            "feature": "type_ENUM_vt_dirt",
+            "gini": 0.024562025806613784
+        },
+        {
+            "feature": "cvss_score",
+            "gini": 0.021011831538757453
+        },
+        {
+            "feature": "description_ENUM_earlier",
+            "gini": 0.011981698815977227
+        },
+        {
+            "feature": "delta_days_oval",
+            "gini": 0.011479242618906815
+        },
+        {
+            "feature": "cpes_non_vulnerable_count",
+            "gini": 0.011266535342253685
+        },
+        {
+            "feature": "description_ENUM_joomla",
+            "gini": 0.008939522272454023
+        },
+        {
+            "feature": "delta_days_patch",
+            "gini": 0.007768711411662818
+        },
+        {
+            "feature": "description_ENUM_parameter",
+            "gini": 0.0065029031624205275
+        },
+        {
+            "feature": "cvss_impact_score",
+            "gini": 0.005936751470783217
+        },
+        {
+            "feature": "description_ENUM_request",
+            "gini": 0.005355426524452468
+        },
+        {
+            "feature": "description_ENUM_vulnerability",
+            "gini": 0.005177960688788724
+        },
+        {
+            "feature": "description_ENUM_wordpress",
+            "gini": 0.005102023314121216
+        },
+        {
+            "feature": "description_ENUM_typo3",
+            "gini": 0.004869089618872717
+        },
+        {
+            "feature": "description_ENUM_html",
+            "gini": 0.004751079636610109
+        },
+        {
+            "feature": "type_ENUM_vt_sql",
+            "gini": 0.004606501131134795
+        },
+        {
+            "feature": "description_ENUM_demonstrated",
+            "gini": 0.0044803297334352725
+        },
+        {
+            "feature": "cvss_ac_ENUM_medium",
+            "gini": 0.003952501109803283
+        },
+        {
+            "feature": "cvss_aupr_ENUM_none",
+            "gini": 0.0038310009868220813
+        },
+        {
+            "feature": "description_ENUM_attacker",
+            "gini": 0.0037706747973378398
+        },
+        {
+            "feature": "description_ENUM_denial",
+            "gini": 0.0037630244677015457
+        },
+        {
+            "feature": "description_ENUM_obtained",
+            "gini": 0.0037208362234560184
+        },
+        {
+            "feature": "description_ENUM_administrator",
+            "gini": 0.003626229135092536
+        },
+        {
+            "feature": "description_ENUM_affected",
+            "gini": 0.003600021407042101
+        },
+        {
+            "feature": "cvss_ac_ENUM_low",
+            "gini": 0.003327599051755743
+        },
+        {
+            "feature": "description_ENUM_detail",
+            "gini": 0.0032215854981032474
+        },
+        {
+            "feature": "description_ENUM_unique",
+            "gini": 0.0032003925429136934
+        },
+        {
+            "feature": "type_ENUM_absent",
+            "gini": 0.003123152706665093
+        },
+        {
+            "feature": "description_ENUM_download",
+            "gini": 0.0030459414164915833
+        },
+        {
+            "feature": "description_ENUM_setting",
+            "gini": 0.0030126557850408604
+        },
+        {
+            "feature": "description_ENUM_path_info",
+            "gini": 0.002951247113157783
+        },
+        {
+            "feature": "description_ENUM_version",
+            "gini": 0.0028334927950732607
+        },
+        {
+            "feature": "description_ENUM_php",
+            "gini": 0.002769123211118735
+        },
+        {
+            "feature": "description_ENUM_url",
+            "gini": 0.002706892859664743
+        },
+        {
+            "feature": "description_ENUM_trigger",
+            "gini": 0.0026405015946641243
+        },
+        {
+            "feature": "type_ENUM_vt_priv",
+            "gini": 0.0025883239787065034
+        },
+        {
+            "feature": "description_ENUM_file",
+            "gini": 0.0025611468112902132
+        },
+        {
+            "feature": "type_ENUM_vt_dos",
+            "gini": 0.0024941306221548092
+        },
+        {
+            "feature": "cvss_i_ENUM_none",
+            "gini": 0.002485029408423247
+        },
+        {
+            "feature": "description_ENUM_vector",
+            "gini": 0.002388173793757319
+        },
+        {
+            "feature": "cvss_a_ENUM_partial",
+            "gini": 0.0023820130142033677
+        },
+        {
+            "feature": "description_ENUM_information",
+            "gini": 0.0023506961635448975
+        },
+        {
+            "feature": "description_ENUM_service",
+            "gini": 0.002257989898533791
+        },
+        {
+            "feature": "type_ENUM_vt_info",
+            "gini": 0.0022254410696860723
+        },
+        {
+            "feature": "type_ENUM_vt_xss",
+            "gini": 0.0021878798256574753
+        },
+        {
+            "feature": "description_ENUM_wild",
+            "gini": 0.002136015014457745
+        },
+        {
+            "feature": "cvss_c_ENUM_none",
+            "gini": 0.0021147147068648993
+        },
+        {
+            "feature": "description_ENUM_argument",
+            "gini": 0.0020368769117673573
+        },
+        {
+            "feature": "description_ENUM_drupal",
+            "gini": 0.001976393506571613
+        },
+        {
+            "feature": "description_ENUM_include",
+            "gini": 0.0019492778456717873
+        },
+        {
+            "feature": "description_ENUM_product",
+            "gini": 0.0019488355838451373
+        },
+        {
+            "feature": "description_ENUM_issue",
+            "gini": 0.00192979892690849
+        },
+        {
+            "feature": "cvss_a_ENUM_none",
+            "gini": 0.0018875557257450916
+        },
+        {
+            "feature": "type_ENUM_vt_bypass",
+            "gini": 0.001840108666112013
+        },
+        {
+            "feature": "description_ENUM_command",
+            "gini": 0.0017878635817485569
+        },
+        {
+            "feature": "cvss_i_ENUM_partial",
+            "gini": 0.0017763854536275566
+        },
+        {
+            "feature": "description_ENUM_kernel",
+            "gini": 0.001771099027052812
+        },
+        {
+            "feature": "description_ENUM_enabled",
+            "gini": 0.0017673665903206208
+        },
+        {
+            "feature": "description_ENUM_provenance",
+            "gini": 0.0016739282018220854
+        },
+        {
+            "feature": "description_ENUM_error",
+            "gini": 0.0016615231510673175
+        },
+        {
+            "feature": "cvss_aupr_ENUM_low",
+            "gini": 0.0015827315114468003
+        },
+        {
+            "feature": "description_ENUM_related",
+            "gini": 0.0015482989407523103
+        },
+        {
+            "feature": "description_ENUM_firmware",
+            "gini": 0.0015307862139098505
+        },
+        {
+            "feature": "cvss_av_ENUM_network",
+            "gini": 0.0015275230598914813
+        },
+        {
+            "feature": "description_ENUM_leveraging",
+            "gini": 0.0014820253799461287
+        },
+        {
+            "feature": "description_ENUM_server",
+            "gini": 0.0014810653849294832
+        },
+        {
+            "feature": "description_ENUM_bypass",
+            "gini": 0.0014616121694537036
+        },
+        {
+            "feature": "cvss_ui_ENUM_required",
+            "gini": 0.0014432225771777313
+        },
+        {
+            "feature": "cvss_aupr_ENUM_single",
+            "gini": 0.0014426957376614804
+        },
+        {
+            "feature": "description_ENUM_uri",
+            "gini": 0.0014027122741273204
+        },
+        {
+            "feature": "cvss_i_ENUM_complete",
+            "gini": 0.0013501289122725994
+        },
+        {
+            "feature": "description_ENUM_crash",
+            "gini": 0.0013387638070662018
+        },
+        {
+            "feature": "description_ENUM_leveraged",
+            "gini": 0.0013337793263193422
+        },
+        {
+            "feature": "description_ENUM_create",
+            "gini": 0.001327482801467311
+        },
+        {
+            "feature": "description_ENUM_upload",
+            "gini": 0.0013256707280894964
+        },
+        {
+            "feature": "description_ENUM_exploited",
+            "gini": 0.0013236974439310662
+        },
+        {
+            "feature": "description_ENUM_unspecified",
+            "gini": 0.0013228175317970981
+        },
+        {
+            "feature": "description_ENUM_access",
+            "gini": 0.0013210591503760567
+        },
+        {
+            "feature": "cvss_ac_ENUM_high",
+            "gini": 0.0013068166255653189
+        },
+        {
+            "feature": "description_ENUM_call",
+            "gini": 0.0012966938324127995
+        },
+        {
+            "feature": "description_ENUM_write",
+            "gini": 0.001288989048341917
+        },
+        {
+            "feature": "description_ENUM_field",
+            "gini": 0.0012870021301220824
+        },
+        {
+            "feature": "description_ENUM_user",
+            "gini": 0.0012685735084558012
+        },
+        {
+            "feature": "description_ENUM_ruby",
+            "gini": 0.0012256141004653627
+        },
+        {
+            "feature": "cvss_ui_ENUM_none",
+            "gini": 0.0012172686072834812
+        },
+        {
+            "feature": "cvss_version_ENUM_3_1",
+            "gini": 0.001214839359470598
+        },
+        {
+            "feature": "description_ENUM_password",
+            "gini": 0.0012085086160133589
+        },
+        {
+            "feature": "description_ENUM_windows",
+            "gini": 0.001202628482052851
+        },
+        {
+            "feature": "cvss_a_ENUM_high",
+            "gini": 0.001153362813455221
+        },
+        {
+            "feature": "cvss_av_ENUM_local",
+            "gini": 0.0011478814372168505
+        },
+        {
+            "feature": "type_ENUM_vt_overflow",
+            "gini": 0.0011436626317700828
+        },
+        {
+            "feature": "description_ENUM_admin",
+            "gini": 0.001143283755519567
+        },
+        {
+            "feature": "description_ENUM_action",
+            "gini": 0.0011424579182623248
+        },
+        {
+            "feature": "description_ENUM_man",
+            "gini": 0.0011389102587322608
+        },
+        {
+            "feature": "cvss_a_ENUM_complete",
+            "gini": 0.0010904547180126648
+        },
+        {
+            "feature": "description_ENUM_vulnerable",
+            "gini": 0.0010883293754344748
+        },
+        {
+            "feature": "description_ENUM_doe",
+            "gini": 0.001060347585168517
+        },
+        {
+            "feature": "cvss_s_ENUM_unchanged",
+            "gini": 0.0010485290539670286
+        },
+        {
+            "feature": "description_ENUM_accessing",
+            "gini": 0.0010343110079701731
+        },
+        {
+            "feature": "description_ENUM_located",
+            "gini": 0.0010264648198022948
+        },
+        {
+            "feature": "description_ENUM_change",
+            "gini": 0.00099665273990394
+        },
+        {
+            "feature": "description_ENUM_read",
+            "gini": 0.000993009829293732
+        },
+        {
+            "feature": "cvss_c_ENUM_high",
+            "gini": 0.0009759053906000317
+        },
+        {
+            "feature": "description_ENUM_mac",
+            "gini": 0.0009618115149983629
+        },
+        {
+            "feature": "description_ENUM_modify",
+            "gini": 0.0009200317873774679
+        },
+        {
+            "feature": "description_ENUM_privilege",
+            "gini": 0.0009066781412729298
+        },
+        {
+            "feature": "description_ENUM_add",
+            "gini": 0.0008926679158769259
+        },
+        {
+            "feature": "description_ENUM_magic_quotes_gpc",
+            "gini": 0.0008816247437915595
+        },
+        {
+            "feature": "description_ENUM_conjunction",
+            "gini": 0.0008764130833814254
+        },
+        {
+            "feature": "description_ENUM_modifying",
+            "gini": 0.0008668758181772343
+        },
+        {
+            "feature": "description_ENUM_register_globals",
+            "gini": 0.0008559267970508199
+        },
+        {
+            "feature": "type_ENUM_vt_csrf",
+            "gini": 0.0008492040361694912
+        },
+        {
+            "feature": "description_ENUM_filename",
+            "gini": 0.000844684579213917
+        },
+        {
+            "feature": "description_ENUM_make",
+            "gini": 0.000821851474374509
+        },
+        {
+            "feature": "description_ENUM_directory",
+            "gini": 0.0008154115234401004
+        },
+        {
+            "feature": "cvss_c_ENUM_complete",
+            "gini": 0.00080072468633427
+        },
+        {
+            "feature": "description_ENUM_hijack",
+            "gini": 0.0007854086821483409
+        },
+        {
+            "feature": "description_ENUM_unknown",
+            "gini": 0.0007805662825407842
+        },
+        {
+            "feature": "description_ENUM_authentication",
+            "gini": 0.0007708822769100859
+        },
+        {
+            "feature": "description_ENUM_memory",
+            "gini": 0.000759638335654427
+        },
+        {
+            "feature": "description_ENUM_uploading",
+            "gini": 0.0007561999685846698
+        },
+        {
+            "feature": "description_ENUM_exploit",
+            "gini": 0.0007492921542713819
+        },
+        {
+            "feature": "description_ENUM_username",
+            "gini": 0.0007291730274439979
+        },
+        {
+            "feature": "description_ENUM_disabled",
+            "gini": 0.0007286081848937771
+        },
+        {
+            "feature": "cvss_av_ENUM_adjacent_network",
+            "gini": 0.0007268252331833215
+        },
+        {
+            "feature": "description_ENUM_crafted",
+            "gini": 0.0007226519643954844
+        },
+        {
+            "feature": "description_ENUM_application",
+            "gini": 0.0007059017342195748
+        },
+        {
+            "feature": "description_ENUM_packet",
+            "gini": 0.0007045090128464522
+        },
+        {
+            "feature": "description_ENUM_device",
+            "gini": 0.0006943042594006912
+        },
+        {
+            "feature": "description_ENUM_root",
+            "gini": 0.0006940025992228333
+        },
+        {
+            "feature": "description_ENUM_prior",
+            "gini": 0.0006873332512367088
+        },
+        {
+            "feature": "description_ENUM_execution",
+            "gini": 0.0006713587858985237
+        },
+        {
+            "feature": "description_ENUM_http",
+            "gini": 0.0006536566954064648
+        },
+        {
+            "feature": "description_ENUM_header",
+            "gini": 0.000642112202689518
+        },
+        {
+            "feature": "cvss_c_ENUM_low",
+            "gini": 0.0006401359489176523
+        },
+        {
+            "feature": "description_ENUM_logon",
+            "gini": 0.0006248663855973876
+        },
+        {
+            "feature": "description_ENUM_message",
+            "gini": 0.0006216973414618838
+        },
+        {
+            "feature": "description_ENUM_easier",
+            "gini": 0.0006198539607798393
+        },
+        {
+            "feature": "cvss_i_ENUM_high",
+            "gini": 0.0006081449150310619
+        },
+        {
+            "feature": "description_ENUM_set",
+            "gini": 0.0006004063752685771
+        },
+        {
+            "feature": "description_ENUM_linux",
+            "gini": 0.0005976188500543001
+        },
+        {
+            "feature": "description_ENUM_free",
+            "gini": 0.0005920749832574406
+        },
+        {
+            "feature": "description_ENUM_note",
+            "gini": 0.0005905424497208995
+        },
+        {
+            "feature": "description_ENUM_lack",
+            "gini": 0.0005815211029743281
+        },
+        {
+            "feature": "description_ENUM_response",
+            "gini": 0.0005797739473070157
+        },
+        {
+            "feature": "description_ENUM_hang",
+            "gini": 0.0005782351844698199
+        },
+        {
+            "feature": "description_ENUM_reference",
+            "gini": 0.0005778335217372769
+        },
+        {
+            "feature": "cvss_s_ENUM_absent",
+            "gini": 0.0005689633826525418
+        },
+        {
+            "feature": "description_ENUM_android",
+            "gini": 0.0005679632144260794
+        },
+        {
+            "feature": "description_ENUM_attack",
+            "gini": 0.0005634039432418549
+        },
+        {
+            "feature": "description_ENUM_obtain",
+            "gini": 0.0005493575097759989
+        },
+        {
+            "feature": "description_ENUM_placing",
+            "gini": 0.0005454970054473675
+        },
+        {
+            "feature": "cvss_s_ENUM_changed",
+            "gini": 0.0005419641788230022
+        },
+        {
+            "feature": "type_ENUM_vt_httprs",
+            "gini": 0.0005364757575792805
+        },
+        {
+            "feature": "description_ENUM_system",
+            "gini": 0.0005324808662211757
+        },
+        {
+            "feature": "description_ENUM_program",
+            "gini": 0.0005305097856645561
+        },
+        {
+            "feature": "description_ENUM_disputed",
+            "gini": 0.0005214641417416973
+        },
+        {
+            "feature": "description_ENUM_reading",
+            "gini": 0.0005200805560530546
+        },
+        {
+            "feature": "description_ENUM_processed",
+            "gini": 0.0005165172469260843
+        },
+        {
+            "feature": "description_ENUM_session",
+            "gini": 0.0005134756098971391
+        },
+        {
+            "feature": "description_ENUM_installation",
+            "gini": 0.0005110589624528247
+        },
+        {
+            "feature": "description_ENUM_running",
+            "gini": 0.0005033156104995201
+        },
+        {
+            "feature": "description_ENUM_adding",
+            "gini": 0.0004973918657979258
+        },
+        {
+            "feature": "description_ENUM_assigned",
+            "gini": 0.0004920554118486846
+        },
+        {
+            "feature": "description_ENUM_reveals",
+            "gini": 0.0004904172412954982
+        },
+        {
+            "feature": "description_ENUM_function",
+            "gini": 0.00048544624045088343
+        },
+        {
+            "feature": "description_ENUM_victim",
+            "gini": 0.00048228548663161385
+        },
+        {
+            "feature": "description_ENUM_script",
+            "gini": 0.0004797521516341964
+        },
+        {
+            "feature": "description_ENUM_reported",
+            "gini": 0.00046646628629680475
+        },
+        {
+            "feature": "description_ENUM_database",
+            "gini": 0.00046374344515782637
+        },
+        {
+            "feature": "description_ENUM_ability",
+            "gini": 0.00046310083183889115
+        },
+        {
+            "feature": "description_ENUM_exploitable",
+            "gini": 0.0004564375234091
+        },
+        {
+            "feature": "description_ENUM_distributed",
+            "gini": 0.00045568748973207285
+        },
+        {
+            "feature": "description_ENUM_series",
+            "gini": 0.0004552202298047769
+        },
+        {
+            "feature": "description_ENUM_email",
+            "gini": 0.000453660879321638
+        },
+        {
+            "feature": "description_ENUM_client",
+            "gini": 0.0004494013526982327
+        },
+        {
+            "feature": "description_ENUM_return",
+            "gini": 0.0004444791669158068
+        },
+        {
+            "feature": "description_ENUM_ac",
+            "gini": 0.00044427584107689086
+        },
+        {
+            "feature": "description_ENUM_mishandled",
+            "gini": 0.0004377798435255554
+        },
+        {
+            "feature": "description_ENUM_sending",
+            "gini": 0.0004342878671466278
+        },
+        {
+            "feature": "description_ENUM_creating",
+            "gini": 0.0004334827433323627
+        },
+        {
+            "feature": "description_ENUM_site",
+            "gini": 0.0004320764579264532
+        },
+        {
+            "feature": "description_ENUM_document",
+            "gini": 0.000423351409488422
+        },
+        {
+            "feature": "description_ENUM_interface",
+            "gini": 0.00042273190181487313
+        },
+        {
+            "feature": "description_ENUM_acrobat",
+            "gini": 0.00042038043988318856
+        },
+        {
+            "feature": "description_ENUM_validate",
+            "gini": 0.0004119724151249995
+        },
+        {
+            "feature": "description_ENUM_found",
+            "gini": 0.0004061739400027154
+        },
+        {
+            "feature": "description_ENUM_option",
+            "gini": 0.000402080762454991
+        },
+        {
+            "feature": "description_ENUM_cookie",
+            "gini": 0.0003954533492176368
+        },
+        {
+            "feature": "description_ENUM_fixed",
+            "gini": 0.0003871166649912753
+        },
+        {
+            "feature": "cvss_version_ENUM_2_0",
+            "gini": 0.0003738788785896051
+        },
+        {
+            "feature": "description_ENUM_page",
+            "gini": 0.00037257472449207037
+        },
+        {
+            "feature": "description_ENUM_process",
+            "gini": 0.00036333305269315363
+        },
+        {
+            "feature": "description_ENUM_data",
+            "gini": 0.0003591851599531122
+        },
+        {
+            "feature": "cvss_version_ENUM_3_0",
+            "gini": 0.00035674529042630345
+        },
+        {
+            "feature": "description_ENUM_link",
+            "gini": 0.0003442355447374294
+        },
+        {
+            "feature": "description_ENUM_character",
+            "gini": 0.00034213477092127806
+        },
+        {
+            "feature": "description_ENUM_context",
+            "gini": 0.0003398162948858947
+        },
+        {
+            "feature": "description_ENUM_node",
+            "gini": 0.00033962835629691934
+        },
+        {
+            "feature": "cvss_i_ENUM_low",
+            "gini": 0.00033701849888382717
+        },
+        {
+            "feature": "description_ENUM_accessed",
+            "gini": 0.00033225486114821766
+        },
+        {
+            "feature": "description_ENUM_verify",
+            "gini": 0.00033059932335853905
+        },
+        {
+            "feature": "description_ENUM_resource",
+            "gini": 0.0003291303379064583
+        },
+        {
+            "feature": "description_ENUM_attempt",
+            "gini": 0.0003240168893737929
+        },
+        {
+            "feature": "description_ENUM_integrity",
+            "gini": 0.000322501658441969
+        },
+        {
+            "feature": "description_ENUM_availability",
+            "gini": 0.00031970718524458987
+        },
+        {
+            "feature": "description_ENUM_buffer",
+            "gini": 0.00031934833360941213
+        },
+        {
+            "feature": "cvss_av_ENUM_physical",
+            "gini": 0.0003172475569605353
+        },
+        {
+            "feature": "description_ENUM_duplicate",
+            "gini": 0.00031541875941446467
+        },
+        {
+            "feature": "description_ENUM_bug",
+            "gini": 0.0003080214783309578
+        },
+        {
+            "feature": "description_ENUM_triggering",
+            "gini": 0.00030725207272582844
+        },
+        {
+            "feature": "description_ENUM_configuration",
+            "gini": 0.0003065221634292045
+        },
+        {
+            "feature": "description_ENUM_redirect",
+            "gini": 0.00030084743353692714
+        },
+        {
+            "feature": "description_ENUM_os",
+            "gini": 0.00029951154047442983
+        },
+        {
+            "feature": "description_ENUM_leverage",
+            "gini": 0.0002987717037277321
+        },
+        {
+            "feature": "cvss_ui_ENUM_absent",
+            "gini": 0.00029787290525035875
+        },
+        {
+            "feature": "description_ENUM_connection",
+            "gini": 0.00028288953494100136
+        },
+        {
+            "feature": "description_ENUM_trick",
+            "gini": 0.00027920164319353416
+        },
+        {
+            "feature": "description_ENUM_csrf",
+            "gini": 0.00027881668644892134
+        },
+        {
+            "feature": "description_ENUM_path",
+            "gini": 0.0002766578001838264
+        },
+        {
+            "feature": "description_ENUM_content",
+            "gini": 0.00027480741784589164
+        },
+        {
+            "feature": "description_ENUM_properly",
+            "gini": 0.00027042394350138346
+        },
+        {
+            "feature": "description_ENUM_case",
+            "gini": 0.0002665655046461345
+        },
+        {
+            "feature": "description_ENUM_changing",
+            "gini": 0.00026220199597210567
+        },
+        {
+            "feature": "description_ENUM_validating",
+            "gini": 0.00025878684834278296
+        },
+        {
+            "feature": "description_ENUM_elevation",
+            "gini": 0.0002563395089695727
+        },
+        {
+            "feature": "description_ENUM_open",
+            "gini": 0.00025418615810035794
+        },
+        {
+            "feature": "description_ENUM_control",
+            "gini": 0.0002534490283094978
+        },
+        {
+            "feature": "description_ENUM_installer",
+            "gini": 0.0002515325329614266
+        },
+        {
+            "feature": "description_ENUM_network",
+            "gini": 0.0002507335452006894
+        },
+        {
+            "feature": "description_ENUM_jenkins",
+            "gini": 0.00025002245463770316
+        },
+        {
+            "feature": "description_ENUM_default",
+            "gini": 0.0002460418096059396
+        },
+        {
+            "feature": "cvss_a_ENUM_low",
+            "gini": 0.0002454130678428818
+        },
+        {
+            "feature": "description_ENUM_implementation",
+            "gini": 0.00024456806344263176
+        },
+        {
+            "feature": "description_ENUM_permission",
+            "gini": 0.00024374383746260354
+        },
+        {
+            "feature": "description_ENUM_occurs",
+            "gini": 0.00024202747636908368
+        },
+        {
+            "feature": "description_ENUM_parsing",
+            "gini": 0.00024121033036273793
+        },
+        {
+            "feature": "description_ENUM_accessible",
+            "gini": 0.00023936455960107993
+        },
+        {
+            "feature": "description_ENUM_filesystem",
+            "gini": 0.00023268082763342423
+        },
+        {
+            "feature": "description_ENUM_oracle",
+            "gini": 0.00023192469540830876
+        },
+        {
+            "feature": "description_ENUM_spoof",
+            "gini": 0.00023158226985206382
+        },
+        {
+            "feature": "description_ENUM_component",
+            "gini": 0.00023046214326667323
+        },
+        {
+            "feature": "description_ENUM_address",
+            "gini": 0.00022704694089708508
+        },
+        {
+            "feature": "description_ENUM_overwrite",
+            "gini": 0.0002262683786374113
+        },
+        {
+            "feature": "description_ENUM_due",
+            "gini": 0.0002208046048866844
+        },
+        {
+            "feature": "description_ENUM_execute",
+            "gini": 0.00022026917358699055
+        },
+        {
+            "feature": "description_ENUM_java",
+            "gini": 0.00021837723707540552
+        },
+        {
+            "feature": "description_ENUM_order",
+            "gini": 0.0002174595013871748
+        },
+        {
+            "feature": "description_ENUM_sequence",
+            "gini": 0.00021008764551757185
+        },
+        {
+            "feature": "description_ENUM_enable",
+            "gini": 0.00021002985764219652
+        },
+        {
+            "feature": "description_ENUM_update",
+            "gini": 0.00020873395192609642
+        },
+        {
+            "feature": "description_ENUM_executing",
+            "gini": 0.0002072284037109985
+        },
+        {
+            "feature": "description_ENUM_seamonkey",
+            "gini": 0.00020598758702991034
+        },
+        {
+            "feature": "description_ENUM_end",
+            "gini": 0.0002057189052574338
+        },
+        {
+            "feature": "description_ENUM_ensure",
+            "gini": 0.0002049937626035974
+        },
+        {
+            "feature": "description_ENUM_login",
+            "gini": 0.00020490303157602742
+        },
+        {
+            "feature": "description_ENUM_object",
+            "gini": 0.00020428583471657102
+        },
+        {
+            "feature": "description_ENUM_disclosure",
+            "gini": 0.0002029249358520161
+        },
+        {
+            "feature": "description_ENUM_affect",
+            "gini": 0.0002022440155246615
+        },
+        {
+            "feature": "description_ENUM_part",
+            "gini": 0.00019550438892895506
+        },
+        {
+            "feature": "description_ENUM_xss",
+            "gini": 0.00019421792934132517
+        },
+        {
+            "feature": "description_ENUM_addressed",
+            "gini": 0.00018784160086894995
+        },
+        {
+            "feature": "description_ENUM_software",
+            "gini": 0.0001867635426905402
+        },
+        {
+            "feature": "description_ENUM_reboot",
+            "gini": 0.0001866628017176877
+        },
+        {
+            "feature": "description_ENUM_provide",
+            "gini": 0.00018477792318304852
+        },
+        {
+            "feature": "description_ENUM_load",
+            "gini": 0.00018470279413137293
+        },
+        {
+            "feature": "description_ENUM_ui",
+            "gini": 0.00018425645455878617
+        },
+        {
+            "feature": "description_ENUM_webkit",
+            "gini": 0.00018240696675071212
+        },
+        {
+            "feature": "description_ENUM_connect",
+            "gini": 0.00018137034161645673
+        },
+        {
+            "feature": "description_ENUM_occur",
+            "gini": 0.00018034462506372748
+        },
+        {
+            "feature": "description_ENUM_included",
+            "gini": 0.00018012644693011926
+        },
+        {
+            "feature": "description_ENUM_prevent",
+            "gini": 0.00018001826287790903
+        },
+        {
+            "feature": "description_ENUM_size",
+            "gini": 0.00017509146714142306
+        },
+        {
+            "feature": "description_ENUM_installed",
+            "gini": 0.00016941566289179933
+        },
+        {
+            "feature": "description_ENUM_flaw",
+            "gini": 0.0001670630654414058
+        },
+        {
+            "feature": "description_ENUM_input",
+            "gini": 0.00016632105085963623
+        },
+        {
+            "feature": "description_ENUM_string",
+            "gini": 0.00015583732972145143
+        },
+        {
+            "feature": "cvss_aupr_ENUM_high",
+            "gini": 0.0001523231455120769
+        },
+        {
+            "feature": "description_ENUM_configured",
+            "gini": 0.00015189597351343342
+        },
+        {
+            "feature": "description_ENUM_processing",
+            "gini": 0.0001513922511306917
+        },
+        {
+            "feature": "description_ENUM_image",
+            "gini": 0.00014841169330713806
+        },
+        {
+            "feature": "description_ENUM_logged",
+            "gini": 0.00014131578603085047
+        },
+        {
+            "feature": "description_ENUM_time",
+            "gini": 0.00014026277016268457
+        },
+        {
+            "feature": "description_ENUM_vendor",
+            "gini": 0.00013389269234433397
+        },
+        {
+            "feature": "description_ENUM_key",
+            "gini": 0.0001336462861575417
+        },
+        {
+            "feature": "description_ENUM_click",
+            "gini": 0.0001295254353537768
+        },
+        {
+            "feature": "description_ENUM_clear",
+            "gini": 0.00012688345496602728
+        },
+        {
+            "feature": "description_ENUM_type",
+            "gini": 0.0001180518008231327
+        },
+        {
+            "feature": "description_ENUM_possibility",
+            "gini": 0.00011618306272670872
+        },
+        {
+            "feature": "description_ENUM_target",
+            "gini": 0.00011296503471893778
+        },
+        {
+            "feature": "description_ENUM_patched",
+            "gini": 0.00011143180757623785
+        },
+        {
+            "feature": "description_ENUM_run",
+            "gini": 0.00011131465298852824
+        },
+        {
+            "feature": "type_ENUM_vt_fileinc",
+            "gini": 0.00010936294936992926
+        },
+        {
+            "feature": "description_ENUM_required",
+            "gini": 0.00010717451697876992
+        },
+        {
+            "feature": "description_ENUM_display",
+            "gini": 0.00010585144660864232
+        },
+        {
+            "feature": "description_ENUM_takeover",
+            "gini": 0.0001057866644371445
+        },
+        {
+            "feature": "description_ENUM_connecting",
+            "gini": 0.00010452823260892427
+        },
+        {
+            "feature": "description_ENUM_conduct",
+            "gini": 0.00010282131146954748
+        },
+        {
+            "feature": "description_ENUM_protocol",
+            "gini": 0.00010177131136258773
+        },
+        {
+            "feature": "cvss_ac_ENUM_absent",
+            "gini": 0.0001015487636747179
+        },
+        {
+            "feature": "description_ENUM_ffmpeg",
+            "gini": 0.00010123630594033409
+        },
+        {
+            "feature": "description_ENUM_opening",
+            "gini": 9.792202211490657e-05
+        },
+        {
+            "feature": "description_ENUM_needed",
+            "gini": 9.632872339009395e-05
+        },
+        {
+            "feature": "description_ENUM_networking",
+            "gini": 9.544335783133568e-05
+        },
+        {
+            "feature": "description_ENUM_stored",
+            "gini": 9.373904505756871e-05
+        },
+        {
+            "feature": "type_ENUM_vt_memc",
+            "gini": 9.370765660616393e-05
+        },
+        {
+            "feature": "description_ENUM_opera",
+            "gini": 9.273827870563715e-05
+        },
+        {
+            "feature": "description_ENUM_overflow",
+            "gini": 9.126358678518092e-05
+        },
+        {
+            "feature": "description_ENUM_susceptible",
+            "gini": 8.908509321857298e-05
+        },
+        {
+            "feature": "description_ENUM_install",
+            "gini": 8.57782620631637e-05
+        },
+        {
+            "feature": "description_ENUM_cpanel",
+            "gini": 8.217563377633654e-05
+        },
+        {
+            "feature": "description_ENUM_code",
+            "gini": 8.213502944278657e-05
+        },
+        {
+            "feature": "description_ENUM_requested",
+            "gini": 8.039253543041066e-05
+        },
+        {
+            "feature": "description_ENUM_javascript",
+            "gini": 7.616157275603843e-05
+        },
+        {
+            "feature": "description_ENUM_sniffing",
+            "gini": 7.616157275603843e-05
+        },
+        {
+            "feature": "description_ENUM_length",
+            "gini": 7.422978799437068e-05
+        },
+        {
+            "feature": "description_ENUM_removed",
+            "gini": 7.34415165861799e-05
+        },
+        {
+            "feature": "cvss_c_ENUM_absent",
+            "gini": 6.986996457184387e-05
+        },
+        {
+            "feature": "description_ENUM_perform",
+            "gini": 6.693080142236575e-05
+        },
+        {
+            "feature": "description_ENUM_reason",
+            "gini": 6.666359138739384e-05
+        },
+        {
+            "feature": "description_ENUM_package",
+            "gini": 6.0929258204830766e-05
+        },
+        {
+            "feature": "description_ENUM_passed",
+            "gini": 6.073262977835818e-05
+        },
+        {
+            "feature": "description_ENUM_domain",
+            "gini": 5.7121179567028826e-05
+        },
+        {
+            "feature": "description_ENUM_mail",
+            "gini": 5.5146245167105086e-05
+        },
+        {
+            "feature": "description_ENUM_send",
+            "gini": 5.315375670684026e-05
+        },
+        {
+            "feature": "description_ENUM_plaintext",
+            "gini": 5.23909545389789e-05
+        },
+        {
+            "feature": "description_ENUM_description",
+            "gini": 4.969025534747694e-05
+        },
+        {
+            "feature": "description_ENUM_app",
+            "gini": 4.795367824494787e-05
+        },
+        {
+            "feature": "description_ENUM_payload",
+            "gini": 4.68686601575621e-05
+        },
+        {
+            "feature": "description_ENUM_candidate",
+            "gini": 4.029353770052803e-05
+        },
+        {
+            "feature": "description_ENUM_account",
+            "gini": 3.958348426476694e-05
+        },
+        {
+            "feature": "description_ENUM_log",
+            "gini": 3.277875566431462e-05
+        },
+        {
+            "feature": "description_ENUM_cleartext",
+            "gini": 3.2211191485166726e-05
+        },
+        {
+            "feature": "description_ENUM_imagemagick",
+            "gini": 1.967566793467358e-05
+        },
+        {
+            "feature": "description_ENUM_executed",
+            "gini": 1.9040393189009604e-05
+        },
+        {
+            "feature": "description_ENUM_check",
+            "gini": 1.0695171097967339e-05
+        },
+        {
+            "feature": "description_ENUM_handling",
+            "gini": 7.631907093777433e-06
+        },
+        {
+            "feature": "cvss_aupr_ENUM_absent",
+            "gini": 4.626425301324647e-06
+        },
+        {
+            "feature": "description_ENUM_cna",
+            "gini": 3.864908326838659e-07
+        },
+        {
+            "feature": "description_ENUM_individual",
+            "gini": 3.153137643660812e-10
+        },
+        {
+            "feature": "description_ENUM_associate",
+            "gini": 1.5788865870666096e-10
+        },
+        {
+            "feature": "description_ENUM_security",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_contract",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_identified",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_aupr_ENUM_multiple",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_zdi",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_visit",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_module",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_leak",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_persuading",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_caf",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_balance",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_altering",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_browser",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_host",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_intel",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_rated",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_av_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_mediaserver",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_owner",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_intended",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_point",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_version_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_operation",
+            "gini": 0.0
+        },
+        {
+            "feature": "delta_days_proposed",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_called",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_i_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "status_ENUM_entry",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_logfile",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_compromise",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_has_impact_score",
+            "gini": 0.0
+        },
+        {
+            "feature": "comments",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_received",
+            "gini": 0.0
+        },
+        {
+            "feature": "status_ENUM_candidate",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_blink",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_reject",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_has_exploitability_score",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_assigned",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_interim",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_proposed",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_credential",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_modified",
+            "gini": 0.0
+        },
+        {
+            "feature": "phase_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_person",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_subset",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_allowed",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_delete",
+            "gini": 0.0
+        },
+        {
+            "feature": "vendor_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_triggered",
+            "gini": 0.0
+        },
+        {
+            "feature": "cvss_a_ENUM_absent",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_currentuser",
+            "gini": 0.0
+        },
+        {
+            "feature": "description_ENUM_infrastructure",
+            "gini": 0.0
+        }
+    ]
+}

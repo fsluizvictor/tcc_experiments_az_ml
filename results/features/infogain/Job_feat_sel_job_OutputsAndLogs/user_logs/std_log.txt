@@ -1,0 +1,2157 @@
+self.X_train.columns
+ Index(['delta_days_oval', 'delta_days_patch', 'delta_days_proposed',
+       'status_ENUM_candidate', 'status_ENUM_entry', 'phase_ENUM_assigned',
+       'phase_ENUM_interim', 'phase_ENUM_proposed', 'phase_ENUM_modified',
+       'phase_ENUM_absent',
+       ...
+       'description_ENUM_opening', 'description_ENUM_properly',
+       'description_ENUM_mediaserver', 'description_ENUM_install',
+       'description_ENUM_intended', 'description_ENUM_point',
+       'description_ENUM_accessible', 'description_ENUM_operation',
+       'vendor_ENUM_encoded', 'reference_type_ENUM_encoded'],
+      dtype='object', length=399)
+info_gain
+ [3.53051171e-03 1.76601258e-04 1.24427178e-03 1.48933287e-02
+ 1.97635990e-03 1.53908272e-02 4.78745091e-04 1.12638719e-03
+ 2.58955250e-03 2.35199293e-04 1.27809143e-02 1.29891136e-02
+ 0.00000000e+00 2.43040393e-02 1.07241790e-02 1.18062657e-03
+ 1.96394217e-02 3.26497880e-03 3.46315185e-03 9.34443982e-03
+ 8.78121896e-03 4.61238912e-03 2.19836710e-03 4.36809669e-03
+ 1.31801073e-04 2.12524996e-03 7.13966530e-04 1.02655981e-02
+ 9.65722103e-04 1.82824921e-02 5.52810511e-03 0.00000000e+00
+ 3.07438564e-03 1.65643852e-02 8.56672808e-03 1.78165693e-03
+ 4.91032329e-03 1.46448904e-03 3.11937629e-03 2.02941912e-02
+ 7.59203939e-03 5.43251233e-03 4.42619851e-04 8.20208460e-04
+ 3.88402487e-03 1.94049692e-02 8.91818533e-03 5.13625247e-03
+ 6.56495816e-03 7.55406793e-03 1.63444757e-02 7.51399898e-04
+ 1.04461352e-02 1.93454628e-02 5.81385823e-03 6.81582704e-03
+ 4.35519548e-03 3.72895679e-04 1.10589151e-03 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 1.19531099e-03 2.37471036e-03
+ 2.95026179e-04 0.00000000e+00 3.02103796e-02 1.83581646e-02
+ 3.97732120e-02 1.36762132e-02 2.52695320e-02 4.23987431e-02
+ 2.16137415e-02 4.22753909e-02 2.09212201e-02 4.33623750e-02
+ 0.00000000e+00 3.97388996e-03 3.58649898e-03 5.82113195e-03
+ 3.15532191e-03 4.01176095e-03 1.87978376e-03 1.09624562e-02
+ 8.89925438e-03 8.85942532e-04 3.38216368e-03 2.98010187e-04
+ 1.97769684e-03 5.83011774e-03 5.52817424e-03 6.67515126e-04
+ 4.68308346e-03 6.50155900e-03 8.00653877e-03 2.26475982e-03
+ 1.04920055e-03 8.05627530e-04 3.64930355e-03 0.00000000e+00
+ 3.34489402e-03 1.22624085e-03 1.73660915e-03 0.00000000e+00
+ 1.93168036e-03 1.96815941e-03 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 2.69234373e-03 6.22388445e-03 1.05722977e-03
+ 2.38205412e-04 1.97270162e-03 1.61762279e-03 0.00000000e+00
+ 7.64274924e-04 1.97765523e-03 2.63483294e-03 6.23368880e-04
+ 0.00000000e+00 3.05975512e-04 2.05357185e-03 7.33614515e-04
+ 2.42163717e-03 0.00000000e+00 1.41600060e-03 0.00000000e+00
+ 1.16429715e-03 0.00000000e+00 5.11451499e-04 1.01045710e-03
+ 2.36312471e-03 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 5.21719394e-03 1.86514617e-03 0.00000000e+00
+ 2.40018124e-03 2.16357683e-03 8.95951704e-05 4.14967572e-04
+ 2.71498689e-04 4.20177357e-04 4.61653668e-04 0.00000000e+00
+ 0.00000000e+00 2.83640728e-03 0.00000000e+00 2.08052318e-03
+ 6.17403213e-04 2.53532069e-03 0.00000000e+00 0.00000000e+00
+ 1.72263706e-03 0.00000000e+00 0.00000000e+00 1.18758659e-03
+ 0.00000000e+00 7.27533626e-04 0.00000000e+00 1.44301239e-04
+ 1.13143326e-03 1.30282369e-03 8.10105994e-03 2.58504073e-04
+ 3.50672149e-03 1.06269746e-04 1.45939879e-03 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 1.80742644e-03 0.00000000e+00
+ 0.00000000e+00 1.01178666e-04 0.00000000e+00 6.57156046e-04
+ 1.94615930e-03 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 3.76012582e-03 6.88094698e-04 1.20589052e-03 2.39086694e-03
+ 1.39872815e-03 1.37427177e-03 0.00000000e+00 1.38336761e-03
+ 0.00000000e+00 0.00000000e+00 2.74225611e-03 0.00000000e+00
+ 6.13867109e-05 8.63304833e-05 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 6.18765233e-04 0.00000000e+00 1.30736867e-03
+ 0.00000000e+00 2.50209242e-04 1.49540620e-04 0.00000000e+00
+ 1.67732893e-03 0.00000000e+00 0.00000000e+00 1.18304616e-03
+ 0.00000000e+00 0.00000000e+00 9.43546984e-04 1.09505541e-03
+ 0.00000000e+00 1.98709956e-03 1.42827500e-03 4.75003222e-04
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 8.86271723e-04
+ 7.84211639e-04 0.00000000e+00 0.00000000e+00 1.05739384e-03
+ 9.09484382e-04 3.52947269e-05 0.00000000e+00 9.59510797e-04
+ 6.64699510e-04 9.27930926e-05 7.87577202e-04 2.39545818e-04
+ 2.34436086e-03 0.00000000e+00 4.83429977e-04 3.66595783e-03
+ 5.93957530e-04 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 6.39409279e-04 2.10111930e-03 0.00000000e+00
+ 1.34387069e-03 0.00000000e+00 1.27734831e-04 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 1.43072879e-03 0.00000000e+00
+ 2.66391291e-03 0.00000000e+00 7.77196635e-04 1.13496844e-03
+ 1.23427038e-03 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 1.39679724e-03 0.00000000e+00 2.82508803e-03 8.44439101e-04
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 4.21737193e-04
+ 0.00000000e+00 5.02573991e-03 0.00000000e+00 7.25440908e-04
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 1.06217036e-04 1.99899715e-04
+ 7.27952093e-04 0.00000000e+00 1.27032177e-03 2.02649398e-03
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 9.32126456e-04
+ 0.00000000e+00 8.66389687e-04 1.59615406e-03 0.00000000e+00
+ 4.14215163e-04 0.00000000e+00 2.80074045e-03 1.32518550e-03
+ 0.00000000e+00 0.00000000e+00 1.14829362e-04 2.59106488e-04
+ 1.31749734e-04 9.58916544e-04 1.32330166e-03 1.44411785e-03
+ 2.18984973e-04 0.00000000e+00 1.13187732e-04 0.00000000e+00
+ 0.00000000e+00 1.34051853e-05 0.00000000e+00 1.74301219e-03
+ 2.66224248e-03 0.00000000e+00 1.21283394e-03 0.00000000e+00
+ 1.66516026e-03 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 5.82082356e-04 1.97147860e-03 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 1.46173492e-04 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 9.06211591e-05
+ 1.47836987e-04 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 4.62833520e-05 0.00000000e+00 1.32372832e-03 3.14259751e-03
+ 1.82834396e-03 9.89893601e-04 1.25367750e-03 0.00000000e+00
+ 3.67726540e-04 0.00000000e+00 0.00000000e+00 3.16096296e-04
+ 0.00000000e+00 1.01674818e-03 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 2.95369884e-04 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 1.16682941e-05 1.63039557e-04 0.00000000e+00
+ 0.00000000e+00 1.71841946e-03 0.00000000e+00 1.34749135e-03
+ 0.00000000e+00 2.00551288e-04 0.00000000e+00 0.00000000e+00
+ 9.04336453e-04 1.78604911e-03 0.00000000e+00 1.50543384e-03
+ 4.67943311e-04 8.72429918e-04 0.00000000e+00 2.00197311e-03
+ 1.50019403e-04 0.00000000e+00 2.19882869e-03 1.82261403e-03
+ 0.00000000e+00 8.98525936e-04 0.00000000e+00 1.67477222e-03
+ 4.82808075e-04 2.02600439e-03 1.58800080e-04 1.43596515e-03
+ 1.71361360e-03 3.97534935e-02 1.27188403e-01]
+self.feature_scores
+                          feature  infogain
+0                delta_days_oval  0.003531
+1               delta_days_patch  0.000177
+2            delta_days_proposed  0.001244
+3          status_ENUM_candidate  0.014893
+4              status_ENUM_entry  0.001976
+..                           ...       ...
+394       description_ENUM_point  0.000159
+395  description_ENUM_accessible  0.001436
+396   description_ENUM_operation  0.001714
+397          vendor_ENUM_encoded  0.039753
+398  reference_type_ENUM_encoded  0.127188
+
+[399 rows x 2 columns]
+top_features
+ 398    reference_type_ENUM_encoded
+75               cvss_impact_score
+71                      cvss_score
+73       cvss_exploitability_score
+68                references_count
+                  ...             
+213    description_ENUM_processing
+300           description_ENUM_add
+301     description_ENUM_processed
+212     description_ENUM_integrity
+199       description_ENUM_execute
+Name: feature, Length: 399, dtype: object
+feature_scores
+                          feature  infogain
+398  reference_type_ENUM_encoded  0.127188
+75             cvss_impact_score  0.043362
+71                    cvss_score  0.042399
+73     cvss_exploitability_score  0.042275
+68              references_count  0.039773
+..                           ...       ...
+213  description_ENUM_processing  0.000000
+300         description_ENUM_add  0.000000
+301   description_ENUM_processed  0.000000
+212   description_ENUM_integrity  0.000000
+199     description_ENUM_execute  0.000000
+
+[399 rows x 2 columns]
+{
+    "top_features": [
+        "reference_type_ENUM_encoded",
+        "cvss_impact_score",
+        "cvss_score",
+        "cvss_exploitability_score",
+        "references_count",
+        "vendor_ENUM_encoded",
+        "type_ENUM_vt_ec",
+        "versions",
+        "cvss_version_ENUM_2_0",
+        "cvss_has_exploitability_score",
+        "cvss_has_impact_score",
+        "cvss_i_ENUM_partial",
+        "cvss_av_ENUM_network",
+        "cvss_a_ENUM_partial",
+        "cvss_s_ENUM_absent",
+        "type_ENUM_absent",
+        "cvss_aupr_ENUM_none",
+        "cvss_c_ENUM_partial",
+        "cvss_ui_ENUM_absent",
+        "phase_ENUM_assigned",
+        "status_ENUM_candidate",
+        "products",
+        "cvss_version_ENUM_3_0",
+        "vendor_ENUM_absent",
+        "description_ENUM_reject",
+        "cvss_version_ENUM_absent",
+        "cvss_s_ENUM_unchanged",
+        "cvss_aupr_ENUM_absent",
+        "cvss_av_ENUM_absent",
+        "cvss_a_ENUM_absent",
+        "description_ENUM_reason",
+        "cvss_ac_ENUM_absent",
+        "cvss_c_ENUM_absent",
+        "description_ENUM_joomla",
+        "description_ENUM_associate",
+        "cvss_i_ENUM_absent",
+        "cvss_ui_ENUM_none",
+        "type_ENUM_vt_dos",
+        "cvss_ui_ENUM_required",
+        "description_ENUM_individual",
+        "description_ENUM_detail",
+        "description_ENUM_candidate",
+        "description_ENUM_vulnerability",
+        "type_ENUM_vt_dirt",
+        "description_ENUM_cna",
+        "cvss_c_ENUM_low",
+        "cvss_i_ENUM_none",
+        "description_ENUM_obtained",
+        "cvss_a_ENUM_none",
+        "description_ENUM_magic_quotes_gpc",
+        "cvss_i_ENUM_low",
+        "description_ENUM_requested",
+        "cvss_ac_ENUM_low",
+        "cvss_ac_ENUM_medium",
+        "type_ENUM_vt_info",
+        "description_ENUM_earlier",
+        "cpes_non_vulnerable_count",
+        "cvss_a_ENUM_high",
+        "description_ENUM_include",
+        "description_ENUM_path",
+        "description_ENUM_url",
+        "description_ENUM_denial",
+        "delta_days_oval",
+        "description_ENUM_webkit",
+        "cvss_av_ENUM_local",
+        "description_ENUM_issue",
+        "description_ENUM_assigned",
+        "cvss_av_ENUM_adjacent_network",
+        "description_ENUM_attacker",
+        "description_ENUM_action",
+        "cvss_i_ENUM_high",
+        "cvss_c_ENUM_high",
+        "description_ENUM_free",
+        "description_ENUM_download",
+        "description_ENUM_cleartext",
+        "description_ENUM_zdi",
+        "description_ENUM_http",
+        "description_ENUM_part",
+        "description_ENUM_header",
+        "description_ENUM_parameter",
+        "phase_ENUM_modified",
+        "description_ENUM_provenance",
+        "description_ENUM_password",
+        "description_ENUM_android",
+        "description_ENUM_disabled",
+        "type_ENUM_vt_sql",
+        "description_ENUM_wordpress",
+        "description_ENUM_register_globals",
+        "description_ENUM_demonstrated",
+        "description_ENUM_protocol",
+        "cvss_ac_ENUM_high",
+        "description_ENUM_php",
+        "cvss_aupr_ENUM_high",
+        "description_ENUM_ability",
+        "description_ENUM_unknown",
+        "description_ENUM_information",
+        "description_ENUM_program",
+        "description_ENUM_intended",
+        "description_ENUM_bug",
+        "description_ENUM_caf",
+        "description_ENUM_affected",
+        "description_ENUM_verify",
+        "status_ENUM_entry",
+        "description_ENUM_make",
+        "description_ENUM_found",
+        "description_ENUM_request",
+        "description_ENUM_vector",
+        "description_ENUM_man",
+        "description_ENUM_html",
+        "description_ENUM_hijack",
+        "description_ENUM_imagemagick",
+        "description_ENUM_payload",
+        "description_ENUM_occur",
+        "description_ENUM_installer",
+        "cvss_c_ENUM_none",
+        "description_ENUM_passed",
+        "description_ENUM_ac",
+        "description_ENUM_removed",
+        "description_ENUM_opera",
+        "description_ENUM_operation",
+        "description_ENUM_default",
+        "description_ENUM_mediaserver",
+        "description_ENUM_trick",
+        "description_ENUM_due",
+        "description_ENUM_connect",
+        "description_ENUM_prevent",
+        "cvss_i_ENUM_complete",
+        "description_ENUM_reading",
+        "description_ENUM_stored",
+        "description_ENUM_accessible",
+        "description_ENUM_log",
+        "description_ENUM_code",
+        "description_ENUM_privilege",
+        "description_ENUM_drupal",
+        "description_ENUM_mishandled",
+        "description_ENUM_change",
+        "description_ENUM_command",
+        "description_ENUM_currentuser",
+        "description_ENUM_database",
+        "description_ENUM_return",
+        "description_ENUM_image",
+        "description_ENUM_csrf",
+        "description_ENUM_run",
+        "description_ENUM_linux",
+        "description_ENUM_module",
+        "description_ENUM_ensure",
+        "delta_days_proposed",
+        "description_ENUM_crafted",
+        "description_ENUM_ui",
+        "description_ENUM_installation",
+        "description_ENUM_victim",
+        "type_ENUM_vt_csrf",
+        "description_ENUM_data",
+        "description_ENUM_setting",
+        "cvss_av_ENUM_physical",
+        "description_ENUM_fixed",
+        "description_ENUM_function",
+        "description_ENUM_leveraging",
+        "phase_ENUM_proposed",
+        "type_ENUM_vt_xss",
+        "description_ENUM_target",
+        "description_ENUM_modifying",
+        "description_ENUM_access",
+        "description_ENUM_vulnerable",
+        "description_ENUM_received",
+        "description_ENUM_exploited",
+        "description_ENUM_reported",
+        "cvss_aupr_ENUM_multiple",
+        "description_ENUM_browser",
+        "description_ENUM_vendor",
+        "description_ENUM_handling",
+        "description_ENUM_host",
+        "description_ENUM_time",
+        "description_ENUM_mail",
+        "description_ENUM_opening",
+        "description_ENUM_addressed",
+        "description_ENUM_service",
+        "description_ENUM_leak",
+        "description_ENUM_credential",
+        "description_ENUM_contract",
+        "cvss_a_ENUM_complete",
+        "description_ENUM_trigger",
+        "description_ENUM_spoof",
+        "description_ENUM_altering",
+        "description_ENUM_username",
+        "description_ENUM_server",
+        "cvss_s_ENUM_changed",
+        "description_ENUM_bypass",
+        "description_ENUM_cookie",
+        "description_ENUM_xss",
+        "description_ENUM_response",
+        "cvss_aupr_ENUM_single",
+        "description_ENUM_kernel",
+        "description_ENUM_exploit",
+        "description_ENUM_uploading",
+        "description_ENUM_configured",
+        "description_ENUM_script",
+        "description_ENUM_device",
+        "description_ENUM_flaw",
+        "description_ENUM_obtain",
+        "description_ENUM_filename",
+        "description_ENUM_sniffing",
+        "description_ENUM_lack",
+        "description_ENUM_domain",
+        "description_ENUM_install",
+        "phase_ENUM_interim",
+        "description_ENUM_object",
+        "description_ENUM_executing",
+        "description_ENUM_person",
+        "cvss_a_ENUM_low",
+        "description_ENUM_balance",
+        "description_ENUM_reference",
+        "description_ENUM_needed",
+        "description_ENUM_logged",
+        "type_ENUM_vt_httprs",
+        "description_ENUM_size",
+        "description_ENUM_app",
+        "description_ENUM_enabled",
+        "description_ENUM_user",
+        "description_ENUM_changing",
+        "type_ENUM_vt_bypass",
+        "description_ENUM_administrator",
+        "description_ENUM_login",
+        "description_ENUM_create",
+        "description_ENUM_software",
+        "description_ENUM_rated",
+        "description_ENUM_context",
+        "phase_ENUM_absent",
+        "description_ENUM_sequence",
+        "description_ENUM_redirect",
+        "description_ENUM_takeover",
+        "delta_days_patch",
+        "description_ENUM_networking",
+        "description_ENUM_point",
+        "description_ENUM_connecting",
+        "description_ENUM_seamonkey",
+        "description_ENUM_ffmpeg",
+        "description_ENUM_adding",
+        "description_ENUM_subset",
+        "cvss_aupr_ENUM_low",
+        "description_ENUM_type",
+        "description_ENUM_logon",
+        "description_ENUM_triggered",
+        "description_ENUM_load",
+        "description_ENUM_running",
+        "description_ENUM_link",
+        "description_ENUM_executed",
+        "description_ENUM_end",
+        "description_ENUM_validating",
+        "description_ENUM_doe",
+        "description_ENUM_error",
+        "description_ENUM_argument",
+        "description_ENUM_node",
+        "description_ENUM_component",
+        "description_ENUM_disclosure",
+        "description_ENUM_triggering",
+        "description_ENUM_provide",
+        "description_ENUM_jenkins",
+        "description_ENUM_security",
+        "description_ENUM_path_info",
+        "description_ENUM_identified",
+        "description_ENUM_option",
+        "description_ENUM_write",
+        "description_ENUM_compromise",
+        "description_ENUM_display",
+        "description_ENUM_click",
+        "description_ENUM_exploitable",
+        "description_ENUM_plaintext",
+        "description_ENUM_availability",
+        "description_ENUM_call",
+        "description_ENUM_reboot",
+        "description_ENUM_distributed",
+        "description_ENUM_key",
+        "description_ENUM_possibility",
+        "description_ENUM_susceptible",
+        "description_ENUM_visit",
+        "description_ENUM_placing",
+        "description_ENUM_filesystem",
+        "description_ENUM_overflow",
+        "description_ENUM_file",
+        "description_ENUM_accessing",
+        "description_ENUM_logfile",
+        "description_ENUM_resource",
+        "description_ENUM_blink",
+        "description_ENUM_update",
+        "description_ENUM_windows",
+        "description_ENUM_overwrite",
+        "description_ENUM_mac",
+        "description_ENUM_directory",
+        "description_ENUM_attempt",
+        "description_ENUM_clear",
+        "description_ENUM_open",
+        "description_ENUM_modify",
+        "description_ENUM_email",
+        "description_ENUM_content",
+        "description_ENUM_wild",
+        "description_ENUM_network",
+        "description_ENUM_properly",
+        "description_ENUM_memory",
+        "description_ENUM_client",
+        "type_ENUM_vt_memc",
+        "description_ENUM_send",
+        "type_ENUM_vt_fileinc",
+        "type_ENUM_vt_overflow",
+        "type_ENUM_vt_priv",
+        "description_ENUM_check",
+        "description_ENUM_perform",
+        "comments",
+        "description_ENUM_located",
+        "description_ENUM_implementation",
+        "description_ENUM_root",
+        "description_ENUM_oracle",
+        "description_ENUM_delete",
+        "description_ENUM_ruby",
+        "description_ENUM_description",
+        "description_ENUM_required",
+        "description_ENUM_included",
+        "description_ENUM_patched",
+        "description_ENUM_leverage",
+        "description_ENUM_site",
+        "description_ENUM_called",
+        "description_ENUM_hang",
+        "cvss_c_ENUM_complete",
+        "description_ENUM_read",
+        "description_ENUM_note",
+        "description_ENUM_document",
+        "description_ENUM_control",
+        "description_ENUM_crash",
+        "description_ENUM_case",
+        "description_ENUM_packet",
+        "description_ENUM_connection",
+        "description_ENUM_character",
+        "description_ENUM_application",
+        "description_ENUM_parsing",
+        "description_ENUM_order",
+        "description_ENUM_affect",
+        "description_ENUM_length",
+        "description_ENUM_typo3",
+        "description_ENUM_session",
+        "description_ENUM_cpanel",
+        "description_ENUM_persuading",
+        "description_ENUM_conjunction",
+        "description_ENUM_javascript",
+        "description_ENUM_execution",
+        "description_ENUM_occurs",
+        "description_ENUM_intel",
+        "description_ENUM_process",
+        "description_ENUM_java",
+        "description_ENUM_configuration",
+        "description_ENUM_disputed",
+        "description_ENUM_creating",
+        "description_ENUM_infrastructure",
+        "description_ENUM_reveals",
+        "description_ENUM_elevation",
+        "description_ENUM_page",
+        "description_ENUM_set",
+        "description_ENUM_owner",
+        "description_ENUM_account",
+        "description_ENUM_system",
+        "description_ENUM_sending",
+        "description_ENUM_message",
+        "description_ENUM_validate",
+        "description_ENUM_easier",
+        "description_ENUM_upload",
+        "description_ENUM_leveraged",
+        "description_ENUM_unique",
+        "description_ENUM_firmware",
+        "description_ENUM_package",
+        "description_ENUM_buffer",
+        "description_ENUM_allowed",
+        "description_ENUM_uri",
+        "description_ENUM_accessed",
+        "description_ENUM_attack",
+        "cvss_version_ENUM_3_1",
+        "description_ENUM_installed",
+        "description_ENUM_unspecified",
+        "description_ENUM_string",
+        "description_ENUM_version",
+        "description_ENUM_input",
+        "description_ENUM_prior",
+        "description_ENUM_product",
+        "description_ENUM_enable",
+        "description_ENUM_permission",
+        "description_ENUM_series",
+        "description_ENUM_admin",
+        "description_ENUM_acrobat",
+        "description_ENUM_duplicate",
+        "description_ENUM_interface",
+        "description_ENUM_conduct",
+        "description_ENUM_field",
+        "description_ENUM_related",
+        "description_ENUM_os",
+        "description_ENUM_address",
+        "description_ENUM_authentication",
+        "description_ENUM_processing",
+        "description_ENUM_add",
+        "description_ENUM_processed",
+        "description_ENUM_integrity",
+        "description_ENUM_execute"
+    ],
+    "feature_scores": [
+        {
+            "feature": "reference_type_ENUM_encoded",
+            "infogain": 0.12718840312118052
+        },
+        {
+            "feature": "cvss_impact_score",
+            "infogain": 0.043362374979112994
+        },
+        {
+            "feature": "cvss_score",
+            "infogain": 0.04239874311042091
+        },
+        {
+            "feature": "cvss_exploitability_score",
+            "infogain": 0.042275390927256185
+        },
+        {
+            "feature": "references_count",
+            "infogain": 0.03977321204111828
+        },
+        {
+            "feature": "vendor_ENUM_encoded",
+            "infogain": 0.039753493508972726
+        },
+        {
+            "feature": "type_ENUM_vt_ec",
+            "infogain": 0.030210379591200764
+        },
+        {
+            "feature": "versions",
+            "infogain": 0.025269531976003456
+        },
+        {
+            "feature": "cvss_version_ENUM_2_0",
+            "infogain": 0.024304039284477996
+        },
+        {
+            "feature": "cvss_has_exploitability_score",
+            "infogain": 0.021613741545523313
+        },
+        {
+            "feature": "cvss_has_impact_score",
+            "infogain": 0.020921220099151983
+        },
+        {
+            "feature": "cvss_i_ENUM_partial",
+            "infogain": 0.020294191205204815
+        },
+        {
+            "feature": "cvss_av_ENUM_network",
+            "infogain": 0.019639421713186778
+        },
+        {
+            "feature": "cvss_a_ENUM_partial",
+            "infogain": 0.019404969192670984
+        },
+        {
+            "feature": "cvss_s_ENUM_absent",
+            "infogain": 0.019345462843465278
+        },
+        {
+            "feature": "type_ENUM_absent",
+            "infogain": 0.018358164641345764
+        },
+        {
+            "feature": "cvss_aupr_ENUM_none",
+            "infogain": 0.018282492080569313
+        },
+        {
+            "feature": "cvss_c_ENUM_partial",
+            "infogain": 0.016564385188376107
+        },
+        {
+            "feature": "cvss_ui_ENUM_absent",
+            "infogain": 0.016344475716550066
+        },
+        {
+            "feature": "phase_ENUM_assigned",
+            "infogain": 0.015390827151111619
+        },
+        {
+            "feature": "status_ENUM_candidate",
+            "infogain": 0.014893328673009743
+        },
+        {
+            "feature": "products",
+            "infogain": 0.013676213210350285
+        },
+        {
+            "feature": "cvss_version_ENUM_3_0",
+            "infogain": 0.012989113551086895
+        },
+        {
+            "feature": "vendor_ENUM_absent",
+            "infogain": 0.012780914251705688
+        },
+        {
+            "feature": "description_ENUM_reject",
+            "infogain": 0.0109624561986994
+        },
+        {
+            "feature": "cvss_version_ENUM_absent",
+            "infogain": 0.010724179035521031
+        },
+        {
+            "feature": "cvss_s_ENUM_unchanged",
+            "infogain": 0.010446135242906163
+        },
+        {
+            "feature": "cvss_aupr_ENUM_absent",
+            "infogain": 0.010265598085512417
+        },
+        {
+            "feature": "cvss_av_ENUM_absent",
+            "infogain": 0.009344439819337191
+        },
+        {
+            "feature": "cvss_a_ENUM_absent",
+            "infogain": 0.008918185327516426
+        },
+        {
+            "feature": "description_ENUM_reason",
+            "infogain": 0.008899254382967126
+        },
+        {
+            "feature": "cvss_ac_ENUM_absent",
+            "infogain": 0.008781218963285431
+        },
+        {
+            "feature": "cvss_c_ENUM_absent",
+            "infogain": 0.008566728077313401
+        },
+        {
+            "feature": "description_ENUM_joomla",
+            "infogain": 0.008101059941839184
+        },
+        {
+            "feature": "description_ENUM_associate",
+            "infogain": 0.008006538770328309
+        },
+        {
+            "feature": "cvss_i_ENUM_absent",
+            "infogain": 0.007592039385944105
+        },
+        {
+            "feature": "cvss_ui_ENUM_none",
+            "infogain": 0.00755406793100355
+        },
+        {
+            "feature": "type_ENUM_vt_dos",
+            "infogain": 0.006815827041498412
+        },
+        {
+            "feature": "cvss_ui_ENUM_required",
+            "infogain": 0.0065649581560423
+        },
+        {
+            "feature": "description_ENUM_individual",
+            "infogain": 0.006501559002760393
+        },
+        {
+            "feature": "description_ENUM_detail",
+            "infogain": 0.006223884447046135
+        },
+        {
+            "feature": "description_ENUM_candidate",
+            "infogain": 0.005830117735128315
+        },
+        {
+            "feature": "description_ENUM_vulnerability",
+            "infogain": 0.005821131946834424
+        },
+        {
+            "feature": "type_ENUM_vt_dirt",
+            "infogain": 0.0058138582265325756
+        },
+        {
+            "feature": "description_ENUM_cna",
+            "infogain": 0.005528174239405104
+        },
+        {
+            "feature": "cvss_c_ENUM_low",
+            "infogain": 0.005528105113962178
+        },
+        {
+            "feature": "cvss_i_ENUM_none",
+            "infogain": 0.00543251232729447
+        },
+        {
+            "feature": "description_ENUM_obtained",
+            "infogain": 0.005217193944280218
+        },
+        {
+            "feature": "cvss_a_ENUM_none",
+            "infogain": 0.005136252474830849
+        },
+        {
+            "feature": "description_ENUM_magic_quotes_gpc",
+            "infogain": 0.005025739909142901
+        },
+        {
+            "feature": "cvss_i_ENUM_low",
+            "infogain": 0.0049103232897151905
+        },
+        {
+            "feature": "description_ENUM_requested",
+            "infogain": 0.004683083456445081
+        },
+        {
+            "feature": "cvss_ac_ENUM_low",
+            "infogain": 0.004612389116665172
+        },
+        {
+            "feature": "cvss_ac_ENUM_medium",
+            "infogain": 0.004368096690243073
+        },
+        {
+            "feature": "type_ENUM_vt_info",
+            "infogain": 0.004355195483021879
+        },
+        {
+            "feature": "description_ENUM_earlier",
+            "infogain": 0.004011760946835752
+        },
+        {
+            "feature": "cpes_non_vulnerable_count",
+            "infogain": 0.003973889956088161
+        },
+        {
+            "feature": "cvss_a_ENUM_high",
+            "infogain": 0.0038840248703602143
+        },
+        {
+            "feature": "description_ENUM_include",
+            "infogain": 0.003760125819934901
+        },
+        {
+            "feature": "description_ENUM_path",
+            "infogain": 0.00366595783017698
+        },
+        {
+            "feature": "description_ENUM_url",
+            "infogain": 0.0036493035496771853
+        },
+        {
+            "feature": "description_ENUM_denial",
+            "infogain": 0.003586498980315822
+        },
+        {
+            "feature": "delta_days_oval",
+            "infogain": 0.003530511711608675
+        },
+        {
+            "feature": "description_ENUM_webkit",
+            "infogain": 0.0035067214949879855
+        },
+        {
+            "feature": "cvss_av_ENUM_local",
+            "infogain": 0.003463151851405444
+        },
+        {
+            "feature": "description_ENUM_issue",
+            "infogain": 0.003382163684254813
+        },
+        {
+            "feature": "description_ENUM_assigned",
+            "infogain": 0.0033448940244273917
+        },
+        {
+            "feature": "cvss_av_ENUM_adjacent_network",
+            "infogain": 0.0032649787961014365
+        },
+        {
+            "feature": "description_ENUM_attacker",
+            "infogain": 0.003155321911357367
+        },
+        {
+            "feature": "description_ENUM_action",
+            "infogain": 0.003142597513965173
+        },
+        {
+            "feature": "cvss_i_ENUM_high",
+            "infogain": 0.0031193762893610977
+        },
+        {
+            "feature": "cvss_c_ENUM_high",
+            "infogain": 0.0030743856405974768
+        },
+        {
+            "feature": "description_ENUM_free",
+            "infogain": 0.0028364072817086416
+        },
+        {
+            "feature": "description_ENUM_download",
+            "infogain": 0.0028250880344597995
+        },
+        {
+            "feature": "description_ENUM_cleartext",
+            "infogain": 0.002800740446642136
+        },
+        {
+            "feature": "description_ENUM_zdi",
+            "infogain": 0.0027422561099894605
+        },
+        {
+            "feature": "description_ENUM_http",
+            "infogain": 0.0026923437313295384
+        },
+        {
+            "feature": "description_ENUM_part",
+            "infogain": 0.0026639129110270776
+        },
+        {
+            "feature": "description_ENUM_header",
+            "infogain": 0.002662242480467647
+        },
+        {
+            "feature": "description_ENUM_parameter",
+            "infogain": 0.0026348329394580983
+        },
+        {
+            "feature": "phase_ENUM_modified",
+            "infogain": 0.0025895524984436147
+        },
+        {
+            "feature": "description_ENUM_provenance",
+            "infogain": 0.002535320688273446
+        },
+        {
+            "feature": "description_ENUM_password",
+            "infogain": 0.0024216371719854024
+        },
+        {
+            "feature": "description_ENUM_android",
+            "infogain": 0.0024001812373750653
+        },
+        {
+            "feature": "description_ENUM_disabled",
+            "infogain": 0.0023908669408012617
+        },
+        {
+            "feature": "type_ENUM_vt_sql",
+            "infogain": 0.002374710364113408
+        },
+        {
+            "feature": "description_ENUM_wordpress",
+            "infogain": 0.0023631247109010545
+        },
+        {
+            "feature": "description_ENUM_register_globals",
+            "infogain": 0.002344360861074035
+        },
+        {
+            "feature": "description_ENUM_demonstrated",
+            "infogain": 0.0022647598214675657
+        },
+        {
+            "feature": "description_ENUM_protocol",
+            "infogain": 0.0021988286945602287
+        },
+        {
+            "feature": "cvss_ac_ENUM_high",
+            "infogain": 0.0021983671039937924
+        },
+        {
+            "feature": "description_ENUM_php",
+            "infogain": 0.0021635768277308287
+        },
+        {
+            "feature": "cvss_aupr_ENUM_high",
+            "infogain": 0.0021252499567567806
+        },
+        {
+            "feature": "description_ENUM_ability",
+            "infogain": 0.0021011193044195853
+        },
+        {
+            "feature": "description_ENUM_unknown",
+            "infogain": 0.0020805231830043347
+        },
+        {
+            "feature": "description_ENUM_information",
+            "infogain": 0.0020535718450092055
+        },
+        {
+            "feature": "description_ENUM_program",
+            "infogain": 0.00202649397878063
+        },
+        {
+            "feature": "description_ENUM_intended",
+            "infogain": 0.0020260043870985456
+        },
+        {
+            "feature": "description_ENUM_bug",
+            "infogain": 0.0020019731115470396
+        },
+        {
+            "feature": "description_ENUM_caf",
+            "infogain": 0.0019870995618849197
+        },
+        {
+            "feature": "description_ENUM_affected",
+            "infogain": 0.0019776968418470098
+        },
+        {
+            "feature": "description_ENUM_verify",
+            "infogain": 0.0019776552255141855
+        },
+        {
+            "feature": "status_ENUM_entry",
+            "infogain": 0.00197635989829803
+        },
+        {
+            "feature": "description_ENUM_make",
+            "infogain": 0.001972701623690787
+        },
+        {
+            "feature": "description_ENUM_found",
+            "infogain": 0.001971478597871279
+        },
+        {
+            "feature": "description_ENUM_request",
+            "infogain": 0.0019681594114719925
+        },
+        {
+            "feature": "description_ENUM_vector",
+            "infogain": 0.0019461592999183708
+        },
+        {
+            "feature": "description_ENUM_man",
+            "infogain": 0.0019316803559139561
+        },
+        {
+            "feature": "description_ENUM_html",
+            "infogain": 0.001879783761495002
+        },
+        {
+            "feature": "description_ENUM_hijack",
+            "infogain": 0.0018651461738887765
+        },
+        {
+            "feature": "description_ENUM_imagemagick",
+            "infogain": 0.0018283439626727294
+        },
+        {
+            "feature": "description_ENUM_payload",
+            "infogain": 0.0018226140259527401
+        },
+        {
+            "feature": "description_ENUM_occur",
+            "infogain": 0.0018074264373255655
+        },
+        {
+            "feature": "description_ENUM_installer",
+            "infogain": 0.0017860491057608563
+        },
+        {
+            "feature": "cvss_c_ENUM_none",
+            "infogain": 0.0017816569315824982
+        },
+        {
+            "feature": "description_ENUM_passed",
+            "infogain": 0.0017430121908870166
+        },
+        {
+            "feature": "description_ENUM_ac",
+            "infogain": 0.0017366091463844047
+        },
+        {
+            "feature": "description_ENUM_removed",
+            "infogain": 0.0017226370555003534
+        },
+        {
+            "feature": "description_ENUM_opera",
+            "infogain": 0.0017184194648689477
+        },
+        {
+            "feature": "description_ENUM_operation",
+            "infogain": 0.0017136136017639192
+        },
+        {
+            "feature": "description_ENUM_default",
+            "infogain": 0.0016773289335836328
+        },
+        {
+            "feature": "description_ENUM_mediaserver",
+            "infogain": 0.0016747722245906704
+        },
+        {
+            "feature": "description_ENUM_trick",
+            "infogain": 0.0016651602596615689
+        },
+        {
+            "feature": "description_ENUM_due",
+            "infogain": 0.001617622789910289
+        },
+        {
+            "feature": "description_ENUM_connect",
+            "infogain": 0.0015961540569116028
+        },
+        {
+            "feature": "description_ENUM_prevent",
+            "infogain": 0.0015054338352404883
+        },
+        {
+            "feature": "cvss_i_ENUM_complete",
+            "infogain": 0.001464489040766459
+        },
+        {
+            "feature": "description_ENUM_reading",
+            "infogain": 0.0014593987942965736
+        },
+        {
+            "feature": "description_ENUM_stored",
+            "infogain": 0.001444117845784021
+        },
+        {
+            "feature": "description_ENUM_accessible",
+            "infogain": 0.0014359651519408878
+        },
+        {
+            "feature": "description_ENUM_log",
+            "infogain": 0.0014307287942971758
+        },
+        {
+            "feature": "description_ENUM_code",
+            "infogain": 0.0014282749962593044
+        },
+        {
+            "feature": "description_ENUM_privilege",
+            "infogain": 0.001416000601784706
+        },
+        {
+            "feature": "description_ENUM_drupal",
+            "infogain": 0.001398728146670969
+        },
+        {
+            "feature": "description_ENUM_mishandled",
+            "infogain": 0.0013967972445050325
+        },
+        {
+            "feature": "description_ENUM_change",
+            "infogain": 0.0013833676054082478
+        },
+        {
+            "feature": "description_ENUM_command",
+            "infogain": 0.0013742717684701589
+        },
+        {
+            "feature": "description_ENUM_currentuser",
+            "infogain": 0.001347491354019681
+        },
+        {
+            "feature": "description_ENUM_database",
+            "infogain": 0.0013438706852451077
+        },
+        {
+            "feature": "description_ENUM_return",
+            "infogain": 0.0013251854979761113
+        },
+        {
+            "feature": "description_ENUM_image",
+            "infogain": 0.0013237283213196616
+        },
+        {
+            "feature": "description_ENUM_csrf",
+            "infogain": 0.0013233016557474553
+        },
+        {
+            "feature": "description_ENUM_run",
+            "infogain": 0.0013073686652504968
+        },
+        {
+            "feature": "description_ENUM_linux",
+            "infogain": 0.0013028236924761405
+        },
+        {
+            "feature": "description_ENUM_module",
+            "infogain": 0.0012703217689988833
+        },
+        {
+            "feature": "description_ENUM_ensure",
+            "infogain": 0.0012536775025555613
+        },
+        {
+            "feature": "delta_days_proposed",
+            "infogain": 0.001244271783228612
+        },
+        {
+            "feature": "description_ENUM_crafted",
+            "infogain": 0.001234270383817515
+        },
+        {
+            "feature": "description_ENUM_ui",
+            "infogain": 0.001226240852969962
+        },
+        {
+            "feature": "description_ENUM_installation",
+            "infogain": 0.0012128339376087371
+        },
+        {
+            "feature": "description_ENUM_victim",
+            "infogain": 0.001205890519951236
+        },
+        {
+            "feature": "type_ENUM_vt_csrf",
+            "infogain": 0.0011953109910793902
+        },
+        {
+            "feature": "description_ENUM_data",
+            "infogain": 0.0011875865922719164
+        },
+        {
+            "feature": "description_ENUM_setting",
+            "infogain": 0.001183046162793966
+        },
+        {
+            "feature": "cvss_av_ENUM_physical",
+            "infogain": 0.0011806265737110966
+        },
+        {
+            "feature": "description_ENUM_fixed",
+            "infogain": 0.0011642971548548875
+        },
+        {
+            "feature": "description_ENUM_function",
+            "infogain": 0.001134968441456552
+        },
+        {
+            "feature": "description_ENUM_leveraging",
+            "infogain": 0.0011314332646188419
+        },
+        {
+            "feature": "phase_ENUM_proposed",
+            "infogain": 0.0011263871930540237
+        },
+        {
+            "feature": "type_ENUM_vt_xss",
+            "infogain": 0.0011058915092976296
+        },
+        {
+            "feature": "description_ENUM_target",
+            "infogain": 0.0010950554125537248
+        },
+        {
+            "feature": "description_ENUM_modifying",
+            "infogain": 0.0010573938361921886
+        },
+        {
+            "feature": "description_ENUM_access",
+            "infogain": 0.0010572297675144338
+        },
+        {
+            "feature": "description_ENUM_vulnerable",
+            "infogain": 0.0010492005529756376
+        },
+        {
+            "feature": "description_ENUM_received",
+            "infogain": 0.0010167481754999041
+        },
+        {
+            "feature": "description_ENUM_exploited",
+            "infogain": 0.0010104571039861732
+        },
+        {
+            "feature": "description_ENUM_reported",
+            "infogain": 0.0009898936014316462
+        },
+        {
+            "feature": "cvss_aupr_ENUM_multiple",
+            "infogain": 0.0009657221034740093
+        },
+        {
+            "feature": "description_ENUM_browser",
+            "infogain": 0.000959510796632479
+        },
+        {
+            "feature": "description_ENUM_vendor",
+            "infogain": 0.0009589165442038805
+        },
+        {
+            "feature": "description_ENUM_handling",
+            "infogain": 0.0009435469843892541
+        },
+        {
+            "feature": "description_ENUM_host",
+            "infogain": 0.0009321264559492004
+        },
+        {
+            "feature": "description_ENUM_time",
+            "infogain": 0.0009094843820771636
+        },
+        {
+            "feature": "description_ENUM_mail",
+            "infogain": 0.0009043364527230313
+        },
+        {
+            "feature": "description_ENUM_opening",
+            "infogain": 0.0008985259358764708
+        },
+        {
+            "feature": "description_ENUM_addressed",
+            "infogain": 0.0008862717234008333
+        },
+        {
+            "feature": "description_ENUM_service",
+            "infogain": 0.0008859425321405823
+        },
+        {
+            "feature": "description_ENUM_leak",
+            "infogain": 0.0008724299183906492
+        },
+        {
+            "feature": "description_ENUM_credential",
+            "infogain": 0.0008663896872294075
+        },
+        {
+            "feature": "description_ENUM_contract",
+            "infogain": 0.0008444391012158992
+        },
+        {
+            "feature": "cvss_a_ENUM_complete",
+            "infogain": 0.0008202084596669046
+        },
+        {
+            "feature": "description_ENUM_trigger",
+            "infogain": 0.0008056275304089144
+        },
+        {
+            "feature": "description_ENUM_spoof",
+            "infogain": 0.0007875772015621951
+        },
+        {
+            "feature": "description_ENUM_altering",
+            "infogain": 0.0007842116394729537
+        },
+        {
+            "feature": "description_ENUM_username",
+            "infogain": 0.000777196635228794
+        },
+        {
+            "feature": "description_ENUM_server",
+            "infogain": 0.0007642749243239599
+        },
+        {
+            "feature": "cvss_s_ENUM_changed",
+            "infogain": 0.0007513998975119396
+        },
+        {
+            "feature": "description_ENUM_bypass",
+            "infogain": 0.0007336145146807915
+        },
+        {
+            "feature": "description_ENUM_cookie",
+            "infogain": 0.0007279520930312255
+        },
+        {
+            "feature": "description_ENUM_xss",
+            "infogain": 0.0007275336264471743
+        },
+        {
+            "feature": "description_ENUM_response",
+            "infogain": 0.0007254409078365498
+        },
+        {
+            "feature": "cvss_aupr_ENUM_single",
+            "infogain": 0.0007139665304563003
+        },
+        {
+            "feature": "description_ENUM_kernel",
+            "infogain": 0.0006880946980656333
+        },
+        {
+            "feature": "description_ENUM_exploit",
+            "infogain": 0.0006675151262707235
+        },
+        {
+            "feature": "description_ENUM_uploading",
+            "infogain": 0.0006646995097483455
+        },
+        {
+            "feature": "description_ENUM_configured",
+            "infogain": 0.0006571560462149684
+        },
+        {
+            "feature": "description_ENUM_script",
+            "infogain": 0.0006394092785677596
+        },
+        {
+            "feature": "description_ENUM_device",
+            "infogain": 0.0006233688799319737
+        },
+        {
+            "feature": "description_ENUM_flaw",
+            "infogain": 0.0006187652329070481
+        },
+        {
+            "feature": "description_ENUM_obtain",
+            "infogain": 0.0006174032128378748
+        },
+        {
+            "feature": "description_ENUM_filename",
+            "infogain": 0.000593957530103717
+        },
+        {
+            "feature": "description_ENUM_sniffing",
+            "infogain": 0.0005820823560311883
+        },
+        {
+            "feature": "description_ENUM_lack",
+            "infogain": 0.0005114514988997509
+        },
+        {
+            "feature": "description_ENUM_domain",
+            "infogain": 0.00048342997680950184
+        },
+        {
+            "feature": "description_ENUM_install",
+            "infogain": 0.0004828080750740593
+        },
+        {
+            "feature": "phase_ENUM_interim",
+            "infogain": 0.0004787450906844626
+        },
+        {
+            "feature": "description_ENUM_object",
+            "infogain": 0.00047500322161986297
+        },
+        {
+            "feature": "description_ENUM_executing",
+            "infogain": 0.00046794331108168663
+        },
+        {
+            "feature": "description_ENUM_person",
+            "infogain": 0.00046165366848671674
+        },
+        {
+            "feature": "cvss_a_ENUM_low",
+            "infogain": 0.0004426198514178026
+        },
+        {
+            "feature": "description_ENUM_balance",
+            "infogain": 0.00042173719285942823
+        },
+        {
+            "feature": "description_ENUM_reference",
+            "infogain": 0.00042017735673138823
+        },
+        {
+            "feature": "description_ENUM_needed",
+            "infogain": 0.0004149675723950086
+        },
+        {
+            "feature": "description_ENUM_logged",
+            "infogain": 0.0004142151631885138
+        },
+        {
+            "feature": "type_ENUM_vt_httprs",
+            "infogain": 0.0003728956787054649
+        },
+        {
+            "feature": "description_ENUM_size",
+            "infogain": 0.0003677265395896079
+        },
+        {
+            "feature": "description_ENUM_app",
+            "infogain": 0.0003160962955417457
+        },
+        {
+            "feature": "description_ENUM_enabled",
+            "infogain": 0.00030597551202493634
+        },
+        {
+            "feature": "description_ENUM_user",
+            "infogain": 0.0002980101872973595
+        },
+        {
+            "feature": "description_ENUM_changing",
+            "infogain": 0.00029536988350931104
+        },
+        {
+            "feature": "type_ENUM_vt_bypass",
+            "infogain": 0.00029502617904442197
+        },
+        {
+            "feature": "description_ENUM_administrator",
+            "infogain": 0.0002714986892238258
+        },
+        {
+            "feature": "description_ENUM_login",
+            "infogain": 0.0002591064878316729
+        },
+        {
+            "feature": "description_ENUM_create",
+            "infogain": 0.0002585040733884547
+        },
+        {
+            "feature": "description_ENUM_software",
+            "infogain": 0.00025020924248742027
+        },
+        {
+            "feature": "description_ENUM_rated",
+            "infogain": 0.000239545818309983
+        },
+        {
+            "feature": "description_ENUM_context",
+            "infogain": 0.00023820541178798393
+        },
+        {
+            "feature": "phase_ENUM_absent",
+            "infogain": 0.00023519929311466292
+        },
+        {
+            "feature": "description_ENUM_sequence",
+            "infogain": 0.00021898497320105292
+        },
+        {
+            "feature": "description_ENUM_redirect",
+            "infogain": 0.0002005512879288407
+        },
+        {
+            "feature": "description_ENUM_takeover",
+            "infogain": 0.00019989971503697745
+        },
+        {
+            "feature": "delta_days_patch",
+            "infogain": 0.00017660125755436518
+        },
+        {
+            "feature": "description_ENUM_networking",
+            "infogain": 0.00016303955702245965
+        },
+        {
+            "feature": "description_ENUM_point",
+            "infogain": 0.0001588000801762135
+        },
+        {
+            "feature": "description_ENUM_connecting",
+            "infogain": 0.00015001940252545864
+        },
+        {
+            "feature": "description_ENUM_seamonkey",
+            "infogain": 0.00014954061985772427
+        },
+        {
+            "feature": "description_ENUM_ffmpeg",
+            "infogain": 0.00014783698733200623
+        },
+        {
+            "feature": "description_ENUM_adding",
+            "infogain": 0.00014617349155532366
+        },
+        {
+            "feature": "description_ENUM_subset",
+            "infogain": 0.00014430123859354715
+        },
+        {
+            "feature": "cvss_aupr_ENUM_low",
+            "infogain": 0.0001318010731901076
+        },
+        {
+            "feature": "description_ENUM_type",
+            "infogain": 0.0001317497339161644
+        },
+        {
+            "feature": "description_ENUM_logon",
+            "infogain": 0.00012773483079397963
+        },
+        {
+            "feature": "description_ENUM_triggered",
+            "infogain": 0.00011482936180629011
+        },
+        {
+            "feature": "description_ENUM_load",
+            "infogain": 0.00011318773188140341
+        },
+        {
+            "feature": "description_ENUM_running",
+            "infogain": 0.00010626974589489357
+        },
+        {
+            "feature": "description_ENUM_link",
+            "infogain": 0.00010621703633750812
+        },
+        {
+            "feature": "description_ENUM_executed",
+            "infogain": 0.00010117866620351634
+        },
+        {
+            "feature": "description_ENUM_end",
+            "infogain": 9.279309264664803e-05
+        },
+        {
+            "feature": "description_ENUM_validating",
+            "infogain": 9.062115913649471e-05
+        },
+        {
+            "feature": "description_ENUM_doe",
+            "infogain": 8.959517035034281e-05
+        },
+        {
+            "feature": "description_ENUM_error",
+            "infogain": 8.633048334094617e-05
+        },
+        {
+            "feature": "description_ENUM_argument",
+            "infogain": 6.138671088296022e-05
+        },
+        {
+            "feature": "description_ENUM_node",
+            "infogain": 4.62833520267214e-05
+        },
+        {
+            "feature": "description_ENUM_component",
+            "infogain": 3.52947268911219e-05
+        },
+        {
+            "feature": "description_ENUM_disclosure",
+            "infogain": 1.3405185293802191e-05
+        },
+        {
+            "feature": "description_ENUM_triggering",
+            "infogain": 1.1668294076505603e-05
+        },
+        {
+            "feature": "description_ENUM_provide",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_jenkins",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_security",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_path_info",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_identified",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_option",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_write",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_compromise",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_display",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_click",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_exploitable",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_plaintext",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_availability",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_call",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_reboot",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_distributed",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_key",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_possibility",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_susceptible",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_visit",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_placing",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_filesystem",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_overflow",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_file",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_accessing",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_logfile",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_resource",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_blink",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_update",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_windows",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_overwrite",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_mac",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_directory",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_attempt",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_clear",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_open",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_modify",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_email",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_content",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_wild",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_network",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_properly",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_memory",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_client",
+            "infogain": 0.0
+        },
+        {
+            "feature": "type_ENUM_vt_memc",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_send",
+            "infogain": 0.0
+        },
+        {
+            "feature": "type_ENUM_vt_fileinc",
+            "infogain": 0.0
+        },
+        {
+            "feature": "type_ENUM_vt_overflow",
+            "infogain": 0.0
+        },
+        {
+            "feature": "type_ENUM_vt_priv",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_check",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_perform",
+            "infogain": 0.0
+        },
+        {
+            "feature": "comments",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_located",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_implementation",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_root",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_oracle",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_delete",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_ruby",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_description",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_required",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_included",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_patched",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_leverage",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_site",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_called",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_hang",
+            "infogain": 0.0
+        },
+        {
+            "feature": "cvss_c_ENUM_complete",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_read",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_note",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_document",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_control",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_crash",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_case",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_packet",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_connection",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_character",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_application",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_parsing",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_order",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_affect",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_length",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_typo3",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_session",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_cpanel",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_persuading",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_conjunction",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_javascript",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_execution",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_occurs",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_intel",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_process",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_java",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_configuration",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_disputed",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_creating",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_infrastructure",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_reveals",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_elevation",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_page",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_set",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_owner",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_account",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_system",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_sending",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_message",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_validate",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_easier",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_upload",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_leveraged",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_unique",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_firmware",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_package",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_buffer",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_allowed",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_uri",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_accessed",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_attack",
+            "infogain": 0.0
+        },
+        {
+            "feature": "cvss_version_ENUM_3_1",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_installed",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_unspecified",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_string",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_version",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_input",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_prior",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_product",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_enable",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_permission",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_series",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_admin",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_acrobat",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_duplicate",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_interface",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_conduct",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_field",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_related",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_os",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_address",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_authentication",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_processing",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_add",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_processed",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_integrity",
+            "infogain": 0.0
+        },
+        {
+            "feature": "description_ENUM_execute",
+            "infogain": 0.0
+        }
+    ]
+}
