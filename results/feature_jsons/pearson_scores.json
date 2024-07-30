@@ -1,0 +1,1600 @@
+{
+    "feature_scores": [
+        {
+            "feature": "type_ENUM_vt_ec",
+            "pearson": 0.269337236115453
+        },
+        {
+            "feature": "cvss_exploitability_score",
+            "pearson": 0.2491255050669815
+        },
+        {
+            "feature": "cvss_a_ENUM_partial",
+            "pearson": 0.20742982714115749
+        },
+        {
+            "feature": "cvss_i_ENUM_partial",
+            "pearson": 0.20571339385757864
+        },
+        {
+            "feature": "cvss_version_ENUM_2_0",
+            "pearson": 0.20316473275218103
+        },
+        {
+            "feature": "cvss_c_ENUM_partial",
+            "pearson": 0.19192837056061626
+        },
+        {
+            "feature": "type_ENUM_absent",
+            "pearson": 0.16801721214935594
+        },
+        {
+            "feature": "description_ENUM_joomla",
+            "pearson": 0.16595724866301187
+        },
+        {
+            "feature": "cvss_s_ENUM_absent",
+            "pearson": 0.15122414362955477
+        },
+        {
+            "feature": "cvss_ui_ENUM_absent",
+            "pearson": 0.15122414362955477
+        },
+        {
+            "feature": "cvss_impact_score",
+            "pearson": 0.15118855638964784
+        },
+        {
+            "feature": "vendor_ENUM_encoded",
+            "pearson": 0.14573656409478447
+        },
+        {
+            "feature": "cvss_av_ENUM_network",
+            "pearson": 0.1440035847827772
+        },
+        {
+            "feature": "cvss_version_ENUM_3_0",
+            "pearson": 0.14299656367577934
+        },
+        {
+            "feature": "type_ENUM_vt_dirt",
+            "pearson": 0.13311515152657222
+        },
+        {
+            "feature": "reference_type_ENUM_encoded",
+            "pearson": 0.12626846328588148
+        },
+        {
+            "feature": "cvss_score",
+            "pearson": 0.1247488084557518
+        },
+        {
+            "feature": "cvss_aupr_ENUM_none",
+            "pearson": 0.12435986380991505
+        },
+        {
+            "feature": "cvss_s_ENUM_unchanged",
+            "pearson": 0.12254862038978886
+        },
+        {
+            "feature": "description_ENUM_detail",
+            "pearson": 0.11901209322780201
+        },
+        {
+            "feature": "description_ENUM_magic_quotes_gpc",
+            "pearson": 0.11603750605307231
+        },
+        {
+            "feature": "description_ENUM_reject",
+            "pearson": 0.1069282883537386
+        },
+        {
+            "feature": "cvss_has_impact_score",
+            "pearson": 0.10686956730211504
+        },
+        {
+            "feature": "cvss_has_exploitability_score",
+            "pearson": 0.10686956730211504
+        },
+        {
+            "feature": "cvss_version_ENUM_absent",
+            "pearson": 0.10686956730211503
+        },
+        {
+            "feature": "cvss_av_ENUM_absent",
+            "pearson": 0.10686956730211503
+        },
+        {
+            "feature": "cvss_a_ENUM_absent",
+            "pearson": 0.10635773904613963
+        },
+        {
+            "feature": "cvss_c_ENUM_absent",
+            "pearson": 0.10631082523016526
+        },
+        {
+            "feature": "cvss_i_ENUM_absent",
+            "pearson": 0.10615113104315471
+        },
+        {
+            "feature": "cvss_ac_ENUM_absent",
+            "pearson": 0.10605962518036288
+        },
+        {
+            "feature": "cvss_aupr_ENUM_absent",
+            "pearson": 0.10605962518036288
+        },
+        {
+            "feature": "description_ENUM_include",
+            "pearson": 0.10604675109001674
+        },
+        {
+            "feature": "description_ENUM_obtained",
+            "pearson": 0.1047761732081534
+        },
+        {
+            "feature": "description_ENUM_reason",
+            "pearson": 0.1037797973624797
+        },
+        {
+            "feature": "cvss_ui_ENUM_none",
+            "pearson": 0.10043384914975205
+        },
+        {
+            "feature": "description_ENUM_disabled",
+            "pearson": 0.09308697144387934
+        },
+        {
+            "feature": "cvss_i_ENUM_none",
+            "pearson": 0.09016884341731055
+        },
+        {
+            "feature": "cvss_ui_ENUM_required",
+            "pearson": 0.0894708765558629
+        },
+        {
+            "feature": "description_ENUM_register_globals",
+            "pearson": 0.08446227637679535
+        },
+        {
+            "feature": "description_ENUM_cna",
+            "pearson": 0.08436083056876245
+        },
+        {
+            "feature": "description_ENUM_associate",
+            "pearson": 0.08274671581108722
+        },
+        {
+            "feature": "description_ENUM_requested",
+            "pearson": 0.08233900298316689
+        },
+        {
+            "feature": "description_ENUM_individual",
+            "pearson": 0.08205198050921131
+        },
+        {
+            "feature": "type_ENUM_vt_info",
+            "pearson": 0.08118348703865755
+        },
+        {
+            "feature": "cvss_a_ENUM_high",
+            "pearson": 0.08084371134235975
+        },
+        {
+            "feature": "cvss_c_ENUM_low",
+            "pearson": 0.08018279562459604
+        },
+        {
+            "feature": "description_ENUM_vulnerability",
+            "pearson": 0.07881940761772825
+        },
+        {
+            "feature": "cvss_i_ENUM_low",
+            "pearson": 0.07755750797961998
+        },
+        {
+            "feature": "description_ENUM_url",
+            "pearson": 0.07220190632269184
+        },
+        {
+            "feature": "description_ENUM_candidate",
+            "pearson": 0.07173693030681894
+        },
+        {
+            "feature": "references_count",
+            "pearson": 0.07163517062853728
+        },
+        {
+            "feature": "cvss_c_ENUM_high",
+            "pearson": 0.07036260546423108
+        },
+        {
+            "feature": "cvss_a_ENUM_none",
+            "pearson": 0.07033506751709757
+        },
+        {
+            "feature": "cvss_s_ENUM_changed",
+            "pearson": 0.07015986742668402
+        },
+        {
+            "feature": "cvss_av_ENUM_local",
+            "pearson": 0.06561664510276637
+        },
+        {
+            "feature": "type_ENUM_vt_dos",
+            "pearson": 0.06488128469071104
+        },
+        {
+            "feature": "description_ENUM_uploading",
+            "pearson": 0.06404343836718612
+        },
+        {
+            "feature": "cvss_av_ENUM_adjacent_network",
+            "pearson": 0.0621565649072573
+        },
+        {
+            "feature": "description_ENUM_man",
+            "pearson": 0.06091864628853787
+        },
+        {
+            "feature": "cvss_i_ENUM_high",
+            "pearson": 0.060888242406949324
+        },
+        {
+            "feature": "description_ENUM_denial",
+            "pearson": 0.06070885751263907
+        },
+        {
+            "feature": "description_ENUM_parameter",
+            "pearson": 0.06011426238307149
+        },
+        {
+            "feature": "cvss_aupr_ENUM_low",
+            "pearson": 0.05851547211571572
+        },
+        {
+            "feature": "description_ENUM_attacker",
+            "pearson": 0.057354795371456914
+        },
+        {
+            "feature": "versions",
+            "pearson": 0.05729569232885976
+        },
+        {
+            "feature": "description_ENUM_provenance",
+            "pearson": 0.0564160818463536
+        },
+        {
+            "feature": "description_ENUM_verify",
+            "pearson": 0.05363167243994382
+        },
+        {
+            "feature": "description_ENUM_assigned",
+            "pearson": 0.052653096100664945
+        },
+        {
+            "feature": "description_ENUM_unknown",
+            "pearson": 0.05185690951027504
+        },
+        {
+            "feature": "description_ENUM_path_info",
+            "pearson": 0.05109759906180934
+        },
+        {
+            "feature": "cvss_c_ENUM_none",
+            "pearson": 0.05017789439900263
+        },
+        {
+            "feature": "description_ENUM_vector",
+            "pearson": 0.050144564976922615
+        },
+        {
+            "feature": "description_ENUM_accessing",
+            "pearson": 0.04954145142684919
+        },
+        {
+            "feature": "description_ENUM_wild",
+            "pearson": 0.04933218215048224
+        },
+        {
+            "feature": "description_ENUM_leveraged",
+            "pearson": 0.04860243402282693
+        },
+        {
+            "feature": "description_ENUM_information",
+            "pearson": 0.04830191857563143
+        },
+        {
+            "feature": "cvss_i_ENUM_complete",
+            "pearson": 0.04674260357448843
+        },
+        {
+            "feature": "cvss_c_ENUM_complete",
+            "pearson": 0.046046530253855904
+        },
+        {
+            "feature": "description_ENUM_service",
+            "pearson": 0.04468383610886868
+        },
+        {
+            "feature": "description_ENUM_html",
+            "pearson": 0.04455370768383465
+        },
+        {
+            "feature": "description_ENUM_setting",
+            "pearson": 0.044298043513491196
+        },
+        {
+            "feature": "type_ENUM_vt_sql",
+            "pearson": 0.04423909137252603
+        },
+        {
+            "feature": "cvss_ac_ENUM_medium",
+            "pearson": 0.04405115506801655
+        },
+        {
+            "feature": "description_ENUM_android",
+            "pearson": 0.04129537898626954
+        },
+        {
+            "feature": "cvss_ac_ENUM_high",
+            "pearson": 0.04125647838239724
+        },
+        {
+            "feature": "description_ENUM_issue",
+            "pearson": 0.04076456632261555
+        },
+        {
+            "feature": "description_ENUM_administrator",
+            "pearson": 0.040215866600121594
+        },
+        {
+            "feature": "description_ENUM_request",
+            "pearson": 0.03968005927547587
+        },
+        {
+            "feature": "description_ENUM_download",
+            "pearson": 0.03902268856491118
+        },
+        {
+            "feature": "description_ENUM_php",
+            "pearson": 0.03823409679371552
+        },
+        {
+            "feature": "description_ENUM_wordpress",
+            "pearson": 0.03779115599636768
+        },
+        {
+            "feature": "cvss_ac_ENUM_low",
+            "pearson": 0.036476282588094454
+        },
+        {
+            "feature": "description_ENUM_drupal",
+            "pearson": 0.03500010696394029
+        },
+        {
+            "feature": "description_ENUM_easier",
+            "pearson": 0.03458109284074438
+        },
+        {
+            "feature": "type_ENUM_vt_overflow",
+            "pearson": 0.03403396501689556
+        },
+        {
+            "feature": "description_ENUM_make",
+            "pearson": 0.03375329471700818
+        },
+        {
+            "feature": "description_ENUM_vulnerable",
+            "pearson": 0.03299866927352
+        },
+        {
+            "feature": "description_ENUM_unspecified",
+            "pearson": 0.03256587187103341
+        },
+        {
+            "feature": "description_ENUM_webkit",
+            "pearson": 0.032304167963017674
+        },
+        {
+            "feature": "cvss_aupr_ENUM_high",
+            "pearson": 0.031625261583637765
+        },
+        {
+            "feature": "cvss_a_ENUM_low",
+            "pearson": 0.030919858260521512
+        },
+        {
+            "feature": "cvss_version_ENUM_3_1",
+            "pearson": 0.030066192749446677
+        },
+        {
+            "feature": "cvss_a_ENUM_complete",
+            "pearson": 0.029256357571834164
+        },
+        {
+            "feature": "description_ENUM_availability",
+            "pearson": 0.029166077441735012
+        },
+        {
+            "feature": "description_ENUM_caf",
+            "pearson": 0.02876273184213984
+        },
+        {
+            "feature": "description_ENUM_rated",
+            "pearson": 0.027909345912183435
+        },
+        {
+            "feature": "description_ENUM_oracle",
+            "pearson": 0.027908033780454634
+        },
+        {
+            "feature": "description_ENUM_admin",
+            "pearson": 0.027815487426760693
+        },
+        {
+            "feature": "description_ENUM_earlier",
+            "pearson": 0.02769429147900828
+        },
+        {
+            "feature": "type_ENUM_vt_bypass",
+            "pearson": 0.026859881923581363
+        },
+        {
+            "feature": "description_ENUM_upload",
+            "pearson": 0.026588607916096713
+        },
+        {
+            "feature": "description_ENUM_person",
+            "pearson": 0.02526205839200442
+        },
+        {
+            "feature": "description_ENUM_exploit",
+            "pearson": 0.02514167045522639
+        },
+        {
+            "feature": "description_ENUM_enable",
+            "pearson": 0.02502257844941234
+        },
+        {
+            "feature": "description_ENUM_demonstrated",
+            "pearson": 0.024547258200010712
+        },
+        {
+            "feature": "description_ENUM_elevation",
+            "pearson": 0.02426964925729964
+        },
+        {
+            "feature": "description_ENUM_typo3",
+            "pearson": 0.024175723317078852
+        },
+        {
+            "feature": "description_ENUM_file",
+            "pearson": 0.02372281478912482
+        },
+        {
+            "feature": "description_ENUM_http",
+            "pearson": 0.023704663015763964
+        },
+        {
+            "feature": "description_ENUM_description",
+            "pearson": 0.02305199697796044
+        },
+        {
+            "feature": "description_ENUM_located",
+            "pearson": 0.023011021712137498
+        },
+        {
+            "feature": "description_ENUM_removed",
+            "pearson": 0.02292123876898103
+        },
+        {
+            "feature": "description_ENUM_ac",
+            "pearson": 0.022911543019083342
+        },
+        {
+            "feature": "description_ENUM_ui",
+            "pearson": 0.02278236165353425
+        },
+        {
+            "feature": "description_ENUM_integrity",
+            "pearson": 0.022625422263098837
+        },
+        {
+            "feature": "description_ENUM_argument",
+            "pearson": 0.022617574043652937
+        },
+        {
+            "feature": "description_ENUM_user",
+            "pearson": 0.022285735698903318
+        },
+        {
+            "feature": "description_ENUM_reading",
+            "pearson": 0.022276117446657803
+        },
+        {
+            "feature": "description_ENUM_seamonkey",
+            "pearson": 0.021837842339023084
+        },
+        {
+            "feature": "description_ENUM_altering",
+            "pearson": 0.021799381914563022
+        },
+        {
+            "feature": "description_ENUM_reference",
+            "pearson": 0.02145515913385822
+        },
+        {
+            "feature": "description_ENUM_acrobat",
+            "pearson": 0.021248024841969013
+        },
+        {
+            "feature": "delta_days_oval",
+            "pearson": 0.021140596795714263
+        },
+        {
+            "feature": "description_ENUM_enabled",
+            "pearson": 0.020833084009219873
+        },
+        {
+            "feature": "description_ENUM_ffmpeg",
+            "pearson": 0.020707993859255626
+        },
+        {
+            "feature": "description_ENUM_read",
+            "pearson": 0.020327671958155283
+        },
+        {
+            "feature": "cvss_aupr_ENUM_single",
+            "pearson": 0.0202971448968854
+        },
+        {
+            "feature": "description_ENUM_context",
+            "pearson": 0.019914493567024873
+        },
+        {
+            "feature": "description_ENUM_reported",
+            "pearson": 0.01900066574780938
+        },
+        {
+            "feature": "description_ENUM_uri",
+            "pearson": 0.01873700408262477
+        },
+        {
+            "feature": "description_ENUM_sniffing",
+            "pearson": 0.01857573958554271
+        },
+        {
+            "feature": "description_ENUM_blink",
+            "pearson": 0.01853263455616079
+        },
+        {
+            "feature": "description_ENUM_unique",
+            "pearson": 0.018421762519530295
+        },
+        {
+            "feature": "description_ENUM_mediaserver",
+            "pearson": 0.01822094800199072
+        },
+        {
+            "feature": "description_ENUM_network",
+            "pearson": 0.0179372507002781
+        },
+        {
+            "feature": "description_ENUM_action",
+            "pearson": 0.017818186384083255
+        },
+        {
+            "feature": "products",
+            "pearson": 0.01761398002539147
+        },
+        {
+            "feature": "description_ENUM_due",
+            "pearson": 0.0175810562213981
+        },
+        {
+            "feature": "description_ENUM_occur",
+            "pearson": 0.017494012396444807
+        },
+        {
+            "feature": "description_ENUM_java",
+            "pearson": 0.017455025891559235
+        },
+        {
+            "feature": "description_ENUM_subset",
+            "pearson": 0.017124131706934193
+        },
+        {
+            "feature": "type_ENUM_vt_xss",
+            "pearson": 0.017016459806718173
+        },
+        {
+            "feature": "description_ENUM_imagemagick",
+            "pearson": 0.017004579832653126
+        },
+        {
+            "feature": "description_ENUM_cpanel",
+            "pearson": 0.016997717302727724
+        },
+        {
+            "feature": "description_ENUM_domain",
+            "pearson": 0.016966976074759093
+        },
+        {
+            "feature": "description_ENUM_lack",
+            "pearson": 0.016848817699605438
+        },
+        {
+            "feature": "cpes_non_vulnerable_count",
+            "pearson": 0.01674291042072732
+        },
+        {
+            "feature": "description_ENUM_buffer",
+            "pearson": 0.01650789953614199
+        },
+        {
+            "feature": "description_ENUM_hijack",
+            "pearson": 0.01603292464856641
+        },
+        {
+            "feature": "description_ENUM_possibility",
+            "pearson": 0.015916725666935434
+        },
+        {
+            "feature": "description_ENUM_module",
+            "pearson": 0.015748569562825037
+        },
+        {
+            "feature": "description_ENUM_send",
+            "pearson": 0.015571221404432838
+        },
+        {
+            "feature": "description_ENUM_spoof",
+            "pearson": 0.015508299889088471
+        },
+        {
+            "feature": "description_ENUM_command",
+            "pearson": 0.01539967454342863
+        },
+        {
+            "feature": "description_ENUM_leveraging",
+            "pearson": 0.015382315396376455
+        },
+        {
+            "feature": "description_ENUM_flaw",
+            "pearson": 0.015239456470262485
+        },
+        {
+            "feature": "description_ENUM_perform",
+            "pearson": 0.015125157016146005
+        },
+        {
+            "feature": "description_ENUM_xss",
+            "pearson": 0.014764509937642082
+        },
+        {
+            "feature": "description_ENUM_database",
+            "pearson": 0.01475662007741309
+        },
+        {
+            "feature": "description_ENUM_authentication",
+            "pearson": 0.014598704876382354
+        },
+        {
+            "feature": "cvss_av_ENUM_physical",
+            "pearson": 0.014410403089780165
+        },
+        {
+            "feature": "description_ENUM_device",
+            "pearson": 0.014272394695169352
+        },
+        {
+            "feature": "description_ENUM_software",
+            "pearson": 0.014252086910613814
+        },
+        {
+            "feature": "description_ENUM_data",
+            "pearson": 0.014248293621775718
+        },
+        {
+            "feature": "description_ENUM_bypass",
+            "pearson": 0.014175598634230182
+        },
+        {
+            "feature": "description_ENUM_configured",
+            "pearson": 0.013991463878559249
+        },
+        {
+            "feature": "description_ENUM_security",
+            "pearson": 0.013684308752555876
+        },
+        {
+            "feature": "description_ENUM_conduct",
+            "pearson": 0.013442423465391234
+        },
+        {
+            "feature": "description_ENUM_check",
+            "pearson": 0.013401015666133326
+        },
+        {
+            "feature": "description_ENUM_permission",
+            "pearson": 0.01329395449223088
+        },
+        {
+            "feature": "description_ENUM_access",
+            "pearson": 0.013077549581939298
+        },
+        {
+            "feature": "description_ENUM_processing",
+            "pearson": 0.012911200217865595
+        },
+        {
+            "feature": "description_ENUM_zdi",
+            "pearson": 0.012679057632909758
+        },
+        {
+            "feature": "description_ENUM_create",
+            "pearson": 0.01250844375587414
+        },
+        {
+            "feature": "description_ENUM_allowed",
+            "pearson": 0.012480897190762183
+        },
+        {
+            "feature": "description_ENUM_jenkins",
+            "pearson": 0.012350505468730863
+        },
+        {
+            "feature": "description_ENUM_required",
+            "pearson": 0.0122456687130613
+        },
+        {
+            "feature": "description_ENUM_crash",
+            "pearson": 0.012019361239129195
+        },
+        {
+            "feature": "description_ENUM_ruby",
+            "pearson": 0.011998592006031148
+        },
+        {
+            "feature": "description_ENUM_return",
+            "pearson": 0.011949367138355284
+        },
+        {
+            "feature": "description_ENUM_properly",
+            "pearson": 0.011869835173667947
+        },
+        {
+            "feature": "description_ENUM_ensure",
+            "pearson": 0.011856994904628868
+        },
+        {
+            "feature": "description_ENUM_open",
+            "pearson": 0.011599027473208933
+        },
+        {
+            "feature": "description_ENUM_trigger",
+            "pearson": 0.011464902380591124
+        },
+        {
+            "feature": "description_ENUM_operation",
+            "pearson": 0.010910223962060973
+        },
+        {
+            "feature": "description_ENUM_opera",
+            "pearson": 0.010844196598159878
+        },
+        {
+            "feature": "description_ENUM_duplicate",
+            "pearson": 0.010787703698383276
+        },
+        {
+            "feature": "description_ENUM_application",
+            "pearson": 0.010732123883225881
+        },
+        {
+            "feature": "description_ENUM_call",
+            "pearson": 0.010625691923284313
+        },
+        {
+            "feature": "description_ENUM_visit",
+            "pearson": 0.010588944035749809
+        },
+        {
+            "feature": "description_ENUM_part",
+            "pearson": 0.010578434045224948
+        },
+        {
+            "feature": "cvss_aupr_ENUM_multiple",
+            "pearson": 0.010558916788663199
+        },
+        {
+            "feature": "description_ENUM_linux",
+            "pearson": 0.010543829229049277
+        },
+        {
+            "feature": "description_ENUM_javascript",
+            "pearson": 0.010457881818404645
+        },
+        {
+            "feature": "description_ENUM_delete",
+            "pearson": 0.010128080220676319
+        },
+        {
+            "feature": "description_ENUM_persuading",
+            "pearson": 0.010100419875017586
+        },
+        {
+            "feature": "description_ENUM_filesystem",
+            "pearson": 0.0099088513391854
+        },
+        {
+            "feature": "description_ENUM_browser",
+            "pearson": 0.009888999184340925
+        },
+        {
+            "feature": "description_ENUM_placing",
+            "pearson": 0.009856783546584744
+        },
+        {
+            "feature": "description_ENUM_disclosure",
+            "pearson": 0.009804009130701336
+        },
+        {
+            "feature": "description_ENUM_memory",
+            "pearson": 0.009755807742475513
+        },
+        {
+            "feature": "description_ENUM_parsing",
+            "pearson": 0.00969918785880519
+        },
+        {
+            "feature": "description_ENUM_document",
+            "pearson": 0.009654946827139797
+        },
+        {
+            "feature": "description_ENUM_handling",
+            "pearson": 0.00951887827280888
+        },
+        {
+            "feature": "description_ENUM_received",
+            "pearson": 0.0093811282493279
+        },
+        {
+            "feature": "description_ENUM_run",
+            "pearson": 0.009203254698053089
+        },
+        {
+            "feature": "description_ENUM_attack",
+            "pearson": 0.009103340578801517
+        },
+        {
+            "feature": "type_ENUM_vt_csrf",
+            "pearson": 0.008991452355847444
+        },
+        {
+            "feature": "type_ENUM_vt_priv",
+            "pearson": 0.008957551290741045
+        },
+        {
+            "feature": "description_ENUM_installation",
+            "pearson": 0.008956445460536493
+        },
+        {
+            "feature": "description_ENUM_cleartext",
+            "pearson": 0.008877347535712378
+        },
+        {
+            "feature": "description_ENUM_overflow",
+            "pearson": 0.008873207524812915
+        },
+        {
+            "feature": "description_ENUM_display",
+            "pearson": 0.008754489895799262
+        },
+        {
+            "feature": "description_ENUM_key",
+            "pearson": 0.008675850859486304
+        },
+        {
+            "feature": "description_ENUM_doe",
+            "pearson": 0.00864857857760666
+        },
+        {
+            "feature": "description_ENUM_object",
+            "pearson": 0.008565861265340199
+        },
+        {
+            "feature": "description_ENUM_size",
+            "pearson": 0.008560165453465236
+        },
+        {
+            "feature": "description_ENUM_system",
+            "pearson": 0.008556127511510168
+        },
+        {
+            "feature": "description_ENUM_validate",
+            "pearson": 0.008553283860588238
+        },
+        {
+            "feature": "description_ENUM_identified",
+            "pearson": 0.008437176548923443
+        },
+        {
+            "feature": "description_ENUM_default",
+            "pearson": 0.008206092664803915
+        },
+        {
+            "feature": "description_ENUM_patched",
+            "pearson": 0.008141985929611942
+        },
+        {
+            "feature": "description_ENUM_time",
+            "pearson": 0.008127776768371722
+        },
+        {
+            "feature": "description_ENUM_implementation",
+            "pearson": 0.008126197830812152
+        },
+        {
+            "feature": "description_ENUM_intended",
+            "pearson": 0.008126168254053564
+        },
+        {
+            "feature": "description_ENUM_function",
+            "pearson": 0.008005370457494486
+        },
+        {
+            "feature": "description_ENUM_connection",
+            "pearson": 0.007946626809844292
+        },
+        {
+            "feature": "description_ENUM_stored",
+            "pearson": 0.007914487805125691
+        },
+        {
+            "feature": "description_ENUM_process",
+            "pearson": 0.00789741748012223
+        },
+        {
+            "feature": "description_ENUM_character",
+            "pearson": 0.00772482903078386
+        },
+        {
+            "feature": "description_ENUM_log",
+            "pearson": 0.00764841258662595
+        },
+        {
+            "feature": "description_ENUM_modifying",
+            "pearson": 0.0076468193370857
+        },
+        {
+            "feature": "description_ENUM_length",
+            "pearson": 0.007623091901842875
+        },
+        {
+            "feature": "description_ENUM_install",
+            "pearson": 0.007612452074056385
+        },
+        {
+            "feature": "description_ENUM_installer",
+            "pearson": 0.007599477215425787
+        },
+        {
+            "feature": "description_ENUM_obtain",
+            "pearson": 0.007530606448134763
+        },
+        {
+            "feature": "description_ENUM_sending",
+            "pearson": 0.007424848448988626
+        },
+        {
+            "feature": "description_ENUM_host",
+            "pearson": 0.0074129433085520805
+        },
+        {
+            "feature": "description_ENUM_exploited",
+            "pearson": 0.007365060796531274
+        },
+        {
+            "feature": "description_ENUM_sequence",
+            "pearson": 0.007351445960322982
+        },
+        {
+            "feature": "description_ENUM_execute",
+            "pearson": 0.007289672289872234
+        },
+        {
+            "feature": "description_ENUM_prevent",
+            "pearson": 0.007252194027901011
+        },
+        {
+            "feature": "description_ENUM_package",
+            "pearson": 0.007249503131891091
+        },
+        {
+            "feature": "description_ENUM_prior",
+            "pearson": 0.007057885648010285
+        },
+        {
+            "feature": "description_ENUM_load",
+            "pearson": 0.007014832606963397
+        },
+        {
+            "feature": "description_ENUM_client",
+            "pearson": 0.006975513162766112
+        },
+        {
+            "feature": "description_ENUM_change",
+            "pearson": 0.0069505626860589835
+        },
+        {
+            "feature": "description_ENUM_execution",
+            "pearson": 0.006867930352670968
+        },
+        {
+            "feature": "description_ENUM_affect",
+            "pearson": 0.006812333319572715
+        },
+        {
+            "feature": "description_ENUM_vendor",
+            "pearson": 0.006678272056821206
+        },
+        {
+            "feature": "description_ENUM_os",
+            "pearson": 0.0066743304926929845
+        },
+        {
+            "feature": "description_ENUM_string",
+            "pearson": 0.006618389328783248
+        },
+        {
+            "feature": "description_ENUM_credential",
+            "pearson": 0.006564778780603211
+        },
+        {
+            "feature": "description_ENUM_reveals",
+            "pearson": 0.006557419313864251
+        },
+        {
+            "feature": "description_ENUM_node",
+            "pearson": 0.006524767016251059
+        },
+        {
+            "feature": "description_ENUM_target",
+            "pearson": 0.00646219819293777
+        },
+        {
+            "feature": "description_ENUM_logged",
+            "pearson": 0.006431334021159787
+        },
+        {
+            "feature": "description_ENUM_reboot",
+            "pearson": 0.006419833323289386
+        },
+        {
+            "feature": "description_ENUM_server",
+            "pearson": 0.006360964808663379
+        },
+        {
+            "feature": "description_ENUM_free",
+            "pearson": 0.006355552897232472
+        },
+        {
+            "feature": "type_ENUM_vt_memc",
+            "pearson": 0.006355307703472848
+        },
+        {
+            "feature": "description_ENUM_component",
+            "pearson": 0.0063239285538353755
+        },
+        {
+            "feature": "description_ENUM_needed",
+            "pearson": 0.006318773801527375
+        },
+        {
+            "feature": "description_ENUM_directory",
+            "pearson": 0.006292263695949525
+        },
+        {
+            "feature": "description_ENUM_set",
+            "pearson": 0.006236177461981131
+        },
+        {
+            "feature": "description_ENUM_susceptible",
+            "pearson": 0.006206321626072874
+        },
+        {
+            "feature": "description_ENUM_passed",
+            "pearson": 0.0061571211310828215
+        },
+        {
+            "feature": "description_ENUM_hang",
+            "pearson": 0.006102307543912985
+        },
+        {
+            "feature": "description_ENUM_path",
+            "pearson": 0.006068999756050009
+        },
+        {
+            "feature": "description_ENUM_exploitable",
+            "pearson": 0.005860957094513607
+        },
+        {
+            "feature": "description_ENUM_app",
+            "pearson": 0.005847276044403443
+        },
+        {
+            "feature": "description_ENUM_connecting",
+            "pearson": 0.00584191297422894
+        },
+        {
+            "feature": "description_ENUM_redirect",
+            "pearson": 0.005809918126127258
+        },
+        {
+            "feature": "description_ENUM_code",
+            "pearson": 0.0057666028915676435
+        },
+        {
+            "feature": "description_ENUM_privilege",
+            "pearson": 0.0055345448238881744
+        },
+        {
+            "feature": "delta_days_patch",
+            "pearson": 0.005377284194436969
+        },
+        {
+            "feature": "description_ENUM_running",
+            "pearson": 0.005208399184011739
+        },
+        {
+            "feature": "description_ENUM_case",
+            "pearson": 0.005131457592329869
+        },
+        {
+            "feature": "description_ENUM_provide",
+            "pearson": 0.005123043473229472
+        },
+        {
+            "feature": "description_ENUM_found",
+            "pearson": 0.005087099730971697
+        },
+        {
+            "feature": "description_ENUM_connect",
+            "pearson": 0.005067020385772555
+        },
+        {
+            "feature": "description_ENUM_called",
+            "pearson": 0.005045500969725527
+        },
+        {
+            "feature": "description_ENUM_packet",
+            "pearson": 0.005005622948685817
+        },
+        {
+            "feature": "description_ENUM_accessible",
+            "pearson": 0.004999598541103653
+        },
+        {
+            "feature": "description_ENUM_note",
+            "pearson": 0.004882610017390421
+        },
+        {
+            "feature": "description_ENUM_option",
+            "pearson": 0.004867797771868314
+        },
+        {
+            "feature": "description_ENUM_payload",
+            "pearson": 0.004823934514356736
+        },
+        {
+            "feature": "description_ENUM_owner",
+            "pearson": 0.004801304555580416
+        },
+        {
+            "feature": "description_ENUM_session",
+            "pearson": 0.004727460194257067
+        },
+        {
+            "feature": "description_ENUM_series",
+            "pearson": 0.004656029975826087
+        },
+        {
+            "feature": "description_ENUM_error",
+            "pearson": 0.004634058723549781
+        },
+        {
+            "feature": "description_ENUM_image",
+            "pearson": 0.004585549086438404
+        },
+        {
+            "feature": "description_ENUM_resource",
+            "pearson": 0.004537192606742305
+        },
+        {
+            "feature": "description_ENUM_login",
+            "pearson": 0.004519656133930098
+        },
+        {
+            "feature": "description_ENUM_triggering",
+            "pearson": 0.004496587911502879
+        },
+        {
+            "feature": "description_ENUM_affected",
+            "pearson": 0.004486174551047403
+        },
+        {
+            "feature": "description_ENUM_add",
+            "pearson": 0.004460958397007173
+        },
+        {
+            "feature": "description_ENUM_windows",
+            "pearson": 0.004419647926489772
+        },
+        {
+            "feature": "description_ENUM_accessed",
+            "pearson": 0.004388952700814907
+        },
+        {
+            "feature": "description_ENUM_compromise",
+            "pearson": 0.004371607123951524
+        },
+        {
+            "feature": "description_ENUM_mishandled",
+            "pearson": 0.0043389356939682955
+        },
+        {
+            "feature": "description_ENUM_victim",
+            "pearson": 0.0042138678436691715
+        },
+        {
+            "feature": "description_ENUM_kernel",
+            "pearson": 0.00398747927112723
+        },
+        {
+            "feature": "description_ENUM_plaintext",
+            "pearson": 0.00393805918306254
+        },
+        {
+            "feature": "description_ENUM_modify",
+            "pearson": 0.003936142473979609
+        },
+        {
+            "feature": "description_ENUM_triggered",
+            "pearson": 0.003909403209175716
+        },
+        {
+            "feature": "description_ENUM_processed",
+            "pearson": 0.003881708910877907
+        },
+        {
+            "feature": "description_ENUM_password",
+            "pearson": 0.0038224484248197137
+        },
+        {
+            "feature": "description_ENUM_account",
+            "pearson": 0.0037196821345767657
+        },
+        {
+            "feature": "description_ENUM_address",
+            "pearson": 0.003640491271893807
+        },
+        {
+            "feature": "description_ENUM_click",
+            "pearson": 0.0035881678970467756
+        },
+        {
+            "feature": "description_ENUM_interface",
+            "pearson": 0.003542461444702559
+        },
+        {
+            "feature": "description_ENUM_executed",
+            "pearson": 0.0035392761940155107
+        },
+        {
+            "feature": "description_ENUM_conjunction",
+            "pearson": 0.0035049489785114033
+        },
+        {
+            "feature": "description_ENUM_write",
+            "pearson": 0.0034922772425792564
+        },
+        {
+            "feature": "description_ENUM_trick",
+            "pearson": 0.0034676806450497305
+        },
+        {
+            "feature": "description_ENUM_leak",
+            "pearson": 0.003463296300788839
+        },
+        {
+            "feature": "description_ENUM_link",
+            "pearson": 0.0034307675518781794
+        },
+        {
+            "feature": "description_ENUM_page",
+            "pearson": 0.0033253469467494144
+        },
+        {
+            "feature": "description_ENUM_cookie",
+            "pearson": 0.003324337177675229
+        },
+        {
+            "feature": "description_ENUM_installed",
+            "pearson": 0.0033067585002182808
+        },
+        {
+            "feature": "description_ENUM_attempt",
+            "pearson": 0.003262337826228851
+        },
+        {
+            "feature": "description_ENUM_protocol",
+            "pearson": 0.0032569361209258394
+        },
+        {
+            "feature": "description_ENUM_overwrite",
+            "pearson": 0.0032432386866617976
+        },
+        {
+            "feature": "description_ENUM_csrf",
+            "pearson": 0.00320416772803344
+        },
+        {
+            "feature": "description_ENUM_occurs",
+            "pearson": 0.003124451424602889
+        },
+        {
+            "feature": "description_ENUM_leverage",
+            "pearson": 0.00304078957675413
+        },
+        {
+            "feature": "description_ENUM_creating",
+            "pearson": 0.0029529795215400023
+        },
+        {
+            "feature": "description_ENUM_included",
+            "pearson": 0.0029255343898617766
+        },
+        {
+            "feature": "description_ENUM_response",
+            "pearson": 0.0028747253695798024
+        },
+        {
+            "feature": "description_ENUM_username",
+            "pearson": 0.0028060399130551937
+        },
+        {
+            "feature": "description_ENUM_root",
+            "pearson": 0.002745017808930887
+        },
+        {
+            "feature": "description_ENUM_opening",
+            "pearson": 0.0027347186913974568
+        },
+        {
+            "feature": "description_ENUM_mac",
+            "pearson": 0.002687162506778805
+        },
+        {
+            "feature": "description_ENUM_product",
+            "pearson": 0.0026496716189206523
+        },
+        {
+            "feature": "description_ENUM_adding",
+            "pearson": 0.0026403093924727205
+        },
+        {
+            "feature": "description_ENUM_email",
+            "pearson": 0.0026384718240128557
+        },
+        {
+            "feature": "description_ENUM_control",
+            "pearson": 0.0025671413471352357
+        },
+        {
+            "feature": "description_ENUM_input",
+            "pearson": 0.0025315393406080988
+        },
+        {
+            "feature": "description_ENUM_type",
+            "pearson": 0.002524453202473126
+        },
+        {
+            "feature": "description_ENUM_ability",
+            "pearson": 0.002467379678920526
+        },
+        {
+            "feature": "description_ENUM_filename",
+            "pearson": 0.00239512500492678
+        },
+        {
+            "feature": "description_ENUM_end",
+            "pearson": 0.0023932915150411925
+        },
+        {
+            "feature": "description_ENUM_logon",
+            "pearson": 0.0023583294176281787
+        },
+        {
+            "feature": "description_ENUM_version",
+            "pearson": 0.0023506112268108573
+        },
+        {
+            "feature": "description_ENUM_order",
+            "pearson": 0.0021642027312406076
+        },
+        {
+            "feature": "description_ENUM_changing",
+            "pearson": 0.0021251173946305354
+        },
+        {
+            "feature": "description_ENUM_site",
+            "pearson": 0.0021237383653477724
+        },
+        {
+            "feature": "description_ENUM_configuration",
+            "pearson": 0.0021053983594928097
+        },
+        {
+            "feature": "description_ENUM_clear",
+            "pearson": 0.002092756455851873
+        },
+        {
+            "feature": "type_ENUM_vt_fileinc",
+            "pearson": 0.002087183783374039
+        },
+        {
+            "feature": "description_ENUM_intel",
+            "pearson": 0.0019771752449979163
+        },
+        {
+            "feature": "description_ENUM_contract",
+            "pearson": 0.0019771752449978448
+        },
+        {
+            "feature": "description_ENUM_infrastructure",
+            "pearson": 0.0019071520011048608
+        },
+        {
+            "feature": "description_ENUM_networking",
+            "pearson": 0.0018165551786462444
+        },
+        {
+            "feature": "description_ENUM_field",
+            "pearson": 0.0017157860807255098
+        },
+        {
+            "feature": "description_ENUM_related",
+            "pearson": 0.0014720978152227388
+        },
+        {
+            "feature": "description_ENUM_balance",
+            "pearson": 0.0013980651431478076
+        },
+        {
+            "feature": "description_ENUM_logfile",
+            "pearson": 0.0013980651431478057
+        },
+        {
+            "feature": "description_ENUM_message",
+            "pearson": 0.0013961560321736322
+        },
+        {
+            "feature": "description_ENUM_executing",
+            "pearson": 0.0012373924927484394
+        },
+        {
+            "feature": "description_ENUM_update",
+            "pearson": 0.0012172361945538015
+        },
+        {
+            "feature": "description_ENUM_takeover",
+            "pearson": 0.0011045232905322977
+        },
+        {
+            "feature": "description_ENUM_addressed",
+            "pearson": 0.001066810282434476
+        },
+        {
+            "feature": "type_ENUM_vt_httprs",
+            "pearson": 0.0009518038005627669
+        },
+        {
+            "feature": "description_ENUM_content",
+            "pearson": 0.0009255018347894191
+        },
+        {
+            "feature": "description_ENUM_fixed",
+            "pearson": 0.0007543161392644718
+        },
+        {
+            "feature": "description_ENUM_firmware",
+            "pearson": 0.0007388881583534647
+        },
+        {
+            "feature": "description_ENUM_bug",
+            "pearson": 0.0006468041007785631
+        },
+        {
+            "feature": "description_ENUM_validating",
+            "pearson": 0.000603353713432849
+        },
+        {
+            "feature": "description_ENUM_header",
+            "pearson": 0.0006028200965270446
+        },
+        {
+            "feature": "description_ENUM_script",
+            "pearson": 0.00045949546145065696
+        },
+        {
+            "feature": "description_ENUM_distributed",
+            "pearson": 0.0004573582292688552
+        },
+        {
+            "feature": "description_ENUM_disputed",
+            "pearson": 0.00044804931671469793
+        },
+        {
+            "feature": "description_ENUM_mail",
+            "pearson": 0.00038986472402582884
+        },
+        {
+            "feature": "description_ENUM_crafted",
+            "pearson": 0.00033526839300286403
+        },
+        {
+            "feature": "description_ENUM_program",
+            "pearson": 7.160421277572956e-05
+        },
+        {
+            "feature": "description_ENUM_point",
+            "pearson": 7.691141359964922e-07
+        },
+        {
+            "feature": "delta_days_proposed",
+            "pearson": null
+        },
+        {
+            "feature": "status_ENUM_candidate",
+            "pearson": null
+        },
+        {
+            "feature": "status_ENUM_entry",
+            "pearson": null
+        },
+        {
+            "feature": "phase_ENUM_assigned",
+            "pearson": null
+        },
+        {
+            "feature": "phase_ENUM_interim",
+            "pearson": null
+        },
+        {
+            "feature": "phase_ENUM_proposed",
+            "pearson": null
+        },
+        {
+            "feature": "phase_ENUM_modified",
+            "pearson": null
+        },
+        {
+            "feature": "phase_ENUM_absent",
+            "pearson": null
+        },
+        {
+            "feature": "vendor_ENUM_absent",
+            "pearson": null
+        },
+        {
+            "feature": "comments",
+            "pearson": null
+        },
+        {
+            "feature": "description_ENUM_currentuser",
+            "pearson": null
+        }
+    ]
+}
