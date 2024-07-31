@@ -1554,47 +1554,47 @@
         },
         {
             "feature": "delta_days_proposed",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "status_ENUM_candidate",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "status_ENUM_entry",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "phase_ENUM_assigned",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "phase_ENUM_interim",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "phase_ENUM_proposed",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "phase_ENUM_modified",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "phase_ENUM_absent",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "vendor_ENUM_absent",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "comments",
-            "spearman": null
+            "spearman": 0.0
         },
         {
             "feature": "description_ENUM_currentuser",
-            "spearman": null
+            "spearman": 0.0
         }
     ]
 }
